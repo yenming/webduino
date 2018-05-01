@@ -13,7 +13,7 @@
     else if (extname_flash.indexOf("."+substr[substr.length-1]+",")!=-1)
         var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="application/x-shockwave-flash"></embed>';
     else
-        var src = '<iframe src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px"></iframe>';
+        var src = '<iframe src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" allow="geolocation; microphone; camera"></iframe>';
     
     if (document.getElementById("fustyles_iframe"+input_id_))
     {
