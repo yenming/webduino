@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>FongShan Air Quality</title>
+  <script src="http://blocklypro.webduino.io/components/jquery/dist/jquery.min.js"></script>
+  <script src="https://webduino.io/components/webduino-js/dist/webduino-all.min.js"></script>
+  <script src="https://blockly.webduino.io/webduino-blockly.js"></script>
+  <script src="https://blockly.webduino.io/lib/firebase.js"></script>
+  <script src="https://blockly.webduino.io/lib/runtime.min.js"></script>
+  <script src="https://rawgit.com/fustyles/webduino/temp/AirQuality_Taiwan_20180120/AirQualityTaiwan.js"></script>
+<style id="jsbin-css">
+#demo-area-01-show { font-size: 24px; pointer-events: auto!important; }
+</style>
+</head>
+
+<body>
+  <div><span id="demo-area-01-show"></span></div>
+<script id="jsbin-javascript">
+(async function () {
+
+var Site;
+var Data;
+var i;
+
+
+PM_gov_link('http://opendata2.epa.gov.tw/AQI.xml');await delay(1);Site = (PM_gov_get("高雄市-鳳山")).split(',');
+Data = '';
+for (i = 1; i <= 36; i += 2) {
+  Data = String(Data) + String(Site[i - 1]);
+  Data = String(Data) + String('：');
+  Data = String(Data) + String(Site[(i + 1) - 1]);
+  Data = String(Data) + String("<br/>");
+}
+document.getElementById("demo-area-01-show").innerHTML = Data;
+
+}());
+</script>
+</body>
