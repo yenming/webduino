@@ -1,0 +1,111 @@
+<!doctype html>
+<!--
+Created using JS Bin
+http://bin.webduino.io
+
+Copyright (c) 2018 by anonymous (http://bin.webduino.io/tutun/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Webduino Blockly Demo 01</title>
+  <script src="https://blocklypro.webduino.io/components/jquery/dist/jquery.min.js"></script>
+  <script src="https://blocklypro.webduino.io/dist/lib/webduino-all-0.4.20.min.js"></script>
+  <script src="https://blocklypro.webduino.io/dist/webduino-blockly.min.js"></script>
+  <script src="https://blocklypro.webduino.io/dist/lib/firebase.min.js"></script>
+  <script src="https://blocklypro.webduino.io/dist/lib/runtime.min.js"></script>
+  <script src="https://rawgit.com/fustyles/webduino/temp/iframe_20180107/iframe.js"></script>
+<style id="jsbin-css">
+#demo-area-01-show { font-size: 60px; pointer-events: auto!important; }
+</style>
+</head>
+
+<body>
+  <div><span id="demo-area-01-show">123</span></div>
+<script id="jsbin-javascript">
+(async function () {
+
+var Tips;
+var QueryString;
+var addr;
+var Parameters;
+var i;
+
+async function OpenMap(QueryString) {
+  await delay(0.5);
+  if (QueryString.indexOf('到') + 1 > 0) {
+    addr = QueryString.split('到');
+    Parameters = '';
+    var i_end = addr.length;
+    var i_inc = 1;
+    if (1 > i_end) {
+      i_inc = -i_inc;
+    }
+    for (i = 1;
+         i_inc >= 0 ? i <= i_end : i >= i_end;
+         i += i_inc) {
+      if (i == 1) {
+        Parameters = String(Parameters) + String('saddr=');
+        Parameters = String(Parameters) + String(addr[i - 1]);
+      } else if (i == 2) {
+        Parameters = String(Parameters) + String('&daddr=');
+        Parameters = String(Parameters) + String(addr[i - 1]);
+      } else {
+        Parameters = String(Parameters) + String('+to:');
+        Parameters = String(Parameters) + String(addr[i - 1]);
+      }
+    }
+  } else if (QueryString.indexOf('到') + 1 == 0) {
+    Parameters = String('q=') + String(QueryString);
+  }
+  createIframe(0,(['https://maps.google.com/maps?',Parameters,'&output=embed'].join('')),800,500,0,50);}
+
+
+Tips = '語音指令： A到B到C...查詢';
+document.getElementById('demo-area-01-show').innerHTML = 'Google地圖路徑規劃';
+document.getElementById('demo-area-01-show').style.fontSize = 36 + 'px';
+async function speechRecognition() {
+  if (!('webkitSpeechRecognition' in window)) {
+    alert('本瀏覽器不支援語音辨識，請更換瀏覽器！(Chrome 25 版以上才支援語音辨識)');
+  } else {
+    window._recognition = new webkitSpeechRecognition();
+    window._recognition.continuous = true;
+    window._recognition.interimResults = true;
+    window._recognition.lang = 'cmn-Hant-TW';
+
+    window._recognition.onstart = async function() {
+      window._recognition.status = true;
+    };
+
+    window._recognition.onend = async function() {
+      if (window._recognition.status) {
+         window._recognition.start();
+      }
+    };
+
+    window._recognition.onresult = async function (event,result) {
+      result = {};
+      result.resultLength = event.results.length - 1;
+      result.resultTranscript = event.results[result.resultLength][0].transcript;
+      if (event.results[result.resultLength].isFinal === true) {
+        document.getElementById('demo-area-01-show').innerHTML = result.resultTranscript;
+  if (result.resultTranscript.indexOf('查詢') !== -1) {
+    OpenMap((result.resultTranscript.split('查詢'))[0]);
+  }
+      console.log('final');
+} else if (event.results[result.resultLength].isFinal === false) {
+              }
+    };
+    window._recognition.start();
+  }
+}
+speechRecognition();
+
+}());
+</script>
+</body>
