@@ -26,7 +26,7 @@ Released under the MIT license: http://jsbin.mit-license.org
 </head>
 
 <body>
-  <div><span id="demo-area-01-show">123</span></div>
+  <div><span id="demo-area-01-show"></span></div>
 <script id="jsbin-javascript">
 (async function () {
 
@@ -63,7 +63,7 @@ async function OpenMap(QueryString) {
   } else if (QueryString.indexOf('到') + 1 == 0) {
     Parameters = String('q=') + String(QueryString);
   }
-  createIframe(0,(['https://maps.google.com/maps?',Parameters,'&output=embed'].join('')),800,500,0,50);}
+  createIframe(0,(['https://maps.google.com/maps?',Parameters,'&output=embed'].join('')),400,500,0,50);}
 
 
 Tips = '語音指令： A到B到C...查詢';
