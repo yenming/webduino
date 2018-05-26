@@ -4,7 +4,7 @@
 
   function createButton() {
     
-    if (document.getElementById('fustyles')== null)
+    if (!document.getElementById('fustyles'))
     {
         var list = document.getElementsByClassName("db5");
           for(var i = list.length - 1; 0 <= i; i--)
@@ -23,7 +23,7 @@
         document.body.appendChild(div);
     }
     
-    if (!document.getElementById('demo-area-01-show')== null)
+    if (!document.getElementById('demo-area-01-show'))
     {
         var div = document.createElement('div');
         div.id = 'demo-area-01-show';
