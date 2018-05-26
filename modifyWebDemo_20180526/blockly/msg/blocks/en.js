@@ -1,1 +1,1 @@
-Blockly.Msg.create_button = "Create Button";
+Blockly.Msg.create_button = "Modify Web Demo";
