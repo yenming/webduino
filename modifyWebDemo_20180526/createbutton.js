@@ -4,11 +4,7 @@
 
   function createButton() {
     
-    if (document.getElementById('fustyles'))
-    {
-          //
-    }
-    else
+    if (document.getElementById('fustyles')== null)
     {
         var list = document.getElementsByClassName("db5");
           for(var i = list.length - 1; 0 <= i; i--)
@@ -25,10 +21,13 @@
         //div.style.zindex='9999';      
         div.innerHTML = divHtml;
         document.body.appendChild(div);
-      
+    }
+    
+    if (!document.getElementById('demo-area-01-show')== null)
+    {
         var div = document.createElement('div');
         div.id = 'demo-area-01-show';
-        document.body.appendChild(div);      
+        document.body.appendChild(div);   
     }
   }
 
