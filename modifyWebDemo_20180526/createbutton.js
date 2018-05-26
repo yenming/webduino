@@ -10,10 +10,6 @@
     }
     else
     {
-        var div = document.createElement('div');
-        div.id = 'demo-area-01-show';
-        document.body.appendChild(div);
-
         var list = document.getElementsByClassName("db5");
           for(var i = list.length - 1; 0 <= i; i--)
           if(list[i] && list[i].parentElement)
@@ -29,6 +25,10 @@
         //div.style.zindex='9999';      
         div.innerHTML = divHtml;
         document.body.appendChild(div);
+      
+        var div = document.createElement('div');
+        div.id = 'demo-area-01-show';
+        document.body.appendChild(div);      
     }
   }
 
