@@ -1,1 +1,1 @@
-MSG.catMatrixLed = "Simulation Indicator Light";
+MSG.catIframe = "Web Page";

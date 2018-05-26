@@ -1,1 +1,1 @@
-MSG.catMatrixLed = "模拟指示灯";
+MSG.catIframe = "显示网页";
