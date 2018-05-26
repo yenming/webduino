@@ -7,7 +7,7 @@
     if (!document.getElementById('fustyles'))
     {
         var list = document.getElementsByClassName("db5");
-          for(var i = list.length - 1; 0 <= i; i--)
+          for(var i = list.length-1;i>=0; i--)
           if(list[i] && list[i].parentElement)
           list[i].parentElement.removeChild(list[i]);
 
