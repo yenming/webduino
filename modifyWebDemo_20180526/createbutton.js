@@ -24,9 +24,9 @@
         var div = document.createElement('div');
         div.id = 'fustyles';
         //div.style.position = 'absolute';      
-        div.style.left = '50px';
-        div.style.top = '100px';
-        div.style.zindex='9999';      
+        //div.style.left = '50px';
+        //div.style.top = '100px';
+        //div.style.zindex='9999';      
         div.innerHTML = divHtml;
         document.body.appendChild(div);
     }
