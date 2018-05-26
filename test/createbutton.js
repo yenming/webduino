@@ -2,7 +2,7 @@
 
   'use strict';
 
-  function createElement() {
+  function createButton() {
     
     if (document.getElementById('fustyles'))
     {
@@ -32,6 +32,6 @@
     }
   }
 
-  window.createElement = createElement;
+  window.createButton = createButton;
 
 }(window, window.document));
