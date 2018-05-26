@@ -1,1 +1,1 @@
-MSG.catIframe = "Web Page";
+MSG.catCreateButton = "Create Button";
