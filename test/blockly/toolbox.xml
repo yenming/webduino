@@ -107,7 +107,7 @@
         <field name="NUM">0</field>
       </block>
     </value>
-    <value name="value_color_on">
+    <value name="value_color_on_">
       <block type="colour_picker">
         <field name="COLOUR">#ffffff</field>
       </block>
