@@ -292,6 +292,28 @@ Blockly.Blocks['matrix_led_on'] = {
   }
 };
 
+Blockly.Blocks['matrix_led_color_on'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.MATRIXLED_COLOR_ON_SHOW);
+    this.appendValueInput("value_x_on_")
+        .setCheck("Number")
+        .appendField("x");
+    this.appendValueInput("value_y_on_")
+        .setCheck("Number")
+        .appendField("y");
+    this.appendValueInput("value_color_on_")
+        .setCheck("Colour")
+        .appendField("color");    
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(300);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
 Blockly.Blocks['matrix_led_off'] = {
   init: function() {
     this.appendDummyInput()
