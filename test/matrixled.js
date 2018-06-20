@@ -290,6 +290,36 @@
     MatrixLed_show();
   }
   
+  function MatrixLed_matrix_color(L01,L02,L03,L04,L05,L06,L07,L08,L09,L10,L11,L12,L13,L14,L15,L16,L17,L18,L19,L20,L21,L22,L23,L24,L25) {
+    L[0]=L01;
+    L[1]=L02;
+    L[2]=L03;
+    L[3]=L04;
+    L[4]=L05;
+    L[5]=L06;
+    L[6]=L07;
+    L[7]=L08;
+    L[8]=L09;
+    L[9]=L10;
+    L[10]=L11;
+    L[11]=L12;
+    L[12]=L13;
+    L[13]=L14;
+    L[14]=L15;
+    L[15]=L16;
+    L[16]=L17;
+    L[17]=L18;
+    L[18]=L19;
+    L[19]=L20;
+    L[20]=L21;
+    L[21]=L22;
+    L[22]=L23;
+    L[23]=L24;
+    L[24]=L25;
+    
+    MatrixLed_show();
+  }  
+  
   function MatrixLed_show() {
     if (MatrixLedshowstate==1)
       var ledtable ="<table style='width:"+MatrixLedwidth+"px;height:"+MatrixLedheight+"px;border:white;'>"
@@ -620,6 +650,7 @@
   
   window.MatrixLed_clear = MatrixLed_clear;
   window.MatrixLed_matrix = MatrixLed_matrix;
+  window.MatrixLed_matrix_color = MatrixLed_matrix_color;
   window.MatrixLed_show = MatrixLed_show;
   window.MatrixLed_on = MatrixLed_on;
   window.MatrixLed_color_on = MatrixLed_color_on;
