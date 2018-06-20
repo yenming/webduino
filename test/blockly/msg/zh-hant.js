@@ -1,1 +1,1 @@
-MSG.catCreateButton = "Create Button";
+MSG.catMatrixLed = "模擬指示燈";
