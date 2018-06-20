@@ -96,6 +96,23 @@
       </block>
     </value>
   </block>
+  <block type="matrix_led_color_on">
+    <value name="value_x_on_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="value_y_on_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="value_color_on">
+      <block type="colour_picker">
+        <field name="COLOUR">#ffffff</field>
+      </block>
+    </value>    
+  </block>  
   <block type="matrix_led_off">
     <value name="value_x_off_">
       <block type="math_number">
