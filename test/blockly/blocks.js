@@ -219,6 +219,48 @@ Blockly.Blocks['matrix_led_matrix'] = {
   }
 };
 
+Blockly.Blocks['matrix_led_matrix_color'] = {
+  init: function() {
+    this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_CENTRE)
+        .appendField(Blockly.Msg.MATRIXLED_MATRIX_SHOW);
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldColour("#000000"), 'L01')
+        .appendField(new Blockly.FieldColour("#000000"), 'L06')
+        .appendField(new Blockly.FieldColour("#000000"), 'L11')
+        .appendField(new Blockly.FieldColour("#000000"), 'L16')
+        .appendField(new Blockly.FieldColour("#000000"), 'L21')
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldColour("#000000"), 'L02')
+        .appendField(new Blockly.FieldColour("#000000"), 'L07')
+        .appendField(new Blockly.FieldColour("#000000"), 'L12')
+        .appendField(new Blockly.FieldColour("#000000"), 'L17')
+        .appendField(new Blockly.FieldColour("#000000"), 'L22')
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldColour("#000000"), 'L03')
+        .appendField(new Blockly.FieldColour("#000000"), 'L08')
+        .appendField(new Blockly.FieldColour("#000000"), 'L13')
+        .appendField(new Blockly.FieldColour("#000000"), 'L18')
+        .appendField(new Blockly.FieldColour("#000000"), 'L23')
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldColour("#000000"), 'L04')
+        .appendField(new Blockly.FieldColour("#000000"), 'L09')
+        .appendField(new Blockly.FieldColour("#000000"), 'L14')
+        .appendField(new Blockly.FieldColour("#000000"), 'L19')
+        .appendField(new Blockly.FieldColour("#000000"), 'L24')
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldColour("#000000"), 'L05')
+        .appendField(new Blockly.FieldColour("#000000"), 'L10')
+        .appendField(new Blockly.FieldColour("#000000"), 'L15')
+        .appendField(new Blockly.FieldColour("#000000"), 'L20')
+        .appendField(new Blockly.FieldColour("#000000"), 'L25')
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(300);
+    this.setTooltip('');
+    this.setHelpUrl('');
+  }
+};
 Blockly.Blocks['matrix_led_matrixcode'] = {
   init: function() {
     this.appendDummyInput()
