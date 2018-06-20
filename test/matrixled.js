@@ -236,6 +236,20 @@
     MatrixLed_show();
   }
   
+  function MatrixLed_color_on(input_x_,input_y_,input_color_) {
+    for (var i=0;i<25;i++)
+    {
+      if (i==(input_x_*5+input_y_))
+        L[i]=input_color_;
+      else
+      {
+        if (L[i]=="")
+          L[i]=MatrixLedbackcolor;
+      }
+    }
+    MatrixLed_show();
+  }  
+  
   function MatrixLed_off(input_x_,input_y_) {
     for (var i=0;i<25;i++)
     {
@@ -608,6 +622,7 @@
   window.MatrixLed_matrix = MatrixLed_matrix;
   window.MatrixLed_show = MatrixLed_show;
   window.MatrixLed_on = MatrixLed_on;
+  window.MatrixLed_color_on = MatrixLed_color_on;
   window.MatrixLed_off = MatrixLed_off;
   window.MatrixLed_reverse = MatrixLed_reverse;
   window.MatrixLed_state = MatrixLed_state;
