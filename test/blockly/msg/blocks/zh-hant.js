@@ -20,6 +20,7 @@ Blockly.Msg.MATRIXLED_CHAR_SHOW = "顯示 字元(英數)";
 Blockly.Msg.MATRIXLED_TEXTTOCODE_SHOW = "轉換文字為編碼";
 Blockly.Msg.MATRIXLED_SHOWSTATE_SHOW = "指示燈 顯示";
 Blockly.Msg.MATRIXLED_INDENTCODE_SHOW = "縮排編碼";
+Blockly.Msg.MATRIXLED_LINECHART_SHOW = "折線圖  ";
 Blockly.Msg.MATRIXLED_BARCHART_SHOW = "長條圖  ";
 Blockly.Msg.MATRIXLED_VALUE1_SHOW = "數值1";
 Blockly.Msg.MATRIXLED_VALUE2_SHOW = "數值2";
