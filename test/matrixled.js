@@ -422,8 +422,7 @@
     else if (input_char_=="▼")      return arrowdownfill;
     else if (input_char_=="◄")      return arrowleftfill;
     else if (input_char_=="►")      return arrowrightfill;    
-    else
-      return noexist;
+    else      return noexist;
   }
   
   function MatrixLed_linechart(value1,value2,value3,value4,value5){
