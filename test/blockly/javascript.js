@@ -210,6 +210,16 @@ Blockly.JavaScript['matrix_led_indentcode'] = function(block) {
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
+Blockly.JavaScript['matrix_led_linechart'] = function(block) {
+  var value_value1 = Blockly.JavaScript.valueToCode(block, 'value_value1', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_value2 = Blockly.JavaScript.valueToCode(block, 'value_value2', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_value3 = Blockly.JavaScript.valueToCode(block, 'value_value3', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_value4 = Blockly.JavaScript.valueToCode(block, 'value_value4', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_value5 = Blockly.JavaScript.valueToCode(block, 'value_value5', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'MatrixLed_linechart('+value_value1+','+value_value2+','+value_value3+','+value_value4+','+value_value5+');';
+  return code;
+};
+
 Blockly.JavaScript['matrix_led_barchart'] = function(block) {
   var value_value1 = Blockly.JavaScript.valueToCode(block, 'value_value1', Blockly.JavaScript.ORDER_ATOMIC);
   var value_value2 = Blockly.JavaScript.valueToCode(block, 'value_value2', Blockly.JavaScript.ORDER_ATOMIC);
