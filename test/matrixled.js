@@ -430,9 +430,9 @@
     var k=0;
     for (var i=0;i<=4;i++)
     {    
-      for (var J=0;J<=4;J++)
+      for (var j=0;j<=4;j++)
       {
-        if (J=(5-input_value[i]))
+        if (j=(5-input_value[i]))
           L[k]=MatrixLedcolor;
         else
           L[k]=MatrixLedbackcolor;
@@ -447,9 +447,9 @@
     var k=0;
     for (var i=0;i<=4;i++)
     {    
-      for (var J=0;J<=4;J++)
+      for (var j=0;j<=4;j++)
       {
-        if (J>=(5-input_value[i]))
+        if (j>=(5-input_value[i]))
           L[k]=MatrixLedcolor;
         else
           L[k]=MatrixLedbackcolor;
