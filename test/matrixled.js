@@ -332,186 +332,96 @@
   }
   
   function MatrixLed_conversion(input_char_) {
-    if (input_char_=="A")
-      return charA;
-    else if (input_char_=="B")
-      return charB;  
-    else if (input_char_=="C")
-      return charC; 
-    else if (input_char_=="D")
-      return charD;  
-    else if (input_char_=="E")
-      return charE;   
-    else if (input_char_=="F")
-      return charF;  
-    else if (input_char_=="G")
-      return charG;   
-    else if (input_char_=="H")
-      return charH;  
-    else if (input_char_=="I")
-      return charI;   
-    else if (input_char_=="J")
-      return charJ;  
-    else if (input_char_=="K")
-      return charK;   
-    else if (input_char_=="L")
-      return charL;  
-    else if (input_char_=="M")
-      return charM;  
-    else if (input_char_=="N")
-      return charN;  
-    else if (input_char_=="O")
-      return charO;  
-    else if (input_char_=="P")
-      return charP;  
-    else if (input_char_=="Q")
-      return charQ; 
-    else if (input_char_=="R")
-      return charR;  
-    else if (input_char_=="S")
-      return charS;
-    else if (input_char_=="T")
-      return charT;  
-    else if (input_char_=="U")
-      return charU;  
-    else if (input_char_=="V")
-      return charV;  
-    else if (input_char_=="W")
-      return charW;  
-    else if (input_char_=="X")
-      return charX;  
-    else if (input_char_=="Y")
-      return charY; 
-    else if (input_char_=="Z")
-      return charZ; 
-    else if (input_char_=="a")
-      return chara;
-    else if (input_char_=="b")
-      return charb;  
-    else if (input_char_=="c")
-      return charc; 
-    else if (input_char_=="d")
-      return chard;  
-    else if (input_char_=="e")
-      return chare;   
-    else if (input_char_=="f")
-      return charf;  
-    else if (input_char_=="g")
-      return charg;   
-    else if (input_char_=="h")
-      return charh;  
-    else if (input_char_=="i")
-      return chari;   
-    else if (input_char_=="j")
-      return charj;  
-    else if (input_char_=="k")
-      return chark;   
-    else if (input_char_=="l")
-      return charl;  
-    else if (input_char_=="m")
-      return charm;  
-    else if (input_char_=="n")
-      return charn;  
-    else if (input_char_=="o")
-      return charo;  
-    else if (input_char_=="p")
-      return charp;  
-    else if (input_char_=="q")
-      return charq; 
-    else if (input_char_=="r")
-      return charr;  
-    else if (input_char_=="s")
-      return chars;
-    else if (input_char_=="t")
-      return chart;  
-    else if (input_char_=="u")
-      return charu;  
-    else if (input_char_=="v")
-      return charv;  
-    else if (input_char_=="w")
-      return charw;  
-    else if (input_char_=="x")
-      return charx;  
-    else if (input_char_=="y")
-      return chary; 
-    else if (input_char_=="z")
-      return charz;     
-    else if (input_char_=="0")
-      return char0; 
-    else if (input_char_=="1")
-      return char1;   
-    else if (input_char_=="2")
-      return char2; 
-    else if (input_char_=="3")
-      return char3;       
-    else if (input_char_=="4")
-      return char4; 
-    else if (input_char_=="5")
-      return char5;       
-    else if (input_char_=="6")
-      return char6; 
-    else if (input_char_=="7")
-      return char7;       
-    else if (input_char_=="8")
-      return char8; 
-    else if (input_char_=="9")
-      return char9;     
-    else if (input_char_==",")
-        return comma;
-    else if (input_char_==".")
-      return period;  
-    else if (input_char_=="?")
-      return questionmark;      
-    else if (input_char_=="!")
-      return exclamationmark;  
-    else if (input_char_==";")
-      return semicolon;  
-    else if (input_char_==":")
-      return colon;  
-    else if (input_char_=="(")
-      return parenthesesleft; 
-    else if (input_char_==")")
-      return parenthesesright;  
-    else if (input_char_=="[")
-      return squarebracketsleft;
-    else if (input_char_=="]")
-      return squarebracketsright;  
-    else if (input_char_=="{")
-      return curlybracketsleft;      
-    else if (input_char_=="}")
-      return curlybracketsright; 
-    else if (input_char_=="'")
-      return Quotationmarkssingle;     
-    else if (input_char_=="\"")
-      return Quotationmarksdouble;   
-    else if (input_char_=="♡")
-      return heart;
-    else if (input_char_=="♥")
-      return heartfill;    
-    else if (input_char_=="↑")
-      return arrowup;
-    else if (input_char_=="↓")
-      return arrowdown;
-    else if (input_char_=="←")
-      return arrowleft;
-    else if (input_char_=="→")
-      return arrowright;   
-    else if (input_char_=="↖")
-      return arrowleftup;
-    else if (input_char_=="↙")
-      return arrowleftdown;
-    else if (input_char_=="↗")
-      return arrowrightup;
-    else if (input_char_=="↘")
-      return arrowrightdown;  
-    else if (input_char_=="▲")
-      return arrowupfill;
-    else if (input_char_=="▼")
-      return arrowdownfill;
-    else if (input_char_=="◄")
-      return arrowleftfill;
-    else if (input_char_=="►")
-      return arrowrightfill;    
+    if (input_char_=="A")      return charA;
+    else if (input_char_=="B")      return charB;  
+    else if (input_char_=="C")      return charC; 
+    else if (input_char_=="D")      return charD;  
+    else if (input_char_=="E")      return charE;   
+    else if (input_char_=="F")      return charF;  
+    else if (input_char_=="G")      return charG;   
+    else if (input_char_=="H")      return charH;  
+    else if (input_char_=="I")      return charI;   
+    else if (input_char_=="J")      return charJ;  
+    else if (input_char_=="K")      return charK;   
+    else if (input_char_=="L")      return charL;  
+    else if (input_char_=="M")      return charM;  
+    else if (input_char_=="N")      return charN;  
+    else if (input_char_=="O")      return charO;  
+    else if (input_char_=="P")      return charP;  
+    else if (input_char_=="Q")      return charQ; 
+    else if (input_char_=="R")      return charR;  
+    else if (input_char_=="S")      return charS;
+    else if (input_char_=="T")      return charT;  
+    else if (input_char_=="U")      return charU;  
+    else if (input_char_=="V")      return charV;  
+    else if (input_char_=="W")      return charW;  
+    else if (input_char_=="X")      return charX;  
+    else if (input_char_=="Y")      return charY; 
+    else if (input_char_=="Z")      return charZ; 
+    else if (input_char_=="a")      return chara;
+    else if (input_char_=="b")      return charb;  
+    else if (input_char_=="c")      return charc; 
+    else if (input_char_=="d")      return chard;  
+    else if (input_char_=="e")      return chare;   
+    else if (input_char_=="f")      return charf;  
+    else if (input_char_=="g")      return charg;   
+    else if (input_char_=="h")      return charh;  
+    else if (input_char_=="i")      return chari;   
+    else if (input_char_=="j")      return charj;  
+    else if (input_char_=="k")      return chark;   
+    else if (input_char_=="l")      return charl;  
+    else if (input_char_=="m")      return charm;  
+    else if (input_char_=="n")      return charn;  
+    else if (input_char_=="o")      return charo;  
+    else if (input_char_=="p")      return charp;  
+    else if (input_char_=="q")      return charq; 
+    else if (input_char_=="r")      return charr;  
+    else if (input_char_=="s")      return chars;
+    else if (input_char_=="t")      return chart;  
+    else if (input_char_=="u")      return charu;  
+    else if (input_char_=="v")      return charv;  
+    else if (input_char_=="w")      return charw;  
+    else if (input_char_=="x")      return charx;  
+    else if (input_char_=="y")      return chary; 
+    else if (input_char_=="z")      return charz;     
+    else if (input_char_=="0")      return char0; 
+    else if (input_char_=="1")      return char1;   
+    else if (input_char_=="2")      return char2; 
+    else if (input_char_=="3")      return char3;       
+    else if (input_char_=="4")      return char4; 
+    else if (input_char_=="5")      return char5;       
+    else if (input_char_=="6")      return char6; 
+    else if (input_char_=="7")      return char7;       
+    else if (input_char_=="8")      return char8; 
+    else if (input_char_=="9")      return char9;     
+    else if (input_char_==",")        return comma;
+    else if (input_char_==".")      return period;  
+    else if (input_char_=="?")      return questionmark;      
+    else if (input_char_=="!")      return exclamationmark;  
+    else if (input_char_==";")      return semicolon;  
+    else if (input_char_==":")      return colon;  
+    else if (input_char_=="(")      return parenthesesleft; 
+    else if (input_char_==")")      return parenthesesright;  
+    else if (input_char_=="[")      return squarebracketsleft;
+    else if (input_char_=="]")      return squarebracketsright;  
+    else if (input_char_=="{")      return curlybracketsleft;      
+    else if (input_char_=="}")      return curlybracketsright; 
+    else if (input_char_=="'")      return Quotationmarkssingle;     
+    else if (input_char_=="\"")      return Quotationmarksdouble;   
+    else if (input_char_=="♡")      return heart;
+    else if (input_char_=="♥")      return heartfill;    
+    else if (input_char_=="↑")      return arrowup;
+    else if (input_char_=="↓")      return arrowdown;
+    else if (input_char_=="←")      return arrowleft;
+    else if (input_char_=="→")      return arrowright;   
+    else if (input_char_=="↖")      return arrowleftup;
+    else if (input_char_=="↙")      return arrowleftdown;
+    else if (input_char_=="↗")      return arrowrightup;
+    else if (input_char_=="↘")      return arrowrightdown;  
+    else if (input_char_=="▲")      return arrowupfill;
+    else if (input_char_=="▼")      return arrowdownfill;
+    else if (input_char_=="◄")      return arrowleftfill;
+    else if (input_char_=="►")      return arrowrightfill;    
     else
       return noexist;
   }
