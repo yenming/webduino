@@ -291,31 +291,11 @@
   }
   
   function MatrixLed_matrix_color(L01,L02,L03,L04,L05,L06,L07,L08,L09,L10,L11,L12,L13,L14,L15,L16,L17,L18,L19,L20,L21,L22,L23,L24,L25) {
-    L[0]=L01;
-    L[1]=L02;
-    L[2]=L03;
-    L[3]=L04;
-    L[4]=L05;
-    L[5]=L06;
-    L[6]=L07;
-    L[7]=L08;
-    L[8]=L09;
-    L[9]=L10;
-    L[10]=L11;
-    L[11]=L12;
-    L[12]=L13;
-    L[13]=L14;
-    L[14]=L15;
-    L[15]=L16;
-    L[16]=L17;
-    L[17]=L18;
-    L[18]=L19;
-    L[19]=L20;
-    L[20]=L21;
-    L[21]=L22;
-    L[22]=L23;
-    L[23]=L24;
-    L[24]=L25;
+    L[0]=L01;    L[1]=L02;    L[2]=L03;    L[3]=L04;    L[4]=L05;
+    L[5]=L06;    L[6]=L07;    L[7]=L08;    L[8]=L09;    L[9]=L10;
+    L[10]=L11;    L[11]=L12;    L[12]=L13;    L[13]=L14;    L[14]=L15;
+    L[15]=L16;    L[16]=L17;    L[17]=L18;    L[18]=L19;    L[19]=L20;
+    L[20]=L21;    L[21]=L22;    L[22]=L23;    L[23]=L24;    L[24]=L25;
     
     MatrixLed_show();
   }  
@@ -536,6 +516,23 @@
       return noexist;
   }
   
+  function MatrixLed_linechart(value1,value2,value3,value4,value5){
+    var input_value=[value1,value2,value3,value4,value5];
+    var k=0;
+    for (var i=0;i<=4;i++)
+    {    
+      for (var J=0;J<=4;J++)
+      {
+        if (J=(5-input_value[i]))
+          L[k]=MatrixLedcolor;
+        else
+          L[k]=MatrixLedbackcolor;
+        k++;
+      }
+    }
+    MatrixLed_show();
+  }
+  
   function MatrixLed_barchart(value1,value2,value3,value4,value5){
     var input_value=[value1,value2,value3,value4,value5];
     var k=0;
@@ -673,6 +670,7 @@
   window.MatrixLed_texttocode = MatrixLed_texttocode;
   window.MatrixLed_showstate = MatrixLed_showstate;
   window.MatrixLed_indentcode = MatrixLed_indentcode;
+  window.MatrixLed_linechart = MatrixLed_linechart;
   window.MatrixLed_barchart = MatrixLed_barchart;
   window.Matrixled_clockwise = Matrixled_clockwise;
   window.Matrixled_counterclockwise = Matrixled_counterclockwise;
