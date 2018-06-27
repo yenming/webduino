@@ -412,6 +412,37 @@ Blockly.Blocks['matrix_led_state'] = {
   }  
 };
 
+Blockly.Blocks['matrix_led_linechart'] = {
+  init: function() {
+    this.appendValueInput("value_value1")
+        .setCheck("Number")
+        .setAlign(Blockly.ALIGN_RIGHT)    
+        .appendField(Blockly.Msg.MATRIXLED_LINECHART_SHOW)    
+        .appendField(Blockly.Msg.MATRIXLED_VALUE1_SHOW);
+    this.appendValueInput("value_value2")
+        .setCheck("Number")
+        .setAlign(Blockly.ALIGN_RIGHT)     
+        .appendField(Blockly.Msg.MATRIXLED_VALUE2_SHOW);
+    this.appendValueInput("value_value3")
+        .setCheck("Number")
+        .setAlign(Blockly.ALIGN_RIGHT)     
+        .appendField(Blockly.Msg.MATRIXLED_VALUE3_SHOW);
+    this.appendValueInput("value_value4")
+        .setCheck("Number")
+        .setAlign(Blockly.ALIGN_RIGHT)     
+        .appendField(Blockly.Msg.MATRIXLED_VALUE4_SHOW);
+    this.appendValueInput("value_value5")
+        .setCheck("Number")
+        .setAlign(Blockly.ALIGN_RIGHT)     
+        .appendField(Blockly.Msg.MATRIXLED_VALUE5_SHOW);    
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(300);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }  
+};
+
 Blockly.Blocks['matrix_led_barchart'] = {
   init: function() {
     this.appendValueInput("value_value1")
