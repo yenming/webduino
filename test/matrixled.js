@@ -432,7 +432,7 @@
     {    
       for (var j=0;j<=4;j++)
       {
-        if (j=(5-input_value[i]))
+        if (j==(5-input_value[i]))
           L[k]=MatrixLedcolor;
         else
           L[k]=MatrixLedbackcolor;
