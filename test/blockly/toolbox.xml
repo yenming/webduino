@@ -235,6 +235,33 @@
     <value name="value_indentcode_">
     </value>
   </block> 
+  <block type="matrix_led_linechart">
+    <value name="value_value1">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="value_value2">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="value_value3">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="value_value4">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="value_value5">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>    
+  </block>   
   <block type="matrix_led_barchart">
     <value name="value_value1">
       <block type="math_number">
