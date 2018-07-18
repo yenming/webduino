@@ -125,13 +125,12 @@
   function MatrixLed_marquee(input_marquee_) {
     if ((input_marquee_.length==25)&&(input_marquee_.search(/[^0-1]/)==-1))
     {
-      MatrixLed_matrix(input_marquee_);
-      return;
+      return MatrixLed_matrix(input_marquee_);
     }
     else if ((input_marquee_.length%5==0)&&(input_marquee_.length>25)&&(input_marquee_.search(/[^0-1]/)==-1))
       MatrixLedmarqueecode = input_marquee_;  
     else if (input_marquee_.length==1)
-      MatrixLed_matrix(MatrixLed_conversion(input_marquee_));
+      return MatrixLed_matrix(MatrixLed_conversion(input_marquee_));
     else if (input_marquee_.length>1)
     {
       MatrixLedmarqueecode="";
@@ -147,13 +146,15 @@
     {
       if (MatrixLedmarqueereverse==1)
       {
-        MatrixLed_matrix(MatrixLedmarqueecode.substr(0,25));
+        var s = MatrixLedmarqueecode.substr(0,25);
         MatrixLedmarqueecode = MatrixLedmarqueecode.substr(5,MatrixLedmarqueecode.length-5)+MatrixLedmarqueecode.substr(0,5);
+        return MatrixLed_matrix(s);
       }
       else if (MatrixLedmarqueereverse==2)
       {
-        MatrixLed_matrix(MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-25,25));
+        var s = MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-25,25);
         MatrixLedmarqueecode = MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-5,5)+MatrixLedmarqueecode.substr(0,MatrixLedmarqueecode.length-5);
+        return MatrixLed_matrix(s);
       }
     }
   } 
