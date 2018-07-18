@@ -203,7 +203,7 @@
   }    
   
   function MatrixLed_sample(input_sample_) {
-    MatrixLed_matrix(MatrixLed_conversion(input_sample_));
+    return MatrixLed_matrix(MatrixLed_conversion(input_sample_));
   }  
   
   function MatrixLed_clear() {
