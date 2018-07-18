@@ -199,7 +199,7 @@
   
   function MatrixLed_code(input_code_) {
     if (input_code_.length==25)
-      MatrixLed_matrix(input_code_);
+      return MatrixLed_matrix(input_code_);
   }    
   
   function MatrixLed_sample(input_sample_) {
