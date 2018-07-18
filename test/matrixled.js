@@ -120,7 +120,7 @@
   
   function MatrixLed_showstate(input_showstate_) {
     MatrixLedshowstate = input_showstate_;
-    MatrixLed_show();
+    return MatrixLed_show();
   }   
   
   function MatrixLed_indentcode(input_indentcode_) {
@@ -219,7 +219,7 @@
     {
       L[i]=MatrixLedbackcolor;
     }
-    MatrixLed_show();
+    return MatrixLed_show();
   }
   
   function MatrixLed_on(input_x_,input_y_) {
@@ -233,7 +233,7 @@
           L[i]=MatrixLedbackcolor;
       }
     }
-    MatrixLed_show();
+    return MatrixLed_show();
   }
   
   function MatrixLed_color_on(input_x_,input_y_,input_color_) {
@@ -247,7 +247,7 @@
           L[i]=MatrixLedbackcolor;
       }
     }
-    MatrixLed_show();
+    return MatrixLed_show();
   }  
   
   function MatrixLed_off(input_x_,input_y_) {
@@ -261,7 +261,7 @@
           L[i]=MatrixLedbackcolor;
       }
     }
-    MatrixLed_show();
+    return MatrixLed_show();
   }
   
   function MatrixLed_reverse(input_x_,input_y_) {
@@ -269,7 +269,7 @@
       L[input_x_*5+input_y_]=MatrixLedcolor;
     else
       L[input_x_*5+input_y_]=MatrixLedbackcolor;
-    MatrixLed_show();
+    return MatrixLed_show();
   }
 
   function MatrixLed_state(input_x_,input_y_) {
@@ -287,7 +287,7 @@
       else
         L[i]=MatrixLedbackcolor;
     }
-    MatrixLed_show();
+    return MatrixLed_show();
   }
   
   function MatrixLed_matrix_color(L01,L02,L03,L04,L05,L06,L07,L08,L09,L10,L11,L12,L13,L14,L15,L16,L17,L18,L19,L20,L21,L22,L23,L24,L25) {
@@ -297,7 +297,7 @@
     L[15]=L16;    L[16]=L17;    L[17]=L18;    L[18]=L19;    L[19]=L20;
     L[20]=L21;    L[21]=L22;    L[22]=L23;    L[23]=L24;    L[24]=L25;
     
-    MatrixLed_show();
+    return MatrixLed_show();
   }  
   
   function MatrixLed_show() {
@@ -314,17 +314,7 @@
                   + "0f"+MatrixLedbackcolor.replace(/\#/ig, "")+"10"+MatrixLedbackcolor.replace(/\#/ig, "")+"11"+MatrixLedbackcolor.replace(/\#/ig, "")+"12"+MatrixLedbackcolor.replace(/\#/ig, "")+"13"+MatrixLedbackcolor.replace(/\#/ig, "")
                   + "14"+MatrixLedbackcolor.replace(/\#/ig, "")+"15"+MatrixLedbackcolor.replace(/\#/ig, "")+"16"+MatrixLedbackcolor.replace(/\#/ig, "")+"17"+MatrixLedbackcolor.replace(/\#/ig, "")+"18"+MatrixLedbackcolor.replace(/\#/ig, "");           
     
-    if (document.getElementById("fustyles_matrixled"))
-    {
-          document.getElementById("fustyles_matrixled").innerHTML = ledtable;
-    }
-    else
-    {
-        var div = document.createElement('div');
-        div.id = "fustyles_matrixled";   
-        div.innerHTML = ledtable;
-        document.body.appendChild(div);
-    }    
+    return ledtable;
   }
   
   function MatrixLed_conversion(input_char_) {
@@ -435,7 +425,7 @@
         k++;
       }
     }
-    MatrixLed_show();
+    return MatrixLed_show();
   }
   
   function MatrixLed_barchart(value1,value2,value3,value4,value5){
@@ -452,7 +442,7 @@
         k++;
       }
     }
-    MatrixLed_show();
+    return MatrixLed_show();
   }
   
   function Matrixled_clockwise(){
@@ -471,7 +461,7 @@
         n++;
       }
     }
-    MatrixLed_show();
+    return MatrixLed_show();
   }
   
   function Matrixled_counterclockwise(){
@@ -490,7 +480,7 @@
         n++;
       }
     }
-    MatrixLed_show();
+    return MatrixLed_show();
   }
   
   function Matrixled_verticalflip(){
@@ -509,7 +499,7 @@
         n++;
       }
     }
-    MatrixLed_show();
+    return MatrixLed_show();
   }
   
   function Matrixled_horizontalflip(){
@@ -528,7 +518,7 @@
         n++;
       }
     }
-    MatrixLed_show();
+    return MatrixLed_show();
   }
   
   function Matrixled_invert(){
@@ -539,7 +529,7 @@
       else
         L[i]=MatrixLedbackcolor;
     }
-    MatrixLed_show();
+    return MatrixLed_show();
   }
   
   function MatrixLed_getcolor(input_x_,input_y_) {
