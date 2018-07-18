@@ -13,20 +13,6 @@
       </block>
     </value>
   </block>    
-  <block type="matrix_led_width">
-    <value name="value_width_">
-      <block type="math_number">
-        <field name="NUM">250</field>
-      </block>
-    </value>
-  </block>
-  <block type="matrix_led_height">
-    <value name="value_height_">
-      <block type="math_number">
-        <field name="NUM">250</field>
-      </block>
-    </value>
-  </block>  
   <block type="matrix_led_showstate">
     <field name="value_showstate_">1</field>
   </block> 
