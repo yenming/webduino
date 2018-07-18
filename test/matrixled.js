@@ -181,7 +181,7 @@
   function MatrixLed_char(input_char_) {
     if (input_char_.length==1)
     {
-      MatrixLed_matrix(MatrixLed_conversion(input_char_));
+      return MatrixLed_matrix(MatrixLed_conversion(input_char_));
     }
   }  
   
