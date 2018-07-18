@@ -542,8 +542,6 @@
   window.MatrixLed_reverse = MatrixLed_reverse;
   window.MatrixLed_state = MatrixLed_state;
   window.MatrixLed_color = MatrixLed_color;
-  window.MatrixLed_width = MatrixLed_width;
-  window.MatrixLed_height = MatrixLed_height;
   window.MatrixLed_sample = MatrixLed_sample;
   window.MatrixLed_code = MatrixLed_code;
   window.MatrixLed_marquee = MatrixLed_marquee;
