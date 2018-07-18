@@ -139,6 +139,7 @@
     }
     window.clearInterval(marqueetimeid);
     marqueetimeid = window.setInterval("MatrixLed_marquee_play()",MatrixLedmarqueetime);
+    return MatrixLed_matrix('0000000000000000000000000');
   }  
   
   function MatrixLed_marquee_play() {
