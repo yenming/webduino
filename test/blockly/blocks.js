@@ -197,7 +197,7 @@ Blockly.Blocks['matrix_led_matrix_color'] = {
   init: function() {
     this.appendDummyInput()
         .setAlign(Blockly.ALIGN_CENTRE)
-        .appendField(Blockly.Msg.MATRIXLED_MATRIX_SHOW);
+        .appendField(Blockly.Msg.MATRIXLED_MATRIX_COLOR_SHOW);
     this.appendDummyInput()
         .appendField(new Blockly.FieldColour("#000000"), 'L01')
         .appendField(new Blockly.FieldColour("#000000"), 'L06')
