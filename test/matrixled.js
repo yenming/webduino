@@ -110,14 +110,6 @@
     MatrixLedcolor = input_color_;
   }
   
-  function MatrixLed_width(input_width_) {
-    MatrixLedwidth = input_width_;
-  }
-  
-  function MatrixLed_height(input_height_) {
-    MatrixLedheight = input_height_;
-  } 
-  
   function MatrixLed_showstate(input_showstate_) {
     MatrixLedshowstate = input_showstate_;
     return MatrixLed_show();
