@@ -125,12 +125,12 @@
   function MatrixLed_marquee(input_marquee_) {
     if ((input_marquee_.length==25)&&(input_marquee_.search(/[^0-1]/)==-1))
     {
-      return MatrixLed_matrix(input_marquee_);
+      MatrixLed_matrix(input_marquee_);
     }
     else if ((input_marquee_.length%5==0)&&(input_marquee_.length>25)&&(input_marquee_.search(/[^0-1]/)==-1))
       MatrixLedmarqueecode = input_marquee_;  
     else if (input_marquee_.length==1)
-      return MatrixLed_matrix(MatrixLed_conversion(input_marquee_));
+      MatrixLed_matrix(MatrixLed_conversion(input_marquee_));
     else if (input_marquee_.length>1)
     {
       MatrixLedmarqueecode="";
@@ -139,7 +139,6 @@
     }
     window.clearInterval(marqueetimeid);
     marqueetimeid = window.setInterval("MatrixLed_marquee_play()",MatrixLedmarqueetime);
-    return MatrixLed_matrix('0000000000000000000000000');
   }  
   
   function MatrixLed_marquee_play() {
