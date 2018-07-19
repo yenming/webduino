@@ -105,7 +105,7 @@
   var MatrixLedmarqueereverse = 1;
   var MatrixLedshowstate = 1;
   var marqueetimeid;
-  var objMatrixLed;
+  var objMatrixLed = fuMatrixLed;
 
   function MatrixLed_color(input_color_) {
     MatrixLedcolor = input_color_;
