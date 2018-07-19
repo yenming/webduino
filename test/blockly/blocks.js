@@ -73,7 +73,22 @@ Blockly.Blocks['matrix_led_marquee_once'] = {
     this.setTooltip("");
     this.setHelpUrl("");    
   }
-};  
+}; 
+
+Blockly.Blocks['matrix_led_marquee_degree'] = {
+  init: function() {
+    this.appendValueInput("value_marquee_degree_")
+        .appendField(Blockly.Msg.MATRIXLED_MARQUEE_DIRECTION_SHOW)
+        .appendField(new Blockly.FieldDropdown([["left","1"], ["right","2"]]), "value_marquee_direction_")
+        .setCheck("Number")  
+        .appendField(Blockly.Msg.MATRIXLED_MARQUEE_DEGREE_SHOW);      
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(300);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }  
+};
 
 Blockly.Blocks['matrix_led_marquee_stop'] = {
   init: function() {
