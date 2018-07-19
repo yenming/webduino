@@ -195,14 +195,16 @@
       if (MatrixLedmarqueereverse==1)
       {
         MatrixLed_matrix(MatrixLedmarqueecode.substr(0,25));
-        MatrixLedmarqueecode = MatrixLedmarqueecode.substr(5,MatrixLedmarqueecode.length-5)+MatrixLedmarqueecode.substr(0,5);
+        MatrixLedmarqueecode = MatrixLedmarqueecode.substr(5,MatrixLedmarqueecode.length-5);
       }
       else if (MatrixLedmarqueereverse==2)
       {
         MatrixLed_matrix(MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-25,25));
-        MatrixLedmarqueecode = MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-5,5)+MatrixLedmarqueecode.substr(0,MatrixLedmarqueecode.length-5);
+        MatrixLedmarqueecode = MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-5,5);
       }
     }
+    else
+      window.clearInterval(marqueetimeid1);
   }   
   
   function MatrixLed_marquee_time(input_time_) {
