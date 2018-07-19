@@ -30,6 +30,6 @@ Blockly.Msg.MATRIXLED_CLOCKWISE_SHOW = "指示燈 順時鐘旋轉90度";
 Blockly.Msg.MATRIXLED_COUNTERCLOCKWISE_SHOW = "指示燈 逆時鐘旋轉90度";
 Blockly.Msg.MATRIXLED_VERTICALFLIP_SHOW = "指示燈 垂直翻轉";
 Blockly.Msg.MATRIXLED_HORIZONTALFLIP_SHOW = "指示燈 水平翻轉";
-Blockly.Msg.MATRIXLED_INVERT_SHOW = "指示燈 反轉";
+Blockly.Msg.MATRIXLED_INVERT_SHOW = "指示燈 開關反轉";
 Blockly.Msg.MATRIXLED_GETCOLOR_SHOW = "燈光色碼值";
 Blockly.Msg.MATRIXLED_BACKCOLOR_SHOW = "指示燈 背景顏色";
