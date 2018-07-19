@@ -111,7 +111,8 @@
     MatrixLedcolor = input_color_;
   }
   
-  function MatrixLed_showstate(input_showstate_) {
+  function MatrixLed_showstate(obj,input_showstate_) {
+    objMatrixLed=obj;
     MatrixLedshowstate = input_showstate_;
     MatrixLed_show();
   }   
