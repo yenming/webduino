@@ -187,10 +187,10 @@ Blockly.JavaScript['matrix_led_state'] = function(block) {
 };
 
 Blockly.JavaScript['matrix_led_showstate'] = function(block) {
-  Blockly.JavaScript.definitions_['var_MatrixLed_obj'] = 'var myMatrixLed;';
+  Blockly.JavaScript.definitions_['var_MatrixLed_obj'] = 'var fuMatrixLed;';
   
   var value_showstate_ = block.getFieldValue('value_showstate_');
-  var code = 'myMatrixLed = getMatrix(board, 4, 25);\nMatrixLed_showstate(myMatrixLed,'+value_showstate_+');\n';
+  var code = 'fuMatrixLed = getMatrix(board, 4, 25);\nMatrixLed_showstate(fuMatrixLed,'+value_showstate_+');\n';
   return code;
 };
 
