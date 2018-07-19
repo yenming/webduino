@@ -78,9 +78,9 @@ Blockly.Blocks['matrix_led_marquee_once'] = {
 Blockly.Blocks['matrix_led_marquee_degree'] = {
   init: function() {
     this.appendValueInput("value_marquee_degree_")
+        .setCheck("Number")
         .appendField(Blockly.Msg.MATRIXLED_MARQUEE_DIRECTION_SHOW)
         .appendField(new Blockly.FieldDropdown([["left","1"], ["right","2"]]), "value_marquee_direction_")
-        .setCheck("Number")  
         .appendField(Blockly.Msg.MATRIXLED_MARQUEE_DEGREE_SHOW);      
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
