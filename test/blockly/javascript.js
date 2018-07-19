@@ -22,6 +22,13 @@ Blockly.JavaScript['matrix_led_marquee_once'] = function(block) {
   return code;
 };
 
+Blockly.JavaScript['matrix_led_marquee_degree'] = function(block) {
+  var value_marquee_direction_ = block.getFieldValue('value_marquee_direction_');
+  var value_marquee_degree_ = Blockly.JavaScript.valueToCode(block, 'value_marquee_degree_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'MatrixLed_marquee_degree('+ value_marquee_direction_ +','+ value_marquee_degree_ +');\n';
+  return code;
+};
+
 Blockly.JavaScript['matrix_led_marquee_stop'] = function(block) {
   var code = 'MatrixLed_marquee_stop();\n';
   return code;
