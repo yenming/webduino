@@ -1,6 +1,6 @@
-Blockly.Msg.MATRIXLED_MATRIX_SHOW = "指示灯";
+Blockly.Msg.MATRIXLED_MATRIX_SHOW = "指示灯(单色)";
 Blockly.Msg.MATRIXLED_MATRIX_COLOR_SHOW = "指示灯(全彩)";
-Blockly.Msg.MATRIXLED_MATRIXCODE_SHOW = "指示灯 编码";
+Blockly.Msg.MATRIXLED_MATRIXCODE_SHOW = "指示灯(单色) 编码";
 Blockly.Msg.MATRIXLED_CLEAR_SHOW = "指示灯 清除";
 Blockly.Msg.MATRIXLED_ON_SHOW = "亮灯";
 Blockly.Msg.MATRIXLED_COLOR_ON_SHOW = "亮灯";
