@@ -205,6 +205,26 @@
     }
     else
       window.clearInterval(marqueetimeid1);
+  } 
+  
+  function MatrixLed_marquee_degree(direction,degree) {
+    window.clearInterval(marqueetimeid);
+    window.clearInterval(marqueetimeid1);
+    if (MatrixLedmarqueecode.length>25)
+    {
+      if (direction==1)
+      {
+        for (var i=1;i<=degree;i++)
+          MatrixLedmarqueecode = MatrixLedmarqueecode.substr(5,MatrixLedmarqueecode.length-5)+MatrixLedmarqueecode.substr(0,5);
+        MatrixLed_matrix(MatrixLedmarqueecode.substr(0,25));
+      }
+      else if (direction==2)
+      {
+        for (var i=1;i<=degree;i++)
+          MatrixLedmarqueecode = MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-5,5)+MatrixLedmarqueecode.substr(0,MatrixLedmarqueecode.length-5);
+        MatrixLed_matrix(MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-25,25));
+      }
+    }
   }   
   
   function MatrixLed_marquee_time(input_time_) {
@@ -213,6 +233,7 @@
   
   function MatrixLed_marquee_stop() {
     window.clearInterval(marqueetimeid);
+    window.clearInterval(marqueetimeid1);
   } 
   
   function MatrixLed_marquee_resume() {
@@ -595,6 +616,7 @@
   window.MatrixLed_marquee_once = MatrixLed_marquee_once;
   window.MatrixLed_marquee_play = MatrixLed_marquee_play;
   window.MatrixLed_marquee_once_play = MatrixLed_marquee_once_play;
+  window.MatrixLed_marquee_degree = MatrixLed_marquee_degree;
   window.MatrixLed_marquee_stop = MatrixLed_marquee_stop;
   window.MatrixLed_marquee_resume = MatrixLed_marquee_resume;
   window.MatrixLed_marquee_reverse = MatrixLed_marquee_reverse;
