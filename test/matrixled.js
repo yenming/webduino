@@ -592,9 +592,9 @@
   window.MatrixLed_sample = MatrixLed_sample;
   window.MatrixLed_code = MatrixLed_code;
   window.MatrixLed_marquee = MatrixLed_marquee;
-  window.MatrixLed_marquee = MatrixLed_marquee_once;
+  window.MatrixLed_marquee_once = MatrixLed_marquee_once;
   window.MatrixLed_marquee_play = MatrixLed_marquee_play;
-  window.MatrixLed_marquee_play = MatrixLed_marquee_once_play;
+  window.MatrixLed_marquee_once_play = MatrixLed_marquee_once_play;
   window.MatrixLed_marquee_stop = MatrixLed_marquee_stop;
   window.MatrixLed_marquee_resume = MatrixLed_marquee_resume;
   window.MatrixLed_marquee_reverse = MatrixLed_marquee_reverse;
