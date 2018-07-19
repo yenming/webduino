@@ -111,9 +111,10 @@
     MatrixLedcolor = input_color_;
   }
   
-  function MatrixLed_showstate(input_showstate_) {
+  function MatrixLed_showstate(obj,input_showstate_) {
+    objMatrixLed=obj;
     MatrixLedshowstate = input_showstate_;
-    return MatrixLed_show();
+    MatrixLed_show();
   }   
   
   function MatrixLed_indentcode(input_indentcode_) {
@@ -123,8 +124,7 @@
     return indentcode;
   } 
   
-  function MatrixLed_marquee(obj,input_marquee_) {
-    objMatrixLed=obj;
+  function MatrixLed_marquee(input_marquee_) {
     if ((input_marquee_.length==25)&&(input_marquee_.search(/[^0-1]/)==-1))
     {
       MatrixLed_matrix(input_marquee_);
@@ -149,12 +149,12 @@
     {
       if (MatrixLedmarqueereverse==1)
       {
-        objMatrixLed.setColor(MatrixLed_matrix(MatrixLedmarqueecode.substr(0,25)));
+        MatrixLed_matrix(MatrixLedmarqueecode.substr(0,25));
         MatrixLedmarqueecode = MatrixLedmarqueecode.substr(5,MatrixLedmarqueecode.length-5)+MatrixLedmarqueecode.substr(0,5);
       }
       else if (MatrixLedmarqueereverse==2)
       {
-        objMatrixLed.setColor(MatrixLed_matrix(MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-25,25)));
+        MatrixLed_matrix(MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-25,25));
         MatrixLedmarqueecode = MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-5,5)+MatrixLedmarqueecode.substr(0,MatrixLedmarqueecode.length-5);
       }
     }
@@ -183,7 +183,7 @@
   function MatrixLed_char(input_char_) {
     if (input_char_.length==1)
     {
-      return MatrixLed_matrix(MatrixLed_conversion(input_char_));
+      MatrixLed_matrix(MatrixLed_conversion(input_char_));
     }
   }  
   
@@ -201,11 +201,11 @@
   
   function MatrixLed_code(input_code_) {
     if (input_code_.length==25)
-      return MatrixLed_matrix(input_code_);
+      MatrixLed_matrix(input_code_);
   }    
   
   function MatrixLed_sample(input_sample_) {
-    return MatrixLed_matrix(MatrixLed_conversion(input_sample_));
+    MatrixLed_matrix(MatrixLed_conversion(input_sample_));
   }  
   
   function MatrixLed_clear() {
@@ -213,7 +213,7 @@
     {
       L[i]=MatrixLedbackcolor;
     }
-    return MatrixLed_show();
+    MatrixLed_show();
   }
   
   function MatrixLed_on(input_x_,input_y_) {
@@ -227,7 +227,7 @@
           L[i]=MatrixLedbackcolor;
       }
     }
-    return MatrixLed_show();
+    MatrixLed_show();
   }
   
   function MatrixLed_color_on(input_x_,input_y_,input_color_) {
@@ -241,7 +241,7 @@
           L[i]=MatrixLedbackcolor;
       }
     }
-    return MatrixLed_show();
+    MatrixLed_show();
   }  
   
   function MatrixLed_off(input_x_,input_y_) {
@@ -255,7 +255,7 @@
           L[i]=MatrixLedbackcolor;
       }
     }
-    return MatrixLed_show();
+    MatrixLed_show();
   }
   
   function MatrixLed_reverse(input_x_,input_y_) {
@@ -263,7 +263,7 @@
       L[input_x_*5+input_y_]=MatrixLedcolor;
     else
       L[input_x_*5+input_y_]=MatrixLedbackcolor;
-    return MatrixLed_show();
+    MatrixLed_show();
   }
 
   function MatrixLed_state(input_x_,input_y_) {
@@ -281,7 +281,7 @@
       else
         L[i]=MatrixLedbackcolor;
     }
-    return MatrixLed_show();
+    MatrixLed_show();
   }
   
   function MatrixLed_matrix_color(L01,L02,L03,L04,L05,L06,L07,L08,L09,L10,L11,L12,L13,L14,L15,L16,L17,L18,L19,L20,L21,L22,L23,L24,L25) {
@@ -291,7 +291,7 @@
     L[15]=L16;    L[16]=L17;    L[17]=L18;    L[18]=L19;    L[19]=L20;
     L[20]=L21;    L[21]=L22;    L[22]=L23;    L[23]=L24;    L[24]=L25;
     
-    return MatrixLed_show();
+    MatrixLed_show();
   }  
   
   function MatrixLed_show() {
@@ -308,8 +308,9 @@
                   + "0f"+MatrixLedbackcolor.replace(/\#/ig, "")+"10"+MatrixLedbackcolor.replace(/\#/ig, "")+"11"+MatrixLedbackcolor.replace(/\#/ig, "")+"12"+MatrixLedbackcolor.replace(/\#/ig, "")+"13"+MatrixLedbackcolor.replace(/\#/ig, "")
                   + "14"+MatrixLedbackcolor.replace(/\#/ig, "")+"15"+MatrixLedbackcolor.replace(/\#/ig, "")+"16"+MatrixLedbackcolor.replace(/\#/ig, "")+"17"+MatrixLedbackcolor.replace(/\#/ig, "")+"18"+MatrixLedbackcolor.replace(/\#/ig, "");           
     
-    return ledtable;
+    objMatrixLed.setColor(ledtable);
   }
+
   
   function MatrixLed_conversion(input_char_) {
     if (input_char_=="A")      return charA;
@@ -419,7 +420,7 @@
         k++;
       }
     }
-    return MatrixLed_show();
+    MatrixLed_show();
   }
   
   function MatrixLed_barchart(value1,value2,value3,value4,value5){
@@ -436,7 +437,7 @@
         k++;
       }
     }
-    return MatrixLed_show();
+    MatrixLed_show();
   }
   
   function Matrixled_clockwise(){
@@ -455,7 +456,7 @@
         n++;
       }
     }
-    return MatrixLed_show();
+    MatrixLed_show();
   }
   
   function Matrixled_counterclockwise(){
@@ -474,7 +475,7 @@
         n++;
       }
     }
-    return MatrixLed_show();
+    MatrixLed_show();
   }
   
   function Matrixled_verticalflip(){
@@ -493,7 +494,7 @@
         n++;
       }
     }
-    return MatrixLed_show();
+    MatrixLed_show();
   }
   
   function Matrixled_horizontalflip(){
@@ -512,7 +513,7 @@
         n++;
       }
     }
-    return MatrixLed_show();
+    MatrixLed_show();
   }
   
   function Matrixled_invert(){
@@ -523,7 +524,7 @@
       else
         L[i]=MatrixLedbackcolor;
     }
-    return MatrixLed_show();
+    MatrixLed_show();
   }
   
   function MatrixLed_getcolor(input_x_,input_y_) {
