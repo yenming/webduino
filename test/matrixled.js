@@ -307,7 +307,7 @@
                   + "0f"+MatrixLedbackcolor.replace(/\#/ig, "")+"10"+MatrixLedbackcolor.replace(/\#/ig, "")+"11"+MatrixLedbackcolor.replace(/\#/ig, "")+"12"+MatrixLedbackcolor.replace(/\#/ig, "")+"13"+MatrixLedbackcolor.replace(/\#/ig, "")
                   + "14"+MatrixLedbackcolor.replace(/\#/ig, "")+"15"+MatrixLedbackcolor.replace(/\#/ig, "")+"16"+MatrixLedbackcolor.replace(/\#/ig, "")+"17"+MatrixLedbackcolor.replace(/\#/ig, "")+"18"+MatrixLedbackcolor.replace(/\#/ig, "");           
     
-    return ledtable;
+    objMatrixLed.setColor(ledtable);
   }
 
   
