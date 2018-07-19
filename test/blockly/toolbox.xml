@@ -297,5 +297,13 @@
   <block type="matrix_led_marquee_resume">
   </block>
   <block type="matrix_led_marquee_reverse">
+  </block>
+  <block type="matrix_led_marquee_degree">
+    <field name="value_marquee_direction_">1</field>
+    <value name="value_marquee_degree_">
+      <block type="math_number">
+        <field name="NUM">1</field>
+      </block>
+    </value>
   </block>  
  </category>
