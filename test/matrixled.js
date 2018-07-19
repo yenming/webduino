@@ -214,16 +214,15 @@
     {
       if (direction==1)
       {
-        MatrixLed_matrix(MatrixLedmarqueecode.substr(0,25));
         for (var i=1;i<=degree;i++)
           MatrixLedmarqueecode = MatrixLedmarqueecode.substr(5,MatrixLedmarqueecode.length-5)+MatrixLedmarqueecode.substr(0,5);
       }
       else if (direction==2)
       {
-        MatrixLed_matrix(MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-25,25));
         for (var i=1;i<=degree;i++)
           MatrixLedmarqueecode = MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-5,5)+MatrixLedmarqueecode.substr(0,MatrixLedmarqueecode.length-5);
       }
+      MatrixLed_matrix(MatrixLedmarqueecode.substr(0,25));
     }
   }   
   
