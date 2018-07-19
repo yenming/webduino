@@ -375,7 +375,6 @@
     
     objMatrixLed.setColor(ledtable);
   }
-
   
   function MatrixLed_conversion(input_char_) {
     if (input_char_=="A")      return charA;
