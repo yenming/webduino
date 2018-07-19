@@ -105,6 +105,7 @@
   var MatrixLedmarqueereverse = 1;
   var MatrixLedshowstate = 1;
   var marqueetimeid;
+  var objMatrixLed;
 
   function MatrixLed_color(input_color_) {
     MatrixLedcolor = input_color_;
@@ -122,7 +123,8 @@
     return indentcode;
   } 
   
-  function MatrixLed_marquee(input_marquee_) {
+  function MatrixLed_marquee(obj,input_marquee_) {
+    objMatrixLed=obj;
     if ((input_marquee_.length==25)&&(input_marquee_.search(/[^0-1]/)==-1))
     {
       MatrixLed_matrix(input_marquee_);
@@ -147,12 +149,12 @@
     {
       if (MatrixLedmarqueereverse==1)
       {
-        MatrixLed_matrix(MatrixLedmarqueecode.substr(0,25));
+        objMatrixLed.setColor(MatrixLed_matrix(MatrixLedmarqueecode.substr(0,25)));
         MatrixLedmarqueecode = MatrixLedmarqueecode.substr(5,MatrixLedmarqueecode.length-5)+MatrixLedmarqueecode.substr(0,5);
       }
       else if (MatrixLedmarqueereverse==2)
       {
-        MatrixLed_matrix(MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-25,25));
+        objMatrixLed.setColor(MatrixLed_matrix(MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-25,25)));
         MatrixLedmarqueecode = MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-5,5)+MatrixLedmarqueecode.substr(0,MatrixLedmarqueecode.length-5);
       }
     }
