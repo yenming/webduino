@@ -265,5 +265,24 @@
   </block>  
   <block type="matrix_led_invert">
   </block>
-   
+  <block type="matrix_led_marquee_time">
+    <value name="value_marquee_time_">
+      <block type="math_number">
+        <field name="NUM">500</field>
+      </block>
+    </value>
+  </block>   
+  <block type="matrix_led_marquee">
+    <value name="value_marquee_">
+      <block type="text">
+        <field name="TEXT">♥ webduino ♡</field>
+      </block>
+    </value>
+  </block>
+  <block type="matrix_led_marquee_stop">
+  </block>
+  <block type="matrix_led_marquee_resume">
+  </block>
+  <block type="matrix_led_marquee_reverse">
+  </block>  
  </category>
