@@ -139,7 +139,10 @@
     else if ((input_marquee_.length%5==0)&&(input_marquee_.length>25)&&(input_marquee_.search(/[^0-1]/)==-1))
       MatrixLedmarqueecode = input_marquee_;  
     else if (input_marquee_.length==1)
+    {
       MatrixLed_matrix(MatrixLed_conversion(input_marquee_));
+      return;
+    }
     else if (input_marquee_.length>1)
     {
       MatrixLedmarqueecode="";
