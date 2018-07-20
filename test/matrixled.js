@@ -98,8 +98,6 @@
   var L = new Array("","","","","","","","","","","","","","","","","","","","","","","","","");
   var MatrixLedcolor = "#ff0000";
   var MatrixLedbackcolor = "#000000";
-  var MatrixLedwidth = 250;
-  var MatrixLedheight = 250;
   var MatrixLedmarqueecode = "";
   var MatrixLedmarqueetime = 500;
   var MatrixLedmarqueereverse = 1;
@@ -114,7 +112,6 @@
   function MatrixLed_showstate(obj,input_showstate_) {
     objMatrixLed=obj;
     MatrixLedshowstate = input_showstate_;
-    MatrixLed_show();
   }   
   
   function MatrixLed_indentcode(input_indentcode_) {
