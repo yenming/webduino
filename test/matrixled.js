@@ -99,6 +99,7 @@
   var MatrixLedcolor = "#ff0000";
   var MatrixLedbackcolor = "#000000";
   var MatrixLedmarqueecode = "";
+  var MatrixLedmarqueecodeonce = "";
   var MatrixLedmarqueetime = 500;
   var MatrixLedmarqueereverse = 1;
   var MatrixLedshowstate = 1;
@@ -157,6 +158,7 @@
     }
     else if ((input_marquee_.length%5==0)&&(input_marquee_.length>25)&&(input_marquee_.search(/[^0-1]/)==-1))
       MatrixLedmarqueecode = input_marquee_+"0000000000000000000000000";
+      MatrixLedmarqueecodeonce = input_marquee_+"0000000000000000000000000";
     else if (input_marquee_.length==1)
     {
       MatrixLed_matrix(MatrixLed_conversion(input_marquee_));
@@ -168,6 +170,7 @@
       for (var i=0;i<input_marquee_.length;i++)
         MatrixLedmarqueecode = MatrixLedmarqueecode+MatrixLed_conversion(input_marquee_.substr(i,1)) + "00000";
       MatrixLedmarqueecode = MatrixLedmarqueecode+"0000000000000000000000000";
+      MatrixLedmarqueecodeonce = MatrixLedmarqueecode+"0000000000000000000000000";
     }
     marqueetimeid1 = window.setInterval("MatrixLed_marquee_once_play()",MatrixLedmarqueetime);
   }    
@@ -194,11 +197,13 @@
       if (MatrixLedmarqueereverse==1)
       {
         MatrixLed_matrix(MatrixLedmarqueecode.substr(0,25));
+        MatrixLedmarqueecodeonce = MatrixLedmarqueecode.substr(5,MatrixLedmarqueecode.length-5)+MatrixLedmarqueecode.substr(0,5);
         MatrixLedmarqueecode = MatrixLedmarqueecode.substr(5,MatrixLedmarqueecode.length-5);
       }
       else if (MatrixLedmarqueereverse==2)
       {
         MatrixLed_matrix(MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-25,25));
+        MatrixLedmarqueecodeonce = MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-5,5)+MatrixLedmarqueecode.substr(0,MatrixLedmarqueecode.length-5);
         MatrixLedmarqueecode = MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-5,5);
       }
     }
@@ -209,6 +214,7 @@
   function MatrixLed_marquee_degree(direction,degree) {
     window.clearInterval(marqueetimeid);
     window.clearInterval(marqueetimeid1);
+    if (MatrixLedmarqueecode.length<MatrixLedmarqueecodeonce.length) MatrixLedmarqueecode=MatrixLedmarqueecodeonce;
     if (MatrixLedmarqueecode.length>25)
     {
       if (direction==1)
