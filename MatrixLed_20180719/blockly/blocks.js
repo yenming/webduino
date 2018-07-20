@@ -178,6 +178,32 @@ Blockly.Blocks['matrix_led_color'] = {
   }
 };  
 
+Blockly.Blocks['matrix_led_width'] = {
+  init: function() {
+    this.appendValueInput("value_width_")
+        .setCheck("Number")  
+        .appendField(Blockly.Msg.MATRIXLED_WIDTH_SHOW);    
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(300);    
+    this.setTooltip("");
+    this.setHelpUrl("");    
+  }
+};  
+
+Blockly.Blocks['matrix_led_height'] = {
+  init: function() {
+    this.appendValueInput("value_height_")
+        .setCheck("Number")  
+        .appendField(Blockly.Msg.MATRIXLED_HEIGHT_SHOW);    
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(300);    
+    this.setTooltip("");
+    this.setHelpUrl("");    
+  }
+};   
+
 Blockly.Blocks['matrix_led_matrix'] = {
   init: function() {
     this.appendDummyInput()
