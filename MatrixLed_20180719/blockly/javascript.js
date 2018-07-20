@@ -201,7 +201,7 @@ Blockly.JavaScript['matrix_led_state'] = function(block) {
 
 Blockly.JavaScript['matrix_led_showstate'] = function(block) {
   var value_showstate_ = block.getFieldValue('value_showstate_');
-  var code = 'MatrixLed_showstate(fuMatrixLed,'+value_showstate_+');\n';
+  var code = 'MatrixLed_showstate('+value_showstate_+');\n';
   return code;
 };
 
