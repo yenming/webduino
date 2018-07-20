@@ -106,7 +106,6 @@
   var MatrixLedmarqueereverse = 1;
   var MatrixLedshowstate = 1;
   var marqueetimeid,marqueetimeid1;
-  var objMatrixLed;
 
   function MatrixLed_color(input_color_) {
     MatrixLedcolor = input_color_;
@@ -120,8 +119,7 @@
     MatrixLedheight = input_height_;
   }   
   
-  function MatrixLed_showstate(obj,input_showstate_) {
-    objMatrixLed=obj;
+  function MatrixLed_showstate(input_showstate_) {
     MatrixLedshowstate = input_showstate_;
   }   
   
