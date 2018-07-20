@@ -359,19 +359,33 @@
   
   function MatrixLed_show() {
     if (MatrixLedshowstate==1)
-      var ledtable ="00"+L[0].replace(/\#/ig, "")+"01"+L[5].replace(/\#/ig, "")+"02"+L[10].replace(/\#/ig, "")+"03"+L[15].replace(/\#/ig, "")+"04"+L[20].replace(/\#/ig, "")
-                  + "05"+L[1].replace(/\#/ig, "")+"06"+L[6].replace(/\#/ig, "")+"07"+L[11].replace(/\#/ig, "")+"08"+L[16].replace(/\#/ig, "")+"09"+L[21].replace(/\#/ig, "")
-                  + "0a"+L[2].replace(/\#/ig, "")+"0b"+L[7].replace(/\#/ig, "")+"0c"+L[12].replace(/\#/ig, "")+"0d"+L[17].replace(/\#/ig, "")+"0e"+L[22].replace(/\#/ig, "")
-                  + "0f"+L[3].replace(/\#/ig, "")+"10"+L[8].replace(/\#/ig, "")+"11"+L[13].replace(/\#/ig, "")+"12"+L[18].replace(/\#/ig, "")+"13"+L[23].replace(/\#/ig, "")
-                  + "14"+L[4].replace(/\#/ig, "")+"15"+L[9].replace(/\#/ig, "")+"16"+L[14].replace(/\#/ig, "")+"17"+L[19].replace(/\#/ig, "")+"18"+L[24].replace(/\#/ig, "");
+      var ledtable ="<table style='width:"+MatrixLedwidth+"px;height:"+MatrixLedheight+"px;border:white;'>"
+                  + "<tr><td bgcolor='"+L[0]+"'></td><td bgcolor='"+L[5]+"'></td><td bgcolor='"+L[10]+"'></td><td bgcolor='"+L[15]+"'></td><td bgcolor='"+L[20]+"'></td></tr>"
+                  + "<tr><td bgcolor='"+L[1]+"'></td><td bgcolor='"+L[6]+"'></td><td bgcolor='"+L[11]+"'></td><td bgcolor='"+L[16]+"'></td><td bgcolor='"+L[21]+"'></td></tr>"
+                  + "<tr><td bgcolor='"+L[2]+"'></td><td bgcolor='"+L[7]+"'></td><td bgcolor='"+L[12]+"'></td><td bgcolor='"+L[17]+"'></td><td bgcolor='"+L[22]+"'></td></tr>"
+                  + "<tr><td bgcolor='"+L[3]+"'></td><td bgcolor='"+L[8]+"'></td><td bgcolor='"+L[13]+"'></td><td bgcolor='"+L[18]+"'></td><td bgcolor='"+L[23]+"'></td></tr>"
+                  + "<tr><td bgcolor='"+L[4]+"'></td><td bgcolor='"+L[9]+"'></td><td bgcolor='"+L[14]+"'></td><td bgcolor='"+L[19]+"'></td><td bgcolor='"+L[24]+"'></td></tr>"
+                  + "</table>";
     else
-      var ledtable ="00"+MatrixLedbackcolor.replace(/\#/ig, "")+"01"+MatrixLedbackcolor.replace(/\#/ig, "")+"02"+MatrixLedbackcolor.replace(/\#/ig, "")+"03"+MatrixLedbackcolor.replace(/\#/ig, "")+"04"+MatrixLedbackcolor.replace(/\#/ig, "")
-                  + "05"+MatrixLedbackcolor.replace(/\#/ig, "")+"06"+MatrixLedbackcolor.replace(/\#/ig, "")+"07"+MatrixLedbackcolor.replace(/\#/ig, "")+"08"+MatrixLedbackcolor.replace(/\#/ig, "")+"09"+MatrixLedbackcolor.replace(/\#/ig, "")
-                  + "0a"+MatrixLedbackcolor.replace(/\#/ig, "")+"0b"+MatrixLedbackcolor.replace(/\#/ig, "")+"0c"+MatrixLedbackcolor.replace(/\#/ig, "")+"0d"+MatrixLedbackcolor.replace(/\#/ig, "")+"0e"+MatrixLedbackcolor.replace(/\#/ig, "")
-                  + "0f"+MatrixLedbackcolor.replace(/\#/ig, "")+"10"+MatrixLedbackcolor.replace(/\#/ig, "")+"11"+MatrixLedbackcolor.replace(/\#/ig, "")+"12"+MatrixLedbackcolor.replace(/\#/ig, "")+"13"+MatrixLedbackcolor.replace(/\#/ig, "")
-                  + "14"+MatrixLedbackcolor.replace(/\#/ig, "")+"15"+MatrixLedbackcolor.replace(/\#/ig, "")+"16"+MatrixLedbackcolor.replace(/\#/ig, "")+"17"+MatrixLedbackcolor.replace(/\#/ig, "")+"18"+MatrixLedbackcolor.replace(/\#/ig, "");           
+      var ledtable ="<table style='width:"+MatrixLedwidth+"px;height:"+MatrixLedheight+"px;border:white;'>"
+                  + "<tr><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td></tr>"
+                  + "<tr><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td></tr>"
+                  + "<tr><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td></tr>"
+                  + "<tr><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td></tr>"
+                  + "<tr><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td></tr>"
+                  + "</table>";
     
-    objMatrixLed.setColor(ledtable);
+    if (document.getElementById("fustyles_matrixled"))
+    {
+          document.getElementById("fustyles_matrixled").innerHTML = ledtable;
+    }
+    else
+    {
+        var div = document.createElement('div');
+        div.id = "fustyles_matrixled";   
+        div.innerHTML = ledtable;
+        document.body.appendChild(div);
+    }    
   }
   
   function MatrixLed_conversion(input_char_) {
