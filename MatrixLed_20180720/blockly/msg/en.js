@@ -1,1 +1,1 @@
-MSG.catMatrixLed = "FuMatrixLed";
+MSG.catMatrixLed = "Matrix Led";
