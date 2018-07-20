@@ -114,7 +114,7 @@
   function MatrixLed_showstate(obj,input_showstate_) {
     objMatrixLed=obj;
     MatrixLedshowstate = input_showstate_;
-    MatrixLed_show();
+    //MatrixLed_show();
   }   
   
   function MatrixLed_indentcode(input_indentcode_) {
