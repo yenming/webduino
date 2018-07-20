@@ -130,6 +130,7 @@
   } 
   
   function MatrixLed_marquee(input_marquee_) {
+    input_marquee_=input_marquee_.toString();
     window.clearInterval(marqueetimeid);
     window.clearInterval(marqueetimeid1);
     if ((input_marquee_.length==25)&&(input_marquee_.search(/[^0-1]/)==-1))
@@ -154,6 +155,7 @@
   }  
   
   function MatrixLed_marquee_once(input_marquee_) {
+    input_marquee_=input_marquee_.toString();
     window.clearInterval(marqueetimeid);
     window.clearInterval(marqueetimeid1);
     if ((input_marquee_.length==25)&&(input_marquee_.search(/[^0-1]/)==-1))
@@ -253,6 +255,7 @@
   }   
   
   function MatrixLed_char(input_char_) {
+    input_char_=input_char_.toString();
     if (input_char_.length==1)
     {
       MatrixLed_matrix(MatrixLed_conversion(input_char_));
@@ -260,6 +263,7 @@
   }  
   
   function MatrixLed_texttocode(input_text_) {
+    input_text_=input_text_.toString();
     if (input_text_.length>0)
     {
       var textcode="";
@@ -272,6 +276,7 @@
   }  
   
   function MatrixLed_code(input_code_) {
+    input_code_=input_code_.toString();
     if (input_code_.length==25)
       MatrixLed_matrix(input_code_);
   }    
@@ -346,6 +351,7 @@
   }
   
   function MatrixLed_matrix(input_value_) {
+    input_value_=input_value_.toString();
     for (var i=0;i<25;i++)
     {
       if (input_value_.substr(i,1)=="1")
