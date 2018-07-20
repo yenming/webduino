@@ -1,1 +1,1 @@
-MSG.catMatrixLed = "Fustyles Matrix Led";
+MSG.catMatrixLed = "FuMatrixLed";
