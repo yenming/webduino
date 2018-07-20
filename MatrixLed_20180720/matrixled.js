@@ -97,7 +97,7 @@
   
   var L = new Array("","","","","","","","","","","","","","","","","","","","","","","","","");
   var MatrixLedcolor = "#ff0000";
-  var MatrixLedbackcolor = "#000000";
+  var MatrixLedbackcolor = "#ffffff";
   var MatrixLedwidth = 250;
   var MatrixLedheight = 250;
   var MatrixLedmarqueecode = "";
