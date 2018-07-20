@@ -110,6 +110,14 @@
     MatrixLedcolor = input_color_;
   }
   
+  function MatrixLed_width(input_width_) {
+    MatrixLedwidth = input_width_;
+  }
+  
+  function MatrixLed_height(input_height_) {
+    MatrixLedheight = input_height_;
+  }   
+  
   function MatrixLed_showstate(input_showstate_) {
     MatrixLedshowstate = input_showstate_;
   }   
@@ -619,6 +627,8 @@
   window.MatrixLed_reverse = MatrixLed_reverse;
   window.MatrixLed_state = MatrixLed_state;
   window.MatrixLed_color = MatrixLed_color;
+  window.MatrixLed_width = MatrixLed_width;
+  window.MatrixLed_height = MatrixLed_height;  
   window.MatrixLed_sample = MatrixLed_sample;
   window.MatrixLed_code = MatrixLed_code;
   window.MatrixLed_marquee = MatrixLed_marquee;
