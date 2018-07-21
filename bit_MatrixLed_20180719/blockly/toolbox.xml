@@ -214,6 +214,51 @@
     <value name="value_indentcode_">
     </value>
   </block> 
+  <block type="matrix_led_clockwise">
+  </block>
+  <block type="matrix_led_counterclockwise">
+  </block>  
+  <block type="matrix_led_verticalflip">
+  </block>  
+  <block type="matrix_led_horizontalflip">
+  </block>  
+  <block type="matrix_led_invert">
+  </block>
+  <block type="matrix_led_marquee_time">
+    <value name="value_marquee_time_">
+      <block type="math_number">
+        <field name="NUM">500</field>
+      </block>
+    </value>
+  </block>   
+  <block type="matrix_led_marquee">
+    <value name="value_marquee_">
+      <block type="text">
+        <field name="TEXT">♥ webduino ♡</field>
+      </block>
+    </value>
+  </block>
+  <block type="matrix_led_marquee_once">
+    <value name="value_marquee_">
+      <block type="text">
+        <field name="TEXT">♥ webduino ♡</field>
+      </block>
+    </value>
+  </block>  
+  <block type="matrix_led_marquee_stop">
+  </block>
+  <block type="matrix_led_marquee_resume">
+  </block>
+  <block type="matrix_led_marquee_reverse">
+  </block>
+  <block type="matrix_led_marquee_degree">
+    <field name="value_marquee_direction_">1</field>
+    <value name="value_marquee_degree_">
+      <block type="math_number">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+  </block>  
   <block type="matrix_led_linechart">
     <value name="value_value1">
       <block type="math_number">
@@ -267,50 +312,5 @@
         <field name="NUM">0</field>
       </block>
     </value>    
-  </block> 
-  <block type="matrix_led_clockwise">
-  </block>
-  <block type="matrix_led_counterclockwise">
-  </block>  
-  <block type="matrix_led_verticalflip">
-  </block>  
-  <block type="matrix_led_horizontalflip">
-  </block>  
-  <block type="matrix_led_invert">
-  </block>
-  <block type="matrix_led_marquee_time">
-    <value name="value_marquee_time_">
-      <block type="math_number">
-        <field name="NUM">500</field>
-      </block>
-    </value>
   </block>   
-  <block type="matrix_led_marquee">
-    <value name="value_marquee_">
-      <block type="text">
-        <field name="TEXT">♥ webduino ♡</field>
-      </block>
-    </value>
-  </block>
-  <block type="matrix_led_marquee_once">
-    <value name="value_marquee_">
-      <block type="text">
-        <field name="TEXT">♥ webduino ♡</field>
-      </block>
-    </value>
-  </block>  
-  <block type="matrix_led_marquee_stop">
-  </block>
-  <block type="matrix_led_marquee_resume">
-  </block>
-  <block type="matrix_led_marquee_reverse">
-  </block>
-  <block type="matrix_led_marquee_degree">
-    <field name="value_marquee_direction_">1</field>
-    <value name="value_marquee_degree_">
-      <block type="math_number">
-        <field name="NUM">1</field>
-      </block>
-    </value>
-  </block>  
  </category>
