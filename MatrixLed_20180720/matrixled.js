@@ -132,6 +132,7 @@
   
   function MatrixLed_marquee(input_marquee_) {
     input_marquee_=input_marquee_.toString();
+    MatrixLedmarqueecodeonce = "";
     window.clearInterval(marqueetimeid);
     window.clearInterval(marqueetimeid1);
     if ((input_marquee_.length==25)&&(input_marquee_.search(/[^0-1]/)==-1))
