@@ -214,16 +214,6 @@
     <value name="value_indentcode_">
     </value>
   </block> 
-  <block type="matrix_led_clockwise">
-  </block>
-  <block type="matrix_led_counterclockwise">
-  </block>  
-  <block type="matrix_led_verticalflip">
-  </block>  
-  <block type="matrix_led_horizontalflip">
-  </block>  
-  <block type="matrix_led_invert">
-  </block>
   <block type="matrix_led_marquee_time">
     <value name="value_marquee_time_">
       <block type="math_number">
@@ -258,6 +248,16 @@
         <field name="NUM">1</field>
       </block>
     </value>
+  </block>  
+  <block type="matrix_led_clockwise">
+  </block>
+  <block type="matrix_led_counterclockwise">
+  </block>  
+  <block type="matrix_led_verticalflip">
+  </block>  
+  <block type="matrix_led_horizontalflip">
+  </block>  
+  <block type="matrix_led_invert">
   </block>  
   <block type="matrix_led_linechart">
     <value name="value_value1">
