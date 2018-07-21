@@ -126,6 +126,23 @@
     <field name="L15">FALSE</field>
     <field name="L20">FALSE</field>
     <field name="L25">FALSE</field>
+  </block>   
+  <block type="matrix_led_sample">
+    <field name="value_sample_">♥</field>
+  </block>  
+  <block type="matrix_led_char">
+    <value name="value_char_">
+      <block type="text">
+        <field name="TEXT">♥</field>
+      </block>
+    </value>
+  </block>    
+  <block type="matrix_led_code">
+    <value name="value_code_">
+      <block type="text">
+        <field name="TEXT">0110011110011111111001100</field>
+      </block>
+    </value>
   </block>    
   <block type="matrix_led_on">
     <value name="value_x_on_">
@@ -188,23 +205,6 @@
     </value>
   </block>   
   <block type="matrix_led_clear">
-  </block>      
-  <block type="matrix_led_sample">
-    <field name="value_sample_">♥</field>
-  </block>  
-  <block type="matrix_led_char">
-    <value name="value_char_">
-      <block type="text">
-        <field name="TEXT">♥</field>
-      </block>
-    </value>
-  </block>    
-  <block type="matrix_led_code">
-    <value name="value_code_">
-      <block type="text">
-        <field name="TEXT">0110011110011111111001100</field>
-      </block>
-    </value>
   </block>  
   <block type="matrix_led_texttocode">
     <value name="value_text_">
