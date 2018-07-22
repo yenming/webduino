@@ -100,10 +100,12 @@
   var MatrixLedbackcolor = "#000000";
   var MatrixLedmarqueecode = "";
   var MatrixLedmarqueecodeonce = "";
+  var MatrixLedmarqueecolorcode = "";
+  var MatrixLedmarqueecolorcodeonce = "";  
   var MatrixLedmarqueetime = 500;
   var MatrixLedmarqueereverse = 1;
   var MatrixLedshowstate = 1;
-  var marqueetimeid,marqueetimeid1;
+  var marqueetimeid,marqueetimeid1,marqueetimeidcolor,marqueetimeidcolor1;
   var objMatrixLed;
 
   function MatrixLed_color(input_color_) {
@@ -127,6 +129,7 @@
     MatrixLedmarqueecodeonce = "";
     window.clearInterval(marqueetimeid);
     window.clearInterval(marqueetimeid1);
+    window.clearInterval(marqueetimeidcolor);
     if ((input_marquee_.length==25)&&(input_marquee_.search(/[^0-1]/)==-1))
     {
       MatrixLed_matrix(input_marquee_);
@@ -152,6 +155,7 @@
     input_marquee_=input_marquee_.toString();
     window.clearInterval(marqueetimeid);
     window.clearInterval(marqueetimeid1);
+    window.clearInterval(marqueetimeidcolor);
     if ((input_marquee_.length==25)&&(input_marquee_.search(/[^0-1]/)==-1))
     {
       MatrixLed_matrix(input_marquee_);
@@ -192,6 +196,8 @@
         MatrixLedmarqueecode = MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-5,5)+MatrixLedmarqueecode.substr(0,MatrixLedmarqueecode.length-5);
       }
     }
+    else
+      window.clearInterval(marqueetimeid);
   } 
   
   function MatrixLed_marquee_once_play() {
@@ -360,6 +366,13 @@
       else
         L[i]=MatrixLedbackcolor;
     }
+    MatrixLed_show();
+  }
+  
+  function MatrixLed_matrix_codetocolor(code) {
+    for (var i=0;i<25;i++)
+      L[i]=color[i];
+    
     MatrixLed_show();
   }
   
@@ -608,7 +621,79 @@
   
   function MatrixLed_backcolor(input_color_) {
     MatrixLedbackcolor=input_color_;
-  }     
+  }  
+  
+  function MatrixLed_marquee_color(input_marquee_) {
+    input_marquee_=input_marquee_.toString();
+    MatrixLedmarqueecolorcodeonce = "";
+    window.clearInterval(marqueetimeid);
+    window.clearInterval(marqueetimeid1);
+    window.clearInterval(marqueetimeidcolor);
+    if (input_marquee_.length==150)
+    {
+      MatrixLed_matrix_color(MatrixLed_matrix_codetocolor(input_marquee_));
+      return;
+    }
+    else if ((input_marquee_.length%30==0)&&(input_marquee_.length>150))
+      MatrixLedmarqueecolorcode = input_marquee_;
+    marqueetimeidcolor = window.setInterval("MatrixLed_marquee_color_play()",MatrixLedmarqueetime);
+  }  
+  
+  function MatrixLed_marquee_color_once(input_marquee_) {
+    input_marquee_=input_marquee_.toString();
+    window.clearInterval(marqueetimeid);
+    window.clearInterval(marqueetimeid1);
+    window.clearInterval(marqueetimeidcolor);
+    if (input_marquee_.length==150)
+    {
+      MatrixLed_matrix_color(MatrixLed_matrix_codetocolor(input_marquee_));
+      return;
+    }
+    else if ((input_marquee_.length%30==0)&&(input_marquee_.length>150))
+    {
+      MatrixLedmarqueecolorcode = input_marquee_+"000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+      MatrixLedmarqueecolorcodeonce = input_marquee_+"000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    }
+    marqueetimeidcolor = window.setInterval("MatrixLed_marquee_color_once_play()",MatrixLedmarqueetime);
+  }    
+  
+  function MatrixLed_marquee_color_play() {
+    if (MatrixLedmarqueecolorcode.length>150)
+    {
+      if (MatrixLedmarqueereverse==1)
+      {
+        MatrixLed_matrix_color(MatrixLed_matrix_codetocolor(MatrixLedmarqueecolorcode.substr(0,150)));
+        MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(30,MatrixLedmarqueecolorcode.length-30)+MatrixLedmarqueecolorcode.substr(0,30);
+      }
+      else if (MatrixLedmarqueereverse==2)
+      {
+        MatrixLed_matrix_color(MatrixLed_matrix_codetocolor(MatrixLedmarqueecolorcode.substr(MatrixLedmarqueecolorcode.length-150,150)));
+        MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(MatrixLedmarqueecolorcode.length-30,30)+MatrixLedmarqueecolorcode.substr(0,MatrixLedmarqueecolorcode.length-30);
+      }
+    }
+    else
+      window.clearInterval(marqueetimeidcolor);
+  } 
+  
+  function MatrixLed_marquee_color_once_play() {
+    if (MatrixLedmarqueecolorcode.length>150)
+    {
+      if (MatrixLedmarqueereverse==1)
+      {
+        MatrixLed_matrix_color(MatrixLed_matrix_codetocolor(MatrixLedmarqueecolorcode.substr(0,150)));
+        MatrixLedmarqueecolorcodeonce = MatrixLedmarqueecolorcodeonce.substr(30,MatrixLedmarqueecolorcodeonce.length-30)+MatrixLedmarqueecolorcodeonce.substr(0,30);
+        MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(30,MatrixLedmarqueecolorcode.length-30);
+      }
+      else if (MatrixLedmarqueereverse==2)
+      {
+        MatrixLed_matrix_color(MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-150,150));
+        MatrixLedmarqueecolorcodeonce = MatrixLedmarqueecolorcodeonce.substr(MatrixLedmarqueecolorcodeonce.length-30,30)+MatrixLedmarqueecolorcodeonce.substr(0,MatrixLedmarqueecolorcodeonce.length-30);
+        MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(MatrixLedmarqueecolorcode.length-30,30);
+      }
+    }
+    else
+      window.clearInterval(marqueetimeidcolor1);
+  } 
   
   window.MatrixLed_clear = MatrixLed_clear;
   window.MatrixLed_matrix = MatrixLed_matrix;
@@ -626,6 +711,11 @@
   window.MatrixLed_marquee_once = MatrixLed_marquee_once;
   window.MatrixLed_marquee_play = MatrixLed_marquee_play;
   window.MatrixLed_marquee_once_play = MatrixLed_marquee_once_play;
+  window.MatrixLed_marquee_color = MatrixLed_marquee;
+  window.MatrixLed_marquee_color_once = MatrixLed_marquee_once;
+  window.MatrixLed_marquee_color_play = MatrixLed_marquee_play;
+  window.MatrixLed_marquee_color_once_play = MatrixLed_marquee_once_play; 
+  window.MatrixLed_matrix_codetocolor = MatrixLed_matrix_codetocolor;
   window.MatrixLed_marquee_degree = MatrixLed_marquee_degree;
   window.MatrixLed_marquee_stop = MatrixLed_marquee_stop;
   window.MatrixLed_marquee_resume = MatrixLed_marquee_resume;
