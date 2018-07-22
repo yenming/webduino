@@ -13,6 +13,7 @@ Blockly.Msg.MATRIXLED_CODE_SHOW = "Show Sample By Code";
 Blockly.Msg.MATRIXLED_MARQUEE_SHOW = "Show Marguee(CYCLE)";
 Blockly.Msg.MATRIXLED_MARQUEE_ONCE_SHOW = "Show Marguee(ONCE)";
 Blockly.Msg.MATRIXLED_MARQUEE_DIRECTION_SHOW = "Marguee Direction Of Movement";
+Blockly.Msg.MATRIXLED_MARQUEE_DIRECTION_COLOR_SHOW = "Marguee(COLOR) Direction Of Movement";
 Blockly.Msg.MATRIXLED_MARQUEE_DEGREE_SHOW = "  Degree";
 Blockly.Msg.MATRIXLED_MARQUEE_STOP_SHOW = "Stop Marguee";
 Blockly.Msg.MATRIXLED_MARQUEE_RESUME_SHOW = "Resume Marguee(CYCLE)";
