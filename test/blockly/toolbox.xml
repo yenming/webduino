@@ -42,6 +42,33 @@
     <field name="L20">#000000</field>
     <field name="L25">#000000</field>
   </block>   
+  <block type="matrix_led_matrixcode_color">
+    <field name="L01">#000000</field>
+    <field name="L06">#000000</field>
+    <field name="L11">#000000</field>
+    <field name="L16">#000000</field>
+    <field name="L21">#000000</field>
+    <field name="L02">#000000</field>
+    <field name="L07">#000000</field>
+    <field name="L12">#000000</field>
+    <field name="L17">#000000</field>
+    <field name="L22">#000000</field>
+    <field name="L03">#000000</field>
+    <field name="L08">#000000</field>
+    <field name="L13">#000000</field>
+    <field name="L18">#000000</field>
+    <field name="L23">#000000</field>
+    <field name="L04">#000000</field>
+    <field name="L09">#000000</field>
+    <field name="L14">#000000</field>
+    <field name="L19">#000000</field>
+    <field name="L24">#000000</field>
+    <field name="L05">#000000</field>
+    <field name="L10">#000000</field>
+    <field name="L15">#000000</field>
+    <field name="L20">#000000</field>
+    <field name="L25">#000000</field>
+  </block>   
   <block type="matrix_led_color_on">
     <value name="value_x_on_">
       <block type="math_number">
@@ -251,6 +278,14 @@
       </block>
     </value>
   </block>  
+  <block type="matrix_led_marquee_color">
+    <value name="value_marquee_">
+    </value>
+  </block>
+  <block type="matrix_led_marquee_color_once">
+    <value name="value_marquee_">
+    </value>
+  </block>    
   <block type="matrix_led_marquee_stop">
   </block>
   <block type="matrix_led_marquee_resume">
