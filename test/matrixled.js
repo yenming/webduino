@@ -130,6 +130,7 @@
     window.clearInterval(marqueetimeid);
     window.clearInterval(marqueetimeid1);
     window.clearInterval(marqueetimeidcolor);
+    window.clearInterval(marqueetimeidcolor1);
     if ((input_marquee_.length==25)&&(input_marquee_.search(/[^0-1]/)==-1))
     {
       MatrixLed_matrix(input_marquee_);
@@ -156,6 +157,7 @@
     window.clearInterval(marqueetimeid);
     window.clearInterval(marqueetimeid1);
     window.clearInterval(marqueetimeidcolor);
+    window.clearInterval(marqueetimeidcolor1);
     if ((input_marquee_.length==25)&&(input_marquee_.search(/[^0-1]/)==-1))
     {
       MatrixLed_matrix(input_marquee_);
@@ -629,6 +631,7 @@
     window.clearInterval(marqueetimeid);
     window.clearInterval(marqueetimeid1);
     window.clearInterval(marqueetimeidcolor);
+    window.clearInterval(marqueetimeidcolor1);
     if (input_marquee_.length==150)
     {
       MatrixLed_matrix_color(MatrixLed_matrix_codetocolor(input_marquee_));
@@ -644,6 +647,7 @@
     window.clearInterval(marqueetimeid);
     window.clearInterval(marqueetimeid1);
     window.clearInterval(marqueetimeidcolor);
+    window.clearInterval(marqueetimeidcolor1);
     if (input_marquee_.length==150)
     {
       MatrixLed_matrix_color(MatrixLed_matrix_codetocolor(input_marquee_));
@@ -654,7 +658,7 @@
       MatrixLedmarqueecolorcode = input_marquee_+"000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
       MatrixLedmarqueecolorcodeonce = input_marquee_+"000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
     }
-    marqueetimeidcolor = window.setInterval("MatrixLed_marquee_color_once_play()",MatrixLedmarqueetime);
+    marqueetimeidcolor1 = window.setInterval("MatrixLed_marquee_color_once_play()",MatrixLedmarqueetime);
   }    
   
   function MatrixLed_marquee_color_play() {
