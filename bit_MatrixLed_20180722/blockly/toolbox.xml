@@ -118,6 +118,14 @@
         <field name="NUM">500</field>
       </block>
     </value>
+  </block> 
+  <block type="matrix_led_clockwise">
+  </block>
+  <block type="matrix_led_counterclockwise">
+  </block>  
+  <block type="matrix_led_verticalflip">
+  </block>  
+  <block type="matrix_led_horizontalflip">
   </block>    
   <block type="matrix_led_marquee_color">
     <value name="value_marquee_">
@@ -307,14 +315,6 @@
         <field name="NUM">1</field>
       </block>
     </value>
-  </block>  
-  <block type="matrix_led_clockwise">
-  </block>
-  <block type="matrix_led_counterclockwise">
-  </block>  
-  <block type="matrix_led_verticalflip">
-  </block>  
-  <block type="matrix_led_horizontalflip">
   </block>  
   <block type="matrix_led_invert">
   </block>  
