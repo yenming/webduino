@@ -259,6 +259,8 @@
   } 
   
   function MatrixLed_marquee_reverse() {
+    if (MatrixLedmarqueecode.length<MatrixLedmarqueecodeonce.length) MatrixLedmarqueecode=MatrixLedmarqueecodeonce;
+    if (MatrixLedmarqueecolorcode.length<MatrixLedmarqueecolorcodeonce.length) MatrixLedmarqueecolorcode=MatrixLedmarqueecolorcodeonce;
     if (MatrixLedmarqueereverse==1)
       MatrixLedmarqueereverse=2;
     else if (MatrixLedmarqueereverse==2)
