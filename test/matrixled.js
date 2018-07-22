@@ -249,6 +249,8 @@
   function MatrixLed_marquee_stop() {
     window.clearInterval(marqueetimeid);
     window.clearInterval(marqueetimeid1);
+    window.clearInterval(marqueetimeidcolor);
+    window.clearInterval(marqueetimeidcolor1);    
   } 
   
   function MatrixLed_marquee_resume() {
