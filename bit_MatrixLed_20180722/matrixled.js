@@ -211,7 +211,7 @@
       {
         MatrixLed_matrix(MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-25,25));
         MatrixLedmarqueecodeonce = MatrixLedmarqueecodeonce.substr(MatrixLedmarqueecodeonce.length-5,5)+MatrixLedmarqueecodeonce.substr(0,MatrixLedmarqueecodeonce.length-5);
-        MatrixLedmarqueecode = MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-5,5);
+        MatrixLedmarqueecode = MatrixLedmarqueecode.substr(0,MatrixLedmarqueecode.length-5);
       }
     }
     else
@@ -695,7 +695,7 @@
       {
         MatrixLed_matrix_codetocolor(MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-150,150));
         MatrixLedmarqueecolorcodeonce = MatrixLedmarqueecolorcodeonce.substr(MatrixLedmarqueecolorcodeonce.length-30,30)+MatrixLedmarqueecolorcodeonce.substr(0,MatrixLedmarqueecolorcodeonce.length-30);
-        MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(MatrixLedmarqueecolorcode.length-30,30);
+        MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(0,MatrixLedmarqueecolorcode.length-30);
       }
     }
     else
