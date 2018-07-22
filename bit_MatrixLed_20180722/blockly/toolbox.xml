@@ -91,7 +91,13 @@
         <field name="NUM">1</field>
       </block>
     </value>
-  </block>    
+  </block> 
+  <block type="matrix_led_marquee_stop">
+  </block>
+  <block type="matrix_led_marquee_resume">
+  </block>
+  <block type="matrix_led_marquee_reverse">
+  </block>  
   <block type="matrix_led_color_on">
     <value name="value_x_on_">
       <block type="math_number">
@@ -293,13 +299,7 @@
         </value>
       </block>
     </value>
-  </block>     
-  <block type="matrix_led_marquee_stop">
-  </block>
-  <block type="matrix_led_marquee_resume">
-  </block>
-  <block type="matrix_led_marquee_reverse">
-  </block>
+  </block>   
   <block type="matrix_led_marquee_degree">
     <field name="value_marquee_direction_">1</field>
     <value name="value_marquee_degree_">
