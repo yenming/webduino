@@ -370,8 +370,8 @@
   }
   
   function MatrixLed_matrix_codetocolor(code) {
-    for (var i=0;i<25;i++)
-      L[i]=color[i];
+    for (var i=0;i<150;i=i+6)
+      L[i/6]="#"+code.substr(i,6);
     
     MatrixLed_show();
   }
