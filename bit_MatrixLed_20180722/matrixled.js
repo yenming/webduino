@@ -200,7 +200,7 @@
   } 
   
   function MatrixLed_marquee_once_play() {
-    if (MatrixLedmarqueecode.length>25)
+    if (MatrixLedmarqueecode.length>=25)
     {
       if (MatrixLedmarqueereverse==1)
       {
@@ -680,7 +680,7 @@
   } 
   
   function MatrixLed_marquee_color_once_play() {
-    if (MatrixLedmarqueecolorcode.length>150)
+    if (MatrixLedmarqueecolorcode.length>=150)
     {
       if (MatrixLedmarqueereverse==1)
       {
