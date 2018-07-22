@@ -88,11 +88,11 @@ Blockly.Blocks['matrix_led_marquee_color'] = {
   }
 };  
 
-Blockly.Blocks['matrix_led_marquee_once_color'] = {
+Blockly.Blocks['matrix_led_marquee_color_once'] = {
   init: function() {
     this.appendValueInput("value_marquee_")
         .setCheck("String")   
-        .appendField(Blockly.Msg.MATRIXLED_MARQUEE_ONCE_COLOR_SHOW); 
+        .appendField(Blockly.Msg.MATRIXLED_MARQUEE_COLOR_ONCE_SHOW); 
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(300);    
