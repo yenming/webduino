@@ -247,6 +247,7 @@
   } 
   
   function MatrixLed_marquee_resume() {
+    window.clearInterval(marqueetimeid);
     if (marqueeactive==1)
       marqueetimeid = window.setInterval("MatrixLed_marquee_play()",MatrixLedmarqueetime);
     else if (marqueeactive==2)
