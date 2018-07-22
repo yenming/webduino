@@ -13,6 +13,7 @@ Blockly.Msg.MATRIXLED_CODE_SHOW = "显示 图案(编码)";
 Blockly.Msg.MATRIXLED_MARQUEE_SHOW = "跑马灯(循环)";
 Blockly.Msg.MATRIXLED_MARQUEE_ONCE_SHOW = "跑马灯(单次)";
 Blockly.Msg.MATRIXLED_MARQUEE_DIRECTION_SHOW = "跑马灯(单色) 移动方向 ";
+Blockly.Msg.MATRIXLED_MARQUEE_DIRECTION_COLOR_SHOW = "跑马灯(全彩) 移动方向 ";
 Blockly.Msg.MATRIXLED_MARQUEE_DEGREE_SHOW = "  格数";
 Blockly.Msg.MATRIXLED_MARQUEE_STOP_SHOW = "跑马灯 暂停";
 Blockly.Msg.MATRIXLED_MARQUEE_RESUME_SHOW = "跑马灯(循环) 恢復";
