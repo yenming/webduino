@@ -36,3 +36,6 @@ Blockly.Msg.MATRIXLED_HORIZONTALFLIP_SHOW = "指示灯 水平翻转";
 Blockly.Msg.MATRIXLED_INVERT_SHOW = "指示灯 开关反转";
 Blockly.Msg.MATRIXLED_GETCOLOR_SHOW = "指示灯 色码值";
 Blockly.Msg.MATRIXLED_BACKCOLOR_SHOW = "指示灯(单色) 背景颜色";
+Blockly.Msg.MATRIXLED_MATRIXCODE_COLOR_SHOW = "指示灯(全彩) 编码";
+Blockly.Msg.MATRIXLED_MARQUEE_COLOR_SHOW = "跑马灯(全彩循环)";
+Blockly.Msg.MATRIXLED_MARQUEE_COLOR_ONCE_SHOW = "跑马灯(全彩单次)";
