@@ -161,8 +161,8 @@
     }
     else if ((input_marquee_.length%5==0)&&(input_marquee_.length>25)&&(input_marquee_.search(/[^0-1]/)==-1))
     {
-      MatrixLedmarqueecode = input_marquee_;
-      MatrixLedmarqueecodeonce = input_marquee_;
+      MatrixLedmarqueecode = input_marquee_+"0000000000000000000000000";
+      MatrixLedmarqueecodeonce = input_marquee_+"0000000000000000000000000";
     }
     else if (input_marquee_.length==1)
     {
@@ -174,8 +174,8 @@
       MatrixLedmarqueecode="";
       for (var i=0;i<input_marquee_.length;i++)
         MatrixLedmarqueecode = MatrixLedmarqueecode+MatrixLed_conversion(input_marquee_.substr(i,1)) + "00000";
-      MatrixLedmarqueecode = MatrixLedmarqueecode;
-      MatrixLedmarqueecodeonce = MatrixLedmarqueecode;
+      MatrixLedmarqueecode = MatrixLedmarqueecode+"0000000000000000000000000";
+      MatrixLedmarqueecodeonce = MatrixLedmarqueecode+"0000000000000000000000000";
     }
     marqueeactive=2;
     marqueetimeid = window.setInterval("MatrixLed_marquee_once_play()",MatrixLedmarqueetime);
@@ -655,8 +655,8 @@
     }
     else if ((input_marquee_.length%30==0)&&(input_marquee_.length>150))
     {
-      MatrixLedmarqueecolorcode = input_marquee_;
-      MatrixLedmarqueecolorcodeonce = input_marquee_;
+      MatrixLedmarqueecolorcode = input_marquee_+"000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+      MatrixLedmarqueecolorcodeonce = input_marquee_+"000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
     }
     marqueeactive=4;
     marqueetimeid = window.setInterval("MatrixLed_marquee_color_once_play()",MatrixLedmarqueetime);
