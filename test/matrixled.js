@@ -249,11 +249,11 @@
   function MatrixLed_marquee_resume() {
     if (marqueeactive==1)
       marqueetimeid = window.setInterval("MatrixLed_marquee_play()",MatrixLedmarqueetime);
-    elseif (marqueeactive==2)
+    else if (marqueeactive==2)
       marqueetimeid = window.setInterval("MatrixLed_marquee_once_play()",MatrixLedmarqueetime);
-    elseif (marqueeactive==3)
+    else if (marqueeactive==3)
       marqueetimeid= window.setInterval("MatrixLed_marquee_color_play()",MatrixLedmarqueetime);
-    elseif (marqueeactive==4)
+    else if (marqueeactive==4)
       marqueetimeid = window.setInterval("MatrixLed_marquee_color_once_play()",MatrixLedmarqueetime);
   } 
   
