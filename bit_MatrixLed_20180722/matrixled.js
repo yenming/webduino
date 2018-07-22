@@ -693,7 +693,7 @@
       }
       else if (MatrixLedmarqueereverse==2)
       {
-        MatrixLed_matrix_codetocolor(MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-150,150));
+        MatrixLed_matrix_codetocolor(MatrixLedmarqueecolorcode.substr(MatrixLedmarqueecolorcode.length-150,150));
         MatrixLedmarqueecolorcodeonce = MatrixLedmarqueecolorcodeonce.substr(MatrixLedmarqueecolorcodeonce.length-30,30)+MatrixLedmarqueecolorcodeonce.substr(0,MatrixLedmarqueecolorcodeonce.length-30);
         MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(0,MatrixLedmarqueecolorcode.length-30);
       }
