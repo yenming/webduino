@@ -22,6 +22,18 @@ Blockly.JavaScript['matrix_led_marquee_once'] = function(block) {
   return code;
 };
 
+Blockly.JavaScript['matrix_led_marquee_color'] = function(block) {
+  var value_marquee_ = Blockly.JavaScript.valueToCode(block, 'value_marquee_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'MatrixLed_marquee_color('+ value_marquee_ +');\n';
+  return code;
+};
+
+Blockly.JavaScript['matrix_led_marquee_color_once'] = function(block) {
+  var value_marquee_ = Blockly.JavaScript.valueToCode(block, 'value_marquee_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'MatrixLed_marquee_color_once('+ value_marquee_ +');\n';
+  return code;
+};
+
 Blockly.JavaScript['matrix_led_marquee_degree'] = function(block) {
   var value_marquee_direction_ = block.getFieldValue('value_marquee_direction_');
   var value_marquee_degree_ = Blockly.JavaScript.valueToCode(block, 'value_marquee_degree_', Blockly.JavaScript.ORDER_ATOMIC);
@@ -154,6 +166,36 @@ Blockly.JavaScript['matrix_led_matrixcode'] = function(block) {
   var L23 = (block.getFieldValue('L23') == 'TRUE')?"1":"0";
   var L24 = (block.getFieldValue('L24') == 'TRUE')?"1":"0";
   var L25 = (block.getFieldValue('L25') == 'TRUE')?"1":"0";
+  var code = '"'+L01+L02+L03+L04+L05+L06+L07+L08+L09+L10+L11+L12+L13+L14+L15+L16+L17+L18+L19+L20+L21+L22+L23+L24+L25+'"';
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript['matrix_led_matrixcode_color'] = function(block) {
+  var L01 = block.getFieldValue('L01').replace(/\#/ig, "");
+  var L02 = block.getFieldValue('L02').replace(/\#/ig, "");
+  var L03 = block.getFieldValue('L03').replace(/\#/ig, "");
+  var L04 = block.getFieldValue('L04').replace(/\#/ig, "");
+  var L05 = block.getFieldValue('L05').replace(/\#/ig, "");
+  var L06 = block.getFieldValue('L06').replace(/\#/ig, "");
+  var L07 = block.getFieldValue('L07').replace(/\#/ig, "");
+  var L08 = block.getFieldValue('L08').replace(/\#/ig, "");
+  var L09 = block.getFieldValue('L09').replace(/\#/ig, "");
+  var L10 = block.getFieldValue('L10').replace(/\#/ig, "");
+  var L11 = block.getFieldValue('L11').replace(/\#/ig, "");
+  var L12 = block.getFieldValue('L12').replace(/\#/ig, "");
+  var L13 = block.getFieldValue('L13').replace(/\#/ig, "");
+  var L14 = block.getFieldValue('L14').replace(/\#/ig, "");
+  var L15 = block.getFieldValue('L15').replace(/\#/ig, "");
+  var L16 = block.getFieldValue('L16').replace(/\#/ig, "");
+  var L17 = block.getFieldValue('L17').replace(/\#/ig, "");
+  var L18 = block.getFieldValue('L18').replace(/\#/ig, "");
+  var L19 = block.getFieldValue('L19').replace(/\#/ig, "");
+  var L20 = block.getFieldValue('L20').replace(/\#/ig, "");
+  var L21 = block.getFieldValue('L21').replace(/\#/ig, "");
+  var L22 = block.getFieldValue('L22').replace(/\#/ig, "");
+  var L23 = block.getFieldValue('L23').replace(/\#/ig, "");
+  var L24 = block.getFieldValue('L24').replace(/\#/ig, "");
+  var L25 = block.getFieldValue('L25').replace(/\#/ig, "");
   var code = '"'+L01+L02+L03+L04+L05+L06+L07+L08+L09+L10+L11+L12+L13+L14+L15+L16+L17+L18+L19+L20+L21+L22+L23+L24+L25+'"';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
