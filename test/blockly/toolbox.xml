@@ -68,7 +68,30 @@
     <field name="L15">#000000</field>
     <field name="L20">#000000</field>
     <field name="L25">#000000</field>
+  </block>  
+  <block type="matrix_led_marquee_time">
+    <value name="value_marquee_time_">
+      <block type="math_number">
+        <field name="NUM">500</field>
+      </block>
+    </value>
+  </block>    
+  <block type="matrix_led_marquee_color">
+    <value name="value_marquee_">
+    </value>
+  </block>
+  <block type="matrix_led_marquee_color_once">
+    <value name="value_marquee_">
+    </value>
   </block>   
+  <block type="matrix_led_marquee_color_degree">
+    <field name="value_marquee_direction_">1</field>
+    <value name="value_marquee_degree_">
+      <block type="math_number">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+  </block>    
   <block type="matrix_led_color_on">
     <value name="value_x_on_">
       <block type="math_number">
@@ -240,14 +263,7 @@
   <block type="matrix_led_indentcode">
     <value name="value_indentcode_">
     </value>
-  </block> 
-  <block type="matrix_led_marquee_time">
-    <value name="value_marquee_time_">
-      <block type="math_number">
-        <field name="NUM">500</field>
-      </block>
-    </value>
-  </block>   
+  </block>  
   <block type="matrix_led_marquee">
     <value name="value_marquee_">
         <block type="matrix_led_indentcode">
@@ -277,15 +293,7 @@
         </value>
       </block>
     </value>
-  </block>  
-  <block type="matrix_led_marquee_color">
-    <value name="value_marquee_">
-    </value>
-  </block>
-  <block type="matrix_led_marquee_color_once">
-    <value name="value_marquee_">
-    </value>
-  </block>    
+  </block>     
   <block type="matrix_led_marquee_stop">
   </block>
   <block type="matrix_led_marquee_resume">

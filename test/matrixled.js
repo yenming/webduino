@@ -225,6 +225,8 @@
   function MatrixLed_marquee_degree(direction,degree) {
     window.clearInterval(marqueetimeid);
     window.clearInterval(marqueetimeid1);
+    window.clearInterval(marqueetimeidcolor);
+    window.clearInterval(marqueetimeidcolor1);
     if (MatrixLedmarqueecode.length<MatrixLedmarqueecodeonce.length) MatrixLedmarqueecode=MatrixLedmarqueecodeonce;
     if (MatrixLedmarqueecode.length>25)
     {
@@ -701,6 +703,28 @@
       window.clearInterval(marqueetimeidcolor1);
   } 
   
+  function MatrixLed_marquee_color_degree(direction,degree) {
+    window.clearInterval(marqueetimeid);
+    window.clearInterval(marqueetimeid1);
+    window.clearInterval(marqueetimeidcolor);
+    window.clearInterval(marqueetimeidcolor1);
+    if (MatrixLedmarqueecolorcode.length<MatrixLedmarqueecolorcodeonce.length) MatrixLedmarqueecolorcode=MatrixLedmarqueecolorcodeonce;
+    if (MatrixLedmarqueecolorcode.length>150)
+    {
+      if (direction==1)
+      {
+        for (var i=1;i<=degree;i++)
+          MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(30,MatrixLedmarqueecolorcode.length-30)+MatrixLedmarqueecolorcode.substr(0,30);
+      }
+      else if (direction==2)
+      {
+        for (var i=1;i<=degree;i++)
+          MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(MatrixLedmarqueecolorcode.length-30,30)+MatrixLedmarqueecolorcode.substr(0,MatrixLedmarqueecolorcode.length-30);
+      }
+      MatrixLed_matrix_codetocolor(MatrixLedmarqueecolorcode.substr(0,150));
+    }
+  }  
+  
   window.MatrixLed_clear = MatrixLed_clear;
   window.MatrixLed_matrix = MatrixLed_matrix;
   window.MatrixLed_matrix_color = MatrixLed_matrix_color;
@@ -714,15 +738,16 @@
   window.MatrixLed_sample = MatrixLed_sample;
   window.MatrixLed_code = MatrixLed_code;
   window.MatrixLed_marquee = MatrixLed_marquee;
-  window.MatrixLed_marquee_once = MatrixLed_marquee_once;
   window.MatrixLed_marquee_play = MatrixLed_marquee_play;
+  window.MatrixLed_marquee_once = MatrixLed_marquee_once;
   window.MatrixLed_marquee_once_play = MatrixLed_marquee_once_play;
-  window.MatrixLed_marquee_color = MatrixLed_marquee;
-  window.MatrixLed_marquee_color_once = MatrixLed_marquee_once;
-  window.MatrixLed_marquee_color_play = MatrixLed_marquee_play;
-  window.MatrixLed_marquee_color_once_play = MatrixLed_marquee_once_play; 
+  window.MatrixLed_marquee_color = MatrixLed_marquee_color;
+  window.MatrixLed_marquee_color_play = MatrixLed_marquee_color_play;
+  window.MatrixLed_marquee_color_once = MatrixLed_marquee_color_once;
+  window.MatrixLed_marquee_color_once_play = MatrixLed_marquee_color_once_play; 
   window.MatrixLed_matrix_codetocolor = MatrixLed_matrix_codetocolor;
   window.MatrixLed_marquee_degree = MatrixLed_marquee_degree;
+  window.MatrixLed_marquee_color_degree = MatrixLed_marquee_color_degree;
   window.MatrixLed_marquee_stop = MatrixLed_marquee_stop;
   window.MatrixLed_marquee_resume = MatrixLed_marquee_resume;
   window.MatrixLed_marquee_reverse = MatrixLed_marquee_reverse;
