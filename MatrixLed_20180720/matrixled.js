@@ -200,6 +200,8 @@
         MatrixLedmarqueecode = MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-5,5)+MatrixLedmarqueecode.substr(0,MatrixLedmarqueecode.length-5);
       }
     }
+    else
+      window.clearInterval(marqueetimeid);
   } 
   
   function MatrixLed_marquee_once_play() {
