@@ -69,6 +69,23 @@
     <field name="L20">#000000</field>
     <field name="L25">#000000</field>
   </block>  
+  <block type="matrix_led_color_on">
+    <value name="value_x_on_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="value_y_on_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="value_color_on_">
+      <block type="colour_picker">
+        <field name="COLOUR">#ff0000</field>
+      </block>
+    </value>    
+  </block>     
   <block type="matrix_led_marquee_time">
     <value name="value_marquee_time_">
       <block type="math_number">
@@ -97,24 +114,7 @@
   <block type="matrix_led_marquee_resume">
   </block>
   <block type="matrix_led_marquee_reverse">
-  </block>  
-  <block type="matrix_led_color_on">
-    <value name="value_x_on_">
-      <block type="math_number">
-        <field name="NUM">0</field>
-      </block>
-    </value>
-    <value name="value_y_on_">
-      <block type="math_number">
-        <field name="NUM">0</field>
-      </block>
-    </value>
-    <value name="value_color_on_">
-      <block type="colour_picker">
-        <field name="COLOUR">#ff0000</field>
-      </block>
-    </value>    
-  </block>   
+  </block> 
   <block type="matrix_led_backcolor">
     <value name="value_color_">
       <block type="colour_picker">
