@@ -98,10 +98,7 @@
   var L = new Array("","","","","","","","","","","","","","","","","","","","","","","","","");
   var MatrixLedcolor = "#ff0000";
   var MatrixLedbackcolor = "#000000";
-  var MatrixLedmarqueecode = "";
-  var MatrixLedmarqueecodeonce = "";
-  var MatrixLedmarqueecolorcode = "";
-  var MatrixLedmarqueecolorcodeonce = "";  
+  var MatrixLedmarqueeinitial = "",MatrixLedmarqueecode = "",MatrixLedmarqueecodeonce = "",MatrixLedmarqueecolorcode = "",MatrixLedmarqueecolorcodeonce = "";  
   var MatrixLedmarqueetime = 500;
   var MatrixLedmarqueereverse = 1;
   var MatrixLedshowstate = 1;
@@ -127,6 +124,7 @@
   
   function MatrixLed_marquee(input_marquee_) {
     input_marquee_=input_marquee_.toString();
+    MatrixLedmarqueeinitial=input_marquee_;
     MatrixLedmarqueecodeonce = "";
     window.clearInterval(marqueetimeid);
     if ((input_marquee_.length==25)&&(input_marquee_.search(/[^0-1]/)==-1))
@@ -153,6 +151,7 @@
   
   function MatrixLed_marquee_once(input_marquee_) {
     input_marquee_=input_marquee_.toString();
+    MatrixLedmarqueeinitial=input_marquee_;
     window.clearInterval(marqueetimeid);
     if ((input_marquee_.length==25)&&(input_marquee_.search(/[^0-1]/)==-1))
     {
@@ -259,13 +258,14 @@
   } 
   
   function MatrixLed_marquee_reverse() {
-    if ((marqueeactive==1)||(marqueeactive==3))
-    {
-      if (MatrixLedmarqueereverse==1)
-        MatrixLedmarqueereverse=2;
-      else if (MatrixLedmarqueereverse==2)
-        MatrixLedmarqueereverse=1;
-    }
+    MatrixLedmarqueecode = MatrixLedmarqueeinitial;
+    MatrixLedmarqueecodeonce = MatrixLedmarqueeinitial;
+    MatrixLedmarqueecolorcode = MatrixLedmarqueeinitial;
+    MatrixLedmarqueecolorcodeonce = MatrixLedmarqueeinitial;
+    if (MatrixLedmarqueereverse==1)
+      MatrixLedmarqueereverse=2;
+    else if (MatrixLedmarqueereverse==2)
+      MatrixLedmarqueereverse=1;
   }   
   
   function MatrixLed_char(input_char_) {
@@ -632,6 +632,7 @@
   
   function MatrixLed_marquee_color(input_marquee_) {
     input_marquee_=input_marquee_.toString();
+    MatrixLedmarqueeinitial=input_marquee_;
     MatrixLedmarqueecolorcodeonce = "";
     window.clearInterval(marqueetimeid);
     if (input_marquee_.length==150)
@@ -647,6 +648,7 @@
   
   function MatrixLed_marquee_color_once(input_marquee_) {
     input_marquee_=input_marquee_.toString();
+    MatrixLedmarqueeinitial=input_marquee_;
     window.clearInterval(marqueetimeid);
     if (input_marquee_.length==150)
     {
