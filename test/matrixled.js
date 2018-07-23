@@ -98,10 +98,7 @@
   var L = new Array("","","","","","","","","","","","","","","","","","","","","","","","","");
   var MatrixLedcolor = "#ff0000";
   var MatrixLedbackcolor = "#000000";
-  var MatrixLedmarqueecode = "";
-  var MatrixLedmarqueecodeonce = "";
-  var MatrixLedmarqueecolorcode = "";
-  var MatrixLedmarqueecolorcodeonce = "";  
+  var MatrixLedmarqueeinitial = "",MatrixLedmarqueecode = "",MatrixLedmarqueecodeonce = "",MatrixLedmarqueecolorcode = "",MatrixLedmarqueecolorcodeonce = "";  
   var MatrixLedmarqueetime = 500;
   var MatrixLedmarqueereverse = 1;
   var MatrixLedshowstate = 1;
@@ -127,6 +124,7 @@
   
   function MatrixLed_marquee(input_marquee_) {
     input_marquee_=input_marquee_.toString();
+    MatrixLedmarqueeinitial=input_marquee_;
     MatrixLedmarqueecodeonce = "";
     window.clearInterval(marqueetimeid);
     if ((input_marquee_.length==25)&&(input_marquee_.search(/[^0-1]/)==-1))
@@ -153,6 +151,7 @@
   
   function MatrixLed_marquee_once(input_marquee_) {
     input_marquee_=input_marquee_.toString();
+    MatrixLedmarqueeinitial=input_marquee_;
     window.clearInterval(marqueetimeid);
     if ((input_marquee_.length==25)&&(input_marquee_.search(/[^0-1]/)==-1))
     {
@@ -161,8 +160,8 @@
     }
     else if ((input_marquee_.length%5==0)&&(input_marquee_.length>25)&&(input_marquee_.search(/[^0-1]/)==-1))
     {
-      MatrixLedmarqueecode = input_marquee_+"0000000000000000000000000";
-      MatrixLedmarqueecodeonce = input_marquee_+"0000000000000000000000000";
+      MatrixLedmarqueecode = input_marquee_;
+      MatrixLedmarqueecodeonce = input_marquee_;
     }
     else if (input_marquee_.length==1)
     {
@@ -174,8 +173,8 @@
       MatrixLedmarqueecode="";
       for (var i=0;i<input_marquee_.length;i++)
         MatrixLedmarqueecode = MatrixLedmarqueecode+MatrixLed_conversion(input_marquee_.substr(i,1)) + "00000";
-      MatrixLedmarqueecode = MatrixLedmarqueecode+"0000000000000000000000000";
-      MatrixLedmarqueecodeonce = MatrixLedmarqueecode+"0000000000000000000000000";
+      MatrixLedmarqueecode = MatrixLedmarqueecode;
+      MatrixLedmarqueecodeonce = MatrixLedmarqueecode;
     }
     marqueeactive=2;
     marqueetimeid = window.setInterval("MatrixLed_marquee_once_play()",MatrixLedmarqueetime);
@@ -200,7 +199,7 @@
   } 
   
   function MatrixLed_marquee_once_play() {
-    if (MatrixLedmarqueecode.length>25)
+    if (MatrixLedmarqueecode.length>=25)
     {
       if (MatrixLedmarqueereverse==1)
       {
@@ -212,7 +211,7 @@
       {
         MatrixLed_matrix(MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-25,25));
         MatrixLedmarqueecodeonce = MatrixLedmarqueecodeonce.substr(MatrixLedmarqueecodeonce.length-5,5)+MatrixLedmarqueecodeonce.substr(0,MatrixLedmarqueecodeonce.length-5);
-        MatrixLedmarqueecode = MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-5,5);
+        MatrixLedmarqueecode = MatrixLedmarqueecode.substr(0,MatrixLedmarqueecode.length-5);
       }
     }
     else
@@ -238,6 +237,97 @@
     }
   }   
   
+  function MatrixLed_marquee_color(input_marquee_) {
+    input_marquee_=input_marquee_.toString();
+    MatrixLedmarqueeinitial=input_marquee_;
+    MatrixLedmarqueecolorcodeonce = "";
+    window.clearInterval(marqueetimeid);
+    if (input_marquee_.length==150)
+    {
+      MatrixLed_matrix_codetocolor(input_marquee_);
+      return;
+    }
+    else if ((input_marquee_.length%30==0)&&(input_marquee_.length>150))
+      MatrixLedmarqueecolorcode = input_marquee_;
+    marqueeactive=3;
+    marqueetimeid = window.setInterval("MatrixLed_marquee_color_play()",MatrixLedmarqueetime);
+  }  
+  
+  function MatrixLed_marquee_color_once(input_marquee_) {
+    input_marquee_=input_marquee_.toString();
+    MatrixLedmarqueeinitial=input_marquee_;
+    window.clearInterval(marqueetimeid);
+    if (input_marquee_.length==150)
+    {
+      MatrixLed_matrix_codetocolor(input_marquee_);
+      return;
+    }
+    else if ((input_marquee_.length%30==0)&&(input_marquee_.length>150))
+    {
+      MatrixLedmarqueecolorcode = input_marquee_;
+      MatrixLedmarqueecolorcodeonce = input_marquee_;
+    }
+    marqueeactive=4;
+    marqueetimeid = window.setInterval("MatrixLed_marquee_color_once_play()",MatrixLedmarqueetime);
+  }    
+  
+  function MatrixLed_marquee_color_play() {
+    if (MatrixLedmarqueecolorcode.length>150)
+    {
+      if (MatrixLedmarqueereverse==1)
+      {
+        MatrixLed_matrix_codetocolor(MatrixLedmarqueecolorcode.substr(0,150));
+        MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(30,MatrixLedmarqueecolorcode.length-30)+MatrixLedmarqueecolorcode.substr(0,30);
+      }
+      else if (MatrixLedmarqueereverse==2)
+      {
+        MatrixLed_matrix_codetocolor(MatrixLedmarqueecolorcode.substr(MatrixLedmarqueecolorcode.length-150,150));
+        MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(MatrixLedmarqueecolorcode.length-30,30)+MatrixLedmarqueecolorcode.substr(0,MatrixLedmarqueecolorcode.length-30);
+      }
+    }
+    else
+      window.clearInterval(marqueetimeid);
+  } 
+  
+  function MatrixLed_marquee_color_once_play() {
+    if (MatrixLedmarqueecolorcode.length>=150)
+    {
+      if (MatrixLedmarqueereverse==1)
+      {
+        MatrixLed_matrix_codetocolor(MatrixLedmarqueecolorcode.substr(0,150));
+        MatrixLedmarqueecolorcodeonce = MatrixLedmarqueecolorcodeonce.substr(30,MatrixLedmarqueecolorcodeonce.length-30)+MatrixLedmarqueecolorcodeonce.substr(0,30);
+        MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(30,MatrixLedmarqueecolorcode.length-30);
+      }
+      else if (MatrixLedmarqueereverse==2)
+      {
+        MatrixLed_matrix_codetocolor(MatrixLedmarqueecolorcode.substr(MatrixLedmarqueecolorcode.length-150,150));
+        MatrixLedmarqueecolorcodeonce = MatrixLedmarqueecolorcodeonce.substr(MatrixLedmarqueecolorcodeonce.length-30,30)+MatrixLedmarqueecolorcodeonce.substr(0,MatrixLedmarqueecolorcodeonce.length-30);
+        MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(0,MatrixLedmarqueecolorcode.length-30);
+      }
+    }
+    else
+      window.clearInterval(marqueetimeid);
+  } 
+  
+  function MatrixLed_marquee_color_degree(direction,degree) {
+    window.clearInterval(marqueetimeid);
+    if (MatrixLedmarqueecolorcode.length<MatrixLedmarqueecolorcodeonce.length) MatrixLedmarqueecolorcode=MatrixLedmarqueecolorcodeonce;
+    if (MatrixLedmarqueecolorcode.length>150)
+    {
+      if (direction==1)
+      {
+        for (var i=1;i<=degree;i++)
+          MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(30,MatrixLedmarqueecolorcode.length-30)+MatrixLedmarqueecolorcode.substr(0,30);
+      }
+      else if (direction==2)
+      {
+        for (var i=1;i<=degree;i++)
+          MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(MatrixLedmarqueecolorcode.length-30,30)+MatrixLedmarqueecolorcode.substr(0,MatrixLedmarqueecolorcode.length-30);
+      }
+      MatrixLed_matrix_codetocolor(MatrixLedmarqueecolorcode.substr(0,150));
+    }
+  }  
+  
   function MatrixLed_marquee_time(input_time_) {
     MatrixLedmarqueetime = input_time_;
   } 
@@ -247,6 +337,7 @@
   } 
   
   function MatrixLed_marquee_resume() {
+    window.clearInterval(marqueetimeid);
     if (marqueeactive==1)
       marqueetimeid = window.setInterval("MatrixLed_marquee_play()",MatrixLedmarqueetime);
     else if (marqueeactive==2)
@@ -258,6 +349,10 @@
   } 
   
   function MatrixLed_marquee_reverse() {
+    MatrixLedmarqueecode = MatrixLedmarqueeinitial;
+    MatrixLedmarqueecodeonce = MatrixLedmarqueeinitial;
+    MatrixLedmarqueecolorcode = MatrixLedmarqueeinitial;
+    MatrixLedmarqueecolorcodeonce = MatrixLedmarqueeinitial;
     if (MatrixLedmarqueereverse==1)
       MatrixLedmarqueereverse=2;
     else if (MatrixLedmarqueereverse==2)
@@ -385,23 +480,6 @@
     
     MatrixLed_show();
   }  
-  
-  function MatrixLed_show() {
-    if (MatrixLedshowstate==1)
-      var ledtable ="00"+L[0].replace(/\#/ig, "")+"01"+L[5].replace(/\#/ig, "")+"02"+L[10].replace(/\#/ig, "")+"03"+L[15].replace(/\#/ig, "")+"04"+L[20].replace(/\#/ig, "")
-                  + "05"+L[1].replace(/\#/ig, "")+"06"+L[6].replace(/\#/ig, "")+"07"+L[11].replace(/\#/ig, "")+"08"+L[16].replace(/\#/ig, "")+"09"+L[21].replace(/\#/ig, "")
-                  + "0a"+L[2].replace(/\#/ig, "")+"0b"+L[7].replace(/\#/ig, "")+"0c"+L[12].replace(/\#/ig, "")+"0d"+L[17].replace(/\#/ig, "")+"0e"+L[22].replace(/\#/ig, "")
-                  + "0f"+L[3].replace(/\#/ig, "")+"10"+L[8].replace(/\#/ig, "")+"11"+L[13].replace(/\#/ig, "")+"12"+L[18].replace(/\#/ig, "")+"13"+L[23].replace(/\#/ig, "")
-                  + "14"+L[4].replace(/\#/ig, "")+"15"+L[9].replace(/\#/ig, "")+"16"+L[14].replace(/\#/ig, "")+"17"+L[19].replace(/\#/ig, "")+"18"+L[24].replace(/\#/ig, "");
-    else
-      var ledtable ="00"+MatrixLedbackcolor.replace(/\#/ig, "")+"01"+MatrixLedbackcolor.replace(/\#/ig, "")+"02"+MatrixLedbackcolor.replace(/\#/ig, "")+"03"+MatrixLedbackcolor.replace(/\#/ig, "")+"04"+MatrixLedbackcolor.replace(/\#/ig, "")
-                  + "05"+MatrixLedbackcolor.replace(/\#/ig, "")+"06"+MatrixLedbackcolor.replace(/\#/ig, "")+"07"+MatrixLedbackcolor.replace(/\#/ig, "")+"08"+MatrixLedbackcolor.replace(/\#/ig, "")+"09"+MatrixLedbackcolor.replace(/\#/ig, "")
-                  + "0a"+MatrixLedbackcolor.replace(/\#/ig, "")+"0b"+MatrixLedbackcolor.replace(/\#/ig, "")+"0c"+MatrixLedbackcolor.replace(/\#/ig, "")+"0d"+MatrixLedbackcolor.replace(/\#/ig, "")+"0e"+MatrixLedbackcolor.replace(/\#/ig, "")
-                  + "0f"+MatrixLedbackcolor.replace(/\#/ig, "")+"10"+MatrixLedbackcolor.replace(/\#/ig, "")+"11"+MatrixLedbackcolor.replace(/\#/ig, "")+"12"+MatrixLedbackcolor.replace(/\#/ig, "")+"13"+MatrixLedbackcolor.replace(/\#/ig, "")
-                  + "14"+MatrixLedbackcolor.replace(/\#/ig, "")+"15"+MatrixLedbackcolor.replace(/\#/ig, "")+"16"+MatrixLedbackcolor.replace(/\#/ig, "")+"17"+MatrixLedbackcolor.replace(/\#/ig, "")+"18"+MatrixLedbackcolor.replace(/\#/ig, "");           
-    
-    objMatrixLed.setColor(ledtable);
-  }
   
   function MatrixLed_conversion(input_char_) {
     if (input_char_=="A")      return charA;
@@ -625,95 +703,23 @@
   function MatrixLed_backcolor(input_color_) {
     MatrixLedbackcolor=input_color_;
   }  
-  
-  function MatrixLed_marquee_color(input_marquee_) {
-    input_marquee_=input_marquee_.toString();
-    MatrixLedmarqueecolorcodeonce = "";
-    window.clearInterval(marqueetimeid);
-    if (input_marquee_.length==150)
-    {
-      MatrixLed_matrix_codetocolor(input_marquee_);
-      return;
-    }
-    else if ((input_marquee_.length%30==0)&&(input_marquee_.length>150))
-      MatrixLedmarqueecolorcode = input_marquee_;
-    marqueeactive=3;
-    marqueetimeid = window.setInterval("MatrixLed_marquee_color_play()",MatrixLedmarqueetime);
-  }  
-  
-  function MatrixLed_marquee_color_once(input_marquee_) {
-    input_marquee_=input_marquee_.toString();
-    window.clearInterval(marqueetimeid);
-    if (input_marquee_.length==150)
-    {
-      MatrixLed_matrix_codetocolor(input_marquee_);
-      return;
-    }
-    else if ((input_marquee_.length%30==0)&&(input_marquee_.length>150))
-    {
-      MatrixLedmarqueecolorcode = input_marquee_+"000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
-      MatrixLedmarqueecolorcodeonce = input_marquee_+"000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    }
-    marqueeactive=4;
-    marqueetimeid = window.setInterval("MatrixLed_marquee_color_once_play()",MatrixLedmarqueetime);
-  }    
-  
-  function MatrixLed_marquee_color_play() {
-    if (MatrixLedmarqueecolorcode.length>150)
-    {
-      if (MatrixLedmarqueereverse==1)
-      {
-        MatrixLed_matrix_codetocolor(MatrixLedmarqueecolorcode.substr(0,150));
-        MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(30,MatrixLedmarqueecolorcode.length-30)+MatrixLedmarqueecolorcode.substr(0,30);
-      }
-      else if (MatrixLedmarqueereverse==2)
-      {
-        MatrixLed_matrix_codetocolor(MatrixLedmarqueecolorcode.substr(MatrixLedmarqueecolorcode.length-150,150));
-        MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(MatrixLedmarqueecolorcode.length-30,30)+MatrixLedmarqueecolorcode.substr(0,MatrixLedmarqueecolorcode.length-30);
-      }
-    }
+ 
+  function MatrixLed_show() {
+    if (MatrixLedshowstate==1)
+      var ledtable ="00"+L[0].replace(/\#/ig, "")+"01"+L[5].replace(/\#/ig, "")+"02"+L[10].replace(/\#/ig, "")+"03"+L[15].replace(/\#/ig, "")+"04"+L[20].replace(/\#/ig, "")
+                  + "05"+L[1].replace(/\#/ig, "")+"06"+L[6].replace(/\#/ig, "")+"07"+L[11].replace(/\#/ig, "")+"08"+L[16].replace(/\#/ig, "")+"09"+L[21].replace(/\#/ig, "")
+                  + "0a"+L[2].replace(/\#/ig, "")+"0b"+L[7].replace(/\#/ig, "")+"0c"+L[12].replace(/\#/ig, "")+"0d"+L[17].replace(/\#/ig, "")+"0e"+L[22].replace(/\#/ig, "")
+                  + "0f"+L[3].replace(/\#/ig, "")+"10"+L[8].replace(/\#/ig, "")+"11"+L[13].replace(/\#/ig, "")+"12"+L[18].replace(/\#/ig, "")+"13"+L[23].replace(/\#/ig, "")
+                  + "14"+L[4].replace(/\#/ig, "")+"15"+L[9].replace(/\#/ig, "")+"16"+L[14].replace(/\#/ig, "")+"17"+L[19].replace(/\#/ig, "")+"18"+L[24].replace(/\#/ig, "");
     else
-      window.clearInterval(marqueetimeid);
-  } 
-  
-  function MatrixLed_marquee_color_once_play() {
-    if (MatrixLedmarqueecolorcode.length>150)
-    {
-      if (MatrixLedmarqueereverse==1)
-      {
-        MatrixLed_matrix_codetocolor(MatrixLedmarqueecolorcode.substr(0,150));
-        MatrixLedmarqueecolorcodeonce = MatrixLedmarqueecolorcodeonce.substr(30,MatrixLedmarqueecolorcodeonce.length-30)+MatrixLedmarqueecolorcodeonce.substr(0,30);
-        MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(30,MatrixLedmarqueecolorcode.length-30);
-      }
-      else if (MatrixLedmarqueereverse==2)
-      {
-        MatrixLed_matrix_codetocolor(MatrixLedmarqueecode.substr(MatrixLedmarqueecode.length-150,150));
-        MatrixLedmarqueecolorcodeonce = MatrixLedmarqueecolorcodeonce.substr(MatrixLedmarqueecolorcodeonce.length-30,30)+MatrixLedmarqueecolorcodeonce.substr(0,MatrixLedmarqueecolorcodeonce.length-30);
-        MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(MatrixLedmarqueecolorcode.length-30,30);
-      }
-    }
-    else
-      window.clearInterval(marqueetimeid);
-  } 
-  
-  function MatrixLed_marquee_color_degree(direction,degree) {
-    window.clearInterval(marqueetimeid);
-    if (MatrixLedmarqueecolorcode.length<MatrixLedmarqueecolorcodeonce.length) MatrixLedmarqueecolorcode=MatrixLedmarqueecolorcodeonce;
-    if (MatrixLedmarqueecolorcode.length>150)
-    {
-      if (direction==1)
-      {
-        for (var i=1;i<=degree;i++)
-          MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(30,MatrixLedmarqueecolorcode.length-30)+MatrixLedmarqueecolorcode.substr(0,30);
-      }
-      else if (direction==2)
-      {
-        for (var i=1;i<=degree;i++)
-          MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(MatrixLedmarqueecolorcode.length-30,30)+MatrixLedmarqueecolorcode.substr(0,MatrixLedmarqueecolorcode.length-30);
-      }
-      MatrixLed_matrix_codetocolor(MatrixLedmarqueecolorcode.substr(0,150));
-    }
-  }  
+      var ledtable ="00"+MatrixLedbackcolor.replace(/\#/ig, "")+"01"+MatrixLedbackcolor.replace(/\#/ig, "")+"02"+MatrixLedbackcolor.replace(/\#/ig, "")+"03"+MatrixLedbackcolor.replace(/\#/ig, "")+"04"+MatrixLedbackcolor.replace(/\#/ig, "")
+                  + "05"+MatrixLedbackcolor.replace(/\#/ig, "")+"06"+MatrixLedbackcolor.replace(/\#/ig, "")+"07"+MatrixLedbackcolor.replace(/\#/ig, "")+"08"+MatrixLedbackcolor.replace(/\#/ig, "")+"09"+MatrixLedbackcolor.replace(/\#/ig, "")
+                  + "0a"+MatrixLedbackcolor.replace(/\#/ig, "")+"0b"+MatrixLedbackcolor.replace(/\#/ig, "")+"0c"+MatrixLedbackcolor.replace(/\#/ig, "")+"0d"+MatrixLedbackcolor.replace(/\#/ig, "")+"0e"+MatrixLedbackcolor.replace(/\#/ig, "")
+                  + "0f"+MatrixLedbackcolor.replace(/\#/ig, "")+"10"+MatrixLedbackcolor.replace(/\#/ig, "")+"11"+MatrixLedbackcolor.replace(/\#/ig, "")+"12"+MatrixLedbackcolor.replace(/\#/ig, "")+"13"+MatrixLedbackcolor.replace(/\#/ig, "")
+                  + "14"+MatrixLedbackcolor.replace(/\#/ig, "")+"15"+MatrixLedbackcolor.replace(/\#/ig, "")+"16"+MatrixLedbackcolor.replace(/\#/ig, "")+"17"+MatrixLedbackcolor.replace(/\#/ig, "")+"18"+MatrixLedbackcolor.replace(/\#/ig, "");           
+    
+    objMatrixLed.setColor(ledtable);
+  }
   
   window.MatrixLed_clear = MatrixLed_clear;
   window.MatrixLed_matrix = MatrixLed_matrix;
