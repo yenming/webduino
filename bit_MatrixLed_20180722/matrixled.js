@@ -124,7 +124,6 @@
   
   function MatrixLed_marquee(input_marquee_) {
     input_marquee_=input_marquee_.toString();
-    MatrixLedmarqueeinitial=input_marquee_;
     MatrixLedmarqueecodeonce = "";
     window.clearInterval(marqueetimeid);
     if ((input_marquee_.length==25)&&(input_marquee_.search(/[^0-1]/)==-1))
@@ -150,13 +149,13 @@
           MatrixLedmarqueecode = MatrixLedmarqueecode + MatrixLed_conversion(input_marquee_.substr(i,1)) + "00000";
       }
     }
+    MatrixLedmarqueeinitial=MatrixLedmarqueecode;
     marqueeactive=1;
     marqueetimeid = window.setInterval("MatrixLed_marquee_play()",MatrixLedmarqueetime);
   }  
   
   function MatrixLed_marquee_once(input_marquee_) {
     input_marquee_=input_marquee_.toString();
-    MatrixLedmarqueeinitial=input_marquee_;
     window.clearInterval(marqueetimeid);
     if ((input_marquee_.length==25)&&(input_marquee_.search(/[^0-1]/)==-1))
     {
@@ -186,6 +185,7 @@
       MatrixLedmarqueecode = MatrixLedmarqueecode;
       MatrixLedmarqueecodeonce = MatrixLedmarqueecode;
     }
+    MatrixLedmarqueeinitial=MatrixLedmarqueecode;
     marqueeactive=2;
     marqueetimeid = window.setInterval("MatrixLed_marquee_once_play()",MatrixLedmarqueetime);
   }    
@@ -249,7 +249,6 @@
   
   function MatrixLed_marquee_color(input_marquee_) {
     input_marquee_=input_marquee_.toString();
-    MatrixLedmarqueeinitial=input_marquee_;
     MatrixLedmarqueecolorcodeonce = "";
     window.clearInterval(marqueetimeid);
     if (input_marquee_.length==150)
@@ -259,6 +258,7 @@
     }
     else if ((input_marquee_.length%30==0)&&(input_marquee_.length>150))
       MatrixLedmarqueecolorcode = input_marquee_;
+    MatrixLedmarqueeinitial=MatrixLedmarqueecolorcode;
     marqueeactive=3;
     marqueetimeid = window.setInterval("MatrixLed_marquee_color_play()",MatrixLedmarqueetime);
   }  
@@ -277,6 +277,7 @@
       MatrixLedmarqueecolorcode = input_marquee_;
       MatrixLedmarqueecolorcodeonce = input_marquee_;
     }
+    MatrixLedmarqueeinitial=MatrixLedmarqueecolorcode;
     marqueeactive=4;
     marqueetimeid = window.setInterval("MatrixLed_marquee_color_once_play()",MatrixLedmarqueetime);
   }    
