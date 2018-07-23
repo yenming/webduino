@@ -75,6 +75,18 @@ Blockly.JavaScript['matrix_led_texttocode'] = function(block) {
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
+Blockly.JavaScript['matrix_led_width'] = function(block) {
+  var value_width_ = Blockly.JavaScript.valueToCode(block, 'value_width_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'MatrixLed_width('+ value_width_ +');';
+  return code;
+};
+
+Blockly.JavaScript['matrix_led_height'] = function(block) {
+  var value_height_ = Blockly.JavaScript.valueToCode(block, 'value_height_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'MatrixLed_height('+ value_height_ +');';
+  return code;
+};
+
 Blockly.JavaScript['matrix_led_sample'] = function(block) {
   var value_sample_ = block.getFieldValue('value_sample_');
   var code = 'MatrixLed_sample("'+ value_sample_ +'");\n';
@@ -250,7 +262,7 @@ Blockly.JavaScript['matrix_led_state'] = function(block) {
 
 Blockly.JavaScript['matrix_led_showstate'] = function(block) {
   var value_showstate_ = block.getFieldValue('value_showstate_');
-  var code = 'MatrixLed_showstate(fuMatrixLed,'+value_showstate_+');\n';
+  var code = 'MatrixLed_showstate('+value_showstate_+');\n';
   return code;
 };
 
