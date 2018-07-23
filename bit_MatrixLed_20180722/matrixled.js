@@ -251,12 +251,12 @@
     input_marquee_=input_marquee_.toString();
     MatrixLedmarqueecolorcodeonce = "";
     window.clearInterval(marqueetimeid);
-    if (input_marquee_.length==150)
+    if (input_marquee_.length==175)
     {
       MatrixLed_matrix_codetocolor(input_marquee_);
       return;
     }
-    else if ((input_marquee_.length%30==0)&&(input_marquee_.length>150))
+    else if ((input_marquee_.length%35==0)&&(input_marquee_.length>175))
       MatrixLedmarqueecolorcode = input_marquee_;
     MatrixLedmarqueeinitial=MatrixLedmarqueecolorcode;
     marqueeactive=3;
@@ -267,12 +267,12 @@
     input_marquee_=input_marquee_.toString();
     MatrixLedmarqueeinitial=input_marquee_;
     window.clearInterval(marqueetimeid);
-    if (input_marquee_.length==150)
+    if (input_marquee_.length==175)
     {
       MatrixLed_matrix_codetocolor(input_marquee_);
       return;
     }
-    else if ((input_marquee_.length%30==0)&&(input_marquee_.length>150))
+    else if ((input_marquee_.length%35==0)&&(input_marquee_.length>175))
     {
       MatrixLedmarqueecolorcode = input_marquee_;
       MatrixLedmarqueecolorcodeonce = input_marquee_;
@@ -283,17 +283,17 @@
   }    
   
   function MatrixLed_marquee_color_play() {
-    if (MatrixLedmarqueecolorcode.length>150)
+    if (MatrixLedmarqueecolorcode.length>175)
     {
       if (MatrixLedmarqueereverse==1)
       {
-        MatrixLed_matrix_codetocolor(MatrixLedmarqueecolorcode.substr(0,150));
-        MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(30,MatrixLedmarqueecolorcode.length-30)+MatrixLedmarqueecolorcode.substr(0,30);
+        MatrixLed_matrix_codetocolor(MatrixLedmarqueecolorcode.substr(0,175));
+        MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(35,MatrixLedmarqueecolorcode.length-35)+MatrixLedmarqueecolorcode.substr(0,35);
       }
       else if (MatrixLedmarqueereverse==2)
       {
-        MatrixLed_matrix_codetocolor(MatrixLedmarqueecolorcode.substr(MatrixLedmarqueecolorcode.length-150,150));
-        MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(MatrixLedmarqueecolorcode.length-30,30)+MatrixLedmarqueecolorcode.substr(0,MatrixLedmarqueecolorcode.length-30);
+        MatrixLed_matrix_codetocolor(MatrixLedmarqueecolorcode.substr(MatrixLedmarqueecolorcode.length-175,175));
+        MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(MatrixLedmarqueecolorcode.length-35,35)+MatrixLedmarqueecolorcode.substr(0,MatrixLedmarqueecolorcode.length-35);
       }
     }
     else
@@ -301,19 +301,19 @@
   } 
   
   function MatrixLed_marquee_color_once_play() {
-    if (MatrixLedmarqueecolorcode.length>=150)
+    if (MatrixLedmarqueecolorcode.length>=175)
     {
       if (MatrixLedmarqueereverse==1)
       {
-        MatrixLed_matrix_codetocolor(MatrixLedmarqueecolorcode.substr(0,150));
-        MatrixLedmarqueecolorcodeonce = MatrixLedmarqueecolorcodeonce.substr(30,MatrixLedmarqueecolorcodeonce.length-30)+MatrixLedmarqueecolorcodeonce.substr(0,30);
-        MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(30,MatrixLedmarqueecolorcode.length-30);
+        MatrixLed_matrix_codetocolor(MatrixLedmarqueecolorcode.substr(0,175));
+        MatrixLedmarqueecolorcodeonce = MatrixLedmarqueecolorcodeonce.substr(35,MatrixLedmarqueecolorcodeonce.length-35)+MatrixLedmarqueecolorcodeonce.substr(0,35);
+        MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(35,MatrixLedmarqueecolorcode.length-35);
       }
       else if (MatrixLedmarqueereverse==2)
       {
-        MatrixLed_matrix_codetocolor(MatrixLedmarqueecolorcode.substr(MatrixLedmarqueecolorcode.length-150,150));
-        MatrixLedmarqueecolorcodeonce = MatrixLedmarqueecolorcodeonce.substr(MatrixLedmarqueecolorcodeonce.length-30,30)+MatrixLedmarqueecolorcodeonce.substr(0,MatrixLedmarqueecolorcodeonce.length-30);
-        MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(0,MatrixLedmarqueecolorcode.length-30);
+        MatrixLed_matrix_codetocolor(MatrixLedmarqueecolorcode.substr(MatrixLedmarqueecolorcode.length-175,175));
+        MatrixLedmarqueecolorcodeonce = MatrixLedmarqueecolorcodeonce.substr(MatrixLedmarqueecolorcodeonce.length-35,35)+MatrixLedmarqueecolorcodeonce.substr(0,MatrixLedmarqueecolorcodeonce.length-35);
+        MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(0,MatrixLedmarqueecolorcode.length-35);
       }
     }
     else
@@ -323,19 +323,19 @@
   function MatrixLed_marquee_color_degree(direction,degree) {
     window.clearInterval(marqueetimeid);
     if (MatrixLedmarqueecolorcode.length<MatrixLedmarqueecolorcodeonce.length) MatrixLedmarqueecolorcode=MatrixLedmarqueecolorcodeonce;
-    if (MatrixLedmarqueecolorcode.length>150)
+    if (MatrixLedmarqueecolorcode.length>175)
     {
       if (direction==1)
       {
         for (var i=1;i<=degree;i++)
-          MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(30,MatrixLedmarqueecolorcode.length-30)+MatrixLedmarqueecolorcode.substr(0,30);
+          MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(35,MatrixLedmarqueecolorcode.length-35)+MatrixLedmarqueecolorcode.substr(0,35);
       }
       else if (direction==2)
       {
         for (var i=1;i<=degree;i++)
-          MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(MatrixLedmarqueecolorcode.length-30,30)+MatrixLedmarqueecolorcode.substr(0,MatrixLedmarqueecolorcode.length-30);
+          MatrixLedmarqueecolorcode = MatrixLedmarqueecolorcode.substr(MatrixLedmarqueecolorcode.length-35,35)+MatrixLedmarqueecolorcode.substr(0,MatrixLedmarqueecolorcode.length-35);
       }
-      MatrixLed_matrix_codetocolor(MatrixLedmarqueecolorcode.substr(0,150));
+      MatrixLed_matrix_codetocolor(MatrixLedmarqueecolorcode.substr(0,175));
     }
   }  
   
@@ -485,7 +485,7 @@
   
   function MatrixLed_matrix_codetocolor(code) {
     for (var i=0;i<25;i++)
-      L[i]="#"+code.substr(i*6,6);
+      L[i]=code.substr(i*7,7);
     
     MatrixLed_show();
   }
