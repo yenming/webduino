@@ -48,6 +48,7 @@ Blockly.Blocks['picture_set'] = {
       .appendField(Blockly.Msg.ID_SHOW);
   this.appendValueInput("value_")
       .setAlign(Blockly.ALIGN_RIGHT)
+      .setCheck(null)
       .appendField(Blockly.Msg.VALUE_SHOW);    
   this.setPreviousStatement(true);
   this.setNextStatement(true);
