@@ -36,6 +36,57 @@
       document.body.appendChild(pic);
     }
   }
+  
+  function picture_set(input_id,input_property) {
+
+    if (document.getElementById("pic_"+input_id_))
+    {
+      if (input_property=='url')
+        return document.getElementById("pic_"+input_id).src = input_url;
+      esle if (input_property=='width')
+        return document.getElementById("pic_"+input_id).style.width = input_width + 'px';
+      esle if (input_property=='height')
+        return document.getElementById("pic_"+input_id).style.height = input_height + 'px';
+      esle if (input_property=='left')
+        return document.getElementById("pic_"+input_id).style.left = input_left + 'px';
+      esle if (input_property=='top')
+        return document.getElementById("pic_"+input_id).style.top = input_top + 'px';
+      esle if (input_property=='zindex')
+        return document.getElementById("pic_"+input_id).style.zindex = input_zindex;
+      esle if (input_property=='display')
+      {
+        if (input_display==flase)
+          document.getElementById("pic_"+input_id).style.display = "none";
+        else
+          document.getElementById("pic_"+input_id).style.display = "block";
+      }
+    }
+
+  }    
+  
+  function picture_get(input_id,input_property) {
+
+    if (document.getElementById("pic_"+input_id_))
+    {
+      if (input_property=='url')
+        return document.getElementById("pic_"+input_id).src;
+      esle if (input_property=='width')
+        return document.getElementById("pic_"+input_id).style.width;
+      esle if (input_property=='height')
+        return document.getElementById("pic_"+input_id).style.height;
+      esle if (input_property=='left')
+        return document.getElementById("pic_"+input_id).style.left;
+      esle if (input_property=='top')
+        return document.getElementById("pic_"+input_id).style.top;
+      esle if (input_property=='zindex')
+        return document.getElementById("pic_"+input_id).style.zindex;
+      esle if (input_property=='display')
+        return document.getElementById("pic_"+input_id).style.display;
+    }
+    else
+      return "";    
+  }  
+ 
 
   window.picture_create = picture_create;
 
