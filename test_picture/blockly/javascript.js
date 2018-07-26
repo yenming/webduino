@@ -22,7 +22,7 @@ Blockly.JavaScript['picture_set'] = function (block) {
 Blockly.JavaScript['picture_get'] = function (block) {
   var value_id_ = Blockly.JavaScript.valueToCode(block, 'id_', Blockly.JavaScript.ORDER_ATOMIC); 
   var value_property_ = block.getFieldValue('property_');
-  var code = 'picture_get(' + value_id_ + ',' + value_property_ + ');';
+  var code = 'picture_get(' + value_id_ + ',' + value_property_ + ')';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
