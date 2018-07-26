@@ -10,4 +10,3 @@ Blockly.Msg.DISPLAY_SHOW = "Display";
 Blockly.Msg.SET_SHOW = "Picture";
 Blockly.Msg.GET_SHOW = "Picture Get";
 Blockly.Msg.DELETE_SHOW = "Picture Delete";
-Blockly.Msg.VALUE_SHOW = "Data";
