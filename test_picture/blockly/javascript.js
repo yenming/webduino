@@ -61,7 +61,7 @@ Blockly.JavaScript['picture_display'] = function (block) {
 };
 
 Blockly.JavaScript['picture_delete'] = function(block) {
-  var value_closeid_ = Blockly.JavaScript.valueToCode(block, 'closeid_', Blockly.JavaScript.ORDER_ATOMIC);  
-  var code = 'picture_delete(' + value_closeid_ + ',\'about:blank\',0,0,0,0);';
+  var value_id_ = Blockly.JavaScript.valueToCode(block, 'id_', Blockly.JavaScript.ORDER_ATOMIC);  
+  var code = 'picture_delete(' + value_id_ + ');';
   return code;
 };
