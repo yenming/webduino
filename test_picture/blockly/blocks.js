@@ -131,23 +131,6 @@ Blockly.Blocks['picture_display'] = {
   }
 };
 
-
-Blockly.Blocks['picture_hide'] = {
-  init: function() {
-  this.appendValueInput("id_")
-      .setCheck("Number")
-      .appendField(Blockly.Msg.PICTURE_SHOW)
-      .appendField(Blockly.Msg.ID_SHOW);
-  this.appendValueInput("hide_")
-      .setCheck("Boolean")
-      .appendField(Blockly.Msg.HIDE_SHOW);
-  this.setInputsInline(true);
-  this.setPreviousStatement(true);
-  this.setNextStatement(true);
-  this.setColour(65);
-  }
-};
-
 Blockly.Blocks['picture_delete'] = {
   init: function() {
   this.appendValueInput("id_")
