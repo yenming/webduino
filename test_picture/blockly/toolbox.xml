@@ -47,6 +47,11 @@
         <field name="NUM">0</field>
       </block>
     </value> 
+    <value name="value_">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>    
   </block>
   <block type="picture_get">
     <value name="id_">
