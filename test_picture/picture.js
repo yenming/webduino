@@ -2,39 +2,41 @@
 
   'use strict';
 
-  function createIframe(input_id_,input_url_,input_WIDTH_,input_HEIGHT_,input_LEFT_,input_TOP_) {
-    
-    var substr = input_url_.toLowerCase().split('.');
-    var extname_av = ".aac,.au,.aif,.aiff,.aiffc,.alac,.ape,.asf,.avi,.cda,.dat,.divx,.flac,.m2ts,.m4a,.mid,.mov,.mp2,.mp3,.mp4,.mpc,.mpg,.mpeg,.mv2,.ogg,.pdf,.ra,.ram,.raw,.rcp,.rm,.rmvb,.snd,.tak,.tta,.vob,.voc,.wma,.wav,.webm,.wmf,.wmv,.wv,.xmi,";
-    var extname_flash = ".swf,.flv,";
-        
-    if (extname_av.indexOf("."+substr[substr.length-1]+",")!=-1)
-        var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" autostart="true"></embed>'; 
-    else if (extname_flash.indexOf("."+substr[substr.length-1]+",")!=-1)
-        var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="application/x-shockwave-flash"></embed>';
-    else
-        var src = '<iframe src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" allow="geolocation; microphone; camera"></iframe>';
-    
-    if (document.getElementById("fustyles_iframe"+input_id_))
+  function picture_create(input_id,input_url,input_width,input_height,input_left,input_top,input_zindex,input_display) {
+
+    if (document.getElementById("pic_"+input_id_))
     {
-          document.getElementById("fustyles_iframe"+input_id_).style.left = input_LEFT_ + 'px';
-          document.getElementById("fustyles_iframe"+input_id_).style.top = input_TOP_ + 'px';
-          document.getElementById("fustyles_iframe"+input_id_).style.display = 'block';
-          document.getElementById("fustyles_iframe"+input_id_).innerHTML = src;
+      document.getElementById("pic_"+input_id).src = input_url;
+      document.getElementById("pic_"+input_id).style.width = input_width + 'px';
+      document.getElementById("pic_"+input_id).style.height = input_height + 'px';
+      document.getElementById("pic_"+input_id).style.left = input_left + 'px';
+      document.getElementById("pic_"+input_id).style.top = input_top + 'px';
+      document.getElementById("pic_"+input_id).style.zindex = input_zindex;
+      if (input_display==flase)
+        document.getElementById("pic_"+input_id).style.display = "none";
+      else
+        document.getElementById("pic_"+input_id).style.display = "block";
     }
     else
     {
-        var div = document.createElement('div');
-        div.id = "fustyles_iframe"+input_id_;
-        div.style.position = 'absolute';      
-        div.style.left = input_LEFT_ + 'px';
-        div.style.top = input_TOP_ + 'px';
-        div.style.zindex='9999';      
-        div.innerHTML = src;
-        document.body.appendChild(div);
+      var pic = document.createElement('img');
+      pic.style.position="absolute";
+      pic.id = "pic_"+input_id;
+      pic.src = input_url;
+      pic.style.width = input_width + 'px';
+      pic.style.height = input_height + 'px';
+      pic.style.left = input_left + 'px';
+      pic.style.top = input_top + 'px';
+      pic.style.zindex = input_zindex;
+      if (input_display==flase)
+        pic.style.display = "none";
+      else
+        pic.style.display = "block";
+      
+      document.body.appendChild(pic);
     }
   }
 
-  window.createIframe = createIframe;
+  window.picture_create = picture_create;
 
 }(window, window.document));
