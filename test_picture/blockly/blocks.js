@@ -1,12 +1,10 @@
-","picture_width","picture_height","picture_left","picture_top","picture_zindex","picture_display","picture_hide","picture_delete
-
 Blockly.Blocks['picture_create'] = {
   init: function() {
   this.appendValueInput("id_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.CREATE_SHOW);
-      .appendField(Blockly.Msg.ID_SHOW)    
+      .appendField(Blockly.Msg.CREATE_SHOW)
+      .appendField(Blockly.Msg.ID_SHOW); 
   this.appendValueInput("url_")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
@@ -33,7 +31,6 @@ Blockly.Blocks['picture_create'] = {
       .appendField(Blockly.Msg.ZINDEX_SHOW);      
   this.setPreviousStatement(true);
   this.setNextStatement(true);
-  this.setTooltip('');
   this.setColour(65);
   }
 };
@@ -50,7 +47,6 @@ Blockly.Blocks['picture_width'] = {
   this.setInputsInline(true);    
   this.setPreviousStatement(true);
   this.setNextStatement(true);
-  this.setTooltip('');
   this.setColour(65);
   }
 };
@@ -67,7 +63,6 @@ Blockly.Blocks['picture_height'] = {
   this.setInputsInline(true);    
   this.setPreviousStatement(true);
   this.setNextStatement(true);
-  this.setTooltip('');
   this.setColour(65);
   }
 };
@@ -84,7 +79,6 @@ Blockly.Blocks['picture_left'] = {
   this.setInputsInline(true);    
   this.setPreviousStatement(true);
   this.setNextStatement(true);
-  this.setTooltip('');
   this.setColour(65);
   }
 };
@@ -93,15 +87,14 @@ Blockly.Blocks['picture_top'] = {
   init: function() {
   this.appendValueInput("id_")
       .setCheck("Number")
-      .appendField(Blockly.Msg.PICTURE_SHOW);
-      .appendField(Blockly.Msg.ID_SHOW)    
+      .appendField(Blockly.Msg.PICTURE_SHOW)
+      .appendField(Blockly.Msg.ID_SHOW);
   this.appendValueInput("top_")
       .setCheck("Number")
       .appendField(Blockly.Msg.TOP_SHOW);
   this.setInputsInline(true);    
   this.setPreviousStatement(true);
   this.setNextStatement(true);
-  this.setTooltip('');
   this.setColour(65);
   }
 };
@@ -113,12 +106,11 @@ Blockly.Blocks['picture_zindex'] = {
       .appendField(Blockly.Msg.PICTURE_SHOW)
       .appendField(Blockly.Msg.ID_SHOW);
   this.appendValueInput("zindex_")
-      .setCheck("Boolean")
+      .setCheck("Number")
       .appendField(Blockly.Msg.ZINDEX_SHOW);
   this.setInputsInline(true);    
   this.setPreviousStatement(true);
   this.setNextStatement(true);
-  this.setTooltip('');
   this.setColour(65);
   }
 };
@@ -127,15 +119,14 @@ Blockly.Blocks['picture_display'] = {
   init: function() {
   this.appendValueInput("id_")
       .setCheck("Number")
-      .appendField(Blockly.Msg.PICTURE_SHOW);
-      .appendField(Blockly.Msg.ID_SHOW)    
+      .appendField(Blockly.Msg.PICTURE_SHOW)
+      .appendField(Blockly.Msg.ID_SHOW);
   this.appendValueInput("display_")
       .setCheck("Boolean")
       .appendField(Blockly.Msg.DISPLAY_SHOW);
   this.setInputsInline(true);
   this.setPreviousStatement(true);
   this.setNextStatement(true);
-  this.setTooltip('');
   this.setColour(65);
   }
 };
@@ -145,15 +136,14 @@ Blockly.Blocks['picture_hide'] = {
   init: function() {
   this.appendValueInput("id_")
       .setCheck("Number")
-      .appendField(Blockly.Msg.PICTURE_SHOW);
-      .appendField(Blockly.Msg.ID_SHOW)    
+      .appendField(Blockly.Msg.PICTURE_SHOW)
+      .appendField(Blockly.Msg.ID_SHOW);
   this.appendValueInput("hide_")
-      .setCheck("Number")
+      .setCheck("Boolean")
       .appendField(Blockly.Msg.HIDE_SHOW);
   this.setInputsInline(true);
   this.setPreviousStatement(true);
   this.setNextStatement(true);
-  this.setTooltip('');
   this.setColour(65);
   }
 };
@@ -164,10 +154,9 @@ Blockly.Blocks['picture_delete'] = {
       .setCheck("Number")
       .appendField(Blockly.Msg.DELETE_SHOW)
       .appendField(Blockly.Msg.ID_SHOW); 
+  this.setInputsInline(true);
   this.setPreviousStatement(true, null);
   this.setNextStatement(true, null);
   this.setColour(65);
-  this.setTooltip("");
-  this.setHelpUrl("");
   }
 };
