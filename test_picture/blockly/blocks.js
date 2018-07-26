@@ -29,6 +29,10 @@ Blockly.Blocks['picture_create'] = {
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.ZINDEX_SHOW);      
+  this.appendValueInput("display_")
+      .setCheck("Boolean")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.DISPLAY_SHOW);        
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setColour(65);
