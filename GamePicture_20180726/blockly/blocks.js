@@ -42,13 +42,13 @@ Blockly.Blocks['picture_create'] = {
 Blockly.Blocks['picture_set'] = {
   init: function() {
   this.appendValueInput("id_")
-      .setCheck("Number")
+      .setCheck("Number")    
       .appendField(Blockly.Msg.SET_SHOW)
-      .appendField(new Blockly.FieldDropdown([["url","url"], ["width","width"], ["height","height"], ["left","left"], ["top","top"], ["zindex","zindex"], ["display","display"]]), "property_")
       .appendField(Blockly.Msg.ID_SHOW);
   this.appendValueInput("value_")
       .setAlign(Blockly.ALIGN_RIGHT)
       .setCheck(null)
+      .appendField(new Blockly.FieldDropdown([["url","url"], ["width","width"], ["height","height"], ["left","left"], ["top","top"], ["zindex","zindex"], ["display","display"]]), "property_")    
       .appendField(Blockly.Msg.VALUE_SHOW);    
   this.setPreviousStatement(true);
   this.setNextStatement(true);
@@ -62,7 +62,7 @@ Blockly.Blocks['picture_get'] = {
       .setCheck("Number")
       .appendField(Blockly.Msg.GET_SHOW)
       .appendField(new Blockly.FieldDropdown([["url","url"], ["width","width"], ["height","height"], ["left","left"], ["top","top"], ["zindex","zindex"], ["display","display"]]), "property_")
-      .appendField(Blockly.Msg.ID_SHOW);
+      .appendField(Blockly.Msg.ID_SHOW);  
   this.setInputsInline(true);
   this.setOutput(true, null); 
   this.setColour(65);
