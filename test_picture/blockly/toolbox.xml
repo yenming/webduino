@@ -1,6 +1,6 @@
 <category id="catIframe">
-  <block type="iframe_open">
-    <value name="openid_">
+  <block type="picture_create">
+    <value name="id_">
       <block type="math_number">
         <field name="NUM">0</field>
       </block>
@@ -12,12 +12,12 @@
     </value>
     <value name="width_">
       <block type="math_number">
-        <field name="NUM">500</field>
+        <field name="NUM">200</field>
       </block>
     </value>
     <value name="height_">
       <block type="math_number">
-        <field name="NUM">400</field>
+        <field name="NUM">300</field>
       </block>
     </value>
     <value name="left_">
@@ -27,11 +27,35 @@
     </value>
     <value name="top_">
       <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>  
+    <value name="zindex_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value> 
+    <value name="display_">
+      <block type="math_number">
         <field name="NUM">100</field>
       </block>
-    </value>    
+    </value>     
   </block>
-  <block type="iframe_close">
+  <block type="picture_set">
+    <value name="closeid_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value> 
+  </block>
+  <block type="picture_get">
+    <value name="closeid_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value> 
+  </block>  
+  <block type="picture_delete">
     <value name="closeid_">
       <block type="math_number">
         <field name="NUM">0</field>
