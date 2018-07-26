@@ -67,13 +67,13 @@
       if (input_property=='url')
         return document.getElementById("pic_"+input_id).src;
       else if (input_property=='width')
-        return document.getElementById("pic_"+input_id).style.width;
+        return document.getElementById("pic_"+input_id).style.width.replace(/px/ig,"");
       else if (input_property=='height')
-        return document.getElementById("pic_"+input_id).style.height;
+        return document.getElementById("pic_"+input_id).style.height.replace(/px/ig,"");
       else if (input_property=='left')
-        return document.getElementById("pic_"+input_id).style.left;
+        return document.getElementById("pic_"+input_id).style.left.replace(/px/ig,"");
       else if (input_property=='top')
-        return document.getElementById("pic_"+input_id).style.top;
+        return document.getElementById("pic_"+input_id).style.top.replace(/px/ig,"");
       else if (input_property=='zindex')
         return document.getElementById("pic_"+input_id).style.zindex;
       else if (input_property=='display')
