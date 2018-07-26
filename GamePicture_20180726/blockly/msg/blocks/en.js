@@ -1,4 +1,4 @@
-Blockly.Msg.CREATE_SHOW = "Picture Create";
+Blockly.Msg.CREATE_SHOW = "Image Create";
 Blockly.Msg.ID_SHOW = "ID";
 Blockly.Msg.URL_SHOW = "Url";
 Blockly.Msg.WIDTH_SHOW = "Width";
@@ -7,6 +7,6 @@ Blockly.Msg.LEFT_SHOW = "Left";
 Blockly.Msg.TOP_SHOW = "Top";
 Blockly.Msg.ZINDEX_SHOW = "Z-index";
 Blockly.Msg.DISPLAY_SHOW = "Display";
-Blockly.Msg.SET_SHOW = "Picture Set";
-Blockly.Msg.GET_SHOW = "Picture Get";
-Blockly.Msg.DELETE_SHOW = "Picture Delete";
+Blockly.Msg.SET_SHOW = "Image Set";
+Blockly.Msg.GET_SHOW = "Image Get";
+Blockly.Msg.DELETE_SHOW = "Image Delete";
