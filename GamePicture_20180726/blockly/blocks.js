@@ -42,6 +42,7 @@ Blockly.Blocks['picture_create'] = {
 Blockly.Blocks['picture_set'] = {
   init: function() {
   this.appendValueInput("id_")
+      .setAlign(Blockly.ALIGN_RIGHT)
       .setCheck("Number")    
       .appendField(Blockly.Msg.SET_SHOW)
       .appendField(Blockly.Msg.ID_SHOW);
