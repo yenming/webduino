@@ -1,5 +1,5 @@
 Blockly.Msg.CREATE_SHOW = "图片 新增";
-Blockly.Msg.ID_SHOW = "序号";
+Blockly.Msg.ID_SHOW = "编号";
 Blockly.Msg.URL_SHOW = "来源网址";
 Blockly.Msg.WIDTH_SHOW = "宽度";
 Blockly.Msg.HEIGHT_SHOW = "高度";
