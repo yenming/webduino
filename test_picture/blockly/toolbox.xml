@@ -42,21 +42,21 @@
     </value>     
   </block>
   <block type="picture_set">
-    <value name="closeid_">
+    <value name="id_">
       <block type="math_number">
         <field name="NUM">0</field>
       </block>
     </value> 
   </block>
   <block type="picture_get">
-    <value name="closeid_">
+    <value name="id_">
       <block type="math_number">
         <field name="NUM">0</field>
       </block>
     </value> 
   </block>  
   <block type="picture_delete">
-    <value name="closeid_">
+    <value name="id_">
       <block type="math_number">
         <field name="NUM">0</field>
       </block>
