@@ -42,12 +42,10 @@ Blockly.Blocks['picture_width'] = {
   init: function() {
   this.appendValueInput("id_")
       .setCheck("Number")
-      .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.PICTURE_SHOW)
       .appendField(Blockly.Msg.ID_SHOW)    
   this.appendValueInput("width_")
       .setCheck("Number")
-      .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.WIDTH_SHOW)
   this.setPreviousStatement(true);
   this.setNextStatement(true);
@@ -60,12 +58,10 @@ Blockly.Blocks['picture_height'] = {
   init: function() {
   this.appendValueInput("id_")
       .setCheck("Number")
-      .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.PICTURE_SHOW)
       .appendField(Blockly.Msg.ID_SHOW)    
   this.appendValueInput("height_")
       .setCheck("Number")
-      .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.HEIGHT_SHOW)
   this.setPreviousStatement(true);
   this.setNextStatement(true);
@@ -78,7 +74,6 @@ Blockly.Blocks['picture_delete'] = {
   init: function() {
   this.appendValueInput("id_")
       .setCheck("Number")
-      .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.DELETE_SHOW)
       .appendField(Blockly.Msg.ID_SHOW)     
   this.setPreviousStatement(true, null);
