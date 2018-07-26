@@ -9,4 +9,4 @@ Blockly.Msg.ZINDEX_SHOW = "層次";
 Blockly.Msg.DISPLAY_SHOW = "顯示";
 Blockly.Msg.SET_SHOW = "圖片 設定";
 Blockly.Msg.GET_SHOW = "圖片 取得";
-Blockly.Msg.DELETE_SHOW = "";
+Blockly.Msg.DELETE_SHOW = "圖片 刪除";
