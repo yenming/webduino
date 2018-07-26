@@ -35,6 +35,21 @@ Blockly.Blocks['picture_create'] = {
   }
 };
 
+Blockly.Blocks['picture_url'] = {
+  init: function() {
+  this.appendValueInput("id_")
+      .setCheck("Number")
+      .appendField(Blockly.Msg.PICTURE_SHOW)
+      .appendField(Blockly.Msg.ID_SHOW);
+  this.appendValueInput("url_")
+      .setCheck("Number")
+      .appendField(Blockly.Msg.URL_SHOW);
+  this.setPreviousStatement(true);
+  this.setNextStatement(true);
+  this.setColour(65);
+  }
+};
+
 Blockly.Blocks['picture_width'] = {
   init: function() {
   this.appendValueInput("id_")
