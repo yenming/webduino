@@ -113,7 +113,7 @@ Blockly.Blocks['picture_zindex'] = {
       .appendField(Blockly.Msg.PICTURE_SHOW)
       .appendField(Blockly.Msg.ID_SHOW);
   this.appendValueInput("zindex_")
-      .setCheck("Number")
+      .setCheck("Boolean")
       .appendField(Blockly.Msg.ZINDEX_SHOW);
   this.setInputsInline(true);    
   this.setPreviousStatement(true);
@@ -130,8 +130,26 @@ Blockly.Blocks['picture_display'] = {
       .appendField(Blockly.Msg.PICTURE_SHOW);
       .appendField(Blockly.Msg.ID_SHOW)    
   this.appendValueInput("display_")
-      .setCheck("Number")
+      .setCheck("Boolean")
       .appendField(Blockly.Msg.DISPLAY_SHOW);
+  this.setInputsInline(true);
+  this.setPreviousStatement(true);
+  this.setNextStatement(true);
+  this.setTooltip('');
+  this.setColour(65);
+  }
+};
+
+
+Blockly.Blocks['picture_hide'] = {
+  init: function() {
+  this.appendValueInput("id_")
+      .setCheck("Number")
+      .appendField(Blockly.Msg.PICTURE_SHOW);
+      .appendField(Blockly.Msg.ID_SHOW)    
+  this.appendValueInput("hide_")
+      .setCheck("Number")
+      .appendField(Blockly.Msg.HIDE_SHOW);
   this.setInputsInline(true);
   this.setPreviousStatement(true);
   this.setNextStatement(true);
