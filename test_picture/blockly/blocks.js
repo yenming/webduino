@@ -35,30 +35,13 @@ Blockly.Blocks['picture_create'] = {
   }
 };
 
-Blockly.Blocks['picture_url'] = {
+Blockly.Blocks['picture_set'] = {
   init: function() {
   this.appendValueInput("id_")
       .setCheck("Number")
       .appendField(Blockly.Msg.PICTURE_SHOW)
-      .appendField(Blockly.Msg.ID_SHOW);
-  this.appendValueInput("url_")
-      .setCheck("Number")
-      .appendField(Blockly.Msg.URL_SHOW);
-  this.setPreviousStatement(true);
-  this.setNextStatement(true);
-  this.setColour(65);
-  }
-};
-
-Blockly.Blocks['picture_width'] = {
-  init: function() {
-  this.appendValueInput("id_")
-      .setCheck("Number")
-      .appendField(Blockly.Msg.PICTURE_SHOW)
-      .appendField(Blockly.Msg.ID_SHOW);
-  this.appendValueInput("width_")
-      .setCheck("Number")
-      .appendField(Blockly.Msg.WIDTH_SHOW);
+      .appendField(Blockly.Msg.ID_SHOW)
+      .appendField(new Blockly.FieldDropdown([["url","url"], ["width","width"], ["height","height"], ["left","left"], ["top","top"], ["zindex","zindex"], ["display","display"]]), "value_property_"); 
   this.setInputsInline(true);    
   this.setPreviousStatement(true);
   this.setNextStatement(true);
@@ -66,144 +49,13 @@ Blockly.Blocks['picture_width'] = {
   }
 };
 
-Blockly.Blocks['picture_getwidth'] = {
+Blockly.Blocks['picture_get'] = {
   init: function() {
   this.appendValueInput("id_")
       .setCheck("Number")
-      .appendField(Blockly.Msg.GETWIDTH_SHOW)
-      .appendField(Blockly.Msg.ID_SHOW);
-  this.setInputsInline(true);
-  this.setPreviousStatement(true);
-  this.setNextStatement(true);
-  this.setColour(65);
-  }
-};
-
-Blockly.Blocks['picture_height'] = {
-  init: function() {
-  this.appendValueInput("id_")
-      .setCheck("Number")
-      .appendField(Blockly.Msg.PICTURE_SHOW);
-      .appendField(Blockly.Msg.ID_SHOW)    
-  this.appendValueInput("height_")
-      .setCheck("Number")
-      .appendField(Blockly.Msg.HEIGHT_SHOW);
-  this.setInputsInline(true);    
-  this.setPreviousStatement(true);
-  this.setNextStatement(true);
-  this.setColour(65);
-  }
-};
-
-Blockly.Blocks['picture_getheight'] = {
-  init: function() {
-  this.appendValueInput("id_")
-      .setCheck("Number")
-      .appendField(Blockly.Msg.GETHEIGHT_SHOW)
-      .appendField(Blockly.Msg.ID_SHOW);
-  this.setInputsInline(true);
-  this.setPreviousStatement(true);
-  this.setNextStatement(true);
-  this.setColour(65);
-  }
-};
-
-Blockly.Blocks['picture_left'] = {
-  init: function() {
-  this.appendValueInput("id_")
-      .setCheck("Number")
-      .appendField(Blockly.Msg.PICTURE_SHOW);
-      .appendField(Blockly.Msg.ID_SHOW)    
-  this.appendValueInput("left_")
-      .setCheck("Number")
-      .appendField(Blockly.Msg.LEFT_SHOW);
-  this.setInputsInline(true);    
-  this.setPreviousStatement(true);
-  this.setNextStatement(true);
-  this.setColour(65);
-  }
-};
-
-Blockly.Blocks['picture_getleft'] = {
-  init: function() {
-  this.appendValueInput("id_")
-      .setCheck("Number")
-      .appendField(Blockly.Msg.GETLEFT_SHOW)
-      .appendField(Blockly.Msg.ID_SHOW);
-  this.setInputsInline(true);
-  this.setPreviousStatement(true);
-  this.setNextStatement(true);
-  this.setColour(65);
-  }
-};
-
-Blockly.Blocks['picture_top'] = {
-  init: function() {
-  this.appendValueInput("id_")
-      .setCheck("Number")
-      .appendField(Blockly.Msg.PICTURE_SHOW)
-      .appendField(Blockly.Msg.ID_SHOW);
-  this.appendValueInput("top_")
-      .setCheck("Number")
-      .appendField(Blockly.Msg.TOP_SHOW);
-  this.setInputsInline(true);    
-  this.setPreviousStatement(true);
-  this.setNextStatement(true);
-  this.setColour(65);
-  }
-};
-
-Blockly.Blocks['picture_gettop'] = {
-  init: function() {
-  this.appendValueInput("id_")
-      .setCheck("Number")
-      .appendField(Blockly.Msg.GETTOP_SHOW)
-      .appendField(Blockly.Msg.ID_SHOW);
-  this.setInputsInline(true);
-  this.setPreviousStatement(true);
-  this.setNextStatement(true);
-  this.setColour(65);
-  }
-};
-
-Blockly.Blocks['picture_zindex'] = {
-  init: function() {
-  this.appendValueInput("id_")
-      .setCheck("Number")
-      .appendField(Blockly.Msg.PICTURE_SHOW)
-      .appendField(Blockly.Msg.ID_SHOW);
-  this.appendValueInput("zindex_")
-      .setCheck("Number")
-      .appendField(Blockly.Msg.ZINDEX_SHOW);
-  this.setInputsInline(true);    
-  this.setPreviousStatement(true);
-  this.setNextStatement(true);
-  this.setColour(65);
-  }
-};
-
-Blockly.Blocks['picture_display'] = {
-  init: function() {
-  this.appendValueInput("id_")
-      .setCheck("Number")
-      .appendField(Blockly.Msg.PICTURE_SHOW)
-      .appendField(Blockly.Msg.ID_SHOW);
-  this.appendValueInput("display_")
-      .setCheck("Boolean")
-      .appendField(Blockly.Msg.DISPLAY_SHOW);
-  this.setInputsInline(true);
-  this.setPreviousStatement(true);
-  this.setNextStatement(true);
-  this.setColour(65);
-  }
-};
-
-Blockly.Blocks['picture_getdisplay'] = {
-  init: function() {
-  this.appendValueInput("id_")
-      .setCheck("Number")
-      .appendField(Blockly.Msg.GETDISPLAY_SHOW)
-      .appendField(Blockly.Msg.ID_SHOW);
+      .appendField(Blockly.Msg.GET_SHOW)
+      .appendField(Blockly.Msg.ID_SHOW)
+      .appendField(new Blockly.FieldDropdown([["url","url"], ["width","width"], ["height","height"], ["left","left"], ["top","top"], ["zindex","zindex"], ["display","display"]]), "value_property_"); 
   this.setInputsInline(true);
   this.setPreviousStatement(true);
   this.setNextStatement(true);
