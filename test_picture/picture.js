@@ -3,7 +3,6 @@
   'use strict';
 
   function picture_create(input_id,input_url,input_width,input_height,input_left,input_top,input_zindex,input_display) {
-
     if (document.getElementById("pic_"+input_id))
     {
       document.getElementById("pic_"+input_id).src = input_url;
@@ -38,7 +37,6 @@
   }
   
   function picture_set(input_id,input_property,input_value) {
-
     if (document.getElementById("pic_"+input_id))
     {
       if (input_property=='url')
@@ -64,7 +62,6 @@
   }    
   
   function picture_get(input_id,input_property) {
-
     if (document.getElementById("pic_"+input_id))
     {
       if (input_property=='url')
@@ -85,8 +82,17 @@
     else
       return "";    
   }  
- 
-
+  
+  function picture_delete(input_id) {
+    if (document.getElementById("pic_"+input_id))
+    {
+      document.body.removeChild("pic_"+input_id);
+    }  
+  }   
+  
   window.picture_create = picture_create;
+  window.picture_set = picture_set;
+  window.picture_get = picture_get;
+  window.picture_delete = picture_delete;
 
 }(window, window.document));
