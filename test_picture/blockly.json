@@ -1,5 +1,5 @@
 {
-  "types": ["picture_create","picture_width","picture_height","picture_left","picture_top","picture_zindex","picture_display","picture_delete"],
+  "types": ["picture_create","picture_url","picture_width","picture_height","picture_left","picture_top","picture_zindex","picture_display","picture_delete"],
   "category": "catPlus",
   "scripts": [
     "blockly/blocks.js",
