@@ -10,4 +10,3 @@ Blockly.Msg.DISPLAY_SHOW = "显示";
 Blockly.Msg.SET_SHOW = "图片";
 Blockly.Msg.GET_SHOW = "图片 取得";
 Blockly.Msg.DELETE_SHOW = "图片 删除";
-Blockly.Msg.VALUE_SHOW = "设定";
