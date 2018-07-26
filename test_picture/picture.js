@@ -91,7 +91,7 @@
   function picture_delete(input_id) {
     if (document.getElementById("pic_"+input_id))
     {
-      document.body.removeChild("pic_"+input_id);
+      document.body.removeChild(document.getElementById("pic_"+input_id));
     }  
   }   
   
