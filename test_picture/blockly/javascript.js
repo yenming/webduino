@@ -25,11 +25,23 @@ Blockly.JavaScript['picture_width'] = function (block) {
   return code;
 };
 
+Blockly.JavaScript['picture_getwidth'] = function (block) {
+  var value_id_ = Blockly.JavaScript.valueToCode(block, 'id_', Blockly.JavaScript.ORDER_ATOMIC);  
+  var code = 'picture_getwidth(' + value_id_ + ');';
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
 Blockly.JavaScript['picture_height'] = function (block) {
   var value_id_ = Blockly.JavaScript.valueToCode(block, 'id_', Blockly.JavaScript.ORDER_ATOMIC);  
   var value_height_ = Blockly.JavaScript.valueToCode(block, 'height_', Blockly.JavaScript.ORDER_ATOMIC);
   var code = 'picture_height(' + value_id_ + ',' + value_height_ + ');';
   return code;
+};
+
+Blockly.JavaScript['picture_getheight'] = function (block) {
+  var value_id_ = Blockly.JavaScript.valueToCode(block, 'id_', Blockly.JavaScript.ORDER_ATOMIC);  
+  var code = 'picture_getheight(' + value_id_ + ');';
+  return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
 Blockly.JavaScript['picture_left'] = function (block) {
@@ -39,11 +51,23 @@ Blockly.JavaScript['picture_left'] = function (block) {
   return code;
 };
 
+Blockly.JavaScript['picture_getleft'] = function (block) {
+  var value_id_ = Blockly.JavaScript.valueToCode(block, 'id_', Blockly.JavaScript.ORDER_ATOMIC);  
+  var code = 'picture_getleft(' + value_id_ + ');';
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
 Blockly.JavaScript['picture_top'] = function (block) {
   var value_id_ = Blockly.JavaScript.valueToCode(block, 'id_', Blockly.JavaScript.ORDER_ATOMIC);  
   var value_top_ = Blockly.JavaScript.valueToCode(block, 'top_', Blockly.JavaScript.ORDER_ATOMIC);   
   var code = 'picture_top(' + value_id_ + ',' + value_top_ + ');';
   return code;
+};
+
+Blockly.JavaScript['picture_gettop'] = function (block) {
+  var value_id_ = Blockly.JavaScript.valueToCode(block, 'id_', Blockly.JavaScript.ORDER_ATOMIC);  
+  var code = 'picture_gettop(' + value_id_ + ');';
+  return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
 Blockly.JavaScript['picture_zindex'] = function (block) {
@@ -58,6 +82,12 @@ Blockly.JavaScript['picture_display'] = function (block) {
   var value_display_ = Blockly.JavaScript.valueToCode(block, 'display_', Blockly.JavaScript.ORDER_ATOMIC);  
   var code = 'picture_display(' + value_id_ + ',' + value_display_ + ');';
   return code;
+};
+
+Blockly.JavaScript['picture_getdisplay'] = function (block) {
+  var value_id_ = Blockly.JavaScript.valueToCode(block, 'id_', Blockly.JavaScript.ORDER_ATOMIC);  
+  var code = 'picture_getdisplay(' + value_id_ + ');';
+  return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
 Blockly.JavaScript['picture_delete'] = function(block) {
