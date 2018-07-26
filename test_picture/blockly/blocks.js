@@ -50,7 +50,6 @@ Blockly.Blocks['picture_set'] = {
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.VALUE_SHOW);    
-  this.setInputsInline(true);    
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setColour(65);
@@ -65,8 +64,7 @@ Blockly.Blocks['picture_get'] = {
       .appendField(new Blockly.FieldDropdown([["url","url"], ["width","width"], ["height","height"], ["left","left"], ["top","top"], ["zindex","zindex"], ["display","display"]]), "property_")
       .appendField(Blockly.Msg.ID_SHOW);
   this.setInputsInline(true);
-  this.setPreviousStatement(true);
-  this.setNextStatement(true);
+  this.setOutput(true, null); 
   this.setColour(65);
   }
 };
