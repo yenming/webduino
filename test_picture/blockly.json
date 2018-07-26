@@ -1,12 +1,12 @@
 {
-  "types": ["iframe_open","iframe_close"],
+  "types": ["picture_create","picture_width","picture_height","picture_zindex","picture_display","picture_hide","picture_delete"],
   "category": "catPlus",
   "scripts": [
     "blockly/blocks.js",
     "blockly/javascript.js"
   ],
   "dependencies": [
-    "iframe.js"    
+    "picture.js"    
   ],
   "msg": "blockly/msg",
   "blocksMsg": "blockly/msg/blocks",
