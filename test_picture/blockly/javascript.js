@@ -13,14 +13,15 @@ Blockly.JavaScript['picture_create'] = function (block) {
 
 Blockly.JavaScript['picture_set'] = function (block) {
   var value_id_ = Blockly.JavaScript.valueToCode(block, 'id_', Blockly.JavaScript.ORDER_ATOMIC);  
-  var value_property_ = block.getFieldValue('value_property_');
-  var code = 'picture_set(' + value_id_ + ',' + value_property_ + ');';
+  var value_property_ = block.getFieldValue('property_');
+  var value_value_ = Blockly.JavaScript.valueToCode(block, 'value_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'picture_set(' + value_id_ + ',' + value_property_ + ',' + value_value_ + ');';
   return code;
 };
 
 Blockly.JavaScript['picture_get'] = function (block) {
   var value_id_ = Blockly.JavaScript.valueToCode(block, 'id_', Blockly.JavaScript.ORDER_ATOMIC); 
-  var value_property_ = block.getFieldValue('value_property_');
+  var value_property_ = block.getFieldValue('property_');
   var code = 'picture_get(' + value_id_ + ',' + value_property_ + ');';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
