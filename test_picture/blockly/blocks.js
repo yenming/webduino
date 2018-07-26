@@ -44,8 +44,12 @@ Blockly.Blocks['picture_set'] = {
   this.appendValueInput("id_")
       .setCheck("Number")
       .appendField(Blockly.Msg.SET_SHOW)
-      .appendField(new Blockly.FieldDropdown([["url","url"], ["width","width"], ["height","height"], ["left","left"], ["top","top"], ["zindex","zindex"], ["display","display"]]), "value_property_")
+      .appendField(new Blockly.FieldDropdown([["url","url"], ["width","width"], ["height","height"], ["left","left"], ["top","top"], ["zindex","zindex"], ["display","display"]]), "property_")
       .appendField(Blockly.Msg.ID_SHOW);
+  this.appendValueInput("value_")
+      .setCheck("String")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.VALUE_SHOW);    
   this.setInputsInline(true);    
   this.setPreviousStatement(true);
   this.setNextStatement(true);
@@ -58,7 +62,7 @@ Blockly.Blocks['picture_get'] = {
   this.appendValueInput("id_")
       .setCheck("Number")
       .appendField(Blockly.Msg.GET_SHOW)
-      .appendField(new Blockly.FieldDropdown([["url","url"], ["width","width"], ["height","height"], ["left","left"], ["top","top"], ["zindex","zindex"], ["display","display"]]), "value_property_")
+      .appendField(new Blockly.FieldDropdown([["url","url"], ["width","width"], ["height","height"], ["left","left"], ["top","top"], ["zindex","zindex"], ["display","display"]]), "property_")
       .appendField(Blockly.Msg.ID_SHOW);
   this.setInputsInline(true);
   this.setPreviousStatement(true);
