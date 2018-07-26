@@ -77,7 +77,12 @@
       else if (input_property=='zindex')
         return document.getElementById("pic_"+input_id).style.zindex;
       else if (input_property=='display')
-        return document.getElementById("pic_"+input_id).style.display;
+      {
+        if (document.getElementById("pic_"+input_id).style.display=="block")
+          return 1;
+        else
+          return 0;  
+      }
     }
     else
       return "";    
