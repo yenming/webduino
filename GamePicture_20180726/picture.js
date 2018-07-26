@@ -10,7 +10,7 @@
       document.getElementById("pic_"+input_id).style.height = input_height + 'px';
       document.getElementById("pic_"+input_id).style.left = input_left + 'px';
       document.getElementById("pic_"+input_id).style.top = input_top + 'px';
-      document.getElementById("pic_"+input_id).style.zindex = input_zindex;
+      document.getElementById("pic_"+input_id).style.zIndex = input_zindex;
       if (input_display==false)
         document.getElementById("pic_"+input_id).style.display = "none";
       else
@@ -26,7 +26,7 @@
       pic.style.height = input_height + 'px';
       pic.style.left = input_left + 'px';
       pic.style.top = input_top + 'px';
-      pic.style.zindex = input_zindex;
+      pic.style.zIndex = input_zindex;
       if (input_display==false)
         pic.style.display = "none";
       else
@@ -50,7 +50,7 @@
       else if (input_property=='top')
         document.getElementById("pic_"+input_id).style.top = input_value + 'px';
       else if (input_property=='zindex')
-        document.getElementById("pic_"+input_id).style.zindex = input_value;
+        document.getElementById("pic_"+input_id).style.zIndex = input_value;
       else if (input_property=='display')
       {
         if (input_value==false)
@@ -75,7 +75,7 @@
       else if (input_property=='top')
         return Number(document.getElementById("pic_"+input_id).style.top.replace(/px/ig,""));
       else if (input_property=='zindex')
-        return Number(document.getElementById("pic_"+input_id).style.zindex);
+        return Number(document.getElementById("pic_"+input_id).style.zIndex);
       else if (input_property=='display')
       {
         if (document.getElementById("pic_"+input_id).style.display=="block")
