@@ -10,4 +10,3 @@ Blockly.Msg.DISPLAY_SHOW = "顯示";
 Blockly.Msg.SET_SHOW = "圖片";
 Blockly.Msg.GET_SHOW = "圖片 取得";
 Blockly.Msg.DELETE_SHOW = "圖片 刪除";
-Blockly.Msg.VALUE_SHOW = "設定";
