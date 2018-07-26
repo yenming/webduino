@@ -66,6 +66,19 @@ Blockly.Blocks['picture_width'] = {
   }
 };
 
+Blockly.Blocks['picture_getwidth'] = {
+  init: function() {
+  this.appendValueInput("id_")
+      .setCheck("Number")
+      .appendField(Blockly.Msg.GETWIDTH_SHOW)
+      .appendField(Blockly.Msg.ID_SHOW);
+  this.setInputsInline(true);
+  this.setPreviousStatement(true);
+  this.setNextStatement(true);
+  this.setColour(65);
+  }
+};
+
 Blockly.Blocks['picture_height'] = {
   init: function() {
   this.appendValueInput("id_")
@@ -76,6 +89,19 @@ Blockly.Blocks['picture_height'] = {
       .setCheck("Number")
       .appendField(Blockly.Msg.HEIGHT_SHOW);
   this.setInputsInline(true);    
+  this.setPreviousStatement(true);
+  this.setNextStatement(true);
+  this.setColour(65);
+  }
+};
+
+Blockly.Blocks['picture_getheight'] = {
+  init: function() {
+  this.appendValueInput("id_")
+      .setCheck("Number")
+      .appendField(Blockly.Msg.GETHEIGHT_SHOW)
+      .appendField(Blockly.Msg.ID_SHOW);
+  this.setInputsInline(true);
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setColour(65);
@@ -98,6 +124,19 @@ Blockly.Blocks['picture_left'] = {
   }
 };
 
+Blockly.Blocks['picture_getleft'] = {
+  init: function() {
+  this.appendValueInput("id_")
+      .setCheck("Number")
+      .appendField(Blockly.Msg.GETLEFT_SHOW)
+      .appendField(Blockly.Msg.ID_SHOW);
+  this.setInputsInline(true);
+  this.setPreviousStatement(true);
+  this.setNextStatement(true);
+  this.setColour(65);
+  }
+};
+
 Blockly.Blocks['picture_top'] = {
   init: function() {
   this.appendValueInput("id_")
@@ -108,6 +147,19 @@ Blockly.Blocks['picture_top'] = {
       .setCheck("Number")
       .appendField(Blockly.Msg.TOP_SHOW);
   this.setInputsInline(true);    
+  this.setPreviousStatement(true);
+  this.setNextStatement(true);
+  this.setColour(65);
+  }
+};
+
+Blockly.Blocks['picture_gettop'] = {
+  init: function() {
+  this.appendValueInput("id_")
+      .setCheck("Number")
+      .appendField(Blockly.Msg.GETTOP_SHOW)
+      .appendField(Blockly.Msg.ID_SHOW);
+  this.setInputsInline(true);
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setColour(65);
@@ -139,6 +191,19 @@ Blockly.Blocks['picture_display'] = {
   this.appendValueInput("display_")
       .setCheck("Boolean")
       .appendField(Blockly.Msg.DISPLAY_SHOW);
+  this.setInputsInline(true);
+  this.setPreviousStatement(true);
+  this.setNextStatement(true);
+  this.setColour(65);
+  }
+};
+
+Blockly.Blocks['picture_getdisplay'] = {
+  init: function() {
+  this.appendValueInput("id_")
+      .setCheck("Number")
+      .appendField(Blockly.Msg.GETDISPLAY_SHOW)
+      .appendField(Blockly.Msg.ID_SHOW);
   this.setInputsInline(true);
   this.setPreviousStatement(true);
   this.setNextStatement(true);
