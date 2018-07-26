@@ -7,6 +7,6 @@ Blockly.Msg.LEFT_SHOW = "Left";
 Blockly.Msg.TOP_SHOW = "Top";
 Blockly.Msg.ZINDEX_SHOW = "z-index";
 Blockly.Msg.DISPLAY_SHOW = "Display";
-Blockly.Msg.SET_SHOW = "Picture";
+Blockly.Msg.SET_SHOW = "Picture S";
 Blockly.Msg.GET_SHOW = "Picture Get";
 Blockly.Msg.DELETE_SHOW = "Picture Delete";
