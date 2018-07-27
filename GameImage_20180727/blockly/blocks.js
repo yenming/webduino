@@ -79,3 +79,17 @@ Blockly.Blocks['image_delete'] = {
   this.setColour(65);
   }
 };
+
+Blockly.Blocks['image_collision'] = {
+  init: function() {
+  this.appendValueInput("id1_")
+      .setCheck("Number")
+      .appendField(Blockly.Msg.COLLISION_SHOW);
+  this.appendValueInput("id2_")
+      .setCheck("Number")
+      .appendField(Blockly.Msg.AND_SHOW);   
+  this.setInputsInline(true);
+  this.setOutput(true, null); 
+  this.setColour(65);
+  }
+};
