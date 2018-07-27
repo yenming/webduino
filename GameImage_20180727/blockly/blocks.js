@@ -43,13 +43,15 @@ Blockly.Blocks['image_set'] = {
   init: function() {
   this.appendValueInput("id_")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .setCheck(null)    
+      .setCheck(null) 
       .appendField(Blockly.Msg.SET_SHOW)
       .appendField(Blockly.Msg.ID_SHOW);
+  this.appendDummyInput()  
+      .appendField(new Blockly.FieldDropdown([["url","url"], ["width","width"], ["height","height"], ["left","left"], ["top","top"], ["zindex","zindex"], ["display","display"]]), "property_");
   this.appendValueInput("value_")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .setCheck(null)
-      .appendField(new Blockly.FieldDropdown([["url","url"], ["width","width"], ["height","height"], ["left","left"], ["top","top"], ["zindex","zindex"], ["display","display"]]), "property_");
+      .setCheck(null);
+  this.setInputsInline(true);
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setColour(65);
@@ -63,6 +65,7 @@ Blockly.Blocks['image_get'] = {
       .appendField(Blockly.Msg.GET_SHOW)
       .appendField(new Blockly.FieldDropdown([["id","id"], ["url","url"], ["width","width"], ["height","height"], ["left","left"], ["top","top"], ["zindex","zindex"], ["display","display"]]), "property_")
       .appendField(Blockly.Msg.ID_SHOW);  
+  this.setInputsInline(true);
   this.setOutput(true, null); 
   this.setColour(65);
   }
@@ -74,6 +77,7 @@ Blockly.Blocks['image_delete'] = {
       .setCheck(null)
       .appendField(Blockly.Msg.DELETE_SHOW)
       .appendField(Blockly.Msg.ID_SHOW); 
+  this.setInputsInline(true);
   this.setPreviousStatement(true, null);
   this.setNextStatement(true, null);
   this.setColour(65);
