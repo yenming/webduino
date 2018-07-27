@@ -61,7 +61,7 @@ Blockly.Blocks['picture_get'] = {
   this.appendValueInput("id_")
       .setCheck("Number")
       .appendField(Blockly.Msg.GET_SHOW)
-      .appendField(new Blockly.FieldDropdown([["url","url"], ["width","width"], ["height","height"], ["left","left"], ["top","top"], ["zindex","zindex"], ["display","display"]]), "property_")
+      .appendField(new Blockly.FieldDropdown([["id","id"], ["url","url"], ["width","width"], ["height","height"], ["left","left"], ["top","top"], ["zindex","zindex"], ["display","display"]]), "property_")
       .appendField(Blockly.Msg.ID_SHOW);  
   this.setOutput(true, null); 
   this.setColour(65);
