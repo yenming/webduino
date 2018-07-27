@@ -63,6 +63,7 @@ Blockly.Blocks['image_get'] = {
       .appendField(Blockly.Msg.GET_SHOW)
       .appendField(new Blockly.FieldDropdown([["id","id"], ["url","url"], ["width","width"], ["height","height"], ["left","left"], ["top","top"], ["zindex","zindex"], ["display","display"]]), "property_")
       .appendField(Blockly.Msg.ID_SHOW);  
+  this.setInputsInline(true);
   this.setOutput(true, null); 
   this.setColour(65);
   }
@@ -74,6 +75,7 @@ Blockly.Blocks['image_delete'] = {
       .setCheck(null)
       .appendField(Blockly.Msg.DELETE_SHOW)
       .appendField(Blockly.Msg.ID_SHOW); 
+  this.setInputsInline(true);
   this.setPreviousStatement(true, null);
   this.setNextStatement(true, null);
   this.setColour(65);
