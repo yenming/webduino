@@ -35,7 +35,7 @@ Blockly.Blocks['image_create'] = {
       .appendField(Blockly.Msg.DISPLAY_SHOW);        
   this.setPreviousStatement(true);
   this.setNextStatement(true);
-  this.setColour(285);
+  this.setColour(330);
   }
 };
 
@@ -54,7 +54,7 @@ Blockly.Blocks['image_set'] = {
   this.setInputsInline(true);
   this.setPreviousStatement(true);
   this.setNextStatement(true);
-  this.setColour(285);
+  this.setColour(330);
   }
 };
 
@@ -67,7 +67,7 @@ Blockly.Blocks['image_get'] = {
       .appendField(Blockly.Msg.ID_SHOW);  
   this.setInputsInline(true);
   this.setOutput(true, null); 
-  this.setColour(285);
+  this.setColour(330);
   }
 };
 
@@ -80,7 +80,7 @@ Blockly.Blocks['image_delete'] = {
   this.setInputsInline(true);
   this.setPreviousStatement(true, null);
   this.setNextStatement(true, null);
-  this.setColour(285);
+  this.setColour(330);
   }
 };
 
@@ -94,6 +94,6 @@ Blockly.Blocks['image_collision'] = {
       .appendField(Blockly.Msg.AND_SHOW);   
   this.setInputsInline(true);
   this.setOutput(true, null); 
-  this.setColour(285);
+  this.setColour(330);
   }
 };
