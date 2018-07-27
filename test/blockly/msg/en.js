@@ -1,1 +1,1 @@
-MSG.catMatrixLed = "FuMatrixLed";
+MSG.catImage = "Game Image";

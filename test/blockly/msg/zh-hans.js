@@ -1,1 +1,1 @@
-MSG.catMatrixLed = "法兰斯点矩阵";
+MSG.catImage = "游戏图片";
