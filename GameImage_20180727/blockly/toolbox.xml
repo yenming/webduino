@@ -1,4 +1,4 @@
-<category id="catPicture">
+<category id="catImage">
   <block type="image_create">
     <value name="id_">
       <block type="math_number">
