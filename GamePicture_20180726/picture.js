@@ -62,6 +62,13 @@
   }    
   
   function picture_get(input_id,input_property) {
+    if (input_property=='id')
+    {
+      if (document.getElementById("pic_"+input_id))
+        return 1;
+      else
+        return 0;
+    }
     if (document.getElementById("pic_"+input_id))
     {
       if (input_property=='url')

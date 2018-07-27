@@ -1,1 +1,1 @@
-MSG.catPicture = "游戏图片";
+MSG.catPicture = "游戏图案";
