@@ -47,6 +47,7 @@ Blockly.Blocks['image_set'] = {
       .appendField(Blockly.Msg.SET_SHOW)
       .appendField(Blockly.Msg.ID_SHOW);
   this.appendDummyInput()  
+      .appendField(Blockly.Msg.PROPERTY_SHOW)
       .appendField(new Blockly.FieldDropdown([["url","url"], ["width","width"], ["height","height"], ["left","left"], ["top","top"], ["zindex","zindex"], ["display","display"]]), "property_");
   this.appendValueInput("value_")
       .setAlign(Blockly.ALIGN_RIGHT)
