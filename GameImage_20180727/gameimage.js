@@ -121,7 +121,7 @@
       else if ((((x1>=x2)&&(x1<=x2_w))&&((y1>=y2)&&(y1<=y2_h)))||(((x1>=x2)&&(x1<=x2_w))&&((y1_h>=y2)&&(y1_h<=y2_h)))||(((x1_w>=x2)&&(x1_w<=x2_w))&&((y1>=y2)&&(y1<=y2_h)))||(((x1_w>=x2)&&(x1_w<=x2_w))&&((y1_h>=y2)&&(y1_h<=y2_h))))
         return 1;
       else
-        return x1+"<br>"+x1_w+"<br>"+y1+"<br>"+y1_h+"<br>"+x2+"<br>"+x2_w+"<br>"+y2+"<br>"+y2_h;  
+        return 0;  
     }
     else
       return 0;   
