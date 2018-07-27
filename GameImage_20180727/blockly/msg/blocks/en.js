@@ -8,7 +8,6 @@ Blockly.Msg.TOP_SHOW = "Top";
 Blockly.Msg.ZINDEX_SHOW = "Z-index";
 Blockly.Msg.DISPLAY_SHOW = "Display";
 Blockly.Msg.SET_SHOW = "Image Set";
-Blockly.Msg.PROPERTY_SHOW = "P";
 Blockly.Msg.GET_SHOW = "Image Get";
 Blockly.Msg.DELETE_SHOW = "Image Delete";
 Blockly.Msg.COLLISION_SHOW = "Image Collision ID ";
