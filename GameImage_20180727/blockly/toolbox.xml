@@ -67,4 +67,16 @@
       </block>
     </value> 
   </block>
+  <block type="image_collision">
+    <value name="id1_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value> 
+    <value name="id2_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>     
+  </block>   
  </category>
