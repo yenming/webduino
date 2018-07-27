@@ -1,7 +1,7 @@
 Blockly.Blocks['image_create'] = {
   init: function() {
   this.appendValueInput("id_")
-      .setCheck("Number")
+      .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.CREATE_SHOW)
       .appendField(Blockly.Msg.ID_SHOW); 
@@ -43,7 +43,7 @@ Blockly.Blocks['image_set'] = {
   init: function() {
   this.appendValueInput("id_")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .setCheck("Number")    
+      .setCheck(null)    
       .appendField(Blockly.Msg.SET_SHOW)
       .appendField(Blockly.Msg.ID_SHOW);
   this.appendValueInput("value_")
@@ -59,7 +59,7 @@ Blockly.Blocks['image_set'] = {
 Blockly.Blocks['image_get'] = {
   init: function() {
   this.appendValueInput("id_")
-      .setCheck("Number")
+      .setCheck(null)
       .appendField(Blockly.Msg.GET_SHOW)
       .appendField(new Blockly.FieldDropdown([["id","id"], ["url","url"], ["width","width"], ["height","height"], ["left","left"], ["top","top"], ["zindex","zindex"], ["display","display"]]), "property_")
       .appendField(Blockly.Msg.ID_SHOW);  
@@ -71,7 +71,7 @@ Blockly.Blocks['image_get'] = {
 Blockly.Blocks['image_delete'] = {
   init: function() {
   this.appendValueInput("id_")
-      .setCheck("Number")
+      .setCheck(null)
       .appendField(Blockly.Msg.DELETE_SHOW)
       .appendField(Blockly.Msg.ID_SHOW); 
   this.setPreviousStatement(true, null);
@@ -83,10 +83,10 @@ Blockly.Blocks['image_delete'] = {
 Blockly.Blocks['image_collision'] = {
   init: function() {
   this.appendValueInput("id1_")
-      .setCheck("Number")
+      .setCheck(null)
       .appendField(Blockly.Msg.COLLISION_SHOW);
   this.appendValueInput("id2_")
-      .setCheck("Number")
+      .setCheck(null)
       .appendField(Blockly.Msg.AND_SHOW);   
   this.setInputsInline(true);
   this.setOutput(true, null); 
