@@ -18,7 +18,7 @@
     }
     else
     {
-      var pic = document.createElement('img');
+      var img = document.createElement('img');
       img.style.position = "absolute";
       img.id = "img_"+input_id;
       img.src = input_url;
@@ -32,7 +32,7 @@
       else
         img.style.display = "block";
       
-      document.body.appendChild(pic);
+      document.body.appendChild(img);
     }
   }
   
