@@ -60,6 +60,7 @@ Blockly.Blocks['image_get'] = {
   init: function() {
   this.appendValueInput("id_")
       .setCheck(null)
+      .appendField(Blockly.Msg.GET_SHOW);
       .appendField(Blockly.Msg.ID_SHOW); 
   this.appendDummyInput()
       .appendField(new Blockly.FieldDropdown([["id","id"], ["url","url"], ["width","width"], ["height","height"], ["left","left"], ["top","top"], ["zindex","zindex"], ["display","display"]]), "property_");     
