@@ -1,4 +1,4 @@
-Blockly.Blocks['picture_create'] = {
+Blockly.Blocks['image_create'] = {
   init: function() {
   this.appendValueInput("id_")
       .setCheck("Number")
@@ -39,7 +39,7 @@ Blockly.Blocks['picture_create'] = {
   }
 };
 
-Blockly.Blocks['picture_set'] = {
+Blockly.Blocks['image_set'] = {
   init: function() {
   this.appendValueInput("id_")
       .setAlign(Blockly.ALIGN_RIGHT)
@@ -56,7 +56,7 @@ Blockly.Blocks['picture_set'] = {
   }
 };
 
-Blockly.Blocks['picture_get'] = {
+Blockly.Blocks['image_get'] = {
   init: function() {
   this.appendValueInput("id_")
       .setCheck("Number")
@@ -68,7 +68,7 @@ Blockly.Blocks['picture_get'] = {
   }
 };
 
-Blockly.Blocks['picture_delete'] = {
+Blockly.Blocks['image_delete'] = {
   init: function() {
   this.appendValueInput("id_")
       .setCheck("Number")
