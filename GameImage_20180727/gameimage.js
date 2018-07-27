@@ -102,9 +102,29 @@
     }  
   }   
   
+  function image_collision(input_id1,input_id2) {
+    if ((document.getElementById("img_"+input_id1))&&(document.getElementById("img_"+input_id2))
+    {
+      document.getElementById("img_"+input_id1).style.width;
+      document.getElementById("img_"+input_id1).style.height;
+      document.getElementById("img_"+input_id1).style.left;
+      document.getElementById("img_"+input_id1).style.top;
+    
+      if (input_property=='url')
+        return 1;
+      else if (input_property=='display')
+        return 1;
+      else
+          return 0;  
+    }
+    else
+      return 0;    
+  }    
+  
   window.image_create = image_create;
   window.image_set = image_set;
   window.image_get = image_get;
   window.image_delete = image_delete;
+  window.image_collision = image_collision;
 
 }(window, window.document));
