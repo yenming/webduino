@@ -1,4 +1,4 @@
-Blockly.JavaScript['picture_create'] = function (block) {
+Blockly.JavaScript['image_create'] = function (block) {
   var value_id_ = Blockly.JavaScript.valueToCode(block, 'id_', Blockly.JavaScript.ORDER_ATOMIC);  
   var value_url_ = Blockly.JavaScript.valueToCode(block, 'url_', Blockly.JavaScript.ORDER_ATOMIC);
   var value_width_ = Blockly.JavaScript.valueToCode(block, 'width_', Blockly.JavaScript.ORDER_ATOMIC);
@@ -11,7 +11,7 @@ Blockly.JavaScript['picture_create'] = function (block) {
   return code;
 };
 
-Blockly.JavaScript['picture_set'] = function (block) {
+Blockly.JavaScript['image_set'] = function (block) {
   var value_id_ = Blockly.JavaScript.valueToCode(block, 'id_', Blockly.JavaScript.ORDER_ATOMIC);  
   var value_property_ = block.getFieldValue('property_');
   var value_value_ = Blockly.JavaScript.valueToCode(block, 'value_', Blockly.JavaScript.ORDER_ATOMIC);
@@ -19,14 +19,14 @@ Blockly.JavaScript['picture_set'] = function (block) {
   return code;
 };
 
-Blockly.JavaScript['picture_get'] = function (block) {
+Blockly.JavaScript['image_get'] = function (block) {
   var value_id_ = Blockly.JavaScript.valueToCode(block, 'id_', Blockly.JavaScript.ORDER_ATOMIC); 
   var value_property_ = block.getFieldValue('property_');
   var code = 'picture_get("' + value_id_ + '","' + value_property_ + '")';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Blockly.JavaScript['picture_delete'] = function(block) {
+Blockly.JavaScript['image_delete'] = function(block) {
   var value_id_ = Blockly.JavaScript.valueToCode(block, 'id_', Blockly.JavaScript.ORDER_ATOMIC);  
   var code = 'picture_delete("' + value_id_ + '");';
   return code;
