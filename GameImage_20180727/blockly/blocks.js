@@ -50,6 +50,7 @@ Blockly.Blocks['image_set'] = {
       .setAlign(Blockly.ALIGN_RIGHT)
       .setCheck(null)
       .appendField(new Blockly.FieldDropdown([["url","url"], ["width","width"], ["height","height"], ["left","left"], ["top","top"], ["zindex","zindex"], ["display","display"]]), "property_");
+  this.setInputsInline(true);
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setColour(65);
