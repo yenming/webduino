@@ -41,17 +41,16 @@ Blockly.Blocks['image_create'] = {
 
 Blockly.Blocks['image_set'] = {
   init: function() {
-  this.appendValueInput("id_")
-      .setAlign(Blockly.ALIGN_RIGHT)
-      .setCheck(null) 
-      .appendField(Blockly.Msg.SET_SHOW)
-      .appendField(Blockly.Msg.ID_SHOW);
   this.appendDummyInput()  
-      .appendField(Blockly.Msg.PROPERTY_SHOW)
+      .appendField(Blockly.Msg.SET_SHOW)
       .appendField(new Blockly.FieldDropdown([["url","url"], ["width","width"], ["height","height"], ["left","left"], ["top","top"], ["zindex","zindex"], ["display","display"]]), "property_");
   this.appendValueInput("value_")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .setCheck(null);
+      .setCheck(null);    
+  this.appendValueInput("id_")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .setCheck(null) 
+      .appendField(Blockly.Msg.ID_SHOW);
   this.setInputsInline(true);
   this.setPreviousStatement(true);
   this.setNextStatement(true);
