@@ -1,8 +1,8 @@
 <category id="catImage">
   <block type="image_create">
     <value name="id_">
-      <block type="math_number">
-        <field name="NUM">0</field>
+      <block type="text">
+        <field name="TEXT"></field>
       </block>
     </value>    
     <value name="url_">
@@ -43,8 +43,8 @@
   </block>
   <block type="image_set">
     <value name="id_">
-      <block type="math_number">
-        <field name="NUM">0</field>
+      <block type="text">
+        <field name="TEXT"></field>
       </block>
     </value> 
     <value name="value_">
@@ -55,27 +55,27 @@
   </block>
   <block type="image_get">
     <value name="id_">
-      <block type="math_number">
-        <field name="NUM">0</field>
+      <block type="text">
+        <field name="TEXT"></field>
       </block>
     </value> 
   </block>  
   <block type="image_delete">
     <value name="id_">
-      <block type="math_number">
-        <field name="NUM">0</field>
+      <block type="text">
+        <field name="TEXT"></field>
       </block>
     </value> 
   </block>
   <block type="image_collision">
     <value name="id1_">
-      <block type="math_number">
-        <field name="NUM">0</field>
+      <block type="text">
+        <field name="TEXT"></field>
       </block>
     </value> 
     <value name="id2_">
-      <block type="math_number">
-        <field name="NUM">1</field>
+      <block type="text">
+        <field name="TEXT"></field>
       </block>
     </value>     
   </block>   
