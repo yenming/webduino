@@ -64,7 +64,14 @@
   function picture_get(input_id,input_property) {
     if (document.getElementById("pic_"+input_id))
     {
-      if (input_property=='url')
+      if (input_property=='id')
+      {
+        if (document.getElementById("pic_"+input_id))
+          return 1;
+        else
+          return 0;
+      }
+      else if (input_property=='url')
         return document.getElementById("pic_"+input_id).src;
       else if (input_property=='width')
         return Number(document.getElementById("pic_"+input_id).style.width.replace(/px/ig,""));
