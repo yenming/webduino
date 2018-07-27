@@ -7,7 +7,7 @@
     </value>    
     <value name="url_">
       <block type="text">
-        <field name="TEXT">about:blank</field>
+        <field name="TEXT"></field>
       </block>
     </value>
     <value name="width_">
