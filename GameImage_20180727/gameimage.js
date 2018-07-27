@@ -2,7 +2,7 @@
 
   'use strict';
 
-  function picture_create(input_id,input_url,input_width,input_height,input_left,input_top,input_zindex,input_display) {
+  function image_create(input_id,input_url,input_width,input_height,input_left,input_top,input_zindex,input_display) {
     if (document.getElementById("pic_"+input_id))
     {
       document.getElementById("pic_"+input_id).src = input_url;
@@ -36,7 +36,7 @@
     }
   }
   
-  function picture_set(input_id,input_property,input_value) {
+  function image_set(input_id,input_property,input_value) {
     if (document.getElementById("pic_"+input_id))
     {
       if (input_property=='url')
@@ -61,7 +61,7 @@
     }
   }    
   
-  function picture_get(input_id,input_property) {
+  function image_get(input_id,input_property) {
     if (input_property=='id')
     {
       if (document.getElementById("pic_"+input_id))
@@ -95,16 +95,16 @@
       return "";    
   }  
   
-  function picture_delete(input_id) {
+  function image_delete(input_id) {
     if (document.getElementById("pic_"+input_id))
     {
       document.body.removeChild(document.getElementById("pic_"+input_id));
     }  
   }   
   
-  window.picture_create = picture_create;
-  window.picture_set = picture_set;
-  window.picture_get = picture_get;
-  window.picture_delete = picture_delete;
+  window.image_create = image_create;
+  window.image_set = image_set;
+  window.image_get = image_get;
+  window.image_delete = image_delete;
 
 }(window, window.document));
