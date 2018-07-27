@@ -1,5 +1,5 @@
 {
-  "types": ["picture_create","picture_set","picture_get","picture_delete"],
+  "types": ["image_create","image_set","image_get","image_delete"],
   "category": "catPlus",
   "scripts": [
     "blockly/blocks.js",
