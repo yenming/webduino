@@ -1,5 +1,5 @@
-Blockly.Msg.CREATE_SHOW = "图片新增";
-Blockly.Msg.ID_SHOW = "编号";
+Blockly.Msg.CREATE_SHOW = "图片建立";
+Blockly.Msg.ID_SHOW = "识别码";
 Blockly.Msg.URL_SHOW = "来源网址";
 Blockly.Msg.WIDTH_SHOW = "宽度";
 Blockly.Msg.HEIGHT_SHOW = "高度";
@@ -10,5 +10,5 @@ Blockly.Msg.DISPLAY_SHOW = "显示";
 Blockly.Msg.SET_SHOW = "设定图片";
 Blockly.Msg.GET_SHOW = "取得图片";
 Blockly.Msg.DELETE_SHOW = "图片 删除";
-Blockly.Msg.COLLISION_SHOW = "取得图片 碰撞状态 编号 ";
+Blockly.Msg.COLLISION_SHOW = "取得图片 碰撞状态 识别码 ";
 Blockly.Msg.AND_SHOW = " 与 ";
