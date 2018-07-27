@@ -103,19 +103,25 @@
   }   
   
   function image_collision(input_id1,input_id2) {
-    if ((document.getElementById("img_"+input_id1))&&(document.getElementById("img_"+input_id2))
+    if ((document.getElementById("img_"+input_id1))&&(document.getElementById("img_"+input_id2)))
     {
-      document.getElementById("img_"+input_id1).style.width;
-      document.getElementById("img_"+input_id1).style.height;
-      document.getElementById("img_"+input_id1).style.left;
-      document.getElementById("img_"+input_id1).style.top;
+      var img1 = document.getElementById("img_"+input_id1).style;
+      var img2 = document.getElementById("img_"+input_id2).style;
+      var x1 = Number(img1.left);
+      var x1_w = Number(img1.left) + Number(img1.width);
+      var y1 = Number(img1.top);
+      var y1_h = Number(img1.top) + Number(img1.height);
+      var x2 = Number(img2.left);
+      var x2_w = Number(img2.left) + Number(img2.width);
+      var y2 = Number(img2.top);
+      var y2_h = Number(img2.top) + Number(img2.height);
     
-      if (input_property=='url')
+      if ((((x2>=x1)&&(x2<=x1_w))&&((y2>=y1)&&(y2<=y1_h)))||(((x2>=x1)&&(x2<=x1_w))&&((y2_h>=y1)&&(y2_h<=y1_h)))||(((x2_w>=x1)&&(x2_w<=x1_w))&&((y2>=y1)&&(y2<=y1_h)))||(((x2_w>=x1)&&(x2_w<=x1_w))&&((y2_h>=y1)&&(y2_h<=y1_h))))
         return 1;
-      else if (input_property=='display')
+      else if ((((x1>=x2)&&(x1<=x2_w))&&((y1>=y2)&&(y1<=y2_h)))||(((x1>=x2)&&(x1<=x2_w))&&((y1_h>=y2)&&(y1_h<=y2_h)))||(((x1_w>=x2)&&(x1_w<=x2_w))&&((y1>=y2)&&(y1<=y2_h)))||(((x1_w>=x2)&&(x1_w<=x2_w))&&((y1_h>=y2)&&(y1_h<=y2_h))))
         return 1;
       else
-          return 0;  
+        return 0;  
     }
     else
       return 0;    
