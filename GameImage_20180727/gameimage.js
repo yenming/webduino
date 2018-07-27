@@ -3,60 +3,60 @@
   'use strict';
 
   function image_create(input_id,input_url,input_width,input_height,input_left,input_top,input_zindex,input_display) {
-    if (document.getElementById("pic_"+input_id))
+    if (document.getElementById("img_"+input_id))
     {
-      document.getElementById("pic_"+input_id).src = input_url;
-      document.getElementById("pic_"+input_id).style.width = input_width + 'px';
-      document.getElementById("pic_"+input_id).style.height = input_height + 'px';
-      document.getElementById("pic_"+input_id).style.left = input_left + 'px';
-      document.getElementById("pic_"+input_id).style.top = input_top + 'px';
-      document.getElementById("pic_"+input_id).style.zIndex = input_zindex;
+      document.getElementById("img_"+input_id).src = input_url;
+      document.getElementById("img_"+input_id).style.width = input_width + 'px';
+      document.getElementById("img_"+input_id).style.height = input_height + 'px';
+      document.getElementById("img_"+input_id).style.left = input_left + 'px';
+      document.getElementById("img_"+input_id).style.top = input_top + 'px';
+      document.getElementById("img_"+input_id).style.zIndex = input_zindex;
       if (input_display==false)
-        document.getElementById("pic_"+input_id).style.display = "none";
+        document.getElementById("img_"+input_id).style.display = "none";
       else
-        document.getElementById("pic_"+input_id).style.display = "block";
+        document.getElementById("img_"+input_id).style.display = "block";
     }
     else
     {
       var pic = document.createElement('img');
-      pic.style.position = "absolute";
-      pic.id = "pic_"+input_id;
-      pic.src = input_url;
-      pic.style.width = input_width + 'px';
-      pic.style.height = input_height + 'px';
-      pic.style.left = input_left + 'px';
-      pic.style.top = input_top + 'px';
-      pic.style.zIndex = input_zindex;
+      img.style.position = "absolute";
+      img.id = "img_"+input_id;
+      img.src = input_url;
+      img.style.width = input_width + 'px';
+      img.style.height = input_height + 'px';
+      img.style.left = input_left + 'px';
+      img.style.top = input_top + 'px';
+      img.style.zIndex = input_zindex;
       if (input_display==false)
-        pic.style.display = "none";
+        img.style.display = "none";
       else
-        pic.style.display = "block";
+        img.style.display = "block";
       
       document.body.appendChild(pic);
     }
   }
   
   function image_set(input_id,input_property,input_value) {
-    if (document.getElementById("pic_"+input_id))
+    if (document.getElementById("img_"+input_id))
     {
       if (input_property=='url')
-        document.getElementById("pic_"+input_id).src = input_value;
+        document.getElementById("img_"+input_id).src = input_value;
       else if (input_property=='width')
-        document.getElementById("pic_"+input_id).style.width = input_value + 'px';
+        document.getElementById("img_"+input_id).style.width = input_value + 'px';
       else if (input_property=='height')
-        document.getElementById("pic_"+input_id).style.height = input_value + 'px';
+        document.getElementById("img_"+input_id).style.height = input_value + 'px';
       else if (input_property=='left')
-        document.getElementById("pic_"+input_id).style.left = input_value + 'px';
+        document.getElementById("img_"+input_id).style.left = input_value + 'px';
       else if (input_property=='top')
-        document.getElementById("pic_"+input_id).style.top = input_value + 'px';
+        document.getElementById("img_"+input_id).style.top = input_value + 'px';
       else if (input_property=='zindex')
-        document.getElementById("pic_"+input_id).style.zIndex = input_value;
+        document.getElementById("img_"+input_id).style.zIndex = input_value;
       else if (input_property=='display')
       {
         if (input_value==false)
-          document.getElementById("pic_"+input_id).style.display = "none";
+          document.getElementById("img_"+input_id).style.display = "none";
         else
-          document.getElementById("pic_"+input_id).style.display = "block";
+          document.getElementById("img_"+input_id).style.display = "block";
       }
     }
   }    
@@ -64,28 +64,28 @@
   function image_get(input_id,input_property) {
     if (input_property=='id')
     {
-      if (document.getElementById("pic_"+input_id))
+      if (document.getElementById("img_"+input_id))
         return 1;
       else
         return 0;
     }
-    if (document.getElementById("pic_"+input_id))
+    if (document.getElementById("img_"+input_id))
     {
       if (input_property=='url')
-        return document.getElementById("pic_"+input_id).src;
+        return document.getElementById("img_"+input_id).src;
       else if (input_property=='width')
-        return Number(document.getElementById("pic_"+input_id).style.width.replace(/px/ig,""));
+        return Number(document.getElementById("img_"+input_id).style.width.replace(/px/ig,""));
       else if (input_property=='height')
-        return Number(document.getElementById("pic_"+input_id).style.height.replace(/px/ig,""));
+        return Number(document.getElementById("img_"+input_id).style.height.replace(/px/ig,""));
       else if (input_property=='left')
-        return Number(document.getElementById("pic_"+input_id).style.left.replace(/px/ig,""));
+        return Number(document.getElementById("img_"+input_id).style.left.replace(/px/ig,""));
       else if (input_property=='top')
-        return Number(document.getElementById("pic_"+input_id).style.top.replace(/px/ig,""));
+        return Number(document.getElementById("img_"+input_id).style.top.replace(/px/ig,""));
       else if (input_property=='zindex')
-        return Number(document.getElementById("pic_"+input_id).style.zIndex);
+        return Number(document.getElementById("img_"+input_id).style.zIndex);
       else if (input_property=='display')
       {
-        if (document.getElementById("pic_"+input_id).style.display=="block")
+        if (document.getElementById("img_"+input_id).style.display=="block")
           return 1;
         else
           return 0;  
@@ -96,9 +96,9 @@
   }  
   
   function image_delete(input_id) {
-    if (document.getElementById("pic_"+input_id))
+    if (document.getElementById("img_"+input_id))
     {
-      document.body.removeChild(document.getElementById("pic_"+input_id));
+      document.body.removeChild(document.getElementById("img_"+input_id));
     }  
   }   
   
