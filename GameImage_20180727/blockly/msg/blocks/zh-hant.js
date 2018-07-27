@@ -9,6 +9,6 @@ Blockly.Msg.ZINDEX_SHOW = "層次";
 Blockly.Msg.DISPLAY_SHOW = "顯示";
 Blockly.Msg.SET_SHOW = "設定圖片 ";
 Blockly.Msg.GET_SHOW = "取得圖片 ";
-Blockly.Msg.DELETE_SHOW = "圖片刪除";
+Blockly.Msg.DELETE_SHOW = "刪除圖片";
 Blockly.Msg.COLLISION_SHOW = "取得圖片 接觸狀態 代碼 ";
 Blockly.Msg.AND_SHOW = " 與 ";
