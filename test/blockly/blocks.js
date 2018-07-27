@@ -43,10 +43,11 @@ Blockly.Blocks['image_set'] = {
   init: function() {
   this.appendValueInput("id_")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .setCheck(null)    
+      .setCheck(null) 
       .appendField(Blockly.Msg.SET_SHOW)
-      .appendField(new Blockly.FieldDropdown([["url","url"], ["width","width"], ["height","height"], ["left","left"], ["top","top"], ["zindex","zindex"], ["display","display"]]), "property_")    
       .appendField(Blockly.Msg.ID_SHOW);
+  this.appendDummyInput()  
+      .appendField(new Blockly.FieldDropdown([["url","url"], ["width","width"], ["height","height"], ["left","left"], ["top","top"], ["zindex","zindex"], ["display","display"]]), "property_");
   this.appendValueInput("value_")
       .setAlign(Blockly.ALIGN_RIGHT)
       .setCheck(null);
