@@ -1,5 +1,5 @@
 <category id="catPicture">
-  <block type="picture_create">
+  <block type="image_create">
     <value name="id_">
       <block type="math_number">
         <field name="NUM">0</field>
@@ -41,7 +41,7 @@
       </block>
     </value>     
   </block>
-  <block type="picture_set">
+  <block type="image_set">
     <value name="id_">
       <block type="math_number">
         <field name="NUM">0</field>
@@ -53,14 +53,14 @@
       </block>
     </value>    
   </block>
-  <block type="picture_get">
+  <block type="image_get">
     <value name="id_">
       <block type="math_number">
         <field name="NUM">0</field>
       </block>
     </value> 
   </block>  
-  <block type="picture_delete">
+  <block type="image_delete">
     <value name="id_">
       <block type="math_number">
         <field name="NUM">0</field>
