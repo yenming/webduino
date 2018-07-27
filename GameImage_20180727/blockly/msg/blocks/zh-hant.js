@@ -10,5 +10,5 @@ Blockly.Msg.DISPLAY_SHOW = "顯示";
 Blockly.Msg.SET_SHOW = "設定圖片屬性";
 Blockly.Msg.GET_SHOW = "取得圖片屬性";
 Blockly.Msg.DELETE_SHOW = "圖片刪除";
-Blockly.Msg.COLLISION_SHOW = "取得圖片 接觸狀態 識別碼 ";
+Blockly.Msg.COLLISION_SHOW = "取得圖片 碰撞狀態 識別碼 ";
 Blockly.Msg.AND_SHOW = " 與 ";
