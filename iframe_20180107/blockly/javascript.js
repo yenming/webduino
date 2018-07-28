@@ -8,8 +8,9 @@ Blockly.JavaScript['iframe_open'] = function (block) {
   var code = 'createIframe(' + value_openid_ + ',' + value_url_ + ','+ value_width_ + ',' + value_height_ + ',' + value_left_ + ',' + value_top_ + ');';
   return code;
 };
+
 Blockly.JavaScript['iframe_close'] = function(block) {
   var value_closeid_ = Blockly.JavaScript.valueToCode(block, 'closeid_', Blockly.JavaScript.ORDER_ATOMIC);  
-  var code = 'createIframe(' + value_closeid_ + ',\'about:blank\',0,0,0,0);';
+  var code = 'deleteIframe(' + value_closeid_ + ');';
   return code;
 };
