@@ -7,14 +7,14 @@
     var substr = input_url_.toLowerCase().split('.');
     var extname_av = ".aac,.au,.aif,.aiff,.aiffc,.alac,.ape,.asf,.avi,.cda,.dat,.divx,.flac,.m2ts,.m4a,.mid,.mov,.mp2,.mp3,.mp4,.mpc,.mpg,.mpeg,.mv2,.ogg,.pdf,.ra,.ram,.raw,.rcp,.rm,.rmvb,.snd,.tak,.tta,.vob,.voc,.wma,.wav,.webm,.wmf,.wmv,.wv,.xmi,";
     var extname_flash = ".swf,.flv,";
-    var extname_text = ".text,";
+    var extname_text = "<text>";
         
     if (extname_av.indexOf("."+substr[substr.length-1]+",")!=-1)
         var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" autostart="true"></embed>'; 
     else if (extname_flash.indexOf("."+substr[substr.length-1]+",")!=-1)
         var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="application/x-shockwave-flash"></embed>';
-    else if (extname_text.indexOf("."+substr[substr.length-1]+",")!=-1)
-        var src = input_url_.substr(0,input_url_.indexOf(".text"));
+    else if (extname_text.indexOf("<text>")==0)
+        var src = input_url_.substr(6,input_url_.length());
     else
         var src = '<iframe src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" frameborder="0" allow="geolocation; microphone; camera"></iframe>';
     
