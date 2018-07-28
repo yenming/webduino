@@ -14,7 +14,7 @@
     else if (extname_flash.indexOf("."+substr[substr.length-1]+",")!=-1)
         var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="application/x-shockwave-flash"></embed>';
     else if (extname_text.indexOf("."+substr[substr.length-1]+",")!=-1)
-        var src = input_url_.substr(0,input_url_.indexOf(extname_text));
+        var src = input_url_.substr(0,input_url_.indexOf(".text"));
     else
         var src = '<iframe src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" frameborder="0" allow="geolocation; microphone; camera"></iframe>';
     
