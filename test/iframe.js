@@ -40,7 +40,7 @@
   
   function deleteIframe(input_id_){
     if (document.getElementById("fustyles_iframe"+input_id_))
-      document.body.removeChild("fustyles_iframe"+input_id_);
+      document.getElementById("fustyles_iframe"+input_id_).remove();
   }
 
   window.createIframe = createIframe;
