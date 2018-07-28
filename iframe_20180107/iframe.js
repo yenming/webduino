@@ -10,7 +10,7 @@
         
     if (input_url_.toLowerCase().indexOf("http")!=0)
         var src = input_url_.substr(5,(input_url_.length-5));
-    elseif (extname_av.indexOf("."+substr[substr.length-1]+",")!=-1)
+    else if (extname_av.indexOf("."+substr[substr.length-1]+",")!=-1)
         var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" autostart="true"></embed>'; 
     else if (extname_flash.indexOf("."+substr[substr.length-1]+",")!=-1)
         var src = '<embed src="' + input_url_ + '" style="width:' + input_WIDTH_ + 'px;height:' + input_HEIGHT_ + 'px" type="application/x-shockwave-flash"></embed>';
