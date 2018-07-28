@@ -1,1 +1,1 @@
-MSG.catImage = "游戏图片";
+MSG.catIframe = "显示网页";
