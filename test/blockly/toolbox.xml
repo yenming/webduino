@@ -92,16 +92,11 @@
     </value>    
   </block>  
   <block type="image_boundary_collision">
-    <value name="id1_">
+    <value name="id_">
       <block type="text">
         <field name="TEXT"></field>
       </block>
-    </value> 
-    <value name="id2_">
-      <block type="text">
-        <field name="TEXT"></field>
-      </block>
-    </value>     
+    </value>  
   </block>  
   <block type="image_sys_get">
   </block>    
