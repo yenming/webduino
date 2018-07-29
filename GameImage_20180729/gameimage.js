@@ -2,8 +2,8 @@
 
   'use strict';
   
-  var boundary_width = 0;
-  var boundary_height = 0;
+  var screen_width = 0;
+  var screen_height = 0;
 
   function image_create(input_id,input_url,input_width,input_height,input_left,input_top,input_zindex,input_display) {
     if (document.getElementById("img_"+input_id))
@@ -131,21 +131,21 @@
   }   
   
   function image_boundary(input_left,input_top) {
-    if (input_left>=0) boundary_width = input_left;
-    if (input_top>=0) boundary_height = input_top;
+    if (input_left>=0) screen_width = input_left;
+    if (input_top>=0) screen_height = input_top;
   }    
   
   function image_boundary_collision(input_id) {
-    if ((boundary_width>0)||(boundary_height>0))
+    if ((screen_width>0)||(screen_height>0))
     {
       var left = Number(document.getElementById("img_"+input_id).style.left.replace(/px/ig,""));
       var width = Number(document.getElementById("img_"+input_id).style.width.replace(/px/ig,""));
       var top = Number(document.getElementById("img_"+input_id).style.top.replace(/px/ig,""));
       var height = Number(document.getElementById("img_"+input_id).style.height.replace(/px/ig,""));
-      if (boundary_width>0)
-        if ((left<=0)||(left+width>=boundary_width)) return 1
-      if (boundary_height>0) 
-        if ((top<=0)||(top+height>=boundary_height)) return 1
+      if (screen_width>0)
+        if ((left<=0)||(left+width>=screen_width)) return 1
+      if (screen_height>0) 
+        if ((top<=0)||(top+height>=screen_height)) return 1
       return 0;
     }
     else
@@ -153,10 +153,10 @@
   }    
   
   function image_sys_get(input_property) {
-    if (input_property=='boundary_width')
-      return boundary_width;
-    else if (input_property=='boundary_height')
-      return boundary_height;
+    if (input_property=='screen_width')
+      return screen_width;
+    else if (input_property=='screen_height')
+      return screen_height;
     else
       return;
   }  
