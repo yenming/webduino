@@ -135,7 +135,7 @@
     if (input_top>=0) screen_height = input_top;
   }    
   
-  function image_boundary_collision(input_id) {
+  function image_boundary_collision(input_id,input_property) {
     if ((screen_width>0)||(screen_height>0))
     {
       var left = Number(document.getElementById("img_"+input_id).style.left.replace(/px/ig,""));
@@ -143,9 +143,15 @@
       var top = Number(document.getElementById("img_"+input_id).style.top.replace(/px/ig,""));
       var height = Number(document.getElementById("img_"+input_id).style.height.replace(/px/ig,""));
       if (screen_width>0)
-        if ((left<=0)||(left+width>=screen_width)) return 1
+      {
+        if ((input_property=="left")&&(left<=0)) return 1
+        if ((input_property=="right")&&(left+width>=screen_width)) return 1
+      }
       if (screen_height>0) 
-        if ((top<=0)||(top+height>=screen_height)) return 1
+      {
+        if ((input_property=="up")&&(top<=0)) return 1
+        if ((input_property=="down")&&(top+height>=screen_height)) return 1
+      }
       return 0;
     }
     else
