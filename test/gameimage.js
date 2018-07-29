@@ -152,6 +152,15 @@
       return 0;   
   }    
   
+  function image_sys_get(input_property) {
+    if (input_property=='boundary_width')
+      return boundary_width;
+    else if (input_property=='boundary_height')
+      return boundary_height;
+    else
+      return;
+  }  
+  
   window.image_create = image_create;
   window.image_set = image_set;
   window.image_get = image_get;
@@ -159,5 +168,6 @@
   window.image_collision = image_collision;
   window.image_boundary = image_boundary;
   window.image_boundary_collision = image_boundary_collision;
+  window.image_sys_get = image_sys_get;
 
 }(window, window.document));
