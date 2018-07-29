@@ -143,9 +143,9 @@
       var top = Number(document.getElementById("img_"+input_id).style.top.replace(/px/ig,""));
       var height = Number(document.getElementById("img_"+input_id).style.height.replace(/px/ig,""));
       if (boundary_left>0)
-        if (left+width>=boundary_left) return 1
+        if ((left<=0)||(left+width>=boundary_left)) return 1
       if (boundary_top>0) 
-        if (top+height>=boundary_top) return 1
+        if ((top<=0)||(top+height>=boundary_top)) return 1
       return 0;
     }
     else
