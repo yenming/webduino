@@ -42,6 +42,13 @@ Blockly.JavaScript['image_collision'] = function (block) {
 Blockly.JavaScript['image_boundary'] = function (block) {
   var value_left_ = Blockly.JavaScript.valueToCode(block, 'left_', Blockly.JavaScript.ORDER_ATOMIC);
   var value_top_ = Blockly.JavaScript.valueToCode(block, 'top_', Blockly.JavaScript.ORDER_ATOMIC);
-  var code = 'image_boundary_set(' + value_left_ + ',' + value_top_ + ');\n';
+  var code = 'image_boundary(' + value_left_ + ',' + value_top_ + ');\n';
   return code;
+};
+
+Blockly.JavaScript['image_boundary_collision'] = function (block) {
+  var value_id1_ = Blockly.JavaScript.valueToCode(block, 'id1_', Blockly.JavaScript.ORDER_ATOMIC); 
+  var value_id2_ = Blockly.JavaScript.valueToCode(block, 'id2_', Blockly.JavaScript.ORDER_ATOMIC); 
+  var code = 'image_boundary_collision(' + value_id1_ + ',' + value_id2_ + ')';
+  return [code, Blockly.JavaScript.ORDER_NONE];
 };
