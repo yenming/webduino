@@ -104,11 +104,11 @@ Blockly.Blocks['image_boundary'] = {
       .setAlign(Blockly.ALIGN_RIGHT)
       .setCheck("Number")
       .appendField(Blockly.Msg.BOUNDARY_SHOW)
-      .appendField(Blockly.Msg.LEFT_SHOW);
+      .appendField(Blockly.Msg.WIDTH_SHOW);
   this.appendValueInput("top_")
       .setAlign(Blockly.ALIGN_RIGHT)
       .setCheck("Number")
-      .appendField(Blockly.Msg.TOP_SHOW);
+      .appendField(Blockly.Msg.HEIGHT_SHOW);
   this.setInputsInline(true);
   this.setPreviousStatement(true);
   this.setNextStatement(true);
