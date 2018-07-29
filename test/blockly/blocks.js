@@ -131,7 +131,7 @@ Blockly.Blocks['image_sys_get'] = {
   init: function() {
   this.appendDummyInput()
       .appendField(Blockly.Msg.SYS_GET_SHOW)
-      .appendField(new Blockly.FieldDropdown([["boundary_width","boundary_width"], ["boundary_height","boundary_height"]]), "property_");
+      .appendField(new Blockly.FieldDropdown([["screen_width","screen_width"], ["screen_height","screen_height"]]), "property_");
   this.setInputsInline(true);
   this.setOutput(true, null); 
   this.setColour(60);
