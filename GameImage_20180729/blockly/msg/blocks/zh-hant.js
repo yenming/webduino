@@ -12,6 +12,6 @@ Blockly.Msg.GET_SHOW = "取得圖片 ";
 Blockly.Msg.DELETE_SHOW = "刪除圖片";
 Blockly.Msg.COLLISION_SHOW = "取得圖片 接觸狀態 代碼";
 Blockly.Msg.AND_SHOW = " 與 ";
-Blockly.Msg.BOUNDARY_SHOW = "設定畫面大小";
+Blockly.Msg.BOUNDARY_SHOW = "設定視窗大小";
 Blockly.Msg.BOUNDARY_COLLISION_SHOW = "取得圖片 邊界狀態 代碼";
 Blockly.Msg.SYS_GET_SHOW = "取得視窗 ";
