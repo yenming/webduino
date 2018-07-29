@@ -131,8 +131,8 @@
   }   
   
   function image_boundary(input_left,input_top) {
-    if (input_left>=0) boundary_left = input_left;
-    if (input_top>=0) boundary_top = input_top;
+    if (input_left>=0) boundary_width = input_left;
+    if (input_top>=0) boundary_height = input_top;
   }    
   
   function image_boundary_collision(input_id) {
