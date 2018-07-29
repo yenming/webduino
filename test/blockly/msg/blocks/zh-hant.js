@@ -14,3 +14,4 @@ Blockly.Msg.COLLISION_SHOW = "取得圖片 接觸狀態 代碼 ";
 Blockly.Msg.AND_SHOW = " 與 ";
 Blockly.Msg.BOUNDARY_SHOW = "設定畫面大小";
 Blockly.Msg.BOUNDARY_COLLISION_SHOW = "取得圖片 邊界狀態 代碼 ";
+Blockly.Msg.SYS_GET_SHOW = "取得畫面 ";
