@@ -157,7 +157,7 @@
   window.image_get = image_get;
   window.image_delete = image_delete;
   window.image_collision = image_collision;
-  window.image_boundary = image_boundary_set;
+  window.image_boundary = image_boundary;
   window.image_boundary_collision = image_boundary_collision;
 
 }(window, window.document));
