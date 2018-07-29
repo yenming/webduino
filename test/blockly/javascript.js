@@ -38,3 +38,10 @@ Blockly.JavaScript['image_collision'] = function (block) {
   var code = 'image_collision(' + value_id1_ + ',' + value_id2_ + ')';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
+
+Blockly.JavaScript['image_boundary'] = function (block) {
+  var value_left_ = Blockly.JavaScript.valueToCode(block, 'left_', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_top_ = Blockly.JavaScript.valueToCode(block, 'top_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'image_boundary_set(' + value_left_ + ',' + value_top_ + ');\n';
+  return code;
+};
