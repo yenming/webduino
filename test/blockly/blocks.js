@@ -97,3 +97,35 @@ Blockly.Blocks['image_collision'] = {
   this.setColour(60);
   }
 };
+
+Blockly.Blocks['image_boundary'] = {
+  init: function() {
+  this.appendValueInput("left_")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .setCheck("Number")
+      .appendField(Blockly.Msg.BOUNDARY_SHOW)
+      .appendField(Blockly.Msg.LEFT_SHOW);
+  this.appendValueInput("top_")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .setCheck("Number")
+      .appendField(Blockly.Msg.TOP_SHOW);
+  this.setInputsInline(true);
+  this.setPreviousStatement(true);
+  this.setNextStatement(true);
+  this.setColour(60);
+  }
+};
+
+Blockly.Blocks['image_boundary_collision'] = {
+  init: function() {
+  this.appendValueInput("id1_")
+      .setCheck(null)
+      .appendField(Blockly.Msg.BOUNDARY_COLLISION_SHOW);
+  this.appendValueInput("id2_")
+      .setCheck(null)
+      .appendField(Blockly.Msg.AND_SHOW);   
+  this.setInputsInline(true);
+  this.setOutput(true, null); 
+  this.setColour(60);
+  }
+};
