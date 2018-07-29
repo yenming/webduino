@@ -12,3 +12,5 @@ Blockly.Msg.GET_SHOW = "Get Image";
 Blockly.Msg.DELETE_SHOW = "Delete Image";
 Blockly.Msg.COLLISION_SHOW = "Image Collision  ID";
 Blockly.Msg.AND_SHOW = " And ";
+Blockly.Msg.BOUNDARY_SHOW = "Set Image Boundary";
+Blockly.Msg.BOUNDARY_COLLISION_SHOW = "Image Boundary Collision  ID ";
