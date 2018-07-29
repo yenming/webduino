@@ -102,5 +102,7 @@
         <field name="TEXT"></field>
       </block>
     </value>     
+  </block>  
+  <block type="image_sys_get">
   </block>    
  </category>
