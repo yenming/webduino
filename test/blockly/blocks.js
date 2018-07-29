@@ -118,9 +118,12 @@ Blockly.Blocks['image_boundary'] = {
 
 Blockly.Blocks['image_boundary_collision'] = {
   init: function() {
-  this.appendValueInput("id_")
+  this.appendDummyInput()
       .setCheck(null)
-      .appendField(Blockly.Msg.BOUNDARY_COLLISION_SHOW);  
+      .appendField(Blockly.Msg.BOUNDARY_COLLISION_SHOW)
+      .appendField(new Blockly.FieldDropdown([["top","top"], ["down","down"], ["left","left"], ["right","right"]]), "property_");   
+  this.appendValueInput("id_")
+      .setCheck(null);
   this.setInputsInline(true);
   this.setOutput(true, null); 
   this.setColour(60);
