@@ -135,26 +135,18 @@
     if (input_top>=0) boundary_top = input_top;
   }    
   
-  function image_boundary_collision(input_id1,input_id2) {
-    if ((document.getElementById("img_"+input_id1))&&(document.getElementById("img_"+input_id2)))
+  function image_boundary_collision(input_id) {
+    if ((boundary_left>0)||(boundary_top>0))
     {
-      var img1 = document.getElementById("img_"+input_id1).style;
-      var img2 = document.getElementById("img_"+input_id2).style;
-      var x1 = Number(img1.left.replace(/px/ig,""));
-      var x1_w = Number(img1.left.replace(/px/ig,"")) + Number(img1.width.replace(/px/ig,""));
-      var y1 = Number(img1.top.replace(/px/ig,""));
-      var y1_h = Number(img1.top.replace(/px/ig,"")) + Number(img1.height.replace(/px/ig,""));
-      var x2 = Number(img2.left.replace(/px/ig,""));
-      var x2_w = Number(img2.left.replace(/px/ig,"")) + Number(img2.width.replace(/px/ig,""));
-      var y2 = Number(img2.top.replace(/px/ig,""));
-      var y2_h = Number(img2.top.replace(/px/ig,"")) + Number(img2.height.replace(/px/ig,""));
-    
-      if ((((x2>=x1)&&(x2<=x1_w))&&((y2>=y1)&&(y2<=y1_h)))||(((x2>=x1)&&(x2<=x1_w))&&((y2_h>=y1)&&(y2_h<=y1_h)))||(((x2_w>=x1)&&(x2_w<=x1_w))&&((y2>=y1)&&(y2<=y1_h)))||(((x2_w>=x1)&&(x2_w<=x1_w))&&((y2_h>=y1)&&(y2_h<=y1_h))))
-        return 1;
-      else if ((((x1>=x2)&&(x1<=x2_w))&&((y1>=y2)&&(y1<=y2_h)))||(((x1>=x2)&&(x1<=x2_w))&&((y1_h>=y2)&&(y1_h<=y2_h)))||(((x1_w>=x2)&&(x1_w<=x2_w))&&((y1>=y2)&&(y1<=y2_h)))||(((x1_w>=x2)&&(x1_w<=x2_w))&&((y1_h>=y2)&&(y1_h<=y2_h))))
-        return 1;
-      else
-        return 0;  
+      var left = Number(document.getElementById("img_"+input_id).style.left.replace(/px/ig,""));
+      var width = Number(document.getElementById("img_"+input_id).style.width.replace(/px/ig,""));
+      var top = Number(document.getElementById("img_"+input_id).style.top.replace(/px/ig,""));
+      var height = Number(document.getElementById("img_"+input_id).style.height.replace(/px/ig,""));
+      if (boundary_left>0)
+        if (left+width>=boundary_left) return 1
+      if (boundary_top>0) 
+        if (top+height>=boundary_top) return 1
+      return 0;
     }
     else
       return 0;   
