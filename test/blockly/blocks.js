@@ -118,12 +118,9 @@ Blockly.Blocks['image_boundary'] = {
 
 Blockly.Blocks['image_boundary_collision'] = {
   init: function() {
-  this.appendValueInput("id1_")
+  this.appendValueInput("id_")
       .setCheck(null)
-      .appendField(Blockly.Msg.BOUNDARY_COLLISION_SHOW);
-  this.appendValueInput("id2_")
-      .setCheck(null)
-      .appendField(Blockly.Msg.AND_SHOW);   
+      .appendField(Blockly.Msg.BOUNDARY_COLLISION_SHOW);  
   this.setInputsInline(true);
   this.setOutput(true, null); 
   this.setColour(60);
