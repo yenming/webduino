@@ -130,7 +130,7 @@
       return 0;   
   }   
   
-  function image_boundary_set(input_left,input_top) {
+  function image_boundary(input_left,input_top) {
     if (input_left>=0) boundary_left = input_left;
     if (input_top>=0) boundary_top = input_top;
   }    
@@ -157,7 +157,7 @@
   window.image_get = image_get;
   window.image_delete = image_delete;
   window.image_collision = image_collision;
-  window.image_boundary_set = image_boundary_set;
+  window.image_boundary = image_boundary_set;
   window.image_boundary_collision = image_boundary_collision;
 
 }(window, window.document));
