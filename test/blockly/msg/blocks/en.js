@@ -13,5 +13,5 @@ Blockly.Msg.DELETE_SHOW = "Delete Image";
 Blockly.Msg.COLLISION_SHOW = "Image Collision  ID";
 Blockly.Msg.AND_SHOW = " And ";
 Blockly.Msg.BOUNDARY_SHOW = "Set Screen Boundary";
-Blockly.Msg.BOUNDARY_COLLISION_SHOW = "Image Screen Boundary Collision  ID";
+Blockly.Msg.BOUNDARY_COLLISION_SHOW = "Image Screen Boundary Collision";
 Blockly.Msg.SYS_GET_SHOW = "Get Screen";
