@@ -48,7 +48,8 @@ Blockly.JavaScript['image_boundary'] = function (block) {
 
 Blockly.JavaScript['image_boundary_collision'] = function (block) {
   var value_id_ = Blockly.JavaScript.valueToCode(block, 'id_', Blockly.JavaScript.ORDER_ATOMIC); 
-  var code = 'image_boundary_collision(' + value_id_ + ')';
+  var value_property_ = block.getFieldValue('property_');
+  var code = 'image_boundary_collision(' + value_id_ + ',"' + value_property_ + '")';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
