@@ -13,5 +13,5 @@ Blockly.Msg.DELETE_SHOW = "删除图片";
 Blockly.Msg.COLLISION_SHOW = "取得图片 接触状态 代码";
 Blockly.Msg.AND_SHOW = " 与 ";
 Blockly.Msg.BOUNDARY_SHOW = "设定视窗大小";
-Blockly.Msg.BOUNDARY_COLLISION_SHOW = "取得图片 边界状态 代码";
+Blockly.Msg.BOUNDARY_COLLISION_SHOW = "取得图片 边界状态";
 Blockly.Msg.SYS_GET_SHOW = "取得视窗";
