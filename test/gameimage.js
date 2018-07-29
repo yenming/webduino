@@ -2,8 +2,8 @@
 
   'use strict';
   
-  var boundary_left = 0;
-  var boundary_top = 0;
+  var boundary_width = 0;
+  var boundary_height = 0;
 
   function image_create(input_id,input_url,input_width,input_height,input_left,input_top,input_zindex,input_display) {
     if (document.getElementById("img_"+input_id))
@@ -136,16 +136,16 @@
   }    
   
   function image_boundary_collision(input_id) {
-    if ((boundary_left>0)||(boundary_top>0))
+    if ((boundary_width>0)||(boundary_height>0))
     {
       var left = Number(document.getElementById("img_"+input_id).style.left.replace(/px/ig,""));
       var width = Number(document.getElementById("img_"+input_id).style.width.replace(/px/ig,""));
       var top = Number(document.getElementById("img_"+input_id).style.top.replace(/px/ig,""));
       var height = Number(document.getElementById("img_"+input_id).style.height.replace(/px/ig,""));
-      if (boundary_left>0)
-        if ((left<=0)||(left+width>=boundary_left)) return 1
-      if (boundary_top>0) 
-        if ((top<=0)||(top+height>=boundary_top)) return 1
+      if (boundary_width>0)
+        if ((left<=0)||(left+width>=boundary_width)) return 1
+      if (boundary_height>0) 
+        if ((top<=0)||(top+height>=boundary_height)) return 1
       return 0;
     }
     else
