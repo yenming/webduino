@@ -1,6 +1,9 @@
 +(function (window, document) {
 
   'use strict';
+  
+  var boundary_left = 0;
+  var boundary_top = 0;
 
   function image_create(input_id,input_url,input_width,input_height,input_left,input_top,input_zindex,input_display) {
     if (document.getElementById("img_"+input_id))
@@ -125,6 +128,36 @@
     }
     else
       return 0;   
+  }   
+  
+  function image_boundary(input_left,input_top) {
+    if (input_left>=0) boundary_left = input_left;
+    if (input_top>=0) boundary_top = input_top;
+  }    
+  
+  function image_boundary_collision(input_id1,input_id2) {
+    if ((document.getElementById("img_"+input_id1))&&(document.getElementById("img_"+input_id2)))
+    {
+      var img1 = document.getElementById("img_"+input_id1).style;
+      var img2 = document.getElementById("img_"+input_id2).style;
+      var x1 = Number(img1.left.replace(/px/ig,""));
+      var x1_w = Number(img1.left.replace(/px/ig,"")) + Number(img1.width.replace(/px/ig,""));
+      var y1 = Number(img1.top.replace(/px/ig,""));
+      var y1_h = Number(img1.top.replace(/px/ig,"")) + Number(img1.height.replace(/px/ig,""));
+      var x2 = Number(img2.left.replace(/px/ig,""));
+      var x2_w = Number(img2.left.replace(/px/ig,"")) + Number(img2.width.replace(/px/ig,""));
+      var y2 = Number(img2.top.replace(/px/ig,""));
+      var y2_h = Number(img2.top.replace(/px/ig,"")) + Number(img2.height.replace(/px/ig,""));
+    
+      if ((((x2>=x1)&&(x2<=x1_w))&&((y2>=y1)&&(y2<=y1_h)))||(((x2>=x1)&&(x2<=x1_w))&&((y2_h>=y1)&&(y2_h<=y1_h)))||(((x2_w>=x1)&&(x2_w<=x1_w))&&((y2>=y1)&&(y2<=y1_h)))||(((x2_w>=x1)&&(x2_w<=x1_w))&&((y2_h>=y1)&&(y2_h<=y1_h))))
+        return 1;
+      else if ((((x1>=x2)&&(x1<=x2_w))&&((y1>=y2)&&(y1<=y2_h)))||(((x1>=x2)&&(x1<=x2_w))&&((y1_h>=y2)&&(y1_h<=y2_h)))||(((x1_w>=x2)&&(x1_w<=x2_w))&&((y1>=y2)&&(y1<=y2_h)))||(((x1_w>=x2)&&(x1_w<=x2_w))&&((y1_h>=y2)&&(y1_h<=y2_h))))
+        return 1;
+      else
+        return 0;  
+    }
+    else
+      return 0;   
   }    
   
   window.image_create = image_create;
@@ -132,5 +165,7 @@
   window.image_get = image_get;
   window.image_delete = image_delete;
   window.image_collision = image_collision;
+  window.image_boundary = image_boundary;
+  window.image_boundary_collision = image_boundary_collision;
 
 }(window, window.document));
