@@ -1,14 +1,14 @@
 ﻿<html>
 <body>
 <button class="btn btn-default" id="arduinoButton">Talk to Arduino</button>
-
 <div id="target"></div>
+<p><small>Demo from 
+<a href="https://developers.google.com/web/updates/2016/03/access-usb-devices-on-the-web" target="_blank">Google Developers</a> article.</small></p>
+</body>
+</html>
 
-<p><small>Demo from <a href="https://developers.google.com/web/updates/2016/03/access-usb-devices-on-the-web" target="_blank">Google Developers</a> article.</small></p>
-</body></html>
 
-
-        <script>
+<script>
 document.getElementById('arduinoButton').addEventListener('click', function () {
   if (navigator.usb) {
     talkToArduino();
@@ -39,4 +39,4 @@ async function talkToArduino() {
     document.getElementById('target').innerHTML = error;
   }
 }
-        </script>
+</script>
