@@ -35,7 +35,11 @@
         div.style.position = 'absolute';      
         div.style.left = input_left_ + 'px';
         div.style.top = input_top_ + 'px';
-        div.style.zIndex = input_zindex;      
+        div.style.zIndex = input_zindex;   
+        if (input_display==true)
+          div.style.display = 'block';
+        else
+          div.style.display = 'none';
         div.innerHTML = src;
         document.body.appendChild(div);
     }
