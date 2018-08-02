@@ -58,3 +58,9 @@ Blockly.JavaScript['image_sys_get'] = function (block) {
   var code = 'image_sys_get("' + value_property_ + '")';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
+
+Blockly.JavaScript['image_onclick_get'] = function (block) {
+  var value_id_ = Blockly.JavaScript.valueToCode(block, 'id_', Blockly.JavaScript.ORDER_ATOMIC); 
+  var code = 'image_onclick_get(' + value_id_ + ')';
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
