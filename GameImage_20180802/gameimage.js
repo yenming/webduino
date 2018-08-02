@@ -195,5 +195,8 @@
   window.image_boundary = image_boundary;
   window.image_boundary_collision = image_boundary_collision;
   window.image_sys_get = image_sys_get;
-
+  window.image_onclickid_set = image_onclickid_set;
+  window.image_onclickid_clear = image_onclickid_clear;
+  window.image_onclick_get = image_onclick_get;
+  
 }(window, window.document));
