@@ -7,3 +7,4 @@ Blockly.Msg.WIDTH_SHOW = "宽度";
 Blockly.Msg.HEIGHT_SHOW = "高度";
 Blockly.Msg.LEFT_SHOW = "靠左距离";
 Blockly.Msg.TOP_SHOW = "靠上距离";
+Blockly.Msg.ZINDEX_SHOW = "层次";
