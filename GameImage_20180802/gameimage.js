@@ -37,7 +37,7 @@
         img.style.display = "none";
       else
         img.style.display = "block";
-      img.onclick="image_onclickid_set(this)";
+      img.setAttribute("onclick", "javascript:image_onclickid_set(this);");
       document.body.appendChild(img);
     }
   }
