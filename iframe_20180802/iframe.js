@@ -2,7 +2,7 @@
 
   'use strict';
 
-  function createIframe(input_id_,input_url_,input_width_,input_height_,input_left_,input_top_,input_zindex) {
+  function createIframe(input_id_,input_url_,input_width_,input_height_,input_left_,input_top_,input_zindex_) {
     
     var substr = input_url_.toLowerCase().split('.');
     var extname_av = ".aac,.au,.aif,.aiff,.aiffc,.alac,.ape,.asf,.avi,.cda,.dat,.divx,.flac,.m2ts,.m4a,.mid,.mov,.mp2,.mp3,.mp4,.mpc,.mpg,.mpeg,.mv2,.ogg,.pdf,.ra,.ram,.raw,.rcp,.rm,.rmvb,.snd,.tak,.tta,.vob,.voc,.wma,.wav,.webm,.wmf,.wmv,.wv,.xmi,";
@@ -21,7 +21,7 @@
     {
           document.getElementById("iframe"+input_id_).style.left = input_left_ + 'px';
           document.getElementById("iframe"+input_id_).style.top = input_top_ + 'px';
-          document.getElementById("iframe"+input_id_).style.zIndex = input_zindex;
+          document.getElementById("iframe"+input_id_).style.zIndex = input_zindex_;
           document.getElementById("iframe"+input_id_).innerHTML = src;
     }
     else
@@ -31,7 +31,7 @@
         div.style.position = 'absolute';      
         div.style.left = input_left_ + 'px';
         div.style.top = input_top_ + 'px';
-        div.style.zIndex = input_zindex;   
+        div.style.zIndex = input_zindex_;   
         div.style.display = 'block';
         document.body.appendChild(div);
     }
