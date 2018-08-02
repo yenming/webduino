@@ -171,7 +171,7 @@
   }  
   
   function image_onclickid_set(obj) {
-    console.log(onclick);
+    console.log("onclick");
     clearTimeout(onclicktimerid);  
     onclickid=obj.id;
     onclicktimerid=setTimeout('image_onclickid_clear();',onclicktime);
