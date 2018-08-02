@@ -140,3 +140,15 @@ Blockly.Blocks['image_sys_get'] = {
   this.setColour(60);
   }
 };
+
+Blockly.Blocks['image_onclick_get'] = {
+  init: function() {
+  this.appendValueInput("id_")
+      .setCheck(null)
+      .appendField(Blockly.Msg.ONCLICK_SHOW)
+      .appendField(Blockly.Msg.ID_SHOW); 
+  this.setInputsInline(true);
+  this.setOutput(true, null); 
+  this.setColour(60);
+  }
+};
