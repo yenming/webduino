@@ -181,7 +181,8 @@
   }
   
   function image_onclick_get(input_id) {
-    if ((input_id!="")&&(onclickid.toString()==("gameimg_"+input_id)))
+    console.log(onclickid);
+    if ((input_id!="")&&(onclickid==("gameimg_"+input_id)))
     {
       onclickid="";
       return 1;
