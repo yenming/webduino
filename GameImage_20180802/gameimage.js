@@ -6,6 +6,7 @@
   var screen_height = 0;
   var onclickid = "";
   var onclicktime = 200;
+  var onclicktimerid;
 
   function image_create(input_id,input_url,input_width,input_height,input_left,input_top,input_zindex,input_display) {
     if (document.getElementById("img_"+input_id))
@@ -169,13 +170,21 @@
       return;
   }  
   
-  function setonclickid(obj) {
-    if (onclickid=="") setTimeout('clearonclickid();',onclicktime);
+  function image_onclickid_set(obj) {
+    clearTimeout(onclicktimerid);  
     onclickid=obj.id;
+    onclicktimerid=setTimeout('image_onclickid_clear();',onclicktime);
   }
   
-  function clearonclickid() {
+  function image_onclickid_clear() {
     onclickid="";
+  }
+  
+  function image_onclick_get(input_id) {
+    if ((input_id!="")&&(onclickid==input_id))
+      return 1;
+    else
+      return 0;
   }
   
   window.image_create = image_create;
