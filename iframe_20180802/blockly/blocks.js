@@ -24,7 +24,11 @@ Blockly.Blocks['iframe_open'] = {
     this.appendValueInput("top_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.TOP_SHOW);  
+      .appendField(Blockly.Msg.TOP_SHOW); 
+    this.appendValueInput("zindex_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.ZINDEX_SHOW);    
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setTooltip('');
