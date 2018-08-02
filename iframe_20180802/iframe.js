@@ -2,7 +2,7 @@
 
   'use strict';
 
-  function createIframe(input_id_,input_url_,input_width_,input_height_,input_left_,input_top_,input_zindex,input_display) {
+  function createIframe(input_id_,input_url_,input_width_,input_height_,input_left_,input_top_,input_zindex) {
     
     var substr = input_url_.toLowerCase().split('.');
     var extname_av = ".aac,.au,.aif,.aiff,.aiffc,.alac,.ape,.asf,.avi,.cda,.dat,.divx,.flac,.m2ts,.m4a,.mid,.mov,.mp2,.mp3,.mp4,.mpc,.mpg,.mpeg,.mv2,.ogg,.pdf,.ra,.ram,.raw,.rcp,.rm,.rmvb,.snd,.tak,.tta,.vob,.voc,.wma,.wav,.webm,.wmf,.wmv,.wv,.xmi,";
@@ -22,10 +22,6 @@
           document.getElementById("fustyles_iframe"+input_id_).style.left = input_left_ + 'px';
           document.getElementById("fustyles_iframe"+input_id_).style.top = input_top_ + 'px';
           document.getElementById("fustyles_iframe"+input_id_).style.zIndex = input_zindex;
-          if (input_display==true)
-            document.getElementById("fustyles_iframe"+input_id_).style.display = 'block';
-          else
-            document.getElementById("fustyles_iframe"+input_id_).style.display = 'none';
           document.getElementById("fustyles_iframe"+input_id_).innerHTML = src;
     }
     else
@@ -36,11 +32,7 @@
         div.style.left = input_left_ + 'px';
         div.style.top = input_top_ + 'px';
         div.style.zIndex = input_zindex;   
-        if (input_display==true)
-          div.style.display = 'block';
-        else
-          div.style.display = 'none';
-        div.innerHTML = src;
+        div.style.display = 'block';
         document.body.appendChild(div);
     }
   }
