@@ -9,24 +9,24 @@
   var onclicktimerid;
 
   function image_create(input_id,input_url,input_width,input_height,input_left,input_top,input_zindex,input_display) {
-    if (document.getElementById("img_"+input_id))
+    if (document.getElementById("gameimg_"+input_id))
     {
-      document.getElementById("img_"+input_id).src = input_url;
-      document.getElementById("img_"+input_id).style.width = input_width + 'px';
-      document.getElementById("img_"+input_id).style.height = input_height + 'px';
-      document.getElementById("img_"+input_id).style.left = input_left + 'px';
-      document.getElementById("img_"+input_id).style.top = input_top + 'px';
-      document.getElementById("img_"+input_id).style.zIndex = input_zindex;
+      document.getElementById("gameimg_"+input_id).src = input_url;
+      document.getElementById("gameimg_"+input_id).style.width = input_width + 'px';
+      document.getElementById("gameimg_"+input_id).style.height = input_height + 'px';
+      document.getElementById("gameimg_"+input_id).style.left = input_left + 'px';
+      document.getElementById("gameimg_"+input_id).style.top = input_top + 'px';
+      document.getElementById("gameimg_"+input_id).style.zIndex = input_zindex;
       if (input_display==false)
-        document.getElementById("img_"+input_id).style.display = "none";
+        document.getElementById("gameimg_"+input_id).style.display = "none";
       else
-        document.getElementById("img_"+input_id).style.display = "block";
+        document.getElementById("gameimg_"+input_id).style.display = "block";
     }
     else
     {
       var img = document.createElement('img');
       img.style.position = "absolute";
-      img.id = "img_"+input_id;
+      img.id = "gameimg_"+input_id;
       img.src = input_url;
       img.style.width = input_width + 'px';
       img.style.height = input_height + 'px';
@@ -43,26 +43,26 @@
   }
   
   function image_set(input_id,input_property,input_value) {
-    if (document.getElementById("img_"+input_id))
+    if (document.getElementById("gameimg_"+input_id))
     {
       if (input_property=='url')
-        document.getElementById("img_"+input_id).src = input_value;
+        document.getElementById("gameimg_"+input_id).src = input_value;
       else if (input_property=='width')
-        document.getElementById("img_"+input_id).style.width = input_value + 'px';
+        document.getElementById("gameimg_"+input_id).style.width = input_value + 'px';
       else if (input_property=='height')
-        document.getElementById("img_"+input_id).style.height = input_value + 'px';
+        document.getElementById("gameimg_"+input_id).style.height = input_value + 'px';
       else if (input_property=='left')
-        document.getElementById("img_"+input_id).style.left = input_value + 'px';
+        document.getElementById("gameimg_"+input_id).style.left = input_value + 'px';
       else if (input_property=='top')
-        document.getElementById("img_"+input_id).style.top = input_value + 'px';
+        document.getElementById("gameimg_"+input_id).style.top = input_value + 'px';
       else if (input_property=='zindex')
-        document.getElementById("img_"+input_id).style.zIndex = input_value;
+        document.getElementById("gameimg_"+input_id).style.zIndex = input_value;
       else if (input_property=='display')
       {
         if (input_value==false)
-          document.getElementById("img_"+input_id).style.display = "none";
+          document.getElementById("gameimg_"+input_id).style.display = "none";
         else
-          document.getElementById("img_"+input_id).style.display = "block";
+          document.getElementById("gameimg_"+input_id).style.display = "block";
       }
     }
   }    
@@ -70,28 +70,28 @@
   function image_get(input_id,input_property) {
     if (input_property=='id')
     {
-      if (document.getElementById("img_"+input_id))
+      if (document.getElementById("gameimg_"+input_id))
         return 1;
       else
         return 0;
     }
-    if (document.getElementById("img_"+input_id))
+    if (document.getElementById("gameimg_"+input_id))
     {
       if (input_property=='url')
-        return document.getElementById("img_"+input_id).src;
+        return document.getElementById("gameimg_"+input_id).src;
       else if (input_property=='width')
-        return Number(document.getElementById("img_"+input_id).style.width.replace(/px/ig,""));
+        return Number(document.getElementById("gameimg_"+input_id).style.width.replace(/px/ig,""));
       else if (input_property=='height')
-        return Number(document.getElementById("img_"+input_id).style.height.replace(/px/ig,""));
+        return Number(document.getElementById("gameimg_"+input_id).style.height.replace(/px/ig,""));
       else if (input_property=='left')
-        return Number(document.getElementById("img_"+input_id).style.left.replace(/px/ig,""));
+        return Number(document.getElementById("gameimg_"+input_id).style.left.replace(/px/ig,""));
       else if (input_property=='top')
-        return Number(document.getElementById("img_"+input_id).style.top.replace(/px/ig,""));
+        return Number(document.getElementById("gameimg_"+input_id).style.top.replace(/px/ig,""));
       else if (input_property=='zindex')
-        return Number(document.getElementById("img_"+input_id).style.zIndex);
+        return Number(document.getElementById("gameimg_"+input_id).style.zIndex);
       else if (input_property=='display')
       {
-        if (document.getElementById("img_"+input_id).style.display=="block")
+        if (document.getElementById("gameimg_"+input_id).style.display=="block")
           return 1;
         else
           return 0;  
@@ -102,17 +102,17 @@
   }  
   
   function image_delete(input_id) {
-    if (document.getElementById("img_"+input_id))
+    if (document.getElementById("gameimg_"+input_id))
     {
-      document.body.removeChild(document.getElementById("img_"+input_id));
+      document.body.removeChild(document.getElementById("gameimg_"+input_id));
     }  
   }   
   
   function image_collision(input_id1,input_id2) {
-    if ((document.getElementById("img_"+input_id1))&&(document.getElementById("img_"+input_id2)))
+    if ((document.getElementById("gameimg_"+input_id1))&&(document.getElementById("gameimg_"+input_id2)))
     {
-      var img1 = document.getElementById("img_"+input_id1).style;
-      var img2 = document.getElementById("img_"+input_id2).style;
+      var img1 = document.getElementById("gameimg_"+input_id1).style;
+      var img2 = document.getElementById("gameimg_"+input_id2).style;
       var x1 = Number(img1.left.replace(/px/ig,""));
       var x1_w = Number(img1.left.replace(/px/ig,"")) + Number(img1.width.replace(/px/ig,""));
       var y1 = Number(img1.top.replace(/px/ig,""));
@@ -141,10 +141,10 @@
   function image_boundary_collision(input_id,input_property) {
     if ((screen_width>0)||(screen_height>0))
     {
-      var left = Number(document.getElementById("img_"+input_id).style.left.replace(/px/ig,""));
-      var width = Number(document.getElementById("img_"+input_id).style.width.replace(/px/ig,""));
-      var top = Number(document.getElementById("img_"+input_id).style.top.replace(/px/ig,""));
-      var height = Number(document.getElementById("img_"+input_id).style.height.replace(/px/ig,""));
+      var left = Number(document.getElementById("gameimg_"+input_id).style.left.replace(/px/ig,""));
+      var width = Number(document.getElementById("gameimg_"+input_id).style.width.replace(/px/ig,""));
+      var top = Number(document.getElementById("gameimg_"+input_id).style.top.replace(/px/ig,""));
+      var height = Number(document.getElementById("gameimg_"+input_id).style.height.replace(/px/ig,""));
       if (screen_width>0)
       {
         if (((input_property=="left")||(input_property=="any"))&&(left<=0)) return 1
@@ -182,7 +182,7 @@
   }
   
   function image_onclick_get(input_id) {
-    if ((input_id!="")&&(onclickid=="img_"+input_id))
+    if ((input_id!="")&&(onclickid=="gameimg_"+input_id))
     {
       onclickid="";
       return 1;
