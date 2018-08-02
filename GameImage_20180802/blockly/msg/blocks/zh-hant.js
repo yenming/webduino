@@ -15,3 +15,4 @@ Blockly.Msg.AND_SHOW = " 與 ";
 Blockly.Msg.BOUNDARY_SHOW = "設定視窗大小";
 Blockly.Msg.BOUNDARY_COLLISION_SHOW = "取得圖片 邊界狀態";
 Blockly.Msg.SYS_GET_SHOW = "取得視窗 ";
+Blockly.Msg.ONCLICK_SHOW = "取得圖片 點選狀態";
