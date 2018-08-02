@@ -17,17 +17,17 @@
     else 
         var src = '<iframe src="' + input_url_ + '" style="width:' + input_width_ + 'px;height:' + input_height_ + 'px" frameborder="0" allow="geolocation; microphone; camera"></iframe>';
     
-    if (document.getElementById("fustyles_iframe"+input_id_))
+    if (document.getElementById("iframe"+input_id_))
     {
-          document.getElementById("fustyles_iframe"+input_id_).style.left = input_left_ + 'px';
-          document.getElementById("fustyles_iframe"+input_id_).style.top = input_top_ + 'px';
-          document.getElementById("fustyles_iframe"+input_id_).style.zIndex = input_zindex;
-          document.getElementById("fustyles_iframe"+input_id_).innerHTML = src;
+          document.getElementById("iframe"+input_id_).style.left = input_left_ + 'px';
+          document.getElementById("iframe"+input_id_).style.top = input_top_ + 'px';
+          document.getElementById("iframe"+input_id_).style.zIndex = input_zindex;
+          document.getElementById("iframe"+input_id_).innerHTML = src;
     }
     else
     {
         var div = document.createElement('div');
-        div.id = "fustyles_iframe"+input_id_;
+        div.id = "iframe"+input_id_;
         div.style.position = 'absolute';      
         div.style.left = input_left_ + 'px';
         div.style.top = input_top_ + 'px';
@@ -38,8 +38,8 @@
   }
   
   function deleteIframe(input_id_){
-    if (document.getElementById("fustyles_iframe"+input_id_))
-      document.getElementById("fustyles_iframe"+input_id_).remove();
+    if (document.getElementById("iframe"+input_id_))
+      document.getElementById("iframe"+input_id_).remove();
   }
 
   window.createIframe = createIframe;
