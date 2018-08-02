@@ -15,3 +15,4 @@ Blockly.Msg.AND_SHOW = " And ";
 Blockly.Msg.BOUNDARY_SHOW = "Set Screen Boundary";
 Blockly.Msg.BOUNDARY_COLLISION_SHOW = "Image Screen Boundary Collision";
 Blockly.Msg.SYS_GET_SHOW = "Get Screen";
+Blockly.Msg.ONCLICK_SHOW = "Get Click";
