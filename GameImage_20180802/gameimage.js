@@ -4,6 +4,8 @@
   
   var screen_width = 0;
   var screen_height = 0;
+  var onclickid = "";
+  var onclicktime = 200;
 
   function image_create(input_id,input_url,input_width,input_height,input_left,input_top,input_zindex,input_display) {
     if (document.getElementById("img_"+input_id))
@@ -34,7 +36,7 @@
         img.style.display = "none";
       else
         img.style.display = "block";
-      
+      img.onclick="setonclickid(this)";
       document.body.appendChild(img);
     }
   }
@@ -166,6 +168,15 @@
     else
       return;
   }  
+  
+  function setonclickid(obj) {
+    if (onclickid=="") setTimeout('clearonclickid();',onclicktime);
+    onclickid=obj.id;
+  }
+  
+  function clearonclickid() {
+    onclickid="";
+  }
   
   window.image_create = image_create;
   window.image_set = image_set;
