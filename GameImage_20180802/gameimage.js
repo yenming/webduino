@@ -183,7 +183,10 @@
   
   function image_onclick_get(input_id) {
     if ((input_id!="")&&(onclickid=="img_"+input_id))
+    {
+      onclickid="";
       return 1;
+    }
     else
       return 0;
   }
