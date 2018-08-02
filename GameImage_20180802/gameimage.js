@@ -181,7 +181,7 @@
   }
   
   function image_onclick_get(input_id) {
-    if ((input_id!="")&&(onclickid=="gameimg_"+input_id))
+    if ((input_id!="")&&(onclickid==("gameimg_"+input_id)))
     {
       onclickid="";
       return 1;
