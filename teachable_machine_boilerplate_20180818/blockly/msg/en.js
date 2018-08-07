@@ -1,1 +1,1 @@
-MSG.catIframe = "Web Page";
+MSG.teachable_machine = "Teachable Machine";
