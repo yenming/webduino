@@ -5,15 +5,10 @@
   var proportion = ["", "", ""];
 
   function teachable_machine_open() {
-        var div = document.createElement('div');
-        div.id = "iframe"+input_id_;
-        div.style.position = 'absolute';      
-        div.style.left = input_left_ + 'px';
-        div.style.top = input_top_ + 'px';
-        div.style.zIndex = input_zindex_;   
-        div.style.display = 'block';
-        div.innerHTML = src;
-        document.body.appendChild(div);
+    var s = document.createElement("script")
+    s.type = "text/javascript";
+    s.src = "build.js";
+    document.getElementsByTagName("head")[0].appendChild(s);
   }
   
   function teachable_machine_proportion(){
