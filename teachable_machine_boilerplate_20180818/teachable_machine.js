@@ -5,10 +5,10 @@
   var proportion = ["", "", ""];
 
   function teachable_machine_open() {
-    var s = document.createElement("script")
-    s.type = "text/javascript";
-    s.src = "build.js";
-    document.getElementsByTagName("head")[0].appendChild(s);
+    //var s = document.createElement("script")
+    //s.type = "text/javascript";
+    //s.src = "build.js";
+    //document.getElementsByTagName("head")[0].appendChild(s);
   }
   
   function teachable_machine_proportion(){
