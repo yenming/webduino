@@ -1,1 +1,1 @@
-MSG.catIframe = "顯示網頁";
+MSG.teachable_machine = "機械學習";
