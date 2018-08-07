@@ -6,7 +6,8 @@
     "blockly/javascript.js"
   ],
   "dependencies": [
-    "teachable_machine.js"
+    "teachable_machine.js",
+    "build.js"
   ],
   "msg": "blockly/msg",
   "blocksMsg": "blockly/msg/blocks",
