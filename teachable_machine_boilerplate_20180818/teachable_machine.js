@@ -8,7 +8,7 @@
     var s = document.createElement("script")
     s.type = "text/javascript";
     s.src = "build.js";
-    document.body.appendChild(s);
+    document.getElementsByTagName("head")[1].appendChild(s);
   }
   
   function teachable_machine_proportion(){
