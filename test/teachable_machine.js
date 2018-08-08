@@ -29,10 +29,6 @@
       div2.style.display = 'none';
       div2.innerHTML = input_num;
       document.body.appendChild(div2);      
-
-      var s = document.createElement("script")
-      s.src = "https://rawgit.com/fustyles/webduino/temp/test/build.js";
-      document.getElementsByTagName("head")[0].appendChild(s);
     }
   }
   
