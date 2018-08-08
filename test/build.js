@@ -162,6 +162,7 @@ var Main = function () {
               }   
             }
 	    document.getElementById("train").innerHTML = maxid ;
+	    document.getElementById("proportion").innerHTML = max ;
           })
           // Dispose image when done
           .then(function () {
