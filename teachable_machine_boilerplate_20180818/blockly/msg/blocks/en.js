@@ -1,2 +1,2 @@
-Blockly.Msg.OPEN_SHOW = "Teachable Machine OPEN";
-Blockly.Msg.PROPORTION_SHOW = "Teachable Machine Answer";
+Blockly.Msg.TEACHABLE_MACHINE_OPEN_SHOW = "Teachable Machine OPEN";
+Blockly.Msg.TEACHABLE_MACHINE_PROPORTION_SHOW = "Teachable Machine Answer";
