@@ -27,7 +27,7 @@
   }
   
   function teachable_machine_proportion(){
-    console.log(document.getElementById("train").innerHTML);
+    return document.getElementById("train").innerHTML;
   }
 
   window.teachable_machine_open = teachable_machine_open;
