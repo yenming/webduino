@@ -12,7 +12,7 @@
     {
       var div = document.createElement('div');
       div.id = "train";
-      div1.style.position = 'absolute';
+      div.style.position = 'absolute';
       div.style.display = 'none';
       document.body.appendChild(div);
       
