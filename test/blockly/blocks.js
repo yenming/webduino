@@ -11,7 +11,8 @@ Blockly.Blocks['teachable_machine_open'] = {
 Blockly.Blocks['teachable_machine_proportion'] = {
   init: function() {
   this.appendDummyInput()  
-      .appendField(Blockly.Msg.TEACHABLE_MACHINE_PROPORTION_SHOW);      
+      .appendField(Blockly.Msg.TEACHABLE_MACHINE_PROPORTION_SHOW)
+      .appendField(new Blockly.FieldDropdown([["id","id"], ["proportion","proportion"]]), "property_");    
   this.setInputsInline(true);
   this.setOutput(true, null); 
   this.setColour(65);
