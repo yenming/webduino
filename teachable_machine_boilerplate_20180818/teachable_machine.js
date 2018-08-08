@@ -5,14 +5,10 @@
   function teachable_machine_open() {
     if (document.getElementById("train"))
     {
-      document.getElementById("train").childNodes[0].innerHTML = "";
-      document.getElementById("train").childNodes[1].innerHTML = "";
-      document.getElementById("train").childNodes[2].innerHTML = "";
+      document.getElementById("train").innerHTML = "";
     }
     else
     {
-      document.write("<div id='train'></div><div id='train'></div><div id='train'></div>");
-      /*
       var div = document.createElement('div');
       div.id = "train";
       div.style.position = 'absolute';    
@@ -20,12 +16,9 @@
       div.style.left = '200px';
       div.style.zIndex = -1;   
       div.style.display = 'block';
-      div.innerHTML = "train";
+      div.innerHTML = "Hello World";
       
       document.body.appendChild(div);
-      document.body.appendChild(div);
-      document.body.appendChild(div);
-      */
     }
     
     var s = document.createElement("script")
