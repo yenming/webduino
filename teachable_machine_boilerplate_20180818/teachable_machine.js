@@ -11,6 +11,8 @@
     }
     else
     {
+      document.write("<div id='train'></div><div id='train'></div><div id='train'></div>");
+      /*
       var div = document.createElement('div');
       div.id = "train";
       div.style.position = 'absolute';    
@@ -23,6 +25,7 @@
       document.body.appendChild(div);
       document.body.appendChild(div);
       document.body.appendChild(div);
+      */
     }
     
     var s = document.createElement("script")
