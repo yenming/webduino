@@ -13,9 +13,9 @@
       div.id = "train";
       div.style.position = 'absolute';    
       div.style.top = '0px';
-      div.style.left = '200px';
+      div.style.left = '0px';
       div.style.zIndex = -1;   
-      div.style.display = 'block';
+      div.style.display = 'none';
       div.innerHTML = "Hello World";
       
       document.body.appendChild(div);
