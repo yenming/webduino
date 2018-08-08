@@ -1,8 +1,6 @@
 +(function (window, document) {
 
   'use strict';
-  
-  var getMaxID="",getMaxProbability="";
 
   function teachable_machine_open() {
     if (document.getElementById("train"))
@@ -43,9 +41,6 @@
   }
   
   function teachable_machine_proportion(input_property){
-    console.log(getMaxID);
-    console.log(getMaxProbability);
-    
     if (input_property=="train")
       return Number(document.getElementById("train").innerHTML);
     else if (input_property=="probability")
