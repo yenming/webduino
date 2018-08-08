@@ -6,6 +6,7 @@
     if (document.getElementById("train"))
     {
       document.getElementById("train").innerHTML = "";
+      document.getElementById("proportion").innerHTML = "";
     }
     else
     {
