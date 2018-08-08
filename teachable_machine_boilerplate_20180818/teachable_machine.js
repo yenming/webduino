@@ -14,11 +14,11 @@
       var div = document.createElement('div');
       div.id = "train";
       div.style.position = 'absolute';      
-      div.style.left = '-500px';
-      div.style.top = '500px';
+      div.style.left = '200px';
+      div.style.top = '0px';
       div.style.zIndex = -1;   
-      div.style.display = 'none';
-      div.innerHTML = "";
+      div.style.display = 'block';
+      div.innerHTML = "Hello";
       document.body.appendChild(div);
       document.body.appendChild(div);
       document.body.appendChild(div);
