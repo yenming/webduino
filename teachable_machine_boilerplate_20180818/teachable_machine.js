@@ -4,7 +4,7 @@
 
   function teachable_machine_open() {
     var s = document.createElement("script")
-    s.src = "build.js";
+    s.src = "https://rawgit.com/fustyles/webduino/temp/teachable_machine_boilerplate_20180818/build.js";
     document.getElementsByTagName("head")[0].appendChild(s);
   }
   
