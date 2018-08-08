@@ -16,7 +16,7 @@
       div.style.left = '0px';
       div.style.zIndex = -1;   
       div.style.display = 'none';
-      div.innerHTML = "Hello World";
+      div.innerHTML = "";
       
       document.body.appendChild(div);
     }
