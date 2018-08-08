@@ -162,7 +162,7 @@ var Main = function () {
               }   
             }
 	    document.getElementById("train").innerHTML = maxid ;
-	    document.getElementById("proportion").innerHTML = max ;
+	    document.getElementById("probability").innerHTML = max ;
           })
           // Dispose image when done
           .then(function () {
