@@ -141,6 +141,7 @@ var Main = function () {
         var exampleCount = this.knn.getClassExampleCount();
         if (Math.max.apply(Math, _toConsumableArray(exampleCount)) > 0) {
           this.knn.predictClass(image).then(function (res) {
+	    var max=0,maxid=-1;
             for (var i = 0; i < NUM_CLASSES; i++) {
               // Make the predicted class bold
               if (res.classIndex == i) {
@@ -150,7 +151,7 @@ var Main = function () {
               }
 
               // Update info text
-	      var max=0,maxid=-1;
+	      
               if (exampleCount[i] > 0) {
                 _this2.infoTexts[i].innerText = ' ' + exampleCount[i] + ' examples - ' + res.confidences[i] * 100 + '%';
                 if ((res.confidences[i] * 100) >= max) 
@@ -158,9 +159,9 @@ var Main = function () {
 		  max=res.confidences[i] * 100;
 		  maxid=i;
 		}
-              }
-	      document.getElementById("train").innerHTML = maxid ;    
+              }   
             }
+	    document.getElementById("train").innerHTML = maxid ;
           })
           // Dispose image when done
           .then(function () {
