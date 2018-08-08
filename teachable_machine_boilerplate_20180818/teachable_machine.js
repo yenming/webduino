@@ -1,8 +1,6 @@
 +(function (window, document) {
 
   'use strict';
-  
-  //var proportion = ["", "", ""];
 
   function teachable_machine_open() {
     var s = document.createElement("script")
