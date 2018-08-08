@@ -38,7 +38,7 @@
   }
   
   function teachable_machine_proportion(input_property){
-    if (input_property=="id")
+    if (input_property=="train")
       return Number(document.getElementById("train").innerHTML);
     else if (input_property=="proportion")
       return Number(document.getElementById("proportion").innerHTML);
