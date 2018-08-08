@@ -1,6 +1,8 @@
 +(function (window, document) {
 
   'use strict';
+  
+  var getMaxID="",getMaxProbability="";
 
   function teachable_machine_open() {
     if (document.getElementById("train"))
@@ -33,12 +35,17 @@
       document.body.appendChild(div1);      
     }
     
+    /*
     var s = document.createElement("script")
     s.src = "https://rawgit.com/fustyles/webduino/temp/teachable_machine_boilerplate_20180808/build.js";
     document.getElementsByTagName("head")[0].appendChild(s);
+    */
   }
   
   function teachable_machine_proportion(input_property){
+    console.log(getMaxID);
+    console.log(getMaxProbability);
+    
     if (input_property=="train")
       return Number(document.getElementById("train").innerHTML);
     else if (input_property=="probability")
