@@ -1,1 +1,1 @@
-MSG.catImage = "游戏图片";
+MSG.teachable_machine = "机械学习";

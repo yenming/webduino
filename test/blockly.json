@@ -1,12 +1,13 @@
 {
-  "types": ["image_create","image_set","image_get","image_delete","image_collision","image_boundary","image_boundary_collision","image_sys_get"],
+  "types": ["teachable_machine_open","teachable_machine_proportion"],
   "category": "catPlus",
   "scripts": [
     "blockly/blocks.js",
     "blockly/javascript.js"
   ],
   "dependencies": [
-    "gameimage.js"    
+    "teachable_machine.js",
+    "build.js"
   ],
   "msg": "blockly/msg",
   "blocksMsg": "blockly/msg/blocks",

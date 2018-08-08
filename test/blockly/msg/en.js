@@ -1,1 +1,1 @@
-MSG.catImage = "Game Image";
+MSG.teachable_machine = "Teachable Machine";
