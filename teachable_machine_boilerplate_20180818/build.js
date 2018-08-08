@@ -141,6 +141,7 @@ var Main = function () {
         var exampleCount = this.knn.getClassExampleCount();
         if (Math.max.apply(Math, _toConsumableArray(exampleCount)) > 0) {
           this.knn.predictClass(image).then(function (res) {
+	    var max=0,maxid=-1;
             for (var i = 0; i < NUM_CLASSES; i++) {
               // Make the predicted class bold
               if (res.classIndex == i) {
@@ -150,11 +151,18 @@ var Main = function () {
               }
 
               // Update info text
+	      
               if (exampleCount[i] > 0) {
                 _this2.infoTexts[i].innerText = ' ' + exampleCount[i] + ' examples - ' + res.confidences[i] * 100 + '%';
-                proportion[i] = res.confidences[i] * 100 ;
-              }
+                if ((res.confidences[i] * 100) >= max) 
+		{
+		  max=res.confidences[i] * 100;
+		  maxid=i;
+		}
+              }   
             }
+	    document.getElementById("train").innerHTML = maxid ;
+	    document.getElementById("proportion").innerHTML = max ;
           })
           // Dispose image when done
           .then(function () {
@@ -19812,7 +19820,7 @@ exports.version = version;
 // var x = random();       // 0 <= x < 1.  Every bit is random.
 // var x = random.quick(); // 0 <= x < 1.  32 bits of randomness.
 
-// alea, a 53-bit multiply-with-carry generator by Johannes Baagøe.
+// alea, a 53-bit multiply-with-carry generator by Johannes BaagÃ¸e.
 // Period: ~2^116
 // Reported to pass all BigCrush tests.
 var alea = require('./lib/alea');
@@ -19827,7 +19835,7 @@ var xor128 = require('./lib/xor128');
 // Reported to fail: CollisionOver, SimpPoker, and LinearComp.
 var xorwow = require('./lib/xorwow');
 
-// xorshift7, by François Panneton and Pierre L'ecuyer, takes
+// xorshift7, by FranÃ§ois Panneton and Pierre L'ecuyer, takes
 // a different approach: it adds robustness by allowing more shifts
 // than Marsaglia's original three.  It is a 7-shift generator
 // with 256 bits, that passes BigCrush with no systmatic failures.
@@ -19865,12 +19873,12 @@ sr.tychei = tychei;
 module.exports = sr;
 
 },{"./lib/alea":154,"./lib/tychei":155,"./lib/xor128":156,"./lib/xor4096":157,"./lib/xorshift7":158,"./lib/xorwow":159,"./seedrandom":160}],154:[function(require,module,exports){
-// A port of an algorithm by Johannes Baagøe <baagoe@baagoe.com>, 2010
+// A port of an algorithm by Johannes BaagÃ¸e <baagoe@baagoe.com>, 2010
 // http://baagoe.com/en/RandomMusings/javascript/
 // https://github.com/nquinlan/better-random-numbers-for-javascript-mirror
 // Original work is under MIT license -
 
-// Copyright (C) 2010 by Johannes Baagøe <baagoe@baagoe.org>
+// Copyright (C) 2010 by Johannes BaagÃ¸e <baagoe@baagoe.org>
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20318,7 +20326,7 @@ if (module && module.exports) {
 
 },{}],158:[function(require,module,exports){
 // A Javascript implementaion of the "xorshift7" algorithm by
-// François Panneton and Pierre L'ecuyer:
+// FranÃ§ois Panneton and Pierre L'ecuyer:
 // "On the Xorgshift Random Number Generators"
 // http://saluc.engr.uconn.edu/refs/crypto/rng/panneton05onthexorshift.pdf
 
@@ -20883,7 +20891,7 @@ if ((typeof module) == 'object' && module.exports) {
 			return continuationByte & 0x3F;
 		}
 
-		// If we end up here, it?�s not a continuation byte
+		// If we end up here, it?s not a continuation byte
 		throw Error('Invalid continuation byte');
 	}
 

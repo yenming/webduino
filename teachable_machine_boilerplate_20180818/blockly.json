@@ -1,12 +1,13 @@
 {
-  "types": ["iframe_open","iframe_close"],
+  "types": ["teachable_machine_open","teachable_machine_proportion"],
   "category": "catPlus",
   "scripts": [
     "blockly/blocks.js",
     "blockly/javascript.js"
   ],
   "dependencies": [
-    "iframe.js"    
+    "teachable_machine.js",
+    "build.js"
   ],
   "msg": "blockly/msg",
   "blocksMsg": "blockly/msg/blocks",
