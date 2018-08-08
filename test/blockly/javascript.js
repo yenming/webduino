@@ -1,5 +1,6 @@
 Blockly.JavaScript['teachable_machine_open'] = function (block) {
-  var code = 'teachable_machine_open();\n';
+  var value_num_ = Blockly.JavaScript.valueToCode(block, 'num_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'teachable_machine_open('+ value_num_ +');\n';
   return code;
 };
 
