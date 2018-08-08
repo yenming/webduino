@@ -8,7 +8,7 @@
     if (document.getElementById("train"))
     {
       document.getElementById("train").innerHTML = "";
-      document.getElementById("proportion").innerHTML = "";
+      document.getElementById("probability").innerHTML = "";
     }
     else
     {
@@ -24,7 +24,7 @@
       document.body.appendChild(div);
       
       var div1 = document.createElement('div');
-      div1.id = "proportion";
+      div1.id = "probability";
       div1.style.position = 'absolute';    
       div1.style.top = '0px';
       div1.style.left = '0px';
@@ -49,7 +49,7 @@
     if (input_property=="train")
       return Number(document.getElementById("train").innerHTML);
     else if (input_property=="probability")
-      return Number(document.getElementById("proportion").innerHTML);
+      return Number(document.getElementById("probability").innerHTML);
   }
 
   window.teachable_machine_open = teachable_machine_open;
