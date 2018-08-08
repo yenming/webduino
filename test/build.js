@@ -163,6 +163,8 @@ var Main = function () {
             }
 	    document.getElementById("train").innerHTML = maxid ;
 	    document.getElementById("proportion").innerHTML = max ;
+            getMaxID=maxid;
+            getMaxProbability=max;
           })
           // Dispose image when done
           .then(function () {
