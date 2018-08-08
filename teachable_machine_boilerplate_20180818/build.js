@@ -150,11 +150,16 @@ var Main = function () {
               }
 
               // Update info text
+	      var max=0,maxid=-1;
               if (exampleCount[i] > 0) {
                 _this2.infoTexts[i].innerText = ' ' + exampleCount[i] + ' examples - ' + res.confidences[i] * 100 + '%';
-                
-		document.getElementById("train").childNodes[i].innerHTML = res.confidences[i] * 100 ;
+                if ((res.confidences[i] * 100) >= max) 
+		{
+		  max=res.confidences[i] * 100;
+		  maxid=i;
+		}
               }
+	      document.getElementById("train").innerHTML = maxid ;    
             }
           })
           // Dispose image when done
