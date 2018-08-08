@@ -2,7 +2,7 @@
 
   'use strict';
 
-  function teachable_machine_open() {
+  function teachable_machine_open(input_num) {
     if (document.getElementById("train"))
     {
       document.getElementById("train").innerHTML = "";
@@ -20,7 +20,14 @@
       div1.id = "probability";
       div1.style.position = 'absolute';    
       div1.style.display = 'none';
-      document.body.appendChild(div1);      
+      document.body.appendChild(div1);   
+      
+      var div2 = document.createElement('div');
+      div2.id = "num";
+      div2.style.position = 'absolute';    
+      div2.style.display = 'none';
+      div2.innerHTML = input_num;
+      document.body.appendChild(div2);        
     }
     
     /*
