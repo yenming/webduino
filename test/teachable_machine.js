@@ -7,6 +7,7 @@
     {
       document.getElementById("train").innerHTML = "";
       document.getElementById("probability").innerHTML = "";
+      document.getElementById("num").innerHTML = input_num;
     }
     else
     {
@@ -27,13 +28,12 @@
       div2.style.position = 'absolute';    
       div2.style.display = 'none';
       div2.innerHTML = input_num;
-      document.body.appendChild(div2);        
-    }
-    
-    var s = document.createElement("script")
-    s.src = "https://rawgit.com/fustyles/webduino/temp/test/build.js";
-    document.getElementsByTagName("head")[0].appendChild(s);
+      document.body.appendChild(div2);      
 
+      var s = document.createElement("script")
+      s.src = "https://rawgit.com/fustyles/webduino/temp/test/build.js";
+      document.getElementsByTagName("head")[0].appendChild(s);
+    }
   }
   
   function teachable_machine_proportion(input_property){
