@@ -3,11 +3,11 @@
   "category": "catPlus",
   "scripts": [
     "blockly/blocks.js",
-    "blockly/javascript.js",
-    "https://rawgit.com/fustyles/webduino/temp/teachable_machine_boilerplate_20180818/build.js"
+    "blockly/javascript.js"
   ],
   "dependencies": [
-    "teachable_machine.js"
+    "teachable_machine.js",
+    "build.js"
   ],
   "msg": "blockly/msg",
   "blocksMsg": "blockly/msg/blocks",
