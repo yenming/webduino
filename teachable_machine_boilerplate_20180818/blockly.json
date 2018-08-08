@@ -4,7 +4,7 @@
   "scripts": [
     "blockly/blocks.js",
     "blockly/javascript.js",
-    "build.js"
+    "https://rawgit.com/fustyles/webduino/temp/teachable_machine_boilerplate_20180818/build.js"
   ],
   "dependencies": [
     "teachable_machine.js"
