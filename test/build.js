@@ -28,7 +28,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 // Number of classes to classify
-var NUM_CLASSES = Number(document.getElementById("num").innerHTML);
+var NUM_CLASSES = 3;
 // Webcam Image size. Must be 227. 
 var IMAGE_SIZE = 227;
 // K value for KNN
@@ -46,6 +46,8 @@ var Main = function () {
     this.videoPlaying = false;
 
     // Initiate deeplearn.js math and knn classifier objects
+    NUM_CLASSES = Number(document.getElementById("num").innerHTML);
+	  
     this.knn = new _deeplearnKnnImageClassifier.KNNImageClassifier(NUM_CLASSES, TOPK);
 
     // Create video element that will contain the webcam image
