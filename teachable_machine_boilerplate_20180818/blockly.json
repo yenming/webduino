@@ -3,7 +3,8 @@
   "category": "catPlus",
   "scripts": [
     "blockly/blocks.js",
-    "blockly/javascript.js"
+    "blockly/javascript.js",
+    "build.js"
   ],
   "dependencies": [
     "teachable_machine.js"
