@@ -12,24 +12,14 @@
     {
       var div = document.createElement('div');
       div.id = "train";
-      div.style.position = 'absolute';    
-      div.style.top = '0px';
-      div.style.left = '0px';
-      div.style.zIndex = -1;   
+      div1.style.position = 'absolute';
       div.style.display = 'none';
-      div.innerHTML = "";
-      
       document.body.appendChild(div);
       
       var div1 = document.createElement('div');
       div1.id = "probability";
       div1.style.position = 'absolute';    
-      div1.style.top = '0px';
-      div1.style.left = '0px';
-      div1.style.zIndex = -1;   
       div1.style.display = 'none';
-      div1.innerHTML = "";
-      
       document.body.appendChild(div1);      
     }
     
