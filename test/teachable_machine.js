@@ -38,10 +38,10 @@
   }
   
   function teachable_machine_proportion(input_property){
-    if (input_property=="max_id")
-      return document.getElementById("train").innerHTML;
-    else if (input_property=="max_proportion")
-      return document.getElementById("proportion").innerHTML;
+    if (input_property=="id")
+      return Number(document.getElementById("train").innerHTML);
+    else if (input_property=="proportion")
+      return Number(document.getElementById("proportion").innerHTML);
   }
 
   window.teachable_machine_open = teachable_machine_open;
