@@ -153,7 +153,7 @@ var Main = function () {
               if (exampleCount[i] > 0) {
                 _this2.infoTexts[i].innerText = ' ' + exampleCount[i] + ' examples - ' + res.confidences[i] * 100 + '%';
                 
-		document.getElementById("train"+i).innerHTML = res.confidences[i] * 100 ;
+		document.getElementById("train").childNodes[i].innerHTML = res.confidences[i] * 100 ;
               }
             }
           })
