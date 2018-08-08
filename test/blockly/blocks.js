@@ -1,6 +1,7 @@
 Blockly.Blocks['teachable_machine_open'] = {
   init: function() {
-  this.appendDummyInput()  
+  this.appendValueInput("num_")
+      .setCheck("Number") 
       .appendField(Blockly.Msg.TEACHABLE_MACHINE_OPEN_SHOW);      
   this.setPreviousStatement(true);
   this.setNextStatement(true);
