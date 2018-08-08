@@ -19,6 +19,17 @@
       div.innerHTML = "";
       
       document.body.appendChild(div);
+      
+      var div1 = document.createElement('div');
+      div1.id = "proportion";
+      div1.style.position = 'absolute';    
+      div1.style.top = '0px';
+      div1.style.left = '0px';
+      div1.style.zIndex = -1;   
+      div1.style.display = 'none';
+      div1.innerHTML = "";
+      
+      document.body.appendChild(div1);      
     }
     
     var s = document.createElement("script")
@@ -26,8 +37,11 @@
     document.getElementsByTagName("head")[0].appendChild(s);
   }
   
-  function teachable_machine_proportion(){
-    return document.getElementById("train").innerHTML;
+  function teachable_machine_proportion(input_property){
+    if (input_property=="max_id")
+      return document.getElementById("train").innerHTML;
+    else if (input_property=="max_proportion")
+      return document.getElementById("proportion").innerHTML;
   }
 
   window.teachable_machine_open = teachable_machine_open;
