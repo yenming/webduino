@@ -6,6 +6,7 @@
     if (document.getElementById("train"))
     {
       document.getElementById("train").innerHTML = "";
+      document.getElementById("proportion").innerHTML = "";
     }
     else
     {
@@ -33,14 +34,14 @@
     }
     
     var s = document.createElement("script")
-    s.src = "https://rawgit.com/fustyles/webduino/temp/teachable_machine_boilerplate_20180818/build.js";
+    s.src = "https://rawgit.com/fustyles/webduino/temp/teachable_machine_boilerplate_20180808/build.js";
     document.getElementsByTagName("head")[0].appendChild(s);
   }
   
   function teachable_machine_proportion(input_property){
     if (input_property=="train")
       return Number(document.getElementById("train").innerHTML);
-    else if (input_property=="proportion")
+    else if (input_property=="probability")
       return Number(document.getElementById("proportion").innerHTML);
   }
 
