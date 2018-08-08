@@ -1,5 +1,10 @@
 <category id="teachable_machine">
-  <block type="teachable_machine_open">  
+  <block type="teachable_machine_open"> 
+    <value name="height_">
+      <block type="math_number">
+        <field name="NUM">4</field>
+      </block>
+    </value>    
   </block>
   <block type="teachable_machine_proportion">
   </block>
