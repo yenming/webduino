@@ -30,9 +30,9 @@
   }
   
   function teachable_machine_proportion(){
-    console.log(proportion[0]);
-    console.log(proportion[1]);
-    console.log(proportion[2]);
+    console.log(document.getElementById("train")[0].innerHTML);
+    console.log(document.getElementById("train")[1].innerHTML);
+    console.log(document.getElementById("train")[2].innerHTML);
   }
 
   window.teachable_machine_open = teachable_machine_open;
