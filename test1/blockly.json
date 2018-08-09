@@ -6,7 +6,8 @@
     "blockly/javascript.js"
   ],
   "dependencies": [
-    "matrixled.js"    
+    "matrixled.js",
+    "BitLedMatrix-blockly.js"
   ],
   "msg": "blockly/msg",
   "blocksMsg": "blockly/msg/blocks",
