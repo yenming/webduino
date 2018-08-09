@@ -1,10 +1,4 @@
 <category id="catMatrixLed">
-  <block type="variables_set">
-    <field name="VAR">fuMatrixLed</field>
-    <value name="VALUE">
-      <block type="matrix_new"></block>
-    </value>
-  </block>  
   <block type="matrix_led_showstate">
     <field name="value_showstate_">1</field>
   </block>  
