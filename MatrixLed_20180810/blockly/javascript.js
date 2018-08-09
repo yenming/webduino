@@ -189,6 +189,16 @@ Blockly.JavaScript['matrix_led_matrixcode'] = function(block) {
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
+Blockly.JavaScript['matrix_led_matrixcode_line'] = function(block) {
+  var L01 = (block.getFieldValue('L01') == 'TRUE')?"1":"0";
+  var L02 = (block.getFieldValue('L02') == 'TRUE')?"1":"0";
+  var L03 = (block.getFieldValue('L03') == 'TRUE')?"1":"0";
+  var L04 = (block.getFieldValue('L04') == 'TRUE')?"1":"0";
+  var L05 = (block.getFieldValue('L05') == 'TRUE')?"1":"0";
+  var code = '"'+L01+L02+L03+L04+L05+'"';
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
 Blockly.JavaScript['matrix_led_matrixcode_color'] = function(block) {
   var L01 = block.getFieldValue('L01');
   var L02 = block.getFieldValue('L02');
@@ -216,6 +226,16 @@ Blockly.JavaScript['matrix_led_matrixcode_color'] = function(block) {
   var L24 = block.getFieldValue('L24');
   var L25 = block.getFieldValue('L25');
   var code = '"'+L01+L02+L03+L04+L05+L06+L07+L08+L09+L10+L11+L12+L13+L14+L15+L16+L17+L18+L19+L20+L21+L22+L23+L24+L25+'"';
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript['matrix_led_matrixcode_line_color'] = function(block) {
+  var L01 = block.getFieldValue('L01');
+  var L02 = block.getFieldValue('L02');
+  var L03 = block.getFieldValue('L03');
+  var L04 = block.getFieldValue('L04');
+  var L05 = block.getFieldValue('L05');
+  var code = '"'+L01+L02+L03+L04+L05+'"';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
