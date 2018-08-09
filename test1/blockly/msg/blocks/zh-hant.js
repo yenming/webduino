@@ -40,3 +40,4 @@ Blockly.Msg.MATRIXLED_BACKCOLOR_SHOW = "指示燈(單色) 背景顏色";
 Blockly.Msg.MATRIXLED_MATRIXCODE_COLOR_SHOW = "指示燈(全彩) 編碼";
 Blockly.Msg.MATRIXLED_MARQUEE_COLOR_SHOW = "跑馬燈(全彩) 循環";
 Blockly.Msg.MATRIXLED_MARQUEE_COLOR_ONCE_SHOW = "跑馬燈(全彩) 單次";
+Blockly.Msg.MATRIXLED_BRIGHTNESS_SHOW = "指示燈 亮度 (0~20)";
