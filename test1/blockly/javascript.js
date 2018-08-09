@@ -231,7 +231,7 @@ Blockly.JavaScript['matrix_led_matrixcode_color'] = function(block) {
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Blockly.JavaScript['matrix_led_matrixcode_color'] = function(block) {
+Blockly.JavaScript['matrix_led_matrixcode_line_color'] = function(block) {
   var L01 = block.getFieldValue('L01');
   var L02 = block.getFieldValue('L02');
   var L03 = block.getFieldValue('L03');
