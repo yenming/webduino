@@ -2,7 +2,7 @@
   <block type="matrix_led_showstate">
     <field name="value_showstate_">1</field>
   </block>  
-  <block type="matrix_brightness">
+  <block type="matrix_led_brightness">
     <value name="brightness_">
       <block type="math_number">
         <field name="NUM">10</field>
