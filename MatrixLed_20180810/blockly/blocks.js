@@ -373,6 +373,22 @@ Blockly.Blocks['matrix_led_matrixcode'] = {
   }
 };
 
+Blockly.Blocks['matrix_led_matrixcode_line'] = {
+  init: function() {
+    this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_CENTRE)
+        .appendField(Blockly.Msg.MATRIXLED_MATRIXCODE_LINE_SHOW);
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L01")
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L02")
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L03")
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L04")
+        .appendField(new Blockly.FieldCheckbox("FALSE"), "L05");
+    this.setOutput(true, null);
+    this.setColour(300);  
+  }
+};
+
 Blockly.Blocks['matrix_led_matrixcode_color'] = {
   init: function() {
     this.appendDummyInput()
@@ -412,6 +428,22 @@ Blockly.Blocks['matrix_led_matrixcode_color'] = {
     this.setColour(300);
     this.setTooltip('');
     this.setHelpUrl('');
+  }
+};
+
+Blockly.Blocks['matrix_led_matrixcode_line_color'] = {
+  init: function() {
+    this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_CENTRE)
+        .appendField(Blockly.Msg.MATRIXLED_MATRIXCODE_LINE_COLOR_SHOW);
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldColour("#000000"), 'L01')
+        .appendField(new Blockly.FieldColour("#000000"), 'L02')
+        .appendField(new Blockly.FieldColour("#000000"), 'L03')
+        .appendField(new Blockly.FieldColour("#000000"), 'L04')
+        .appendField(new Blockly.FieldColour("#000000"), 'L05');
+    this.setOutput(true, null);
+    this.setColour(300);
   }
 };
 
