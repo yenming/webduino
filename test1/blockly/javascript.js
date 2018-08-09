@@ -1,3 +1,8 @@
+Blockly.JavaScript['matrix_led_brightness'] = function (block) {
+  var value_brightness_ = Blockly.JavaScript.valueToCode(block, 'brightness_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'fuMatrixLed.brightness(' + value_brightness_ + ');\n';
+  return code;
+};
 
 Blockly.JavaScript['matrix_led_showstate'] = function(block) {
   Blockly.JavaScript.definitions_['var_fuMatrixLed'] = 'var fuMatrixLed;';
