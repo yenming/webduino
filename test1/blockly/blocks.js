@@ -384,7 +384,7 @@ Blockly.Blocks['matrix_led_matrixcode_line_color'] = {
         .appendField(new Blockly.FieldColour("#000000"), 'L02')
         .appendField(new Blockly.FieldColour("#000000"), 'L03')
         .appendField(new Blockly.FieldColour("#000000"), 'L04')
-        .appendField(new Blockly.FieldColour("#000000"), 'L05')
+        .appendField(new Blockly.FieldColour("#000000"), 'L05');
     this.setOutput(true, null);
     this.setColour(300);
   }
