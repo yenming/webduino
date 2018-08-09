@@ -345,7 +345,7 @@
     <field name="L02">FALSE</field>
     <field name="L03">FALSE</field>
     <field name="L04">FALSE</field>
-    <field name="L05">FALSE</field
+    <field name="L05">FALSE</field>
   </block>   
   <block type="matrix_led_sample">
     <field name="value_sample_">♥</field>
