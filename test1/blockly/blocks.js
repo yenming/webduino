@@ -1,3 +1,14 @@
+Blockly.Blocks['matrix_led_brightness'] = {
+  init: function () {
+    this.appendValueInput('brightness_')
+        .setCheck(null)
+        .appendField(Blockly.Msg.MATRIXLED_BRIGHTNESS_SHOW);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(300);
+  }
+};
+
 Blockly.Blocks['matrix_led_char'] = {
   init: function() {
     this.appendValueInput("value_char_")
