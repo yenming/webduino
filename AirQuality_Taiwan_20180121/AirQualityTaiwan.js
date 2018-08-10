@@ -97,6 +97,7 @@
         url: target,
         success: function(json)
         {
+          console.log(json);
           var s0 = JSON.stringify(json);
           /*
           if (s0.indexOf("\"records\":")!=-1)
