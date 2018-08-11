@@ -1,46 +1,32 @@
-<category id="catIframe">
-  <block type="iframe_open">
-    <value name="openid_">
-      <block type="text">
-        <field name="TEXT"></field>
-      </block>
-    </value>    
-    <value name="url_">
-      <block type="text">
-        <field name="TEXT">about:blank</field>
-      </block>
-    </value>
-    <value name="width_">
-      <block type="math_number">
-        <field name="NUM">500</field>
-      </block>
-    </value>
-    <value name="height_">
-      <block type="math_number">
-        <field name="NUM">400</field>
-      </block>
-    </value>
-    <value name="left_">
-      <block type="math_number">
-        <field name="NUM">0</field>
-      </block>
-    </value>
-    <value name="top_">
-      <block type="math_number">
-        <field name="NUM">100</field>
-      </block>
-    </value>  
-    <value name="zindex_">
-      <block type="math_number">
-        <field name="NUM">0</field>
-      </block>
-    </value>     
+<category id="catDemoText">
+  <block type="demo_text_add">
   </block>
-  <block type="iframe_close">
-    <value name="closeid_">
-      <block type="text">
-        <field name="TEXT"></field>
-      </block>
-    </value> 
+  <block type="variables_set">
+    <field name="VAR">string</field>
+    <value name="VALUE">
+      <block type="text_class"></block>
+    </value>
   </block>
+  <block type="text_set">
+    <value name="string_">
+      <block type="text">
+        <field name="TEXT">Webduino</field>
+      </block>
+    </value>
+  </block>
+  <block type="text_size">
+    <value name="size_">
+      <block type="math_number">
+        <field name="NUM">20</field>
+      </block>
+    </value>
+  </block>
+  <block type="text_color">
+    <value name="color_">
+      <block type="colour_picker">
+        <field name="COLOUR">#ff0000</field>
+      </block>
+    </value>
+  </block>
+  <block type="text_align"></block>  
  </category>
