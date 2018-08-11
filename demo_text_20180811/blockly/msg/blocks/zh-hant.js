@@ -1,1 +1,11 @@
 Blockly.Msg.DEMO_TEXT_ADD_SHOW = "顯示文字新增";
+Blockly.Msg.TEXT_SHOW = "顯示文字";
+Blockly.Msg.TEXT_SET = "設定";
+Blockly.Msg.TEXT_DISPLAY = "顯示";
+Blockly.Msg.TEXT_SIZE = "文字大小爲";
+Blockly.Msg.TEXT_COLOR = "文字顏色爲";
+Blockly.Msg.TEXT_BREAK = "文字換行";
+Blockly.Msg.TEXT_ALIGNMENT = "文字排列";
+Blockly.Msg.TEXT_ALIGN_LEFT = "置左";
+Blockly.Msg.TEXT_ALIGN_CENTER = "置中";
+Blockly.Msg.TEXT_ALIGN_RIGHT = "置右";
