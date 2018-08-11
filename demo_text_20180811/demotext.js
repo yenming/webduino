@@ -10,7 +10,7 @@
         div.style.zIndex = 999;   
         div.style.display = 'block';
         div.innerHTML = "123";
-        document.body.appendChild(div);
+        document.body.insertBefore(div, null);
     }
   }
  
