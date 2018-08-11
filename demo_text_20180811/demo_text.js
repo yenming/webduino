@@ -3,7 +3,6 @@
   'use strict';
 
   function createDemoText() {
-    
     if (document.getElementById("demo-area-01-show"))
     {
         var div = document.createElement('div');
