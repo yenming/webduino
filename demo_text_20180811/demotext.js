@@ -16,4 +16,4 @@
  
   window.createDemoText = createDemoText;
 
-}(window, window.document, window.jQuery));
+}(window, window.document));
