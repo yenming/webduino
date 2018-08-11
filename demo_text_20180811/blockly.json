@@ -1,5 +1,5 @@
 {
-  "types": ["demo_text_add"],
+  "types": ["demo_text_add","text_class", "text_set", "text_size", "text_color", "text_align"],
   "category": "catPlus",
   "scripts": [
     "blockly/blocks.js",
