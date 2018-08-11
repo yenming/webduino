@@ -1,3 +1,15 @@
+Blockly.Blocks['matrix_led_showstate'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldVariable('fuMatrixLed'), 'fuMatrixLed_')
+        .appendField(Blockly.Msg.MATRIXLED_SHOWSTATE_SHOW)
+        .appendField(new Blockly.FieldDropdown([["on","1"], ["off","0"]]), "value_showstate_");     
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(300);
+  }  
+};
+
 Blockly.Blocks['matrix_led_brightness'] = {
   init: function () {
     this.appendValueInput('brightness_')
@@ -37,17 +49,6 @@ Blockly.Blocks['matrix_led_indentcode'] = {
         .setCheck("String")
         .appendField(Blockly.Msg.MATRIXLED_INDENTCODE_SHOW);
     this.setOutput(true, null);  
-    this.setColour(300);
-  }  
-};
-
-Blockly.Blocks['matrix_led_showstate'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.MATRIXLED_SHOWSTATE_SHOW)
-        .appendField(new Blockly.FieldDropdown([["on","1"], ["off","0"]]), "value_showstate_");     
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
     this.setColour(300);
   }  
 };
