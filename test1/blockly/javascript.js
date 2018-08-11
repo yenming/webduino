@@ -1,14 +1,15 @@
 Blockly.JavaScript['matrix_led_brightness'] = function (block) {
+  var variable_fuMatrixLed_ = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('fuMatrixLed_'), Blockly.Variables.NAME_TYPE);
   var value_brightness_ = Blockly.JavaScript.valueToCode(block, 'brightness_', Blockly.JavaScript.ORDER_ATOMIC);
-  var code = 'fuMatrixLed.brightness(' + value_brightness_ + ');\n';
+  var code = variable_fuMatrixLed_+'.brightness(' + value_brightness_ + ');\n';
   return code;
 };
 
 Blockly.JavaScript['matrix_led_showstate'] = function(block) {
-  Blockly.JavaScript.definitions_['var_fuMatrixLed'] = 'var fuMatrixLed;';
-  
+  var variable_fuMatrixLed_ = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('fuMatrixLed_'), Blockly.Variables.NAME_TYPE);
+  Blockly.JavaScript.definitions_['var_'+variable_fuMatrixLed_] = 'var '+variable_fuMatrixLed_+';';
   var value_showstate_ = block.getFieldValue('value_showstate_');
-  var code = 'fuMatrixLed = getMatrix(board, 4, 25);\nMatrixLed_showstate(fuMatrixLed,'+value_showstate_+');\n';
+  var code = variable_fuMatrixLed_+' = getMatrix(board, 4, 25);\nMatrixLed_showstate(fuMatrixLed,'+value_showstate_+');\n';
   return code;
 };
 
