@@ -1,1 +1,1 @@
-Blockly.Msg.DEMO_TEXT_ADD_SHOW = "顯示文字新增";
+Blockly.Msg.DEMO_TEXT_ADD_SHOW = "顯示文字附加";
