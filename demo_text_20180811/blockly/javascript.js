@@ -1,77 +1,34 @@
-var mainUrl = 'https://tutorials.webduino.io/zh-tw/docs/';
-var utmUrl = '?utm_source=cloud-blockly&utm_medium=contextMenu&utm_campaign=tutorials';
-
-Blockly.Blocks['text_class'] = {
-  init: function () {
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.TEXT_SHOW);
-    this.setOutput(true, null);
-    this.setColour(Blockly.Blocks.colour.HUE);
-    this.setTooltip('');
-    this.setHelpUrl('');
-  }
+Blockly.JavaScript['text_class'] = function (block) {
+  var code = 'new demoText(\'' + block.id.replace(/[^a-zA-Z0-9]/g, '') + '\')';
+  return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
-Blockly.Blocks['text_set'] = {
-  init: function () {
-    this.appendValueInput('string_')
-        .setCheck(['Boolean', 'String', 'Number'])
-        .appendField(Blockly.Msg.TEXT_SET)
-        .appendField(new Blockly.FieldVariable('string'), 'stringVariable_')
-        .appendField(Blockly.Msg.TEXT_DISPLAY);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(Blockly.Blocks.colour.HUE);
-    this.setTooltip('');
-    this.setHelpUrl('');
-  }
+Blockly.JavaScript['text_set'] = function (block) {
+  var stringvariable_ = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('stringVariable_'), Blockly.Variables.NAME_TYPE);
+  var value_name = Blockly.JavaScript.valueToCode(block, 'string_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = stringvariable_ + '.setText(' + value_name + ');\n';
+  return code;
 };
 
-Blockly.Blocks['text_size'] = {
-  init: function () {
-    this.appendValueInput('size_')
-        .appendField(Blockly.Msg.TEXT_SET)
-        .appendField(new Blockly.FieldVariable('string'), 'stringVariable_')
-        .appendField(Blockly.Msg.TEXT_SIZE);
-    this.setPreviousStatement(true);
-    this.setNextStatement(true);
-    this.setTooltip('');
-    this.setColour(Blockly.Blocks.colour.HUE);
-    this.setHelpUrl('');
-  }
+Blockly.JavaScript['text_size'] = function (block) {
+  var variable_string_ = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('stringVariable_'), Blockly.Variables.NAME_TYPE);
+  var value_size_ = Blockly.JavaScript.valueToCode(block, 'size_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = variable_string_ + '.setSize(' + value_size_ + ');\n';
+  return code;
 };
 
-Blockly.Blocks['text_color'] = {
-  init: function () {
-    this.appendValueInput('color_')
-        .appendField(Blockly.Msg.TEXT_SET)
-        .appendField(new Blockly.FieldVariable('string'), 'stringVariable_')
-        .appendField(Blockly.Msg.TEXT_COLOR);
-    this.setPreviousStatement(true);
-    this.setNextStatement(true);
-    this.setTooltip('');
-    this.setColour(Blockly.Blocks.colour.HUE);
-    this.setHelpUrl('');
-  }
+Blockly.JavaScript['text_color'] = function (block) {
+  var variable_string_ = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('stringVariable_'), Blockly.Variables.NAME_TYPE);
+  var value_color_ = Blockly.JavaScript.valueToCode(block, 'color_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = variable_string_ + '.setColor(' + value_color_ + ');\n';
+  return code;
 };
 
-Blockly.Blocks['text_align'] = {
-  init: function () {
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.TEXT_SET)
-        .appendField(new Blockly.FieldVariable('string'), 'stringVariable_')
-        .appendField(Blockly.Msg.TEXT_ALIGNMENT)
-        .appendField(new Blockly.FieldDropdown([
-          [Blockly.Msg.TEXT_ALIGN_LEFT, 'left'],
-          [Blockly.Msg.TEXT_ALIGN_CENTER, 'center'],
-          [Blockly.Msg.TEXT_ALIGN_RIGHT, 'right']
-        ]), 'align_');
-    this.setPreviousStatement(true);
-    this.setNextStatement(true);
-    this.setColour(Blockly.Blocks.colour.HUE);
-    this.setTooltip('');
-    this.setHelpUrl('');
-  }
+Blockly.JavaScript['text_align'] = function (block) {
+  var variable_string_ = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('stringVariable_'), Blockly.Variables.NAME_TYPE);
+  var dropdown_align_ = block.getFieldValue('align_');
+  var code = variable_string_ + '.setAlignment(\'' + dropdown_align_ + '\');\n';
+  return code;
 };
 
 Blockly.JavaScript['demo_text_add'] = function(block) {
