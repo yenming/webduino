@@ -7,7 +7,6 @@ Blockly.JavaScript['matrix_led_brightness'] = function (block) {
 
 Blockly.JavaScript['matrix_led_showstate'] = function(block) {
   var variable_fuMatrixLed_ = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('fuMatrixLed_'), Blockly.Variables.NAME_TYPE);
-  Blockly.JavaScript.definitions_['var_'+variable_fuMatrixLed_] = 'var '+variable_fuMatrixLed_+';';
   var value_showstate_ = block.getFieldValue('value_showstate_');
   var code = variable_fuMatrixLed_+' = getMatrix(board, 4, 25);\nMatrixLed_showstate('+variable_fuMatrixLed_+','+value_showstate_+');\n';
   return code;
