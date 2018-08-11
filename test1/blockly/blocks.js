@@ -14,6 +14,7 @@ Blockly.Blocks['matrix_led_brightness'] = {
   init: function () {
     this.appendValueInput('brightness_')
         .setCheck(null)
+        .appendField(new Blockly.FieldVariable('fuMatrixLed'), 'fuMatrixLed_')
         .appendField(Blockly.Msg.MATRIXLED_BRIGHTNESS_SHOW);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
