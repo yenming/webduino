@@ -152,3 +152,23 @@ Blockly.Blocks['image_onclick_get'] = {
   this.setColour(60);
   }
 };
+
+Blockly.Blocks['mouse_x_get'] = {
+  init: function() {
+  this.appendDummyInput()
+      .appendField(Blockly.Msg.MOUSE_X_GET_SHOW);
+  this.setInputsInline(true);
+  this.setOutput(true, null); 
+  this.setColour(60);
+  }
+};
+
+Blockly.Blocks['mouse_y_get'] = {
+  init: function() {
+  this.appendDummyInput()
+      .appendField(Blockly.Msg.MOUSE_Y_GET_SHOW);
+  this.setInputsInline(true);
+  this.setOutput(true, null); 
+  this.setColour(60);
+  }
+};
