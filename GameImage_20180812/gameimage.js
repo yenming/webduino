@@ -191,11 +191,11 @@
   }
   
   function mouse_x_get() {
-    return e.pageX;
+    return event.pageX;
   }   
   
   function mouse_y_get() {
-    return e.pageY;
+    return event.pageY;
   }    
   
   window.image_create = image_create;
