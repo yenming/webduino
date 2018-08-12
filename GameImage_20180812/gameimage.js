@@ -40,12 +40,6 @@
         img.style.display = "block";
       img.setAttribute("onclick", "javascript:image_onclickid_set(this);");
       document.body.appendChild(img);
-      
-      document.onmousemove = function(e){  
-        e=e||window.event;
-        mouse_x = e.pageX;
-        mouse_y = e.pageY;
-      }
     }
   }
   
@@ -198,10 +192,20 @@
   }
   
   function mouse_x_get() {
+    document.onmousemove = function(e){  
+      e=e||window.event;
+      mouse_x = e.pageX;
+      mouse_y = e.pageY;
+    }    
     return mouse_x;
   }   
   
   function mouse_y_get() {
+    document.onmousemove = function(e){  
+      e=e||window.event;
+      mouse_x = e.pageX;
+      mouse_y = e.pageY;
+    }     
     return mouse_y;
   }    
   
