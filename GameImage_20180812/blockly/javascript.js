@@ -64,3 +64,13 @@ Blockly.JavaScript['image_onclick_get'] = function (block) {
   var code = 'image_onclick_get(' + value_id_ + ')';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
+
+Blockly.JavaScript['mouse_x_get'] = function (block) {
+  var code = 'mouse_x_get()';
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript['mouse_y_get'] = function (block) {
+  var code = 'mouse_y_get()';
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
