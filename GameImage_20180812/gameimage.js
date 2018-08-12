@@ -192,12 +192,12 @@
   
   function mouse_x_get() {
     var e = event || window.event;
-    return e.pageX;
+    return e.clientX;
   }   
   
   function mouse_y_get() {
     var e = event || window.event;
-    return e.pageY;
+    return e.clientY;
   }    
   
   window.image_create = image_create;
