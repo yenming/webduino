@@ -137,7 +137,7 @@ Blockly.Blocks['image_sys_get'] = {
       .appendField(new Blockly.FieldDropdown([["width","screen_width"], ["height","screen_height"]]), "property_");
   this.setInputsInline(true);
   this.setOutput(true, null); 
-  this.setColour(60);
+  this.setColour(150);
   }
 };
 
