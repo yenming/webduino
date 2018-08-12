@@ -191,7 +191,7 @@
       return 0;
   }
   
-  function mouse_position_get(input_property) {
+  function mouse_coordinate_get(input_property) {
     document.onmousemove = function(e){  
       e=e||window.event;
       mouse_x = e.pageX;
@@ -214,6 +214,6 @@
   window.image_onclickid_set = image_onclickid_set;
   window.image_onclickid_clear = image_onclickid_clear;
   window.image_onclick_get = image_onclick_get;
-  window.mouse_position_get = mouse_position_get;
+  window.mouse_coordinate_get = mouse_coordinate_get;
   
 }(window, window.document));
