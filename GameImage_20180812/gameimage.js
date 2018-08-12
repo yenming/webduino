@@ -190,6 +190,14 @@
       return 0;
   }
   
+  function mouse_x_get() {
+    return e.pageX;
+  }   
+  
+  function mouse_y_get() {
+    return e.pageY;
+  }    
+  
   window.image_create = image_create;
   window.image_set = image_set;
   window.image_get = image_get;
@@ -201,5 +209,7 @@
   window.image_onclickid_set = image_onclickid_set;
   window.image_onclickid_clear = image_onclickid_clear;
   window.image_onclick_get = image_onclick_get;
+  window.mouse_x_get = mouse_x_get;
+  window.mouse_y_get = mouse_y_get;
   
 }(window, window.document));
