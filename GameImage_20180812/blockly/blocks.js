@@ -67,7 +67,7 @@ Blockly.Blocks['image_get'] = {
       .appendField(Blockly.Msg.ID_SHOW);  
   this.setInputsInline(true);
   this.setOutput(true, null); 
-  this.setColour(150);
+  this.setColour(200);
   }
 };
 
@@ -94,7 +94,7 @@ Blockly.Blocks['image_collision'] = {
       .appendField(Blockly.Msg.AND_SHOW);   
   this.setInputsInline(true);
   this.setOutput(true, null); 
-  this.setColour(150);
+  this.setColour(200);
   }
 };
 
@@ -126,7 +126,7 @@ Blockly.Blocks['image_boundary_collision'] = {
       .appendField(Blockly.Msg.ID_SHOW);
   this.setInputsInline(true);
   this.setOutput(true, null); 
-  this.setColour(150);
+  this.setColour(200);
   }
 };
 
@@ -137,7 +137,7 @@ Blockly.Blocks['image_sys_get'] = {
       .appendField(new Blockly.FieldDropdown([["width","screen_width"], ["height","screen_height"]]), "property_");
   this.setInputsInline(true);
   this.setOutput(true, null); 
-  this.setColour(150);
+  this.setColour(200);
   }
 };
 
@@ -149,7 +149,7 @@ Blockly.Blocks['image_onclick_get'] = {
       .appendField(Blockly.Msg.ID_SHOW); 
   this.setInputsInline(true);
   this.setOutput(true, null); 
-  this.setColour(150);
+  this.setColour(200);
   }
 };
 
@@ -160,6 +160,6 @@ Blockly.Blocks['mouse_coordinate_get'] = {
       .appendField(new Blockly.FieldDropdown([["X","x"], ["Y","y"]]), "property_");
   this.setInputsInline(true);
   this.setOutput(true, null); 
-  this.setColour(150);
+  this.setColour(200);
   }
 };
