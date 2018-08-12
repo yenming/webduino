@@ -214,4 +214,4 @@
   window.mouse_x_get = mouse_x_get;
   window.mouse_y_get = mouse_y_get;
   
-}(window, window.document, window.jQuery));
+}(window, window.document));
