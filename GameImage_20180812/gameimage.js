@@ -7,6 +7,7 @@
   var onclickid = "";
   var onclicktime = 200;
   var onclicktimerid;
+  var mouse_x,mouse_y;
 
   function image_create(input_id,input_url,input_width,input_height,input_left,input_top,input_zindex,input_display) {
     if (document.getElementById("gameimg_"+input_id))
@@ -39,6 +40,12 @@
         img.style.display = "block";
       img.setAttribute("onclick", "javascript:image_onclickid_set(this);");
       document.body.appendChild(img);
+      
+      document.onmousemove = function(e){  
+        e=e||window.event;
+        mouse_x = e.pageX;
+        mouse_y = e.pageY;
+      }
     }
   }
   
@@ -191,11 +198,11 @@
   }
   
   function mouse_x_get() {
-    return event.clientX;
+    return mouse_x;
   }   
   
   function mouse_y_get() {
-    return event.clientY;
+    return mouse_y;
   }    
   
   window.image_create = image_create;
