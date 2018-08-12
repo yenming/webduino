@@ -16,3 +16,5 @@ Blockly.Msg.BOUNDARY_SHOW = "设定视窗大小";
 Blockly.Msg.BOUNDARY_COLLISION_SHOW = "取得图片 边界状态";
 Blockly.Msg.SYS_GET_SHOW = "取得视窗";
 Blockly.Msg.ONCLICK_SHOW = "取得图片 点选状态";
+Blockly.Msg.MOUSE_X_GET_SHOW = "取得滑鼠 X座标";
+Blockly.Msg.MOUSE_Y_GET_SHOW = "取得滑鼠 Y座标";
