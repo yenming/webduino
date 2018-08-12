@@ -156,7 +156,7 @@ Blockly.Blocks['image_onclick_get'] = {
 Blockly.Blocks['mouse_coordinate_get'] = {
   init: function() {
   this.appendDummyInput()
-      .appendField(Blockly.Msg.MOUSE_COORDINATE_SHOW)
+      .appendField(Blockly.Msg.MOUSE_COORDINATE_GET_SHOW)
       .appendField(new Blockly.FieldDropdown([["X","x"], ["Y","y"]]), "property_");
   this.setInputsInline(true);
   this.setOutput(true, null); 
