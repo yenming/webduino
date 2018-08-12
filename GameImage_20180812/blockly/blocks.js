@@ -153,20 +153,10 @@ Blockly.Blocks['image_onclick_get'] = {
   }
 };
 
-Blockly.Blocks['mouse_x_get'] = {
+Blockly.Blocks['mouse_coordinate_get'] = {
   init: function() {
   this.appendDummyInput()
-      .appendField(Blockly.Msg.MOUSE_X_GET_SHOW);
-  this.setInputsInline(true);
-  this.setOutput(true, null); 
-  this.setColour(60);
-  }
-};
-
-Blockly.Blocks['mouse_y_get'] = {
-  init: function() {
-  this.appendDummyInput()
-      .appendField(Blockly.Msg.MOUSE_Y_GET_SHOW);
+      .appendField(Blockly.Msg.MOUSE_COORDINATE_SHOW);
   this.setInputsInline(true);
   this.setOutput(true, null); 
   this.setColour(60);
