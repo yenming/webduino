@@ -65,12 +65,8 @@ Blockly.JavaScript['image_onclick_get'] = function (block) {
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Blockly.JavaScript['mouse_x_get'] = function (block) {
-  var code = 'mouse_x_get()';
-  return [code, Blockly.JavaScript.ORDER_NONE];
-};
-
-Blockly.JavaScript['mouse_y_get'] = function (block) {
-  var code = 'mouse_y_get()';
+Blockly.JavaScript['mouse_coordinate_get'] = function (block) {
+  var value_property_ = block.getFieldValue('property_');
+  var code = 'mouse_coordinate_get("' + value_property_ + '")';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
