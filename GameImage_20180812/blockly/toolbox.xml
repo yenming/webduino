@@ -107,4 +107,8 @@
   </block>  
   <block type="image_sys_get">
   </block>    
+  <block type="mouse_x_get">
+  </block>  
+  <block type="mouse_y_get">
+  </block>    
  </category>
