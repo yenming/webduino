@@ -178,10 +178,10 @@ Blockly.Blocks['document_timer'] = {
   }
 };
 
-Blockly.Blocks['document_timer_close'] = {
+Blockly.Blocks['document_timer_stop'] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(Blockly.Msg.DOCUMENT_TIMER_CLOSE_SHOW)
+      .appendField(Blockly.Msg.DOCUMENT_TIMER_STOP_SHOW)
       .appendField(new Blockly.FieldVariable('fuTimer'), 'fuTimer_');
     this.setPreviousStatement(true);
     this.setNextStatement(true);
