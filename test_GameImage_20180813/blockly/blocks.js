@@ -173,7 +173,6 @@ Blockly.Blocks['document_timer'] = {
         .appendField(new Blockly.FieldVariable('fuTimer'), 'fuTimer_')
         .appendField(Blockly.Msg.DOCUMENT_TIMER_SHOW);  
     this.appendStatementInput("do_");
-    this.setInputsInline(false);
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setColour(60);
