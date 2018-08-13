@@ -168,7 +168,8 @@ Blockly.Blocks['document_timer'] = {
   init: function () {
     this.appendValueInput("timerintervals_")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .setCheck("Number")
+        .setCheck("Number");
+    this.appendDummyInput()
         .appendField(new Blockly.FieldVariable('fuTimer'), 'fuTimer_')
         .appendField(Blockly.Msg.DOCUMENT_TIMER_SHOW);  
     this.appendStatementInput("do_");
