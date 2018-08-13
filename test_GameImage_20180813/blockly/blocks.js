@@ -175,8 +175,6 @@ Blockly.Blocks['document_timer'] = {
     this.setInputsInline(false);
     this.setPreviousStatement(true);
     this.setNextStatement(true);
-    this.setTooltip('');
-    this.setColour(5);
-    this.setHelpUrl(mainUrl + 'useful/example/toycar-keyboard.html' + utmUrl); 
+    this.setColour(60);
   }
 };
