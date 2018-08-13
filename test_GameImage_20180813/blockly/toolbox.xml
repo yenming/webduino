@@ -116,4 +116,6 @@
       </block>
     </value>  
   </block>
+  <block type="document_timer_close">
+  </block>  
  </category>
