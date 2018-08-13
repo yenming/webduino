@@ -79,7 +79,7 @@ Blockly.JavaScript['document_timer'] = function (block) {
   return code;
 };
 
-Blockly.JavaScript['document_timer_close'] = function (block) {
+Blockly.JavaScript['document_timer_stop'] = function (block) {
   var variable_fuTimer_ = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('fuTimer_'), Blockly.Variables.NAME_TYPE);
   var code = 'clearInterval(' + variable_fuTimer_ + ');\n';
   return code;
