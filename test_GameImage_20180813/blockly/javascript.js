@@ -77,6 +77,6 @@ Blockly.JavaScript['document_timer'] = function (block) {
   var value_intervals_ = block.getFieldValue('intervals_');
   var code = variable_fuTimer_+' = setInterval(function(){\n' +
     statements_do_ +
-    '},'+value_intervals_+');\n';
+    '},' + value_intervals_ + ');\n';
   return code;
 };
