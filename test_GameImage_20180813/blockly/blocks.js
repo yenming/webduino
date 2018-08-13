@@ -166,7 +166,7 @@ Blockly.Blocks['mouse_coordinate_get'] = {
 
 Blockly.Blocks['document_timer'] = {
   init: function () {
-    this.appendValueInput("timerintervals_")
+    this.appendValueInput("intervals_")
         .setAlign(Blockly.ALIGN_RIGHT)
         .setCheck("Number")
         .appendField(new Blockly.FieldVariable('fuTimer'), 'fuTimer_')
