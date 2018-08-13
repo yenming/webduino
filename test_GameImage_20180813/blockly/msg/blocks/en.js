@@ -17,3 +17,4 @@ Blockly.Msg.BOUNDARY_COLLISION_SHOW = "Get Collision with sides of screen ";
 Blockly.Msg.SYS_GET_SHOW = "Get Screen";
 Blockly.Msg.ONCLICK_SHOW = "Get onClick";
 Blockly.Msg.MOUSE_COORDINATE_GET_SHOW = "Get Mouse Coordinate";
+Blockly.Msg.DOCUMENT_TIMER_SHOW = "Timer Intervals";
