@@ -177,3 +177,14 @@ Blockly.Blocks['document_timer'] = {
     this.setColour(60);
   }
 };
+
+Blockly.Blocks['document_timer_close'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.DOCUMENT_TIMER_CLOSE_SHOW)
+      .appendField(new Blockly.FieldVariable('fuTimer'), 'fuTimer_');
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setColour(60);
+  }
+};
