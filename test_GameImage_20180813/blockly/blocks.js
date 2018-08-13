@@ -163,3 +163,21 @@ Blockly.Blocks['mouse_coordinate_get'] = {
   this.setColour(200);
   }
 };
+
+Blockly.Blocks['document_timer'] = {
+  init: function () {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldVariable('fuTimer'), 'fuTimer_')
+        .appendField(Blockly.Msg.DOCUMENT_TIMER_SHOW);
+    this.appendValueInput("intervals_")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .setCheck("Number");   
+    this.appendStatementInput("do_");
+    this.setInputsInline(false);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setTooltip('');
+    this.setColour(5);
+    this.setHelpUrl(mainUrl + 'useful/example/toycar-keyboard.html' + utmUrl); 
+  }
+};
