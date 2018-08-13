@@ -108,5 +108,6 @@
   <block type="image_sys_get">
   </block>    
   <block type="mouse_coordinate_get">
-  </block>  
+  </block>
+  <block type="document_timer"></block>
  </category>
