@@ -70,3 +70,13 @@ Blockly.JavaScript['mouse_coordinate_get'] = function (block) {
   var code = 'mouse_coordinate_get("' + value_property_ + '")';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
+
+Blockly.JavaScript['document_timer'] = function (block) {
+  var variable_fuTimer_ = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('fuTimer_'), Blockly.Variables.NAME_TYPE);
+  var statements_do_ = Blockly.JavaScript.statementToCode(block, 'do_');
+  var value_intervals_ = block.getFieldValue('intervals_');
+  var code = variable_fuTimer_+' = setInterval(function(){\n' +
+    statements_do_ +
+    '},"+value_intervals_+");\n';
+  return code;
+};
