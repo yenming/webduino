@@ -78,3 +78,9 @@ Blockly.JavaScript['document_timer'] = function (block) {
   var code = variable_fuTimer_+' = setInterval(function(){\n' + statements_do_ + '},' + value_intervals_ + ');\n';
   return code;
 };
+
+Blockly.JavaScript['document_timer_close'] = function (block) {
+  var variable_fuTimer_ = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('fuTimer_'), Blockly.Variables.NAME_TYPE);
+  var code = 'clearInterval(' + variable_fuTimer_ + ');\n';
+  return code;
+};
