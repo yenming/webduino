@@ -17,5 +17,5 @@ Blockly.Msg.BOUNDARY_COLLISION_SHOW = "取得图片 边界状态";
 Blockly.Msg.SYS_GET_SHOW = "取得视窗";
 Blockly.Msg.ONCLICK_SHOW = "取得图片 点选状态";
 Blockly.Msg.MOUSE_COORDINATE_GET_SHOW = "取得滑鼠 座标";
-Blockly.Msg.DOCUMENT_TIMER_SHOW = "定时器 间隔时间(ms)";
-Blockly.Msg.DOCUMENT_TIMER_STOP_SHOW = "停止定时器";
+Blockly.Msg.DOCUMENT_TIMER_SHOW = "计时器 间隔时间(ms)";
+Blockly.Msg.DOCUMENT_TIMER_STOP_SHOW = "停止计时器";
