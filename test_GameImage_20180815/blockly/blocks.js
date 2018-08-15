@@ -178,6 +178,20 @@ Blockly.Blocks['document_timer'] = {
   }
 };
 
+Blockly.Blocks['document_timer_once'] = {
+  init: function () {
+    this.appendValueInput("intervals_")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .setCheck("Number")
+        .appendField(new Blockly.FieldVariable('fuTimerOnce'), 'fuTimerOnce_')
+        .appendField(Blockly.Msg.DOCUMENT_TIMER_SHOW);     
+    this.appendStatementInput("do_");
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setColour(60);
+  }
+};
+
 Blockly.Blocks['document_timer_stop'] = {
   init: function () {
     this.appendDummyInput()
