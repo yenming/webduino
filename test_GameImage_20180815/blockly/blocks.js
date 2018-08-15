@@ -184,7 +184,7 @@ Blockly.Blocks['document_timer_once'] = {
         .setAlign(Blockly.ALIGN_RIGHT)
         .setCheck("Number")
         .appendField(new Blockly.FieldVariable('fuTimerOnce'), 'fuTimerOnce_')
-        .appendField(Blockly.Msg.DOCUMENT_TIMER_SHOW);     
+        .appendField(Blockly.Msg.DOCUMENT_TIMER_ONCE_SHOW);     
     this.appendStatementInput("do_");
     this.setPreviousStatement(true);
     this.setNextStatement(true);
