@@ -18,12 +18,8 @@ Author : ChungYi Fu (Kaohsiung, Taiwan)
 </style>
 
 </head>
-
-
 <body>
-  
 <span id="demo-area-01-show"></span><br>
-
 <table>
 <tr>
 <td>Google Sheet Url:</td><td><input type="text" id="SheetUrl" name="SheetUrl" value="" size="40"></td>
@@ -390,21 +386,17 @@ Author : ChungYi Fu (Kaohsiung, Taiwan)
 <tr>
 <td><a href="https://www.facebook.com/groups/webduino/">Webduino</a></td><td align="right"><input type="button" id="translate" value="Translate"></td>
 </tr>
-
-
 </body>
 </html>
 
 <script>
-
-
+  
 (async function () {
-
-console.log(document.getElementById("SheetUrl").value);
-console.log(document.getElementById("SheetName").value);
-console.log(document.getElementById("RecognitionLanguage").value);
-console.log(document.getElementById("OutputLanguage").value);
-console.log(document.getElementById("SpeakLanguage").value);
+//console.log(document.getElementById("SheetUrl").value);
+//console.log(document.getElementById("SheetName").value);
+//console.log(document.getElementById("RecognitionLanguage").value);
+//console.log(document.getElementById("OutputLanguage").value);
+//console.log(document.getElementById("SpeakLanguage").value);
 
 var word;
 var ReadState;
@@ -479,7 +471,6 @@ async function GoogleTTS(word) {
   });
 }
 
-
 ReadState = 0;
 InputString = '';
 
@@ -539,11 +530,6 @@ async function speechRecognition() {
   }
 }
 speechRecognition();
-
 }());
 
 </script>
-
-
-
-
