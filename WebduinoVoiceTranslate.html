@@ -22,7 +22,7 @@
 <script src="https://rawgit.com/fustyles/webduino/temp/speak_setting_sample_fustyles/speak_setting_sample.js"></script>
 
 <style id="jsbin-css">
-#demo-area-01-show { font-size: 30px; color: red; pointer-events: auto!important; }
+#demo-area-01-show { font-size: 30px; color: blue; pointer-events: auto!important; }
 </style>
 
 </head>
@@ -479,7 +479,7 @@ async function GoogleTTS(word) {
     sheetUrl : myData.sheetUrl,
     sheetName : myData.sheetName
   }, function(googleSheetReadData){
-    document.getElementById('demo-area-01-show').innerHTML = ([word,("<br/>"),googleSheetReadData].join(''));
+    document.getElementById('demo-area-01-show').innerHTML = ([word,("<br/>"),"<font color='red'>"+googleSheetReadData].join('')+"</font>");
     speak(googleSheetReadData,[SpeakLanguage,1,1,1], async function () {
       ReadState = 0;
 
