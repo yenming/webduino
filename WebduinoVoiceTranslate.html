@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 Author : ChungYi Fu (Kaohsiung, Taiwan)
 -->
 <!doctype html>
@@ -517,14 +517,13 @@ async function speechRecognition() {
       document.getElementById('demo-area-01-show').innerHTML = InputString;
     }
   }
-      console.log('final');
-} else if (event.results[result.resultLength].isFinal === false) {
-              }
+      } else if (event.results[result.resultLength].isFinal === true) {
+        console.log('final');
+      }
     };
     window._recognition.start();
   }
 }
 speechRecognition();
-
 }());
 </script>
