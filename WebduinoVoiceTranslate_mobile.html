@@ -466,6 +466,7 @@ async function GoogleTTS(word) {
   }, function(googleSheetReadData){
     document.getElementById('demo-area-01-show').innerHTML = ([word,("<br/>"),"<font color='red'>"+googleSheetReadData].join('')+"</font>");
     speak(googleSheetReadData,[SpeakLanguage,1,1,1], async function () {
+      await delay(2);
       ReadState = 0;
     },0);
   });
