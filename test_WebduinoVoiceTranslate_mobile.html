@@ -12,16 +12,11 @@ Author : ChungYi Fu (Kaohsiung, Taiwan)
 <script src="https://blocklypro.webduino.io/dist/lib/firebase.min.js"></script>
 <script src="https://blocklypro.webduino.io/dist/lib/runtime.min.js"></script>
 <script src="https://rawgit.com/fustyles/webduino/temp/speak_setting_sample_fustyles/speak_setting_sample.js"></script>
-
 <style id="jsbin-css">
 #demo-area-01-show { font-size: 30px; color: blue; pointer-events: auto!important; }
 </style>
-
 </head>
-
-
 <body>
-  
 <span id="demo-area-01-show"></span><br>
 
 <table>
@@ -401,11 +396,11 @@ Author : ChungYi Fu (Kaohsiung, Taiwan)
 
 <script>
 (async function () {
-console.log(document.getElementById("SheetUrl").value);
-console.log(document.getElementById("SheetName").value);
-console.log(document.getElementById("RecognitionLanguage").value);
-console.log(document.getElementById("OutputLanguage").value);
-console.log(document.getElementById("SpeakLanguage").value);
+//console.log(document.getElementById("SheetUrl").value);
+//console.log(document.getElementById("SheetName").value);
+//console.log(document.getElementById("RecognitionLanguage").value);
+//console.log(document.getElementById("OutputLanguage").value);
+//console.log(document.getElementById("SpeakLanguage").value);
 var word;
 var ReadState;
 var myData;
@@ -413,6 +408,7 @@ var InputString;
 RecognitionLanguage = "cmn-Hant-TW";
 OutputLanguage = "en";
 SpeakLanguage = "en-US";
+	
 function get_date(t) {
   var varDay = new Date(),
     varYear = varDay.getFullYear(),
@@ -434,6 +430,7 @@ function get_date(t) {
   }
   return varNow;
 }
+	
 function get_time(t) {
   var varTime = new Date(),
     varHours = varTime.getHours(),
@@ -451,6 +448,7 @@ function get_time(t) {
   }
   return varNow;
 }
+	
 async function GoogleTTS(word) {
   myData= {};
   myData.sheetUrl = document.getElementById("SheetUrl").value;
@@ -478,22 +476,24 @@ async function GoogleTTS(word) {
 ReadState = 0;
 InputString = '';
 document.getElementById('demo-area-01-show').innerHTML = '';
+	
 document.getElementById("translate").onclick = async function(e){
-      if (ReadState == 0) {
+    if (ReadState == 0) {
       ReadState = 1;
       GoogleTTS(InputString);
     }
 };
 document.getElementById("RecognitionLanguage").onchange = async function(e){
-      RecognitionLanguage = document.getElementById("RecognitionLanguage").value;
-      speechRecognition();
+    RecognitionLanguage = document.getElementById("RecognitionLanguage").value;
+    speechRecognition();
 };
 document.getElementById("OutputLanguage").onchange = async function(e){
-      OutputLanguage = document.getElementById("OutputLanguage").value;
+    OutputLanguage = document.getElementById("OutputLanguage").value;
 };
 document.getElementById("SpeakLanguage").onchange = async function(e){
-      SpeakLanguage = document.getElementById("SpeakLanguage").value;
+    SpeakLanguage = document.getElementById("SpeakLanguage").value;
 };
+	
 async function speechRecognition() {
   if (!('webkitSpeechRecognition' in window)) {
     alert('本瀏覽器不支援語音辨識，請更換瀏覽器！(Chrome 25 版以上才支援語音辨識)');
@@ -517,20 +517,20 @@ async function speechRecognition() {
       result.resultTranscript = event.results[result.resultLength][0].transcript;
       if (event.results[result.resultLength].isFinal === true) {
         if (ReadState == 0) {
-    if (result.resultTranscript != '') {
-      InputString = result.resultTranscript;
-      document.getElementById('demo-area-01-show').innerHTML = InputString;
-    }
-  }
-      console.log('final');
+    	    if (result.resultTranscript != '') {
+      	        InputString = result.resultTranscript;
+      	        document.getElementById('demo-area-01-show').innerHTML = InputString;
+    	    }
+        }
+        console.log('final');
 	if (document.getElementById('Automatic').checked){
-      		if (ReadState == 0) {
-      			ReadState = 1;
-      			GoogleTTS(InputString);
-    		}
-	}
-} else if (event.results[result.resultLength].isFinal === false) {
-              }
+      	    if (ReadState == 0) {
+      		ReadState = 1;
+      		GoogleTTS(InputString);
+    	    }
+        }
+      } else if (event.results[result.resultLength].isFinal === false) {
+      }
     };
     window._recognition.start();
   }
