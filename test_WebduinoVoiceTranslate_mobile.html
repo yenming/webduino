@@ -1,0 +1,540 @@
+﻿<!--
+Author : ChungYi Fu (Kaohsiung, Taiwan)
+-->
+<!doctype html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Webduino Voice Input/Output & Translate</title>
+<script src="https://blocklypro.webduino.io/components/jquery/dist/jquery.min.js"></script>
+<script src="https://blocklypro.webduino.io/dist/lib/webduino-all-0.4.20.min.js"></script>
+<script src="https://blocklypro.webduino.io/dist/webduino-blockly.min.js"></script>
+<script src="https://blocklypro.webduino.io/dist/lib/firebase.min.js"></script>
+<script src="https://blocklypro.webduino.io/dist/lib/runtime.min.js"></script>
+<script src="https://rawgit.com/fustyles/webduino/temp/speak_setting_sample_fustyles/speak_setting_sample.js"></script>
+
+<style id="jsbin-css">
+#demo-area-01-show { font-size: 30px; color: blue; pointer-events: auto!important; }
+</style>
+
+</head>
+
+
+<body>
+  
+<span id="demo-area-01-show"></span><br>
+
+<table>
+<tr>
+<td>Google Sheet Url:</td><td><input type="text" id="SheetUrl" name="SheetUrl" value="" size="40"></td>
+</tr>
+<tr>
+<td>Google Sheet Name:</td><td><input type="text" id="SheetName" name="SheetName" value="" size="10"></td>
+</tr>
+<tr>
+<td>Recognition Language:</td><td>
+<select id="RecognitionLanguage" name="RecognitionLanguage">
+<option value="cmn-Hant-TW">Chinese, Mandarin (Traditional, Taiwan)<option>        
+<option value="en-US">English (United States)<option>
+<option value="cmn-Hans-CN">Chinese, Mandarin (Simplified, China)<option>
+<option value="cmn-Hans-HK">Chinese, Mandarin (Simplified, Hong Kong)<option>
+<option value="af-ZA">Afrikaans (South Africa)<option>
+<option value="am-ET">Amharic (Ethiopia)<option>
+<option value="ar-AE">Arabic (United Arab Emirates)<option>
+<option value="ar-BH">Arabic (Bahrain)<option>
+<option value="ar-DZ">Arabic (Algeria)<option>
+<option value="ar-EG">Arabic (Egypt)<option>
+<option value="ar-IL">Arabic (Israel)<option>
+<option value="ar-IQ">Arabic (Iraq)<option>
+<option value="ar-JO">Arabic (Jordan)<option>
+<option value="ar-KW">Arabic (Kuwait)<option>
+<option value="ar-LB">Arabic (Lebanon)<option>
+<option value="ar-MA">Arabic (Morocco)<option>
+<option value="ar-OM">Arabic (Oman)<option>
+<option value="ar-PS">Arabic (State of Palestine)<option>
+<option value="ar-QA">Arabic (Qatar)<option>
+<option value="ar-SA">Arabic (Saudi Arabia)<option>
+<option value="ar-TN">Arabic (Tunisia)<option>
+<option value="az-AZ">Azerbaijani (Azerbaijan)<option>
+<option value="bg-BG">Bulgarian (Bulgaria)<option>
+<option value="bn-BD">Bengali (Bangladesh)<option>
+<option value="bn-IN">Bengali (India)<option>
+<option value="ca-ES">Catalan (Spain)<option>
+<option value="cs-CZ">Czech (Czech Republic)<option>
+<option value="da-DK">Danish (Denmark)<option>
+<option value="de-DE">German (Germany)<option>
+<option value="el-GR">Greek (Greece)<option>
+<option value="en-AU">English (Australia)<option>
+<option value="en-CA">English (Canada)<option>
+<option value="en-GB">English (United Kingdom)<option>
+<option value="en-GH">English (Ghana)<option>
+<option value="en-IE">English (Ireland)<option>
+<option value="en-IN">English (India)<option>
+<option value="en-KE">English (Kenya)<option>
+<option value="en-NG">English (Nigeria)<option>
+<option value="en-NZ">English (New Zealand)<option>
+<option value="en-PH">English (Philippines)<option>
+<option value="en-TZ">English (Tanzania)<option>
+<option value="en-ZA">English (South Africa)<option>
+<option value="es-AR">Spanish (Argentina)<option>
+<option value="es-BO">Spanish (Bolivia)<option>
+<option value="es-CL">Spanish (Chile)<option>
+<option value="es-CO">Spanish (Colombia)<option>
+<option value="es-CR">Spanish (Costa Rica)<option>
+<option value="es-DO">Spanish (Dominican Republic)<option>
+<option value="es-EC">Spanish (Ecuador)<option>
+<option value="es-ES">Spanish (Spain)<option>
+<option value="es-GT">Spanish (Guatemala)<option>
+<option value="es-HN">Spanish (Honduras)<option>
+<option value="es-MX">Spanish (Mexico)<option>
+<option value="es-NI">Spanish (Nicaragua)<option>
+<option value="es-PA">Spanish (Panama)<option>
+<option value="es-PE">Spanish (Peru)<option>
+<option value="es-PR">Spanish (Puerto Rico)<option>
+<option value="es-PY">Spanish (Paraguay)<option>
+<option value="es-SV">Spanish (El Salvador)<option>
+<option value="es-US">Spanish (United States)<option>
+<option value="es-UY">Spanish (Uruguay)<option>
+<option value="es-VE">Spanish (Venezuela)<option>
+<option value="eu-ES">Basque (Spain)<option>
+<option value="fa-IR">Persian (Iran)<option>
+<option value="fi-FI">Finnish (Finland)<option>
+<option value="fil-PH">Filipino (Philippines)<option>
+<option value="fr-CA">French (Canada)<option>
+<option value="fr-FR">French (France)<option>
+<option value="gl-ES">Galician (Spain)<option>
+<option value="gu-IN">Gujarati (India)<option>
+<option value="he-IL">Hebrew (Israel)<option>
+<option value="hi-IN">Hindi (India)<option>
+<option value="hr-HR">Croatian (Croatia)<option>
+<option value="hu-HU">Hungarian (Hungary)<option>
+<option value="hy-AM">Armenian (Armenia)<option>
+<option value="id-ID">Indonesian (Indonesia)<option>
+<option value="is-IS">Icelandic (Iceland)<option>
+<option value="it-IT">Italian (Italy)<option>
+<option value="ja-JP">Japanese (Japan)<option>
+<option value="jv-ID">Javanese (Indonesia)<option>
+<option value="ka-GE">Georgian (Georgia)<option>
+<option value="km-KH">Khmer (Cambodia)<option>
+<option value="kn-IN">Kannada (India)<option>
+<option value="ko-KR">Korean (South Korea)<option>
+<option value="lo-LA">Lao (Laos)<option>
+<option value="lt-LT">Lithuanian (Lithuania)<option>
+<option value="lv-LV">Latvian (Latvia)<option>
+<option value="ml-IN">Malayalam (India)<option>
+<option value="mr-IN">Marathi (India)<option>
+<option value="ms-MY">Malay (Malaysia)<option>
+<option value="nb-NO">Norwegian Bokmal (Norway)<option>
+<option value="ne-NP">Nepali (Nepal)<option>
+<option value="nl-NL">Dutch (Netherlands)<option>
+<option value="pl-PL">Polish (Poland)<option>
+<option value="pt-BR">Portuguese (Brazil)<option>
+<option value="pt-PT">Portuguese (Portugal)<option>
+<option value="ro-RO">Romanian (Romania)<option>
+<option value="ru-RU">Russian (Russia)<option>
+<option value="si-LK">Sinhala (Sri Lanka)<option>
+<option value="sk-SK">Slovak (Slovakia)<option>
+<option value="sl-SI">Slovenian (Slovenia)<option>
+<option value="sr-RS">Serbian (Serbia)<option>
+<option value="su-ID">Sundanese (Indonesia)<option>
+<option value="sv-SE">Swedish (Sweden)<option>
+<option value="sw-KE">Swahili (Kenya)<option>
+<option value="sw-TZ">Swahili (Tanzania)<option>
+<option value="ta-IN">Tamil (India)<option>
+<option value="ta-LK">Tamil (Sri Lanka)<option>
+<option value="ta-MY">Tamil (Malaysia)<option>
+<option value="ta-SG">Tamil (Singapore)<option>
+<option value="te-IN">Telugu (India)<option>
+<option value="th-TH">Thai (Thailand)<option>
+<option value="tr-TR">Turkish (Turkey)<option>
+<option value="uk-UA">Ukrainian (Ukraine)<option>
+<option value="ur-IN">Urdu (India)<option>
+<option value="ur-PK">Urdu (Pakistan)<option>
+<option value="vi-VN">Vietnamese (Vietnam)<option>
+<option value="yue-Hant-HK">Chinese, Cantonese (Traditional, Hong Kong)<option>
+<option value="zu-ZA">Zulu (South Africa)<option>
+</select></td>
+</tr>
+<tr>
+<td>Translate Language:</td><td>
+<select id="OutputLanguage" name="OutputLanguage" onchange="OutputLanguage=this.value;"> 
+<option value="en">en (英文)</option>
+<option value="zh-CN">zh-CN (中文簡體)</option>
+<option value="zh-TW">zh-TW (中文繁體)</option>
+<option value="af">af (布爾文)</option>
+<option value="am">am (阿姆哈拉文)</option>
+<option value="ar">ar (阿拉伯文)</option>
+<option value="az">az (亞塞拜然文)</option>
+<option value="be">be (白俄羅斯文)</option>
+<option value="bn">bn (孟加拉文)</option>
+<option value="bs">bs (波士尼亞文)</option>
+<option value="ca">ca (加泰羅尼亞文)</option>
+<option value="ceb">ceb (宿霧文)</option>
+<option value="co">co (科西嘉文)</option>
+<option value="cs">cs (捷克文)</option>
+<option value="cy">cy (威爾斯文)</option>
+<option value="da">da (丹麥文)</option>
+<option value="de">de (德文)</option>
+<option value="el">el (希臘文)</option>
+<option value="eo">eo (世界語)</option>
+<option value="es">es (西班牙文)</option>
+<option value="et">et (愛沙尼亞文)</option>
+<option value="eu">eu (巴斯克文)</option>
+<option value="fa">fa (波斯文)</option>
+<option value="fi">fi (芬蘭文)</option>
+<option value="fr">fr (法文)</option>
+<option value="fy">fy (弗利然文)</option>
+<option value="ga">ga (愛爾蘭文)</option>
+<option value="gd">gd (蘇格蘭的蓋爾文)</option>
+<option value="gl">gl (加里西亞文)</option>
+<option value="gu">gu (印度古哈拉地文)</option>
+<option value="ha">ha (豪沙文)</option>
+<option value="haw">haw (夏威夷文)</option>
+<option value="hi">hi (印度文)</option>
+<option value="hmn">hmn (苗文)</option>
+<option value="hr">hr (克羅埃西亞文)</option>
+<option value="ht">ht (海地克里奧文)</option>
+<option value="hu">hu (匈牙利文)</option>
+<option value="hy">hy (亞美尼亞文)</option>
+<option value="id">id (印尼文)</option>
+<option value="ig">ig (伊博文)</option>
+<option value="is">is (冰島文)</option>
+<option value="it">it (義大利文)</option>
+<option value="iw">iw (希伯來文)</option>
+<option value="ja">ja (日文)</option>
+<option value="jw">jw (爪哇文)</option>
+<option value="ka">ka (喬治亞文)</option>
+<option value="kk">kk (哈薩克文)</option>
+<option value="km">km (高棉文)</option>
+<option value="kn">kn (卡納達文)</option>
+<option value="ko">ko (韓文)</option>
+<option value="ku">ku (庫德文)</option>
+<option value="ky">ky (吉爾吉斯文)</option>
+<option value="la">la (拉丁文)</option>
+<option value="lb">lb (盧森堡文)</option>
+<option value="lo">lo (寮文)</option>
+<option value="lt">lt (立陶宛文)</option>
+<option value="lv">lv (拉脫維亞文)</option>
+<option value="mg">mg (馬拉加斯文)</option>
+<option value="mi">mi (毛利文)</option>
+<option value="mk">mk (馬其頓文)</option>
+<option value="ml">ml (馬拉雅拉姆文)</option>
+<option value="mn">mn (蒙古文)</option>
+<option value="mr">mr (馬拉地文)</option>
+<option value="ms">ms (馬來文)</option>
+<option value="mt">mt (馬耳他文)</option>
+<option value="my">my (緬甸文)</option>
+<option value="ne">ne (尼泊爾文)</option>
+<option value="nl">nl (荷蘭文)</option>
+<option value="no">no (挪威文)</option>
+<option value="ny">ny (奇切瓦文)</option>
+<option value="pa">pa (旁遮普文)</option>
+<option value="pl">pl (波蘭文)</option>
+<option value="ps">ps (帕施圖文)</option>
+<option value="pt">pt (葡萄牙文)</option>
+<option value="ro">ro (羅馬尼亞文)</option>
+<option value="ru">ru (俄文bg保加利亞文)</option>
+<option value="sd">sd (信德文)</option>
+<option value="si">si (錫蘭文)</option>
+<option value="sk">sk (斯洛伐克文)</option>
+<option value="sl">sl (斯洛維尼亞文)</option>
+<option value="sm">sm (薩摩亞文)</option>
+<option value="sn">sn (紹納文)</option>
+<option value="so">so (索馬里文)</option>
+<option value="sq">sq (阿爾巴尼亞文)</option>
+<option value="sr">sr (塞爾維亞文)</option>
+<option value="st">st (瑟索托文)</option>
+<option value="su">su (印尼巽他文)</option>
+<option value="sv">sv (瑞典文)</option>
+<option value="sw">sw (斯瓦希里文)</option>
+<option value="ta">ta (泰米爾文)</option>
+<option value="te">te (泰盧固文)</option>
+<option value="tg">tg (塔吉克文)</option>
+<option value="th">th (泰文)</option>
+<option value="tl">tl (菲律賓文)</option>
+<option value="tr">tr (土耳其文)</option>
+<option value="uk">uk (烏克蘭文)</option>
+<option value="ur">ur (烏爾都文)</option>
+<option value="uz">uz (烏茲別克文)</option>
+<option value="vi">vi (越南文)</option>
+<option value="xh">xh (南非柯薩文)</option>
+<option value="yi">yi (意第緒文)</option>
+<option value="yo">yo (優魯巴文)</option>
+<option value="zu">zu (南非祖魯文)</option>
+</select></td>
+</tr>
+<tr>
+<td>Speak Language:</td><td>
+<select id="SpeakLanguage" name="SpeakLanguage">        
+<option value="en-US">English (United States)<option>
+<option value="cmn-Hans-CN">Chinese, Mandarin (Simplified, China)<option>
+<option value="cmn-Hans-HK">Chinese, Mandarin (Simplified, Hong Kong)<option>
+<option value="cmn-Hant-TW">Chinese, Mandarin (Traditional, Taiwan)<option>
+<option value="af-ZA">Afrikaans (South Africa)<option>
+<option value="am-ET">Amharic (Ethiopia)<option>
+<option value="ar-AE">Arabic (United Arab Emirates)<option>
+<option value="ar-BH">Arabic (Bahrain)<option>
+<option value="ar-DZ">Arabic (Algeria)<option>
+<option value="ar-EG">Arabic (Egypt)<option>
+<option value="ar-IL">Arabic (Israel)<option>
+<option value="ar-IQ">Arabic (Iraq)<option>
+<option value="ar-JO">Arabic (Jordan)<option>
+<option value="ar-KW">Arabic (Kuwait)<option>
+<option value="ar-LB">Arabic (Lebanon)<option>
+<option value="ar-MA">Arabic (Morocco)<option>
+<option value="ar-OM">Arabic (Oman)<option>
+<option value="ar-PS">Arabic (State of Palestine)<option>
+<option value="ar-QA">Arabic (Qatar)<option>
+<option value="ar-SA">Arabic (Saudi Arabia)<option>
+<option value="ar-TN">Arabic (Tunisia)<option>
+<option value="az-AZ">Azerbaijani (Azerbaijan)<option>
+<option value="bg-BG">Bulgarian (Bulgaria)<option>
+<option value="bn-BD">Bengali (Bangladesh)<option>
+<option value="bn-IN">Bengali (India)<option>
+<option value="ca-ES">Catalan (Spain)<option>
+<option value="cs-CZ">Czech (Czech Republic)<option>
+<option value="da-DK">Danish (Denmark)<option>
+<option value="de-DE">German (Germany)<option>
+<option value="el-GR">Greek (Greece)<option>
+<option value="en-AU">English (Australia)<option>
+<option value="en-CA">English (Canada)<option>
+<option value="en-GB">English (United Kingdom)<option>
+<option value="en-GH">English (Ghana)<option>
+<option value="en-IE">English (Ireland)<option>
+<option value="en-IN">English (India)<option>
+<option value="en-KE">English (Kenya)<option>
+<option value="en-NG">English (Nigeria)<option>
+<option value="en-NZ">English (New Zealand)<option>
+<option value="en-PH">English (Philippines)<option>
+<option value="en-TZ">English (Tanzania)<option>
+<option value="en-ZA">English (South Africa)<option>
+<option value="es-AR">Spanish (Argentina)<option>
+<option value="es-BO">Spanish (Bolivia)<option>
+<option value="es-CL">Spanish (Chile)<option>
+<option value="es-CO">Spanish (Colombia)<option>
+<option value="es-CR">Spanish (Costa Rica)<option>
+<option value="es-DO">Spanish (Dominican Republic)<option>
+<option value="es-EC">Spanish (Ecuador)<option>
+<option value="es-ES">Spanish (Spain)<option>
+<option value="es-GT">Spanish (Guatemala)<option>
+<option value="es-HN">Spanish (Honduras)<option>
+<option value="es-MX">Spanish (Mexico)<option>
+<option value="es-NI">Spanish (Nicaragua)<option>
+<option value="es-PA">Spanish (Panama)<option>
+<option value="es-PE">Spanish (Peru)<option>
+<option value="es-PR">Spanish (Puerto Rico)<option>
+<option value="es-PY">Spanish (Paraguay)<option>
+<option value="es-SV">Spanish (El Salvador)<option>
+<option value="es-US">Spanish (United States)<option>
+<option value="es-UY">Spanish (Uruguay)<option>
+<option value="es-VE">Spanish (Venezuela)<option>
+<option value="eu-ES">Basque (Spain)<option>
+<option value="fa-IR">Persian (Iran)<option>
+<option value="fi-FI">Finnish (Finland)<option>
+<option value="fil-PH">Filipino (Philippines)<option>
+<option value="fr-CA">French (Canada)<option>
+<option value="fr-FR">French (France)<option>
+<option value="gl-ES">Galician (Spain)<option>
+<option value="gu-IN">Gujarati (India)<option>
+<option value="he-IL">Hebrew (Israel)<option>
+<option value="hi-IN">Hindi (India)<option>
+<option value="hr-HR">Croatian (Croatia)<option>
+<option value="hu-HU">Hungarian (Hungary)<option>
+<option value="hy-AM">Armenian (Armenia)<option>
+<option value="id-ID">Indonesian (Indonesia)<option>
+<option value="is-IS">Icelandic (Iceland)<option>
+<option value="it-IT">Italian (Italy)<option>
+<option value="ja-JP">Japanese (Japan)<option>
+<option value="jv-ID">Javanese (Indonesia)<option>
+<option value="ka-GE">Georgian (Georgia)<option>
+<option value="km-KH">Khmer (Cambodia)<option>
+<option value="kn-IN">Kannada (India)<option>
+<option value="ko-KR">Korean (South Korea)<option>
+<option value="lo-LA">Lao (Laos)<option>
+<option value="lt-LT">Lithuanian (Lithuania)<option>
+<option value="lv-LV">Latvian (Latvia)<option>
+<option value="ml-IN">Malayalam (India)<option>
+<option value="mr-IN">Marathi (India)<option>
+<option value="ms-MY">Malay (Malaysia)<option>
+<option value="nb-NO">Norwegian Bokmal (Norway)<option>
+<option value="ne-NP">Nepali (Nepal)<option>
+<option value="nl-NL">Dutch (Netherlands)<option>
+<option value="pl-PL">Polish (Poland)<option>
+<option value="pt-BR">Portuguese (Brazil)<option>
+<option value="pt-PT">Portuguese (Portugal)<option>
+<option value="ro-RO">Romanian (Romania)<option>
+<option value="ru-RU">Russian (Russia)<option>
+<option value="si-LK">Sinhala (Sri Lanka)<option>
+<option value="sk-SK">Slovak (Slovakia)<option>
+<option value="sl-SI">Slovenian (Slovenia)<option>
+<option value="sr-RS">Serbian (Serbia)<option>
+<option value="su-ID">Sundanese (Indonesia)<option>
+<option value="sv-SE">Swedish (Sweden)<option>
+<option value="sw-KE">Swahili (Kenya)<option>
+<option value="sw-TZ">Swahili (Tanzania)<option>
+<option value="ta-IN">Tamil (India)<option>
+<option value="ta-LK">Tamil (Sri Lanka)<option>
+<option value="ta-MY">Tamil (Malaysia)<option>
+<option value="ta-SG">Tamil (Singapore)<option>
+<option value="te-IN">Telugu (India)<option>
+<option value="th-TH">Thai (Thailand)<option>
+<option value="tr-TR">Turkish (Turkey)<option>
+<option value="uk-UA">Ukrainian (Ukraine)<option>
+<option value="ur-IN">Urdu (India)<option>
+<option value="ur-PK">Urdu (Pakistan)<option>
+<option value="vi-VN">Vietnamese (Vietnam)<option>
+<option value="yue-Hant-HK">Chinese, Cantonese (Traditional, Hong Kong)<option>
+<option value="zu-ZA">Zulu (South Africa)<option>
+</select></td>
+</tr>
+<tr>
+<td><a href="https://www.facebook.com/groups/webduino/">Webduino</a></td>
+<td align="right">
+<input type="checkbox" id="Automatic" name="Automatic" onchange="if (this.checked){document.getElementById('translate').disabled=true;}else{document.getElementById('translate').disabled=false;}">Automatic
+<input type="button" id="translate" value="Translate">
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+
+<script>
+(async function () {
+console.log(document.getElementById("SheetUrl").value);
+console.log(document.getElementById("SheetName").value);
+console.log(document.getElementById("RecognitionLanguage").value);
+console.log(document.getElementById("OutputLanguage").value);
+console.log(document.getElementById("SpeakLanguage").value);
+var word;
+var ReadState;
+var myData;
+var InputString;
+RecognitionLanguage = "cmn-Hant-TW";
+OutputLanguage = "en";
+SpeakLanguage = "en-US";
+function get_date(t) {
+  var varDay = new Date(),
+    varYear = varDay.getFullYear(),
+    varMonth = varDay.getMonth() + 1,
+    varDate = varDay.getDate();
+  var varNow;
+  if (t == "ymd") {
+    varNow = varYear + "/" + varMonth + "/" + varDate;
+  } else if (t == "mdy") {
+    varNow = varMonth + "/" + varDate + "/" + varYear;
+  } else if (t == "dmy") {
+    varNow = varDate + "/" + varMonth + "/" + varYear;
+  } else if (t == "y") {
+    varNow = varYear;
+  } else if (t == "m") {
+    varNow = varMonth;
+  } else if (t == "d") {
+    varNow = varDate;
+  }
+  return varNow;
+}
+function get_time(t) {
+  var varTime = new Date(),
+    varHours = varTime.getHours(),
+    varMinutes = varTime.getMinutes(),
+    varSeconds = varTime.getSeconds();
+  var varNow;
+  if (t == "hms") {
+    varNow = varHours + ":" + varMinutes + ":" + varSeconds;
+  } else if (t == "h") {
+    varNow = varHours;
+  } else if (t == "m") {
+    varNow = varMinutes;
+  } else if (t == "s") {
+    varNow = varSeconds;
+  }
+  return varNow;
+}
+async function GoogleTTS(word) {
+  myData= {};
+  myData.sheetUrl = document.getElementById("SheetUrl").value;
+  myData.sheetName = document.getElementById("SheetName").value;
+  myData.column0 = get_date("ymd");
+  myData.column1 = get_time("hms");
+  myData.column2 = word;
+  myData.column3 = ['=GOOGLETRANSLATE(INDIRECT("C"&ROW()),"auto","',OutputLanguage,'")'].join('');
+  myData.column4 = '=INDIRECT("D"&COUNTA(A:A))';
+  writeSheetData(myData);
+  await delay(2);
+  readSheetData({
+    row : 1,
+    col : 5,
+    sheetUrl : myData.sheetUrl,
+    sheetName : myData.sheetName
+  }, function(googleSheetReadData){
+    document.getElementById('demo-area-01-show').innerHTML = ([word,("<br/>"),"<font color='red'>"+googleSheetReadData].join('')+"</font>");
+    speak(googleSheetReadData,[SpeakLanguage,1,1,1], async function () {
+      await delay(2);
+      ReadState = 0;
+    },0);
+  });
+}
+ReadState = 0;
+InputString = '';
+document.getElementById('demo-area-01-show').innerHTML = '';
+document.getElementById("translate").onclick = async function(e){
+      if (ReadState == 0) {
+      ReadState = 1;
+      GoogleTTS(InputString);
+    }
+};
+document.getElementById("RecognitionLanguage").onchange = async function(e){
+      RecognitionLanguage = document.getElementById("RecognitionLanguage").value;
+      speechRecognition();
+};
+document.getElementById("OutputLanguage").onchange = async function(e){
+      OutputLanguage = document.getElementById("OutputLanguage").value;
+};
+document.getElementById("SpeakLanguage").onchange = async function(e){
+      SpeakLanguage = document.getElementById("SpeakLanguage").value;
+};
+async function speechRecognition() {
+  if (!('webkitSpeechRecognition' in window)) {
+    alert('本瀏覽器不支援語音辨識，請更換瀏覽器！(Chrome 25 版以上才支援語音辨識)');
+  } else {
+    window._recognition = new webkitSpeechRecognition();
+    window._recognition.continuous = true;
+    window._recognition.interimResults = true;
+    window._recognition.lang = RecognitionLanguage;
+    
+    window._recognition.onstart = async function() {
+      window._recognition.status = true;
+    };
+    window._recognition.onend = async function() {
+      if (window._recognition.status) {
+         window._recognition.start();
+      }
+    };
+    window._recognition.onresult = async function (event,result) {
+      result = {};
+      result.resultLength = event.results.length - 1;
+      result.resultTranscript = event.results[result.resultLength][0].transcript;
+      if (event.results[result.resultLength].isFinal === true) {
+        if (ReadState == 0) {
+    if (result.resultTranscript != '') {
+      InputString = result.resultTranscript;
+      document.getElementById('demo-area-01-show').innerHTML = InputString;
+    }
+  }
+      console.log('final');
+	if (document.getElementById('Automatic').checked){
+      		if (ReadState == 0) {
+      			ReadState = 1;
+      			GoogleTTS(InputString);
+    		}
+	}
+} else if (event.results[result.resultLength].isFinal === false) {
+              }
+    };
+    window._recognition.start();
+  }
+}
+speechRecognition();
+}());
+</script>
