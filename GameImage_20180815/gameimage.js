@@ -65,6 +65,16 @@
         else
           document.getElementById("gameimg_"+input_id).style.display = "block";
       }
+      else if (input_property=='opacity')
+          document.getElementById("gameimg_"+input_id).style.opacity = input_value;
+      else if (input_property=='rotate')
+          document.getElementById("gameimg_"+input_id).style.transform = "rotate("+input_value+"deg)";
+      else if (input_property=='rotateX')
+          document.getElementById("gameimg_"+input_id).style.transform = "rotateX("+input_value+"deg)";
+      else if (input_property=='rotateY')
+          document.getElementById("gameimg_"+input_id).style.transform = "rotateY("+input_value+"deg)";
+      else if (input_property=='rotateZ')
+          document.getElementById("gameimg_"+input_id).style.transform = "rotateZ("+input_value+"deg)";
     }
   }    
   
@@ -97,6 +107,16 @@
         else
           return 0;  
       }
+      else if (input_property=='opacity')
+        return document.getElementById("gameimg_"+input_id).style.opacity;
+      else if (input_property=='rotate')
+        return document.getElementById("gameimg_"+input_id).style.transform;
+      else if (input_property=='rotateX')
+        return document.getElementById("gameimg_"+input_id).style.transform;
+      else if (input_property=='rotateY')
+        return document.getElementById("gameimg_"+input_id).style.transform;
+      else if (input_property=='rotateZ')
+        return document.getElementById("gameimg_"+input_id).style.transform;
     }
     else
       return "";    
