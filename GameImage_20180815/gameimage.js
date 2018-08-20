@@ -240,4 +240,4 @@
   window.image_onclick_get = image_onclick_get;
   window.mouse_coordinate_get = mouse_coordinate_get;
   
-}(window, window.document));
+}(window, window.document, window.jQuery));
