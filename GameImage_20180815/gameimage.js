@@ -76,12 +76,9 @@
       else if (input_property=='rotateZ')
           document.getElementById("gameimg_"+input_id).style.transform = "rotateZ("+input_value+"deg)";
       else if (input_property=='moveX')
-      {
-          document.getElementById("gameimg_"+input_id).style.left = Number(document.getElementById("gameimg_"+input_id).style.left.replace(/px/ig,""))+Number(input_value);
-      console.log(Number(document.getElementById("gameimg_"+input_id).style.left.replace(/px/ig,""))+Number(input_value));
-      }   
+          document.getElementById("gameimg_"+input_id).style.left = (Number(document.getElementById("gameimg_"+input_id).style.left.replace(/px/ig,""))+Number(input_value))+"px";
       else if (input_property=='moveY')
-          document.getElementById("gameimg_"+input_id).style.top = Number(document.getElementById("gameimg_"+input_id).style.top.replace(/px/ig,""))+Number(input_value);    
+          document.getElementById("gameimg_"+input_id).style.top = (Number(document.getElementById("gameimg_"+input_id).style.top.replace(/px/ig,""))+Number(input_value))+"px";    
     }
   }    
   
