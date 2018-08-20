@@ -68,13 +68,13 @@
       else if (input_property=='opacity')
           document.getElementById("gameimg_"+input_id).style.opacity = input_value;
       else if (input_property=='rotate')
-          document.getElementById("gameimg_"+input_id).style.rotate = input_value;
+          document.getElementById("gameimg_"+input_id).style.transform = "rotate("+input_value+"deg)";
       else if (input_property=='rotateX')
-          document.getElementById("gameimg_"+input_id).style.rotateX = input_value;
+          document.getElementById("gameimg_"+input_id).style.transform = "rotateX("+input_value+"deg)";
       else if (input_property=='rotateY')
-          document.getElementById("gameimg_"+input_id).style.rotateY = input_value;
+          document.getElementById("gameimg_"+input_id).style.transform = "rotateY("+input_value+"deg)";
       else if (input_property=='rotateZ')
-          document.getElementById("gameimg_"+input_id).style.rotateZ = input_value;
+          document.getElementById("gameimg_"+input_id).style.transform = "rotateZ("+input_value+"deg)";
     }
   }    
   
@@ -110,13 +110,13 @@
       else if (input_property=='opacity')
         return Number(document.getElementById("gameimg_"+input_id).style.opacity);
       else if (input_property=='rotate')
-        return Number(document.getElementById("gameimg_"+input_id).style.rotate);
+        return Number(document.getElementById("gameimg_"+input_id).style.transform);
       else if (input_property=='rotateX')
-        return Number(document.getElementById("gameimg_"+input_id).style.rotateX);
+        return Number(document.getElementById("gameimg_"+input_id).style.transform);
       else if (input_property=='rotateY')
-        return Number(document.getElementById("gameimg_"+input_id).style.rotateY);
+        return Number(document.getElementById("gameimg_"+input_id).style.transform);
       else if (input_property=='rotateZ')
-        return Number(document.getElementById("gameimg_"+input_id).style.rotateZ);
+        return Number(document.getElementById("gameimg_"+input_id).style.transform);
     }
     else
       return "";    
