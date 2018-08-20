@@ -65,6 +65,8 @@
         else
           document.getElementById("gameimg_"+input_id).style.display = "block";
       }
+      else if (input_property=='opacity')
+          document.getElementById("gameimg_"+input_id).style.opacity = input_value;
     }
   }    
   
@@ -97,6 +99,8 @@
         else
           return 0;  
       }
+      else if (input_property=='opacity')
+        return Number(document.getElementById("gameimg_"+input_id).style.opacity);
     }
     else
       return "";    
