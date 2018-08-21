@@ -227,31 +227,58 @@
       return mouse_y;
   } 
   
-  function canvas_create(input_fuGameElements_ ,input_width_,input_height_,input_left_,input_top_,input_zindex_,input_display_) {
+  function canvas_create(input_id ,input_width,input_height,input_left,input_top,input_zindex,input_display) {
+    if (document.getElementById("gameelements_"+input_id))
+    {
+      document.getElementById("gameelements_"+input_id).style.width = input_width + 'px';
+      document.getElementById("gameelements_"+input_id).style.height = input_height + 'px';
+      document.getElementById("gameelements_"+input_id).style.left = input_left + 'px';
+      document.getElementById("gameelements_"+input_id).style.top = input_top + 'px';
+      document.getElementById("gameelements_"+input_id).style.zIndex = input_zindex;
+      if (input_display==false)
+        document.getElementById("gameelements_"+input_id).style.display = "none";
+      else
+        document.getElementById("gameelements_"+input_id).style.display = "block";
+    }
+    else
+    {
+      var can = document.createElement('canvas');
+      can.style.position = "absolute";
+      can.id = "gameelements_"+input_id;
+      can.style.width = input_width + 'px';
+      can.style.height = input_height + 'px';
+      can.style.left = input_left + 'px';
+      can.style.top = input_top + 'px';
+      can.style.zIndex = input_zindex;
+      if (input_display==false)
+        can.style.display = "none";
+      else
+        can.style.display = "block";
+      document.body.appendChild(can);
+    }
+  } 
+  
+  function canvas_line(input_id,input_x0,input_y0,input_x1,input_y1,input_color) {
   
   } 
   
-  function canvas_line(input_fuGameElements_,input_x0_,input_y0_,input_x1_,input_y1_,input_color_) {
+  function canvas_rect(input_id,input_x0,input_y0,input_x1,input_y1,input_color) {
   
   } 
   
-  function canvas_rect(input_fuGameElements_,input_x0_,input_y0_,input_x1_,input_y1_,input_color_) {
+  function canvas_arc(input_id,input_x0,input_y0,input_r,input_sAngle,input_eAngle,input_counterclockwise,input_color) {
   
   } 
   
-  function canvas_arc(input_fuGameElements_,input_x0_,input_y0_,input_r_,input_sAngle_,input_eAngle_,input_counterclockwise_,input_color_) {
+  function canvas_img(input_id,input_url,input_x0,input_y0,input_width,input_height) {
   
   } 
   
-  function canvas_img(input_fuGameElements_,input_url_,input_x0_,input_y0_,input_width_,input_height_) {
+  function canvas_clear(input_id) {
   
   } 
   
-  function canvas_clear(input_fuGameElements_) {
-  
-  } 
-  
-  function canvas_delete(input_fuGameElements_) {
+  function canvas_delete(input_id_) {
   
   }   
   
