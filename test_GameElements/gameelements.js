@@ -227,27 +227,27 @@
       return mouse_y;
   } 
   
-  function canvas_create(variable_fuGameElements_ ,value_width_,value_height_,value_left_,value_top_,value_zindex_,value_display_) {
+  function canvas_create(input_fuGameElements_ ,input_width_,input_height_,input_left_,input_top_,input_zindex_,input_display_) {
   
   } 
   
-  function canvas_line(variable_fuGameElements_,value_x0_,value_y0_,value_x1_,value_y1_,value_color_) {
+  function canvas_line(input_fuGameElements_,input_x0_,input_y0_,input_x1_,input_y1_,input_color_) {
   
   } 
   
-  function canvas_rect(variable_fuGameElements_,value_x0_,value_y0_,value_x1_,value_y1_,value_color_) {
+  function canvas_rect(input_fuGameElements_,input_x0_,input_y0_,input_x1_,input_y1_,input_color_) {
   
   } 
   
-  function canvas_arc(variable_fuGameElements_,value_x0_,value_y0_,value_r_,value_sAngle_,value_eAngle_,value_counterclockwise_,value_color_) {
+  function canvas_arc(input_fuGameElements_,input_x0_,input_y0_,input_r_,input_sAngle_,input_eAngle_,input_counterclockwise_,input_color_) {
   
   } 
   
-  function canvas_img(variable_fuGameElements_,value_url_,value_x0_,value_y0_,value_width_,value_height_) {
+  function canvas_img(input_fuGameElements_,input_url_,input_x0_,input_y0_,input_width_,input_height_) {
   
   } 
   
-  function canvas_clear(variable_fuGameElements_) {
+  function canvas_clear(input_fuGameElements_) {
   
   } 
   
