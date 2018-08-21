@@ -142,6 +142,21 @@ Blockly.Blocks['canvas_arc'] = {
   }
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Blockly.Blocks['image_create'] = {
   init: function() {
   this.appendValueInput("id_")
