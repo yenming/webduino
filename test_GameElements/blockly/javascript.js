@@ -52,7 +52,7 @@ Blockly.JavaScript['canvas_img'] = function (block) {
   var value_y0_ = Blockly.JavaScript.valueToCode(block, 'y0_', Blockly.JavaScript.ORDER_ATOMIC);
   var value_width_ = Blockly.JavaScript.valueToCode(block, 'width_', Blockly.JavaScript.ORDER_ATOMIC);
   var value_height_ = Blockly.JavaScript.valueToCode(block, 'height_', Blockly.JavaScript.ORDER_ATOMIC);
-  var code = 'canvas_arc("' + variable_fuGameElements_ + '",' + value_url_ + ',' + value_x0_ + ','+ value_y0_ + ',' + value_width_ + ',' + value_height_ + ');\n';
+  var code = 'canvas_img("' + variable_fuGameElements_ + '",' + value_url_ + ',' + value_x0_ + ','+ value_y0_ + ',' + value_width_ + ',' + value_height_ + ');\n';
   return code;
 };
 
