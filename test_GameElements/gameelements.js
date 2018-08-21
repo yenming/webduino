@@ -251,6 +251,10 @@
   
   } 
   
+  function canvas_delete(input_fuGameElements_) {
+  
+  }   
+  
   window.image_create = image_create;
   window.image_set = image_set;
   window.image_get = image_get;
@@ -269,5 +273,6 @@
   window.canvas_arc = canvas_arc;
   window.canvas_img = canvas_img;
   window.canvas_clear = canvas_clear;
+  window.canvas_delete = canvas_delete;
   
 }(window, window.document));
