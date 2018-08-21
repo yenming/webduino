@@ -11,6 +11,7 @@ Blockly.Msg.CANVAS_R_SHOW = "半径";
 Blockly.Msg.CANVAS_SANGLE_SHOW = "起始径度";
 Blockly.Msg.CANVAS_EANGLE_SHOW = "终止径度";
 Blockly.Msg.CANVAS_COUNTERCLOCKWISE_SHOW = "顺时钟方向";
+Blockly.Msg.CANVAS_FILL_SHOW = "填满";
 Blockly.Msg.CANVAS_IMG_SHOW = "画布贴图";
 Blockly.Msg.CANVAS_CLEAR_SHOW = "画布清除";
 Blockly.Msg.CANVAS_DELETE_SHOW = "画布删除";
