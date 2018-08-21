@@ -57,7 +57,8 @@ Blockly.Blocks['canvas_line'] = {
   this.appendValueInput("color_")
       .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.COLOR_SHOW);         
+      .appendField(Blockly.Msg.COLOR_SHOW);  
+  this.setInputsInline(true);
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setColour(60);
@@ -88,7 +89,8 @@ Blockly.Blocks['canvas_rect'] = {
   this.appendValueInput("color_")
       .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.COLOR_SHOW);         
+      .appendField(Blockly.Msg.COLOR_SHOW);   
+  this.setInputsInline(true);
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setColour(60);
@@ -127,7 +129,8 @@ Blockly.Blocks['canvas_arc'] = {
   this.appendValueInput("color_")
       .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.COLOR_SHOW);         
+      .appendField(Blockly.Msg.COLOR_SHOW);   
+  this.setInputsInline(true);
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setColour(60);
@@ -158,7 +161,8 @@ Blockly.Blocks['canvas_img'] = {
   this.appendValueInput("height_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.HEIGHT_SHOW);        
+      .appendField(Blockly.Msg.HEIGHT_SHOW); 
+  this.setInputsInline(true);
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setColour(60);
@@ -170,6 +174,7 @@ Blockly.Blocks['canvas_clear'] = {
     this.appendDummyInput()
       .appendField(Blockly.Msg.CANVAS_CLEAR_SHOW)
       .appendField(new Blockly.FieldVariable('fuGameElements'), 'fuGameElements_');
+    this.setInputsInline(true);
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setColour(60);
@@ -181,6 +186,7 @@ Blockly.Blocks['canvas_delete'] = {
     this.appendDummyInput()
       .appendField(Blockly.Msg.CANVAS_DELETE_SHOW)
       .appendField(new Blockly.FieldVariable('fuGameElements'), 'fuGameElements_');
+    this.setInputsInline(true);
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setColour(60);
