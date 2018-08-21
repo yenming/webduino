@@ -1,4 +1,4 @@
-Blockly.Msg.CREATE_SHOW = "图片建立";
+Blockly.Msg.IMAGE_CREATE_SHOW = "图片建立";
 Blockly.Msg.ID_SHOW = "  代码";
 Blockly.Msg.URL_SHOW = "来源网址";
 Blockly.Msg.WIDTH_SHOW = "宽度";
