@@ -121,7 +121,7 @@ Blockly.Blocks['canvas_arc'] = {
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.CANVAS_EANGLE_SHOW);
   this.appendValueInput("counterclockwise_")
-      .setCheck("Number")
+      .setCheck("Boolean")
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.CANVAS_COUNTERCLOCKWISE_SHOW);
   this.appendValueInput("color_")
