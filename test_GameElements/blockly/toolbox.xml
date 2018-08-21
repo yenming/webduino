@@ -29,7 +29,7 @@
   <block type="canvas_line">  
     <value name="linewidth_">
       <block type="math_number">
-        <field name="NUM">5</field>
+        <field name="NUM">1</field>
       </block>
     </value>    
     <value name="x0_">
@@ -61,7 +61,7 @@
   <block type="canvas_rect"> 
     <value name="linewidth_">
       <block type="math_number">
-        <field name="NUM">5</field>
+        <field name="NUM">1</field>
       </block>
     </value>     
     <value name="x0_">
