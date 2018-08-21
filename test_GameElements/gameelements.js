@@ -83,6 +83,7 @@
     if (document.getElementById("gamecanvas_"+input_id)) {
       var img = document.getElementById("gamecanvasimg");
       img.src = input_url;
+      var context = document.getElementById("gamecanvas_"+input_id).getContext("2d");
       if ((input_swidth>0)&&(input_sheight>0))
         context.drawImage(img,input_sx,input_sy,input_swidth,input_sheight,input_x0,input_y0,input_width,input_height);
       else if (((input_swidth==0)||(input_sheight==0))&&((input_width>0)&&(input_height>0)))
@@ -94,13 +95,15 @@
   
   function canvas_clear(input_id) {
     if (document.getElementById("gamecanvas_"+input_id)) {
-      
+      var canvas = document.getElementById("gamecanvas_"+input_id);
+      var context = canvas.getContext("2d");
+      context.clearRect(0, 0, canvas.width, canvas.height);
     }
   } 
   
   function canvas_delete(input_id) {
     if (document.getElementById("gamecanvas_"+input_id)) {
-      
+      document.body.removeChild(document.getElementById("gamecanvas_"+input_id));
     }
   }   
   
