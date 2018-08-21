@@ -258,16 +258,28 @@
     }
   } 
   
-  function canvas_line(input_id,input_x0,input_y0,input_x1,input_y1,input_color) {
-  
+  function canvas_line(input_id,input_linewidth,input_x0,input_y0,input_x1,input_y1,input_color) {
+    if (document.getElementById("gamecanvas_"+input_id)) {
+      var context = document.getElementById("gamecanvas_"+input_id).getContext("2d");
+      context.strokeStyle = input_color;
+      context.lineWidth = input_linewidth;
+      context.beginPath();
+      context.moveTo(input_x0,input_y0);
+      context.lineTo(input_x1,input_y1);
+      context.stroke();
+    }
   } 
   
   function canvas_rect(input_id,input_x0,input_y0,input_x1,input_y1,input_color) {
-  
+    if (document.getElementById("gamecanvas_"+input_id)) {
+      
+    }
   } 
   
   function canvas_arc(input_id,input_x0,input_y0,input_r,input_sAngle,input_eAngle,input_counterclockwise,input_color) {
-  
+    if (document.getElementById("gamecanvas_"+input_id)) {
+      
+    }
   } 
   
   function canvas_img(input_id,input_url,input_x0,input_y0,input_width,input_height) {
@@ -275,11 +287,15 @@
   } 
   
   function canvas_clear(input_id) {
-  
+    if (document.getElementById("gamecanvas_"+input_id)) {
+      
+    }
   } 
   
-  function canvas_delete(input_id_) {
-  
+  function canvas_delete(input_id) {
+    if (document.getElementById("gamecanvas_"+input_id)) {
+      
+    }
   }   
   
   window.image_create = image_create;
