@@ -14,8 +14,6 @@
     {
       document.getElementById("gamecanvas_"+input_id).setAttribute("width",input_width + 'px');
       document.getElementById("gamecanvas_"+input_id).setAttribute("height",input_height + 'px');
-      //document.getElementById("gamecanvas_"+input_id).style.width = input_width + 'px';
-      //document.getElementById("gamecanvas_"+input_id).style.height = input_height + 'px';
       document.getElementById("gamecanvas_"+input_id).style.left = input_left + 'px';
       document.getElementById("gamecanvas_"+input_id).style.top = input_top + 'px';
       document.getElementById("gamecanvas_"+input_id).style.zIndex = input_zindex;
@@ -31,8 +29,6 @@
       can.id = "gamecanvas_"+input_id;
       can.setAttribute("width",input_width + 'px');
       can.setAttribute("height",input_height + 'px');
-      //can.style.width = input_width + 'px';
-      //can.style.height = input_height + 'px';
       can.style.left = input_left + 'px';
       can.style.top = input_top + 'px';
       can.style.zIndex = input_zindex;
@@ -56,15 +52,20 @@
     }
   } 
   
-  function canvas_rect(input_id,input_x0,input_y0,input_x1,input_y1,input_color) {
+  function canvas_rect(input_id,input_linewidth,input_x0,input_y0,input_x1,input_y1,input_color) {
     if (document.getElementById("gamecanvas_"+input_id)) {
       
     }
   } 
   
-  function canvas_arc(input_id,input_x0,input_y0,input_r,input_sAngle,input_eAngle,input_counterclockwise,input_color) {
+  function canvas_arc(input_id,input_linewidth,input_x0,input_y0,input_r,input_sAngle,input_eAngle,input_counterclockwise,input_color) {
     if (document.getElementById("gamecanvas_"+input_id)) {
-      
+      var context = document.getElementById("gamecanvas_"+input_id).getContext("2d");
+      context.strokeStyle = input_color;
+      context.lineWidth = input_linewidth;
+      context.beginPath();
+      context.arc(input_x0,input_y0,input_r,input_sAngle,input_eAngle,input_counterclockwise);
+      context.stroke();
     }
   } 
   
