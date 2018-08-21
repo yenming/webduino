@@ -225,7 +225,25 @@
       return mouse_x;
     else if (input_property=="y")
       return mouse_y;
-  }   
+  } 
+  
+  function canvas_create() {
+  } 
+  
+  function canvas_line() {
+  } 
+  
+  function canvas_rect() {
+  } 
+  
+  function canvas_arc() {
+  } 
+  
+  function canvas_img() {
+  } 
+  
+  function canvas_clear() {
+  } 
   
   window.image_create = image_create;
   window.image_set = image_set;
@@ -239,5 +257,11 @@
   window.image_onclickid_clear = image_onclickid_clear;
   window.image_onclick_get = image_onclick_get;
   window.mouse_coordinate_get = mouse_coordinate_get;
+  window.canvas_create = canvas_create;
+  window.canvas_line = canvas_line;
+  window.canvas_rect = canvas_rect;
+  window.canvas_arc = canvas_arc;
+  window.canvas_img = canvas_img;
+  window.canvas_clear = canvas_clear;
   
 }(window, window.document));
