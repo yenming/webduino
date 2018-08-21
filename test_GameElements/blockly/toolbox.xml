@@ -63,7 +63,12 @@
       </block>
     </value>     
   </block>  
-  <block type="canvas_rect">  
+  <block type="canvas_rect"> 
+    <value name="linewidth_">
+      <block type="math_number">
+        <field name="NUM">5</field>
+      </block>
+    </value>     
     <value name="x0_">
       <block type="math_number">
         <field name="NUM">0</field>
@@ -91,6 +96,11 @@
     </value>     
   </block>  
   <block type="canvas_arc">  
+    <value name="linewidth_">
+      <block type="math_number">
+        <field name="NUM">5</field>
+      </block>
+    </value>     
     <value name="x0_">
       <block type="math_number">
         <field name="NUM">0</field>
