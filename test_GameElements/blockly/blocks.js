@@ -162,7 +162,23 @@ Blockly.Blocks['canvas_img'] = {
   this.appendValueInput("url_")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.URL_SHOW);    
+      .appendField(Blockly.Msg.URL_SHOW);
+  this.appendValueInput("sx_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_SX_SHOW);
+  this.appendValueInput("sy_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_SY_SHOW);
+  this.appendValueInput("swidth_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_SWIDTH_SHOW);
+  this.appendValueInput("sheight_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_SHEIGHT_SHOW);     
   this.appendValueInput("x0_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
