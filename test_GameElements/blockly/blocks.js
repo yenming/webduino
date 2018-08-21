@@ -68,6 +68,39 @@ Blockly.Blocks['canvas_line'] = {
   }
 };
 
+Blockly.Blocks['canvas_rect'] = {
+  init: function() {
+  this.appendValueInput("id_")
+      .setCheck(null)
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_RECT_SHOW)
+      .appendField(Blockly.Msg.ID_SHOW); 
+  this.appendValueInput("x1_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.X1_SHOW);
+  this.appendValueInput("y1_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.Y1_SHOW);
+  this.appendValueInput("x2_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.X2_SHOW);    
+  this.appendValueInput("y2_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.Y2_SHOW);  
+  this.appendValueInput("color_")
+      .setCheck(null)
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.COLOR_SHOW);         
+  this.setPreviousStatement(true);
+  this.setNextStatement(true);
+  this.setColour(60);
+  }
+};
+
 Blockly.Blocks['image_create'] = {
   init: function() {
   this.appendValueInput("id_")
