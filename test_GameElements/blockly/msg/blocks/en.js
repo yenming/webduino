@@ -11,6 +11,7 @@ Blockly.Msg.CANVAS_R_SHOW = "Radius";
 Blockly.Msg.CANVAS_SANGLE_SHOW = "Start Diameter";
 Blockly.Msg.CANVAS_EANGLE_SHOW = "End Diameter";
 Blockly.Msg.CANVAS_COUNTERCLOCKWISE_SHOW = "Counterclockwise";
+Blockly.Msg.CANVAS_FILL_SHOW = "F";
 Blockly.Msg.CANVAS_IMG_SHOW = "Canvas Image";
 Blockly.Msg.CANVAS_CLEAR_SHOW = "Canvas Clear";
 Blockly.Msg.CANVAS_DELETE_SHOW = "Canvas Delete";
