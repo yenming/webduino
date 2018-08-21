@@ -45,23 +45,23 @@ Blockly.Blocks['canvas_line'] = {
   this.appendValueInput("x1_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.X1_SHOW);
+      .appendField(Blockly.Msg.CANVAS_X1_SHOW);
   this.appendValueInput("y1_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.Y1_SHOW);
+      .appendField(Blockly.Msg.CANVAS_Y1_SHOW);
   this.appendValueInput("x2_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.X2_SHOW);    
+      .appendField(Blockly.Msg.CANVAS_X2_SHOW);    
   this.appendValueInput("y2_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.Y2_SHOW);  
+      .appendField(Blockly.Msg.CANVAS_Y2_SHOW);  
   this.appendValueInput("color_")
       .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.COLOR_SHOW);         
+      .appendField(Blockly.Msg.CANVAS_COLOR_SHOW);         
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setColour(60);
@@ -78,23 +78,64 @@ Blockly.Blocks['canvas_rect'] = {
   this.appendValueInput("x1_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.X1_SHOW);
+      .appendField(Blockly.Msg.CANVAS_X1_SHOW);
   this.appendValueInput("y1_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.Y1_SHOW);
+      .appendField(Blockly.Msg.CANVAS_Y1_SHOW);
   this.appendValueInput("x2_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.X2_SHOW);    
+      .appendField(Blockly.Msg.CANVAS_X2_SHOW);    
   this.appendValueInput("y2_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.Y2_SHOW);  
+      .appendField(Blockly.Msg.CANVAS_Y2_SHOW);  
   this.appendValueInput("color_")
       .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.COLOR_SHOW);         
+      .appendField(Blockly.Msg.CANVAS_COLOR_SHOW);         
+  this.setPreviousStatement(true);
+  this.setNextStatement(true);
+  this.setColour(60);
+  }
+};
+
+Blockly.Blocks['canvas_arc'] = {
+  init: function() {
+  this.appendValueInput("id_")
+      .setCheck(null)
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_ARC_SHOW)
+      .appendField(Blockly.Msg.ID_SHOW); 
+  this.appendValueInput("x_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_X_SHOW);
+  this.appendValueInput("y_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_Y_SHOW);
+  this.appendValueInput("r_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_R_SHOW);    
+  this.appendValueInput("sAngle_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_SANGLE_SHOW);  
+  this.appendValueInput("eAngle_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_EANGLE_SHOW);
+  this.appendValueInput("counterclockwise_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_COUNTERCLOCKWISE_SHOW);
+  this.appendValueInput("color_")
+      .setCheck(null)
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_COLOR_SHOW);         
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setColour(60);
