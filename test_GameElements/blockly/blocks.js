@@ -38,6 +38,10 @@ Blockly.Blocks['canvas_line'] = {
   this.appendDummyInput()
       .appendField(Blockly.Msg.CANVAS_LINE_SHOW)
       .appendField(new Blockly.FieldVariable('fuGameElements'), 'fuGameElements_');
+  this.appendValueInput("linewidth_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_LINEWIDTH_SHOW);    
   this.appendValueInput("x0_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
