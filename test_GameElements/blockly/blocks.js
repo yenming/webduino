@@ -142,20 +142,38 @@ Blockly.Blocks['canvas_arc'] = {
   }
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Blockly.Blocks['canvas_img'] = {
+  init: function() {
+  this.appendValueInput("id_")
+      .setCheck(null)
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_ARC_SHOW)
+      .appendField(Blockly.Msg.ID_SHOW); 
+  this.appendValueInput("url_")
+      .setCheck("String")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.URL_SHOW);    
+  this.appendValueInput("x0_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_X0_SHOW);
+  this.appendValueInput("y0_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_Y0_SHOW);
+  this.appendValueInput("width_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.WIDTH_SHOW);
+  this.appendValueInput("height_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.HEIGHT_SHOW);        
+  this.setPreviousStatement(true);
+  this.setNextStatement(true);
+  this.setColour(60);
+  }
+};
 
 Blockly.Blocks['image_create'] = {
   init: function() {
