@@ -9,7 +9,7 @@
   var onclicktimerid;
   var mouse_x,mouse_y;
   
-  function canvas_create(input_id ,input_width,input_height,input_left,input_top,input_zindex,input_display) {
+  function canvas_create(input_id ,input_width,input_height,input_left,input_top,input_zindex) {
     if (document.getElementById("gamecanvas_"+input_id))
     {
       document.getElementById("gamecanvas_"+input_id).setAttribute("width",input_width + 'px');
@@ -17,10 +17,6 @@
       document.getElementById("gamecanvas_"+input_id).style.left = input_left + 'px';
       document.getElementById("gamecanvas_"+input_id).style.top = input_top + 'px';
       document.getElementById("gamecanvas_"+input_id).style.zIndex = input_zindex;
-      if (input_display==false)
-        document.getElementById("gamecanvas_"+input_id).style.display = "none";
-      else
-        document.getElementById("gamecanvas_"+input_id).style.display = "block";
     }
     else
     {
@@ -32,10 +28,6 @@
       can.style.left = input_left + 'px';
       can.style.top = input_top + 'px';
       can.style.zIndex = input_zindex;
-      if (input_display==false)
-        can.style.display = "none";
-      else
-        can.style.display = "block";
       document.body.appendChild(can);
     }
   } 
