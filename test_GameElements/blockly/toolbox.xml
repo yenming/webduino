@@ -151,6 +151,8 @@
   </block>
   <block type="canvas_clear">
   </block>  
+  <block type="canvas_delete">
+  </block>  
   <block type="image_create">
     <value name="id_">
       <block type="text">
