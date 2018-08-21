@@ -12,8 +12,10 @@
   function canvas_create(input_id ,input_width,input_height,input_left,input_top,input_zindex,input_display) {
     if (document.getElementById("gamecanvas_"+input_id))
     {
-      document.getElementById("gamecanvas_"+input_id).style.width = input_width + 'px';
-      document.getElementById("gamecanvas_"+input_id).style.height = input_height + 'px';
+      document.getElementById("gamecanvas_"+input_id).setAttribute("width",input_width + 'px');
+      document.getElementById("gamecanvas_"+input_id).setAttribute("height",input_height + 'px');
+      //document.getElementById("gamecanvas_"+input_id).style.width = input_width + 'px';
+      //document.getElementById("gamecanvas_"+input_id).style.height = input_height + 'px';
       document.getElementById("gamecanvas_"+input_id).style.left = input_left + 'px';
       document.getElementById("gamecanvas_"+input_id).style.top = input_top + 'px';
       document.getElementById("gamecanvas_"+input_id).style.zIndex = input_zindex;
@@ -27,8 +29,10 @@
       var can = document.createElement('canvas');
       can.style.position = "absolute";
       can.id = "gamecanvas_"+input_id;
-      can.style.width = input_width + 'px';
-      can.style.height = input_height + 'px';
+      can.setAttribute("width",input_width + 'px');
+      can.setAttribute("height",input_height + 'px');
+      //can.style.width = input_width + 'px';
+      //can.style.height = input_height + 'px';
       can.style.left = input_left + 'px';
       can.style.top = input_top + 'px';
       can.style.zIndex = input_zindex;
