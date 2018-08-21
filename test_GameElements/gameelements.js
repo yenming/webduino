@@ -29,6 +29,11 @@
       can.style.top = input_top + 'px';
       can.style.zIndex = input_zindex;
       document.body.appendChild(can);
+      
+      var img = document.createElement('img');
+      img.id = "gamecanvasimg";
+      img.style.display = "none";
+      document.body.appendChild(img);
     }
   } 
   
@@ -74,8 +79,17 @@
     }
   } 
   
-  function canvas_img(input_id,input_url,input_x0,input_y0,input_width,input_height) {
-  
+  function canvas_img(input_id,input_url,input_sx,input_sy,input_swidth,input_sheight,input_x0,input_y0,input_width,input_height) {
+    if (document.getElementById("gamecanvas_"+input_id)) {
+      var img = document.getElementById("gamecanvasimg");
+      img.src = input_url;
+      if ((input_swidth>0)&&(input_sheight>0))
+        context.drawImage(img,input_sx,input_sy,input_swidth,input_sheight,input_x0,input_y0,input_width,input_height);
+      else if (((input_swidth==0)||(input_sheight==0))&&((input_width>0)&&(input_height>0)))
+        context.drawImage(img,input_x0,input_y0,input_width,input_height);
+      else
+        context.drawImage(img,input_x0,input_y0);
+    }
   } 
   
   function canvas_clear(input_id) {
