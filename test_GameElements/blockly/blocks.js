@@ -42,22 +42,22 @@ Blockly.Blocks['canvas_line'] = {
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.CANVAS_LINE_SHOW)
       .appendField(Blockly.Msg.ID_SHOW); 
+  this.appendValueInput("x0_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_X0_SHOW);
+  this.appendValueInput("y0_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_Y0_SHOW);
   this.appendValueInput("x1_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.CANVAS_X1_SHOW);
+      .appendField(Blockly.Msg.CANVAS_X1_SHOW);    
   this.appendValueInput("y1_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.CANVAS_Y1_SHOW);
-  this.appendValueInput("x2_")
-      .setCheck("Number")
-      .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.CANVAS_X2_SHOW);    
-  this.appendValueInput("y2_")
-      .setCheck("Number")
-      .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.CANVAS_Y2_SHOW);  
+      .appendField(Blockly.Msg.CANVAS_Y1_SHOW);  
   this.appendValueInput("color_")
       .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
@@ -75,22 +75,22 @@ Blockly.Blocks['canvas_rect'] = {
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.CANVAS_RECT_SHOW)
       .appendField(Blockly.Msg.ID_SHOW); 
+  this.appendValueInput("x0_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_X0_SHOW);
+  this.appendValueInput("y0_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_Y0_SHOW);
   this.appendValueInput("x1_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.CANVAS_X1_SHOW);
+      .appendField(Blockly.Msg.CANVAS_X1_SHOW);    
   this.appendValueInput("y1_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.CANVAS_Y1_SHOW);
-  this.appendValueInput("x2_")
-      .setCheck("Number")
-      .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.CANVAS_X2_SHOW);    
-  this.appendValueInput("y2_")
-      .setCheck("Number")
-      .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.CANVAS_Y2_SHOW);  
+      .appendField(Blockly.Msg.CANVAS_Y1_SHOW);  
   this.appendValueInput("color_")
       .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
