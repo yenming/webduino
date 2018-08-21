@@ -1,1 +1,1 @@
-MSG.catImage = "Game E";
+MSG.catImage = "Game Elements";
