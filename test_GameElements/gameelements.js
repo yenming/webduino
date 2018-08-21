@@ -27,8 +27,8 @@
       var can = document.createElement('canvas');
       can.style.position = "absolute";
       can.id = "gamecanvas_"+input_id;
-      can.style.width = input_width + 'px';
-      can.style.height = input_height + 'px';
+      can.width = input_width + 'px';
+      can.height = input_height + 'px';
       can.style.left = input_left + 'px';
       can.style.top = input_top + 'px';
       can.style.zIndex = input_zindex;
