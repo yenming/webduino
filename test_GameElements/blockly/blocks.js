@@ -1,10 +1,8 @@
 Blockly.Blocks['canvas_create'] = {
   init: function() {
-  this.appendValueInput("id_")
-      .setCheck(null)
-      .setAlign(Blockly.ALIGN_RIGHT)
+  this.appendDummyInput()
       .appendField(Blockly.Msg.CANVAS_CREATE_SHOW)
-      .appendField(Blockly.Msg.ID_SHOW); 
+      .appendField(new Blockly.FieldVariable('fuGameElements'), 'fuGameElements_');
   this.appendValueInput("width_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
@@ -37,11 +35,9 @@ Blockly.Blocks['canvas_create'] = {
 
 Blockly.Blocks['canvas_line'] = {
   init: function() {
-  this.appendValueInput("id_")
-      .setCheck(null)
-      .setAlign(Blockly.ALIGN_RIGHT)
+  this.appendDummyInput()
       .appendField(Blockly.Msg.CANVAS_LINE_SHOW)
-      .appendField(Blockly.Msg.ID_SHOW); 
+      .appendField(new Blockly.FieldVariable('fuGameElements'), 'fuGameElements_');
   this.appendValueInput("x0_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
@@ -70,11 +66,9 @@ Blockly.Blocks['canvas_line'] = {
 
 Blockly.Blocks['canvas_rect'] = {
   init: function() {
-  this.appendValueInput("id_")
-      .setCheck(null)
-      .setAlign(Blockly.ALIGN_RIGHT)
+  this.appendDummyInput()
       .appendField(Blockly.Msg.CANVAS_RECT_SHOW)
-      .appendField(Blockly.Msg.ID_SHOW); 
+      .appendField(new Blockly.FieldVariable('fuGameElements'), 'fuGameElements_');
   this.appendValueInput("x0_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
@@ -103,11 +97,9 @@ Blockly.Blocks['canvas_rect'] = {
 
 Blockly.Blocks['canvas_arc'] = {
   init: function() {
-  this.appendValueInput("id_")
-      .setCheck(null)
-      .setAlign(Blockly.ALIGN_RIGHT)
+  this.appendDummyInput()
       .appendField(Blockly.Msg.CANVAS_ARC_SHOW)
-      .appendField(Blockly.Msg.ID_SHOW); 
+      .appendField(new Blockly.FieldVariable('fuGameElements'), 'fuGameElements_');
   this.appendValueInput("x0_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
@@ -144,11 +136,9 @@ Blockly.Blocks['canvas_arc'] = {
 
 Blockly.Blocks['canvas_img'] = {
   init: function() {
-  this.appendValueInput("id_")
-      .setCheck(null)
-      .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.CANVAS_ARC_SHOW)
-      .appendField(Blockly.Msg.ID_SHOW); 
+  this.appendDummyInput()
+      .appendField(Blockly.Msg.CANVAS_IMG_SHOW)
+      .appendField(new Blockly.FieldVariable('fuGameElements'), 'fuGameElements_');
   this.appendValueInput("url_")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
