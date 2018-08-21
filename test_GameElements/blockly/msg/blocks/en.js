@@ -1,4 +1,4 @@
-Blockly.Msg.CREATE_SHOW = "Create Image";
+Blockly.Msg.IMAGE_CREATE_SHOW = "Create Image";
 Blockly.Msg.ID_SHOW = "  ID";
 Blockly.Msg.URL_SHOW = "Url";
 Blockly.Msg.WIDTH_SHOW = "Width";
