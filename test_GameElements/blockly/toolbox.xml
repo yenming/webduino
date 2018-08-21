@@ -123,12 +123,12 @@
     </value>  
     <value name="eAngle_">
       <block type="math_number">
-        <field name="NUM">6.283</field>
+        <field name="NUM">6.284</field>
       </block>
     </value>  
     <value name="counterclockwise_">
       <block type="logic_boolean">
-        <field name="BOOL">TRUE</field>
+        <field name="BOOL">FALSE</field>
       </block>
     </value>      
     <value name="color_">
