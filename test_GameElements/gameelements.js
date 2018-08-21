@@ -227,22 +227,28 @@
       return mouse_y;
   } 
   
-  function canvas_create() {
+  function canvas_create(variable_fuGameElements_ ,value_width_,value_height_,value_left_,value_top_,value_zindex_,value_display_) {
+  
   } 
   
-  function canvas_line() {
+  function canvas_line(variable_fuGameElements_,value_x0_,value_y0_,value_x1_,value_y1_,value_color_) {
+  
   } 
   
-  function canvas_rect() {
+  function canvas_rect(variable_fuGameElements_,value_x0_,value_y0_,value_x1_,value_y1_,value_color_) {
+  
   } 
   
-  function canvas_arc() {
+  function canvas_arc(variable_fuGameElements_,value_x0_,value_y0_,value_r_,value_sAngle_,value_eAngle_,value_counterclockwise_,value_color_) {
+  
   } 
   
-  function canvas_img() {
+  function canvas_img(variable_fuGameElements_,value_url_,value_x0_,value_y0_,value_width_,value_height_) {
+  
   } 
   
-  function canvas_clear() {
+  function canvas_clear(variable_fuGameElements_) {
+  
   } 
   
   window.image_create = image_create;
