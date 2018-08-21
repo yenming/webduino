@@ -52,9 +52,18 @@
     }
   } 
   
-  function canvas_rect(input_id,input_linewidth,input_x0,input_y0,input_x1,input_y1,input_color) {
+  function canvas_rect(input_id,input_linewidth,input_x0,input_y0,input_x1,input_y1,input_fill,input_color) {
     if (document.getElementById("gamecanvas_"+input_id)) {
-      
+      var context = document.getElementById("gamecanvas_"+input_id).getContext("2d");
+      context.strokeStyle = input_color;
+      context.fillStyle = input_color;
+      context.lineWidth = input_linewidth;
+      context.beginPath();
+      context.rect(input_x0,input_y0,input_x1,input_y1);
+      if (input_fill==false)
+        context.stroke();
+      else
+        context.fill();
     }
   } 
   
