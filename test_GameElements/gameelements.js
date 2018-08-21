@@ -66,7 +66,7 @@
       context.fillStyle = input_color;
       context.lineWidth = input_linewidth;
       context.beginPath();
-      context.arc(input_x0,input_y0,input_r,input_sAngle,input_eAngle,input_counterclockwise);
+      context.arc(input_x0,input_y0,input_r,input_sAngle,input_eAngle,input_counterclockwise,input_fill);
       if (input_fill==false)
         context.stroke();
       else
