@@ -57,7 +57,7 @@ Blockly.Blocks['canvas_line'] = {
   this.appendValueInput("color_")
       .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.CANVAS_COLOR_SHOW);         
+      .appendField(Blockly.Msg.COLOR_SHOW);         
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setColour(60);
@@ -88,7 +88,7 @@ Blockly.Blocks['canvas_rect'] = {
   this.appendValueInput("color_")
       .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.CANVAS_COLOR_SHOW);         
+      .appendField(Blockly.Msg.COLOR_SHOW);         
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setColour(60);
@@ -127,7 +127,7 @@ Blockly.Blocks['canvas_arc'] = {
   this.appendValueInput("color_")
       .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.CANVAS_COLOR_SHOW);         
+      .appendField(Blockly.Msg.COLOR_SHOW);         
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setColour(60);
