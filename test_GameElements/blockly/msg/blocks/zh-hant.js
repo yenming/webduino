@@ -1,5 +1,6 @@
 Blockly.Msg.CANVAS_CREATE_SHOW = "畫布建立";
 Blockly.Msg.CANVAS_LINE_SHOW = "畫布畫直線";
+Blockly.Msg.CANVAS_LINEWIDTH_SHOW = "寬度";
 Blockly.Msg.CANVAS_X0_SHOW = "x0";
 Blockly.Msg.CANVAS_Y0_SHOW = "y0";
 Blockly.Msg.CANVAS_X1_SHOW = "x1";
