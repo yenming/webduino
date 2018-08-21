@@ -74,6 +74,10 @@ Blockly.Blocks['canvas_rect'] = {
   this.appendDummyInput()
       .appendField(Blockly.Msg.CANVAS_RECT_SHOW)
       .appendField(new Blockly.FieldVariable('fuGameElements'), 'fuGameElements_');
+  this.appendValueInput("linewidth_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_LINEWIDTH_SHOW);    
   this.appendValueInput("x0_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
@@ -106,6 +110,10 @@ Blockly.Blocks['canvas_arc'] = {
   this.appendDummyInput()
       .appendField(Blockly.Msg.CANVAS_ARC_SHOW)
       .appendField(new Blockly.FieldVariable('fuGameElements'), 'fuGameElements_');
+  this.appendValueInput("linewidth_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_LINEWIDTH_SHOW);    
   this.appendValueInput("x0_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
