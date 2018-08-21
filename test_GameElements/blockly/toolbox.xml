@@ -1,4 +1,4 @@
-<category id="catImage">
+<category id="catGameElements">
   <block type="image_create">
     <value name="id_">
       <block type="text">
