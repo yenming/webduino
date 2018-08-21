@@ -148,6 +148,26 @@
         <field name="TEXT"></field>
       </block>
     </value>
+    <value name="sx_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="sy_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>     
+    <value name="swidth_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="sheight_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>       
     <value name="x0_">
       <block type="math_number">
         <field name="NUM">0</field>
