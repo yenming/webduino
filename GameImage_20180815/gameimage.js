@@ -60,7 +60,7 @@
         document.getElementById("gameimg_"+input_id).style.zIndex = input_value;
       else if (input_property=='display')
       {
-        if (input_value==false)
+        if (input_value==0)
           document.getElementById("gameimg_"+input_id).style.display = "none";
         else
           document.getElementById("gameimg_"+input_id).style.display = "block";
