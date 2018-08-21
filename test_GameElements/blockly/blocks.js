@@ -175,6 +175,17 @@ Blockly.Blocks['canvas_img'] = {
   }
 };
 
+Blockly.Blocks['canvas_clear'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.CANVAS_CLEAR_SHOW)
+      .appendField(new Blockly.FieldVariable('fuGameElements'), 'fuGameElements_');
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setColour(60);
+  }
+};
+
 Blockly.Blocks['image_create'] = {
   init: function() {
   this.appendValueInput("id_")
