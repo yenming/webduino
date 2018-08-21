@@ -62,6 +62,12 @@ Blockly.JavaScript['canvas_clear'] = function (block) {
   return code;
 };
 
+Blockly.JavaScript['canvas_delete'] = function (block) {
+  var variable_fuGameElements_ = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('fuGameElements_'), Blockly.Variables.NAME_TYPE);
+  var code = 'canvas_delete("' + variable_fuGameElements_ + '");\n';
+  return code;
+};
+
 Blockly.JavaScript['image_create'] = function (block) {
   var value_id_ = Blockly.JavaScript.valueToCode(block, 'id_', Blockly.JavaScript.ORDER_ATOMIC);  
   var value_url_ = Blockly.JavaScript.valueToCode(block, 'url_', Blockly.JavaScript.ORDER_ATOMIC);
