@@ -228,23 +228,23 @@
   } 
   
   function canvas_create(input_id ,input_width,input_height,input_left,input_top,input_zindex,input_display) {
-    if (document.getElementById("gameelements_"+input_id))
+    if (document.getElementById("gamecanvas_"+input_id))
     {
-      document.getElementById("gameelements_"+input_id).style.width = input_width + 'px';
-      document.getElementById("gameelements_"+input_id).style.height = input_height + 'px';
-      document.getElementById("gameelements_"+input_id).style.left = input_left + 'px';
-      document.getElementById("gameelements_"+input_id).style.top = input_top + 'px';
-      document.getElementById("gameelements_"+input_id).style.zIndex = input_zindex;
+      document.getElementById("gamecanvas_"+input_id).style.width = input_width + 'px';
+      document.getElementById("gamecanvas_"+input_id).style.height = input_height + 'px';
+      document.getElementById("gamecanvas_"+input_id).style.left = input_left + 'px';
+      document.getElementById("gamecanvas_"+input_id).style.top = input_top + 'px';
+      document.getElementById("gamecanvas_"+input_id).style.zIndex = input_zindex;
       if (input_display==false)
-        document.getElementById("gameelements_"+input_id).style.display = "none";
+        document.getElementById("gamecanvas_"+input_id).style.display = "none";
       else
-        document.getElementById("gameelements_"+input_id).style.display = "block";
+        document.getElementById("gamecanvas_"+input_id).style.display = "block";
     }
     else
     {
       var can = document.createElement('canvas');
       can.style.position = "absolute";
-      can.id = "gameelements_"+input_id;
+      can.id = "gamecanvas_"+input_id;
       can.style.width = input_width + 'px';
       can.style.height = input_height + 'px';
       can.style.left = input_left + 'px';
