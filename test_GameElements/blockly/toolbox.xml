@@ -108,7 +108,7 @@
     </value>  
     <value name="eAngle_">
       <block type="math_number">
-        <field name="NUM">6.28</field>
+        <field name="NUM">6.283</field>
       </block>
     </value>  
     <value name="counterclockwise_">
@@ -122,15 +122,35 @@
       </block>
     </value>     
   </block>  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  <block type="canvas_img">
+    <value name="url_">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="x0_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="y0_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>     
+    <value name="width_">
+      <block type="math_number">
+        <field name="NUM">300</field>
+      </block>
+    </value>
+    <value name="height_">
+      <block type="math_number">
+        <field name="NUM">300</field>
+      </block>
+    </value>   
+  </block>
+  <block type="canvas_clear">
+  </block>  
   <block type="image_create">
     <value name="id_">
       <block type="text">
