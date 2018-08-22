@@ -93,13 +93,13 @@
     }
   } 
   
-  function canvas_text(input_id,input_text,input_x0,input_y0,input_FontName,input_FontSize,input_TextAlign,input_fill,input_color) {
+  function canvas_text(input_id,input_text,input_x0,input_y0,input_fontname,input_fontsize,input_textalign,input_fill,input_color) {
     if (document.getElementById("gamecanvas_"+input_id)) {
       var context = document.getElementById("gamecanvas_"+input_id).getContext("2d");
       context.strokeStyle = input_color;
       context.fillStyle = input_color;
-      context.font = input_FontSize + 'px ' + input_FontName;
-		  context.textAlign = input_TextAlign;
+      context.font = input_fontsize + 'px ' + input_fontname;
+      context.textAlign = input_textalign;
       if (input_fill==false)
         context.strokeText(input_text,input_x0,input_y0);
       else
