@@ -57,7 +57,7 @@
       context.lineWidth = input_linewidth;
       context.beginPath();
       context.rect(input_x0,input_y0,input_x1,input_y1);
-      if (input_fill==false)
+      if (input_fill==0)
         context.stroke();
       else
         context.fill();
@@ -72,7 +72,7 @@
       context.lineWidth = input_linewidth;
       context.beginPath();
       context.arc(input_x0,input_y0,input_r,input_sAngle,input_eAngle,input_counterclockwise);
-      if (input_fill==false)
+      if (input_fill==0)
         context.stroke();
       else
         context.fill();
@@ -100,7 +100,7 @@
       context.fillStyle = input_color;
       context.font = input_fontsize + 'px ' + input_fontname;
       context.textAlign = input_textalign;
-      if (input_fill==false)
+      if (input_fill==0)
         context.strokeText(input_text,input_x0,input_y0);
       else
         context.fillText(input_text,input_x0,input_y0);
