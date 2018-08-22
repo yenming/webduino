@@ -202,6 +202,50 @@ Blockly.Blocks['canvas_img'] = {
   }
 };
 
+Blockly.Blocks['canvas_text'] = {
+  init: function() {
+  this.appendDummyInput()
+      .appendField(Blockly.Msg.CANVAS_TEXT_SHOW)
+      .appendField(new Blockly.FieldVariable('fuGameElements'), 'fuGameElements_');
+  this.appendValueInput("text_")
+      .setCheck("String")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_TEXT_SHOW);    
+  this.appendValueInput("x0_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_X0_SHOW);
+  this.appendValueInput("y0_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_Y0_SHOW);
+  this.appendValueInput("fontname_")
+      .setCheck("String")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_FONTNAME_SHOW);    
+  this.appendValueInput("fonesize_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_FONTSIZE_SHOW);  
+  this.appendValueInput("textalign_")
+      .setCheck("String")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_TEXTALIGN_SHOW);      
+  this.appendValueInput("fill_")
+      .setCheck("Boolean")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.CANVAS_FILL_SHOW);     
+  this.appendValueInput("color_")
+      .setCheck(null)
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.COLOR_SHOW);   
+  this.setInputsInline(true);
+  this.setPreviousStatement(true);
+  this.setNextStatement(true);
+  this.setColour(60);
+  }
+};
+
 Blockly.Blocks['canvas_clear'] = {
   init: function () {
     this.appendDummyInput()
