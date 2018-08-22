@@ -210,7 +210,7 @@ Blockly.Blocks['canvas_text'] = {
   this.appendValueInput("text_")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.CANVAS_TEXT_SHOW);    
+      .appendField(Blockly.Msg.CANVAS_CONTEXT_SHOW);    
   this.appendValueInput("x0_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
