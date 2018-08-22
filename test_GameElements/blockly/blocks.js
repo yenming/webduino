@@ -227,10 +227,9 @@ Blockly.Blocks['canvas_text'] = {
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.CANVAS_FONTSIZE_SHOW);  
-  this.appendValueInput("textalign_")
-      .setCheck("String")
-      .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.CANVAS_TEXTALIGN_SHOW);      
+  this.appendDummyInput()  
+      .appendField(Blockly.Msg.CANVAS_TEXTALIGN_SHOW)
+      .appendField(new Blockly.FieldDropdown([["start","start"], ["end","end"], ["center","center"], ["left","left"], ["right","right"]], "property_");     
   this.appendValueInput("fill_")
       .setCheck("Boolean")
       .setAlign(Blockly.ALIGN_RIGHT)
