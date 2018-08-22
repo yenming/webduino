@@ -2,12 +2,12 @@
   <block type="canvas_create">  
     <value name="width_">
       <block type="math_number">
-        <field name="NUM">300</field>
+        <field name="NUM">500</field>
       </block>
     </value>
     <value name="height_">
       <block type="math_number">
-        <field name="NUM">300</field>
+        <field name="NUM">500</field>
       </block>
     </value>
     <value name="left_">
@@ -17,7 +17,7 @@
     </value>
     <value name="top_">
       <block type="math_number">
-        <field name="NUM">0</field>
+        <field name="NUM">100</field>
       </block>
     </value>  
     <value name="zindex_">
@@ -29,7 +29,7 @@
   <block type="canvas_line">  
     <value name="linewidth_">
       <block type="math_number">
-        <field name="NUM">1</field>
+        <field name="NUM">5</field>
       </block>
     </value>    
     <value name="x0_">
@@ -61,7 +61,7 @@
   <block type="canvas_rect"> 
     <value name="linewidth_">
       <block type="math_number">
-        <field name="NUM">1</field>
+        <field name="NUM">5</field>
       </block>
     </value>     
     <value name="x0_">
@@ -192,7 +192,7 @@
   <block type="canvas_text">
     <value name="text_">
       <block type="text">
-        <field name="TEXT"></field>
+        <field name="TEXT">Hello World</field>
       </block>
     </value>
     <value name="x0_">
@@ -212,7 +212,7 @@
     </value>
     <value name="fontsize_">
       <block type="math_number">
-        <field name="NUM">12</field>
+        <field name="NUM">30</field>
       </block>
     </value>      
     <value name="fill_">
