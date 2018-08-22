@@ -136,7 +136,7 @@ Blockly.Blocks['canvas_arc'] = {
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.CANVAS_EANGLE_SHOW);
   this.appendValueInput("counterclockwise_")
-      .setCheck("Boolean")
+      .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.CANVAS_COUNTERCLOCKWISE_SHOW);
   this.appendValueInput("fill_")
@@ -301,7 +301,7 @@ Blockly.Blocks['image_create'] = {
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.ZINDEX_SHOW);      
   this.appendValueInput("display_")
-      .setCheck("Boolean")
+      .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.DISPLAY_SHOW);        
   this.setPreviousStatement(true);
