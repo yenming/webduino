@@ -130,7 +130,7 @@
       document.getElementById("gameimg_"+input_id).style.left = input_left + 'px';
       document.getElementById("gameimg_"+input_id).style.top = input_top + 'px';
       document.getElementById("gameimg_"+input_id).style.zIndex = input_zindex;
-      if (input_display==false)
+      if (input_display==0)
         document.getElementById("gameimg_"+input_id).style.display = "none";
       else
         document.getElementById("gameimg_"+input_id).style.display = "block";
@@ -146,7 +146,7 @@
       img.style.left = input_left + 'px';
       img.style.top = input_top + 'px';
       img.style.zIndex = input_zindex;
-      if (input_display==false)
+      if (input_display==0)
         img.style.display = "none";
       else
         img.style.display = "block";
