@@ -74,7 +74,7 @@ Blockly.JavaScript['canvas_text'] = function (block) {
   var value_textalign_ = block.getFieldValue('textalign_');
   var value_fill_ = Blockly.JavaScript.valueToCode(block, 'fill_', Blockly.JavaScript.ORDER_ATOMIC);
   var value_color_ = Blockly.JavaScript.valueToCode(block, 'color_', Blockly.JavaScript.ORDER_ATOMIC); 
-  var code = 'canvas_text("' + variable_fuGameElements_ + '",' + value_text_ + ',' + value_x0_ + ','+ value_y0_ + ',' + value_fontname_ + ','+ value_fontsize_ + ',' + value_textalign_ + ','+ value_fill_ + ',' + value_color_ + ');\n';
+  var code = 'canvas_text("' + variable_fuGameElements_ + '",' + value_text_ + ',' + value_x0_ + ','+ value_y0_ + ',' + value_fontname_ + ','+ value_fontsize_ + ',"' + value_textalign_ + '",'+ value_fill_ + ',' + value_color_ + ');\n';
   return code;
 };
 
