@@ -64,6 +64,20 @@ Blockly.JavaScript['canvas_img'] = function (block) {
   return code;
 };
 
+Blockly.JavaScript['canvas_text'] = function (block) {
+  var variable_fuGameElements_ = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('fuGameElements_'), Blockly.Variables.NAME_TYPE);
+  var value_text_ = Blockly.JavaScript.valueToCode(block, 'text_', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_x0_ = Blockly.JavaScript.valueToCode(block, 'x0_', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_y0_ = Blockly.JavaScript.valueToCode(block, 'y0_', Blockly.JavaScript.ORDER_ATOMIC);  
+  var value_fontname_ = Blockly.JavaScript.valueToCode(block, 'fontname_', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_fontsize_ = Blockly.JavaScript.valueToCode(block, 'fontsize_', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_textalign_ = Blockly.JavaScript.valueToCode(block, 'textalign_', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_fill_ = Blockly.JavaScript.valueToCode(block, 'fill_', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_color_ = Blockly.JavaScript.valueToCode(block, 'color_', Blockly.JavaScript.ORDER_ATOMIC); 
+  var code = 'canvas_text("' + variable_fuGameElements_ + '",' + value_text_ + ',' + value_x0_ + ','+ value_y0_ + ',' + value_fontname_ + ','+ value_fontsize_ + ',' + value_textalign_ + ','+ value_fill_ + ',' + value_color_ + ');\n';
+  return code;
+};
+
 Blockly.JavaScript['canvas_clear'] = function (block) {
   var variable_fuGameElements_ = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('fuGameElements_'), Blockly.Variables.NAME_TYPE);
   var code = 'canvas_clear("' + variable_fuGameElements_ + '");\n';
