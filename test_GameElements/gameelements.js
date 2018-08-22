@@ -356,6 +356,7 @@
   window.canvas_rect = canvas_rect;
   window.canvas_arc = canvas_arc;
   window.canvas_img = canvas_img;
+  window.canvas_text = canvas_text;
   window.canvas_clear = canvas_clear;
   window.canvas_delete = canvas_delete;
   
