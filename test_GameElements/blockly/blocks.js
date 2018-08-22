@@ -92,7 +92,7 @@ Blockly.Blocks['canvas_rect'] = {
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.CANVAS_Y1_SHOW);  
   this.appendValueInput("fill_")
-      .setCheck("Boolean")
+      .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.CANVAS_FILL_SHOW);     
   this.appendValueInput("color_")
@@ -140,7 +140,7 @@ Blockly.Blocks['canvas_arc'] = {
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.CANVAS_COUNTERCLOCKWISE_SHOW);
   this.appendValueInput("fill_")
-      .setCheck("Boolean")
+      .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.CANVAS_FILL_SHOW);      
   this.appendValueInput("color_")
@@ -231,7 +231,7 @@ Blockly.Blocks['canvas_text'] = {
       .appendField(Blockly.Msg.CANVAS_TEXTALIGN_SHOW)
       .appendField(new Blockly.FieldDropdown([["start","start"], ["end","end"], ["center","center"], ["left","left"], ["right","right"]]), "textalign_");
   this.appendValueInput("fill_")
-      .setCheck("Boolean")
+      .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.CANVAS_FILL_SHOW);     
   this.appendValueInput("color_")
