@@ -197,12 +197,12 @@
     </value>
     <value name="x0_">
       <block type="math_number">
-        <field name="NUM">0</field>
+        <field name="NUM">100</field>
       </block>
     </value>
     <value name="y0_">
       <block type="math_number">
-        <field name="NUM">0</field>
+        <field name="NUM">100</field>
       </block>
     </value>     
     <value name="fontname_">
