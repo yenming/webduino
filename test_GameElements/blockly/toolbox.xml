@@ -217,7 +217,7 @@
     </value>      
     <value name="fill_">
       <block type="logic_boolean">
-        <field name="BOOL">FALSE</field>
+        <field name="BOOL">TRUE</field>
       </block>
     </value>     
     <value name="color_">
