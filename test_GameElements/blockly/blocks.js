@@ -223,7 +223,7 @@ Blockly.Blocks['canvas_text'] = {
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.CANVAS_FONTNAME_SHOW);    
-  this.appendValueInput("fonesize_")
+  this.appendValueInput("fontsize_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.CANVAS_FONTSIZE_SHOW);  
