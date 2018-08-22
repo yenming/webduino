@@ -22,8 +22,7 @@ Blockly.Blocks['canvas_create'] = {
   this.appendValueInput("zindex_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.ZINDEX_SHOW);    
-  this.setInputsInline(true);
+      .appendField(Blockly.Msg.ZINDEX_SHOW);   
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setColour(60);
