@@ -83,14 +83,14 @@ Blockly.Blocks['canvas_rect'] = {
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.CANVAS_Y0_SHOW);
-  this.appendValueInput("x1_")
+  this.appendValueInput("width_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.CANVAS_X1_SHOW);    
-  this.appendValueInput("y1_")
+      .appendField(Blockly.Msg.WIDTH_SHOW);
+  this.appendValueInput("height_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.CANVAS_Y1_SHOW);  
+      .appendField(Blockly.Msg.HEIGHT_SHOW);
   this.appendValueInput("fill_")
       .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)

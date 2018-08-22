@@ -74,12 +74,12 @@
         <field name="NUM">0</field>
       </block>
     </value>
-    <value name="x1_">
+    <value name="width_">
       <block type="math_number">
         <field name="NUM">100</field>
       </block>
     </value>
-    <value name="y1_">
+    <value name="height_">
       <block type="math_number">
         <field name="NUM">100</field>
       </block>
