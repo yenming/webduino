@@ -39,9 +39,9 @@
     }
   }
   
-  function music_delete(input_id) {
-    if (document.getElementById("gamemusic_"+input_id)) {
-      document.body.removeChild(document.getElementById("gamemusic_"+input_id));
+  function music_delete() {
+    if (document.getElementById("gamemusic_")) {
+      document.body.removeChild(document.getElementById("gamemusic_"));
     }
   }  
   
