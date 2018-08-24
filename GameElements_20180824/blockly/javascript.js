@@ -2,7 +2,7 @@ Blockly.JavaScript['document_timer'] = function (block) {
   var value_url = Blockly.JavaScript.valueToCode(block, 'url_', Blockly.JavaScript.ORDER_ATOMIC);
   var value_length = Blockly.JavaScript.valueToCode(block, 'length_', Blockly.JavaScript.ORDER_ATOMIC);
   var value_loop = Blockly.JavaScript.valueToCode(block, 'loop_', Blockly.JavaScript.ORDER_ATOMIC);
-  if (value_loop==1)
+  if ((value_loop==1)&&(value_length>0))
     var code = 'setInterval(function(){\nmusic_create(' + value_url + ');},' + value_length + ');\n';
   else
     var code = 'music_create(' + value_url + ');\n';
