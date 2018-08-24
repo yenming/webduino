@@ -1,3 +1,7 @@
+Blockly.Msg.MUSIC_CREATE_SHOW ="Background Music Play";
+Blockly.Msg.MUSIC_LENGTH_SHOW ="Length(ms)";
+Blockly.Msg.MUSIC_LOOP_SHOW ="Loop";
+Blockly.Msg.MUSIC_DELETE_SHOW ="Background Music  Stop";
 Blockly.Msg.CANVAS_CREATE_SHOW = "Canvas Create";
 Blockly.Msg.CANVAS_LINE_SHOW = "Canvas Line";
 Blockly.Msg.CANVAS_LINEWIDTH_SHOW = "Line Width";
