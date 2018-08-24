@@ -9,7 +9,7 @@
   var onclicktimerid;
   var mouse_x,mouse_y;
   
-  function music_create(input_id ,input_url) {
+  function music_create(input_url) {
     var substr = input_url.toLowerCase().split('.');
     var extname_av = ".aac,.au,.aif,.aiff,.aiffc,.alac,.ape,.asf,.avi,.cda,.dat,.divx,.flac,.m2ts,.m4a,.mid,.mov,.mp2,.mp3,.mp4,.mpc,.mpg,.mpeg,.mv2,.ogg,.pdf,.ra,.ram,.raw,.rcp,.rm,.rmvb,.snd,.tak,.tta,.vob,.voc,.wma,.wav,.webm,.wmf,.wmv,.wv,.xmi,";
     var extname_flash = ".swf,.flv,";
@@ -23,12 +23,12 @@
     else 
         var src = '<iframe src="' + input_url + '" style="width:0px;height:0px" frameborder="0" allow="geolocation; microphone; camera"></iframe>';
     
-    if (document.getElementById("gamemusic_"+input_id))
-          document.getElementById("gamemusic_"+input_id).innerHTML = src;
+    if (document.getElementById("gamemusic_"))
+          document.getElementById("gamemusic_").innerHTML = src;
     else
     {
         var div = document.createElement('div');
-        div.id = "gamemusic_"+input_id;
+        div.id = "gamemusic_";
         div.style.position = 'absolute';      
         div.style.left = '0px';
         div.style.top = '0px';
