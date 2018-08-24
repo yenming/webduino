@@ -9,6 +9,68 @@
   var onclicktimerid;
   var mouse_x,mouse_y;
   
+  function music_create(input_id ,input_url) {
+    var substr = input_url.toLowerCase().split('.');
+    var extname_av = ".aac,.au,.aif,.aiff,.aiffc,.alac,.ape,.asf,.avi,.cda,.dat,.divx,.flac,.m2ts,.m4a,.mid,.mov,.mp2,.mp3,.mp4,.mpc,.mpg,.mpeg,.mv2,.ogg,.pdf,.ra,.ram,.raw,.rcp,.rm,.rmvb,.snd,.tak,.tta,.vob,.voc,.wma,.wav,.webm,.wmf,.wmv,.wv,.xmi,";
+    var extname_flash = ".swf,.flv,";
+        
+    if (input_url.toLowerCase().indexOf("http")!=0)
+        var src = input_url;
+    else if (extname_av.indexOf("."+substr[substr.length-1]+",")!=-1)
+        var src = '<embed src="' + input_url + '" style="width:0px;height:0px" autostart="true"></embed>'; 
+    else if (extname_flash.indexOf("."+substr[substr.length-1]+",")!=-1)
+        var src = '<embed src="' + input_url + '" style="width:0px;height:0px" type="application/x-shockwave-flash"></embed>';
+    else 
+        var src = '<iframe src="' + input_url + '" style="width:0px;height:0px" frameborder="0" allow="geolocation; microphone; camera"></iframe>';
+    
+    if (document.getElementById("gamemusic_"+input_id))
+          document.getElementById("gamemusic_"+input_id).innerHTML = src;
+    else
+    {
+        var div = document.createElement('div');
+        div.id = "gamemusic_"+input_id;
+        div.style.position = 'absolute';      
+        div.style.left = '0px';
+        div.style.top = '0px';
+        div.style.zIndex = -1;   
+        div.style.display = 'none';
+        div.innerHTML = src;
+        document.body.appendChild(div);
+    }
+  }
+  
+  function music_delete(input_id) {
+    if (document.getElementById("gamemusic_"+input_id)) {
+      document.body.removeChild(document.getElementById("gamemusic_"+input_id));
+    }
+  }  
+  
+  function deleteIframe(input_id_){
+    if (document.getElementById("iframe"+input_id_))
+      document.getElementById("iframe"+input_id_).remove();
+  }
+
+  window.createIframe = createIframe;
+  window.deleteIframe = deleteIframe;
+
+}(window, window.document));
+
+    if (document.getElementById("gamemusic_"+input_id))
+    {
+      document.getElementById("iframe"+input_id).innerHTML = innerHTML;
+    }
+    else
+    {
+      var div = document.createElement('div');
+      div.id = "iframe"+input_id;     
+      div.style.left = '0px';
+      div.style.top = '0px'; 
+      div.style.display = 'none';
+      div.innerHTML = innerHTML;
+      document.body.appendChild(div);
+    }
+  } 
+  
   function canvas_create(input_id ,input_width,input_height,input_left,input_top,input_zindex) {
     if (document.getElementById("gamecanvas_"+input_id))
     {
