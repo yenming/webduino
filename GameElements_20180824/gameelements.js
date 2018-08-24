@@ -45,32 +45,6 @@
     }
   }  
   
-  function deleteIframe(input_id_){
-    if (document.getElementById("iframe"+input_id_))
-      document.getElementById("iframe"+input_id_).remove();
-  }
-
-  window.createIframe = createIframe;
-  window.deleteIframe = deleteIframe;
-
-}(window, window.document));
-
-    if (document.getElementById("gamemusic_"+input_id))
-    {
-      document.getElementById("iframe"+input_id).innerHTML = innerHTML;
-    }
-    else
-    {
-      var div = document.createElement('div');
-      div.id = "iframe"+input_id;     
-      div.style.left = '0px';
-      div.style.top = '0px'; 
-      div.style.display = 'none';
-      div.innerHTML = innerHTML;
-      document.body.appendChild(div);
-    }
-  } 
-  
   function canvas_create(input_id ,input_width,input_height,input_left,input_top,input_zindex) {
     if (document.getElementById("gamecanvas_"+input_id))
     {
