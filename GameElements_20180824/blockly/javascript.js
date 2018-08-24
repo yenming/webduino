@@ -9,12 +9,12 @@ Blockly.JavaScript['music_create'] = function (block) {
   else if ((value_loop=="false")&&(value_length>0))
     var code = 'music_create(' + value_url + ');\nvar musicTimer = setTimeout(function(){\nmusic_delete();},' + value_length + ');\n';
   else
-    var code = 'clearInterval(musicTimer);\nmusic_create(' + value_url + ');\n';
+    var code = 'music_create(' + value_url + ');\n';
   return code;
 };
 
 Blockly.JavaScript['music_delete'] = function (block) {
-  var code = 'music_delete();\n';
+  var code = 'clearInterval(musicTimer);\nmusic_delete();\n';
   return code;
 };
 
