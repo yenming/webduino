@@ -1,3 +1,35 @@
+Blockly.Blocks['music_create'] = {
+  init: function() {
+  this.appendValueInput("url_")
+      .setCheck("String")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.MUSIC_CREATE_SHOW)
+      .appendField(Blockly.Msg.URL_SHOW);
+  this.appendValueInput("length_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.MUSIC_LENGTH_SHOW);
+  this.appendValueInput("loop_")
+      .setCheck(null)
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.MUSIC_LOOP_SHOW);  
+  this.setInputsInline(true);
+  this.setPreviousStatement(true);
+  this.setNextStatement(true);
+  this.setColour(60);
+  }
+};
+
+Blockly.Blocks['music_delete'] = {
+  init: function () {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.MUSIC_DELETE_SHOW);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setColour(60);
+  }
+};
+
 Blockly.Blocks['canvas_create'] = {
   init: function() {
   this.appendDummyInput()
