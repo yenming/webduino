@@ -1,3 +1,7 @@
+Blockly.Msg.MUSIC_CREATE_SHOW ="背景音樂 播放";
+Blockly.Msg.MUSIC_LENGTH_SHOW ="長度";
+Blockly.Msg.MUSIC_LOOP_SHOW ="循環";
+Blockly.Msg.MUSIC_DELETE_SHOW ="背景音樂 停止";
 Blockly.Msg.CANVAS_CREATE_SHOW = "畫布 建立";
 Blockly.Msg.CANVAS_LINE_SHOW = "畫布 畫直線";
 Blockly.Msg.CANVAS_LINEWIDTH_SHOW = "寬度";
