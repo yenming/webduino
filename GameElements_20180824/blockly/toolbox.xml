@@ -1,23 +1,4 @@
-<category id="catGameElements">
-  <block type="music_create"> 
-    <value name="url_">
-      <block type="text">
-        <field name="TEXT"></field>
-      </block>
-    </value>
-    <value name="length_">
-      <block type="math_number">
-        <field name="NUM">0</field>
-      </block>
-    </value>
-    <value name="loop_">
-      <block type="logic_boolean">
-        <field name="BOOL">TRUE</field>
-      </block>
-    </value>     
-  </block>  
-  <block type="music_delete"> 
-  </block>   
+<category id="catGameElements"> 
   <block type="canvas_create">  
     <value name="width_">
       <block type="math_number">
@@ -375,4 +356,23 @@
   </block>  
   <block type="document_timer_stop">
   </block>  
+  <block type="music_create"> 
+    <value name="url_">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="length_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="loop_">
+      <block type="logic_boolean">
+        <field name="BOOL">TRUE</field>
+      </block>
+    </value>     
+  </block>  
+  <block type="music_delete"> 
+  </block>    
  </category>
