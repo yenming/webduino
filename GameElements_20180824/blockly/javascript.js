@@ -1,3 +1,19 @@
+Blockly.JavaScript['document_timer'] = function (block) {
+  var value_url = Blockly.JavaScript.valueToCode(block, 'url_', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_length = Blockly.JavaScript.valueToCode(block, 'length_', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_loop = Blockly.JavaScript.valueToCode(block, 'loop_', Blockly.JavaScript.ORDER_ATOMIC);
+  if (value_loop==1)
+    var code = 'setInterval(function(){\nmusic_create(' + value_url + ');},' + value_length + ');\n';
+  else
+    var code = 'music_create(' + value_url + ');\n';
+  return code;
+};
+
+Blockly.JavaScript['music_delete'] = function (block) {
+  var code = 'music_delete();\n';
+  return code;
+};
+
 Blockly.JavaScript['canvas_create'] = function (block) {
   var variable_fuGameElements_ = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('fuGameElements_'), Blockly.Variables.NAME_TYPE);
   var value_width_ = Blockly.JavaScript.valueToCode(block, 'width_', Blockly.JavaScript.ORDER_ATOMIC);
