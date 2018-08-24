@@ -5,7 +5,7 @@ Blockly.JavaScript['music_create'] = function (block) {
   console.log(value_length);
   console.log(value_loop);
   if ((value_loop=="true")&&(value_length>0))
-    var code = 'var musicTimer = setInterval(function(){\nmusic_delete();\nmusic_create(' + value_url + ');},' + value_length + ');\n';
+    var code = 'music_create(' + value_url + ');\nvar musicTimer = setInterval(function(){\nmusic_create(' + value_url + ');},' + value_length + ');\n';
   else if ((value_loop=="false")&&(value_length>0))
     var code = 'music_create(' + value_url + ');\nvar musicTimer = setTimeout(function(){\nmusic_delete();},' + value_length + ');\n';
   else
