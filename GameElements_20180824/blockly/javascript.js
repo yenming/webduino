@@ -4,9 +4,9 @@ Blockly.JavaScript['music_create'] = function (block) {
   var value_loop = Blockly.JavaScript.valueToCode(block, 'loop_', Blockly.JavaScript.ORDER_ATOMIC);
   console.log(value_length);
   console.log(value_loop);
-  if ((value_loop==1)&&(value_length>0))
+  if ((value_loop==true)&&(value_length>0))
     var code = 'setInterval(function(){\nmusic_create(' + value_url + ');},' + value_length + ');\n';
-  else if ((value_loop==0)&&(value_length>0))
+  else if ((value_loop==false)&&(value_length>0))
     var code = 'music_create(' + value_url + ');\nsetTimeout(function(){\nmusic_delete();},' + value_length + ');\n';
   else
     var code = 'music_create(' + value_url + ');\n';
