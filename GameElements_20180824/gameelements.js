@@ -421,5 +421,7 @@
   window.canvas_text = canvas_text;
   window.canvas_clear = canvas_clear;
   window.canvas_delete = canvas_delete;
+  window.music_create = music_create;
+  window.music_delete = music_delete;
   
 }(window, window.document));
