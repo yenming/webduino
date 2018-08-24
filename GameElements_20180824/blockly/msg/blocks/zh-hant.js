@@ -1,5 +1,5 @@
 Blockly.Msg.MUSIC_CREATE_SHOW ="背景音樂 播放";
-Blockly.Msg.MUSIC_LENGTH_SHOW ="長度";
+Blockly.Msg.MUSIC_LENGTH_SHOW ="長度(ms)";
 Blockly.Msg.MUSIC_LOOP_SHOW ="循環";
 Blockly.Msg.MUSIC_DELETE_SHOW ="背景音樂 停止";
 Blockly.Msg.CANVAS_CREATE_SHOW = "畫布 建立";
