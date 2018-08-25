@@ -49,7 +49,8 @@ Blockly.Blocks['table_create'] = {
   this.appendValueInput("display_")
       .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.DISPLAY_SHOW);     
+      .appendField(Blockly.Msg.DISPLAY_SHOW); 
+  this.setInputsInline(false);
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setColour(60);
