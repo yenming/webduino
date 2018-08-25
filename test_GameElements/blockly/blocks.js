@@ -87,7 +87,7 @@ Blockly.Blocks['table_td_insert_img'] = {
   this.appendValueInput("url_")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.MUSIC_CREATE_SHOW);     
+      .appendField(Blockly.Msg.URL_SHOW);     
   this.appendValueInput("width_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
@@ -118,7 +118,7 @@ Blockly.Blocks['table_td_insert_text'] = {
   this.appendValueInput("text_")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.TEXT_SHOW);    
+      .appendField(Blockly.Msg.TABLE_TD_TEXT_SHOW);    
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setColour(60);
