@@ -43,29 +43,39 @@
 
   function table_set(input_id,input_property,input_value){
     if (document.getElementById("gametable_"+input_id)) {
-      if (input_property=="width")
-        document.getElementById("gametable_"+input_id).style.width = input_value + "px";
-      else if (input_property=="height")
-        document.getElementById("gametable_"+input_id).style.height = input_value + "px";
-      else if (input_property=="left")
+      
+      if (input_property=="left")
         document.getElementById("gametable_"+input_id).style.left = input_value + "px";
       else if (input_property=="top")
         document.getElementById("gametable_"+input_id).style.top = input_value + "px";
-      else if (input_property=="borderstyle")
-        document.getElementById("gametable_"+input_id).style.borderstyle = input_value;
-      else if (input_property=="borderwidth")
-        document.getElementById("gametable_"+input_id).style.borderwidth = input_value + "px";
-      else if (input_property=="bordercolor")
-        document.getElementById("gametable_"+input_id).style.bordercolor = input_value;
-      else if (input_property=="bgcolor")
-        document.getElementById("gametable_"+input_id).style.bgcolor = input_value;
       else if (input_property=="zindex")
         document.getElementById("gametable_"+input_id).style.zIndex = input_value;
-      else if (input_property=="display")
-      { if (input_value==1)
+      else if (input_property=="display"){ 
+        if (input_value==1)
           document.getElementById("gametable_"+input_id).style.display = "block";    
         else if (input_value==0)
           document.getElementById("gametable_"+input_id).style.display = "none";
+      }
+      
+      if (document.getElementById("gametable_"+input_id).hasChildNodes())
+      {
+        for (var objtr in document.getElementById("gametable_"+input_id).childNodes){
+          for (var objtd in objtr.childNodes){
+              console.log(objtd.id);
+                if (input_property=="width")
+                  objtd.style.width = input_value + "px";
+                else if (input_property=="height")
+                  objtd.style.height = input_value + "px";        
+                else if (input_property=="borderstyle")
+                  objtd.style.borderstyle = input_value;
+                else if (input_property=="borderwidth")
+                  objtd.style.borderwidth = input_value + "px";
+                else if (input_property=="bordercolor")
+                  objtd.style.bordercolor = input_value;
+                else if (input_property=="bgcolor")
+                  objtd.style.bgcolor = input_value;
+          }
+        }
       }
     }
   }
