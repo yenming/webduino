@@ -61,6 +61,7 @@
         if (document.getElementById("gametable_"+input_id).hasChildNodes()){
           var obj = document.getElementById("gametable_"+input_id).childNodes;
           for (var i=0;i<obj.length;i++){
+            console.log(obj[i].hasChildNodes());
             if (obj[i].hasChildNodes()){
               for (var j=0;j<obj[i].length;j++){
                 if (input_property=="cellwidth")
