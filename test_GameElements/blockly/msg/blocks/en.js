@@ -1,4 +1,5 @@
 Blockly.Msg.TABLE_CREATE_SHOW = "Table Create";
+Blockly.Msg.TABLE_SET_SHOW = "Table Set";
 Blockly.Msg.TABLE_TRCOUNT_SHOW = "Rows";
 Blockly.Msg.TABLE_TDCOUNT_SHOW = "Columns";
 Blockly.Msg.TABLE_BORDERSTYLE_SHOW = "Border Style";
