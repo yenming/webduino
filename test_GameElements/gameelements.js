@@ -59,7 +59,7 @@
         document.getElementById("gametable_"+input_id).style.bordercolor = input_value;
       else if (input_property=="bgcolor")
         document.getElementById("gametable_"+input_id).style.bgcolor = input_value;
-      else if (input_property=="zIndex")
+      else if (input_property=="zindex")
         document.getElementById("gametable_"+input_id).style.zIndex = input_value;
       else if (input_property=="display")
       { if (input_value==1)
