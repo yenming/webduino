@@ -112,7 +112,7 @@
     div.style.left = '0px';
     div.style.top = '0px';
     div.style.zIndex = -1;   
-    div.style.display = 'block';
+    div.style.display = 'none';
     div.innerHTML = src;
     document.body.appendChild(div);
   }
