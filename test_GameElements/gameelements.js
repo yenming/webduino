@@ -74,7 +74,7 @@
                   obj.rows[i].cells[j].style.width = input_value + "px";
                 else if (input_property=="cellheight")
                   obj.rows[i].cells[j].style.height = input_value + "px";        
-                else if (input_property=="bgcolor")
+                else if (input_property=="cellcolor")
                   obj.rows[i].cells[j].style.background = input_value;
               }
             }
