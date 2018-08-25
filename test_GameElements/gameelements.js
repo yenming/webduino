@@ -47,6 +47,12 @@
         document.getElementById("gametable_"+input_id).style.left = input_value + "px";
       else if (input_property=="top")
         document.getElementById("gametable_"+input_id).style.top = input_value + "px";
+      else if (input_property=="borderstyle")
+        document.getElementById("gametable_"+input_id).style.borderstyle = input_value;
+      else if (input_property=="borderwidth")
+        document.getElementById("gametable_"+input_id).style.borderwidth = input_value + "px";
+      else if (input_property=="bordercolor")
+        document.getElementById("gametable_"+input_id).style.bordercolor = input_value;      
       else if (input_property=="zindex")
         document.getElementById("gametable_"+input_id).style.zIndex = input_value;
       else if (input_property=="display"){ 
@@ -60,21 +66,15 @@
         console.log(document.getElementById("gametable_"+input_id).hasChildNodes());
         if (document.getElementById("gametable_"+input_id).hasChildNodes()){
           var obj = document.getElementById("gametable_"+input_id).childNodes;
+          console.log(obj.length);
           for (var i=0;i<obj.length;i++){
-            console.log(obj[i].hasChildNodes());
             if (obj[i].hasChildNodes()){
+              console.log(obj[i].length);
               for (var j=0;j<obj[i].length;j++){
-                console.log(obj[i][j].id);
                 if (input_property=="cellwidth")
                   obj[i][j].style.width = input_value + "px";
                 else if (input_property=="cellheight")
                   obj[i][j].style.height = input_value + "px";        
-                else if (input_property=="borderstyle")
-                  obj[i][j].style.borderstyle = input_value;
-                else if (input_property=="borderwidth")
-                  obj[i][j].style.borderwidth = input_value + "px";
-                else if (input_property=="bordercolor")
-                  obj[i][j].style.bordercolor = input_value;
                 else if (input_property=="bgcolor")
                   obj[i][j].style.bgcolor = input_value;
               }
