@@ -95,7 +95,8 @@ Blockly.Blocks['table_td_insert_img'] = {
   this.appendValueInput("height_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.HEIGHT_SHOW);    
+      .appendField(Blockly.Msg.HEIGHT_SHOW);   
+  this.setInputsInline(true);
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setColour(60);
@@ -118,7 +119,8 @@ Blockly.Blocks['table_td_insert_text'] = {
   this.appendValueInput("text_")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.TABLE_TD_TEXT_SHOW);    
+      .appendField(Blockly.Msg.TABLE_TD_TEXT_SHOW);
+  this.setInputsInline(true);
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setColour(60);
@@ -137,19 +139,13 @@ Blockly.Blocks['table_td_clear'] = {
   this.appendValueInput("y_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.TABLE_TD_Y_SHOW);      
+      .appendField(Blockly.Msg.TABLE_TD_Y_SHOW); 
+  this.setInputsInline(true);
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setColour(60);
   }
 };
-
-
-
-
-
-
-
 
 Blockly.Blocks['music_create'] = {
   init: function() {
