@@ -2,18 +2,10 @@ Blockly.Blocks['table_create'] = {
   init: function() {
   this.appendDummyInput()
       .appendField(new Blockly.FieldVariable('fuGameTable'), 'fuGameElements_');    
-  this.appendValueInput("width_")
-      .setCheck("Number")
-      .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.TABLE_CREATE_SHOW)
-      .appendField(Blockly.Msg.WIDTH_SHOW);
-  this.appendValueInput("height_")
-      .setCheck("Number")
-      .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.HEIGHT_SHOW);
   this.appendValueInput("left_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.TABLE_CREATE_SHOW)
       .appendField(Blockly.Msg.LEFT_SHOW);    
   this.appendValueInput("top_")
       .setCheck("Number")
@@ -26,7 +18,15 @@ Blockly.Blocks['table_create'] = {
   this.appendValueInput("tdcount_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.TABLE_TDCOUNT_SHOW);    
+      .appendField(Blockly.Msg.TABLE_TDCOUNT_SHOW);   
+  this.appendValueInput("width_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.TABLE_TD_WIDTH_SHOW);
+  this.appendValueInput("height_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.TABLE_TD_HEIGHT_SHOW);    
   this.appendDummyInput()  
       .appendField(Blockly.Msg.TABLE_BORDERSTYLE_SHOW)
       .appendField(new Blockly.FieldDropdown([["solid","solid"], ["dashed","dashed"], ["double","double"], ["dotted","dotted"], ["groove","groove"], ["ridge","ridge"], ["inset","inset"], ["outset","outset"], ["inherit","inherit"], ["none","none"], ["hidden","hidden"]]), "borderstyle_");  
