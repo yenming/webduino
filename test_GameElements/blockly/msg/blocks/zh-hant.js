@@ -1,3 +1,10 @@
+Blockly.Msg.TABLE_CREATE_SHOW = "表格 新增";
+Blockly.Msg.TABLE_TRCOUNT_SHOW = "列數";
+Blockly.Msg.TABLE_TDCOUNT_SHOW = "行數";
+Blockly.Msg.TABLE_BORDERSTYLE_SHOW = "邊框樣式";
+Blockly.Msg.TABLE_BORDERWIDTH_SHOW = "邊框寬度";
+Blockly.Msg.TABLE_BORDERCOLOR_SHOW = "邊框顏色";
+Blockly.Msg.TABLE_BGCOLOR_SHOW = "背景顏色";
 Blockly.Msg.MUSIC_CREATE_SHOW ="背景音樂 播放";
 Blockly.Msg.MUSIC_LENGTH_SHOW ="長度(ms)";
 Blockly.Msg.MUSIC_LOOP_SHOW ="循環";
