@@ -61,7 +61,12 @@
   
   function table_td_get(input_id,input_x,input_y,input_property){
     if (document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x))
-      return "OK";
+    {
+      if (input_property=="background")
+        return document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x).style.background;
+      else if (input_property=="innerHTML")
+        return document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x).innerHTML;
+    }
     else
       return "";
   }
