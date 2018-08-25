@@ -52,10 +52,11 @@
     } 
   }
   
-  function table_td_img_get(input_id,input_img_id,input_position){
+  function table_td_img_get(input_img_id,input_position){
      if (document.getElementById("gameimg_"+input_img_id)) {
-      
-    } 
+      return "OK";
+    }
+    return "";
   }
   
   function table_td_insert_text(input_id,input_x,input_y,input_text){
