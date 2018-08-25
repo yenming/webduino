@@ -47,16 +47,15 @@
   }
   
   function table_td_insert_img(input_id,input_x,input_y,input_img_id,input_url,input_width,input_height){
-    if (document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x)) {
+    if (document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x))
       document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x).innerHTML = "<img id='gameimg_"+input_img_id+"' src='"+input_url+"' width='"+input_width+"' height='"+input_height+"' onclick='image_onclickid_set(this);'>";
-    } 
   }
   
   function table_td_img_get(input_img_id,input_position){
-     if (document.getElementById("gameimg_"+input_img_id)) {
+    if (document.getElementById("gameimg_"+input_img_id))
       return "OK";
-    }
-    return "";
+    else
+      return "";
   }
   
   function table_td_insert_text(input_id,input_x,input_y,input_text){
