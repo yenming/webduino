@@ -49,7 +49,7 @@ Blockly.JavaScript['table_td_get'] = function (block) {
   var value_x_ = Blockly.JavaScript.valueToCode(block, 'x_', Blockly.JavaScript.ORDER_ATOMIC);
   var value_y_ = Blockly.JavaScript.valueToCode(block, 'y_', Blockly.JavaScript.ORDER_ATOMIC);
   var value_property_ = block.getFieldValue('property_');
-  var code = 'table_td_get("' + variable_fuGameElements_ + '",'+ value_x_ + ',' + value_y_ + ',' + value_property_+ ')';
+  var code = 'table_td_get("' + variable_fuGameElements_ + '",'+ value_x_ + ',' + value_y_ + ',"' + value_property_+ '")';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
