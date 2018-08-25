@@ -26,8 +26,8 @@
         var tbl = document.createElement('table');
         tbl.id = "gametable_"+input_id;
         tbl.style.position = "absolute";
-        tbl.style.width = input_width + 'px';
-        tbl.style.height = input_height + 'px';
+        //tbl.style.width = input_width + 'px';
+        //tbl.style.height = input_height + 'px';
         tbl.style.left = input_left + 'px';
         tbl.style.top = input_top + 'px';
         tbl.style.zIndex = input_zindex;
@@ -49,6 +49,8 @@
             td.style.align="center";
             td.style.verticalAlign = "center";
             td.style.background = "#123456";
+            td.style.width = (input_width/input_tdcount) + 'px';
+            td.style.height = (input_height/input_trcount) + 'px';
           }
          }
         document.body.appendChild(tbl);
