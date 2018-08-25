@@ -201,9 +201,8 @@
   } 
   
   function canvas_delete(input_id) {
-    if (document.getElementById("gamecanvas_"+input_id)) {
-      document.body.removeChild(document.getElementById("gamecanvas_"+input_id));
-    }
+    if (document.getElementById("gamecanvas_"+input_id)) 
+      document.getElementById("gamecanvas_"+input_id).parentNode.removeChild(document.getElementById("gamecanvas_"+input_id));
   }   
   
   function image_create(input_id,input_url,input_width,input_height,input_left,input_top,input_zindex,input_display) {
@@ -313,10 +312,7 @@
   
   function image_delete(input_id) {
     if (document.getElementById("gameimg_"+input_id))
-    {
-      //document.body.removeChild(document.getElementById("gameimg_"+input_id));
       document.getElementById("gameimg_"+input_id).parentNode.removeChild(document.getElementById("gameimg_"+input_id));
-    }  
   }   
   
   function image_collision(input_id1,input_id2) {
