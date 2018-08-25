@@ -38,9 +38,9 @@
         else
           tbl.style.display = "block";
         var tr,td;
-        for (i=0;i<input_trcount;i++){
+        for (var i=0;i<input_trcount;i++){
           tr = tbl.insertRow(i);
-          for (j=0;j<input_tdcount;j++){
+          for (var j=0;j<input_tdcount;j++){
             td = tr.insertCell(j);
             td.style.align="center";
           }
