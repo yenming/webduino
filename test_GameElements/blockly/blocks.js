@@ -1,9 +1,11 @@
 Blockly.Blocks['table_create'] = {
   init: function() {
+  this.appendDummyInput()
+      .appendField(Blockly.Msg.TABLE_CREATE_SHOW)
+      .appendField(new Blockly.FieldVariable('fuGameElements'), 'fuGameElements_');    
   this.appendValueInput("width_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.TABLE_CREATE_SHOW)
       .appendField(Blockly.Msg.WIDTH_SHOW);
   this.appendValueInput("height_")
       .setCheck("Number")
