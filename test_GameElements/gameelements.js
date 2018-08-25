@@ -43,6 +43,8 @@
           for (var j=0;j<input_tdcount;j++){
             td = tr.insertCell(j);
             td.style.align="center";
+            td.style.vertical-align="center";
+            td.style.background = "#123456";
           }
          }
         document.body.appendChild(tbl);
