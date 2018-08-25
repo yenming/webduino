@@ -29,7 +29,6 @@
         tbl.style.left = input_left + 'px';
         tbl.style.top = input_top + 'px';
         tbl.style.zIndex = input_zindex;
-        tbl.style.border = input_borderwidth +'px ' + input_borderstyle + ' ' + input_bordercolor;
         tbl.style.borderTop = input_borderwidth +'px ' + input_borderstyle + ' ' + input_bordercolor;
         tbl.style.borderLeft = input_borderwidth +'px ' + input_borderstyle + ' ' + input_bordercolor;
         tbl.style.borderBottom = input_borderwidth +'px ' + input_borderstyle + ' ' + input_bordercolor;
