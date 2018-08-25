@@ -70,17 +70,11 @@
     }
   }  
   
-  function table_td_insert_clear(input_id,input_x,input_y){
+  function table_td_clear(input_id,input_x,input_y){
     if (document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x)) {
       document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x).innerHTML = "";
     }    
   }  
-  
-  
-  
-  
-  
-  
   
   function music_create(input_url) {
     var substr = input_url.toLowerCase().split('.');
