@@ -64,6 +64,7 @@
             console.log(obj[i].hasChildNodes());
             if (obj[i].hasChildNodes()){
               for (var j=0;j<obj[i].length;j++){
+                console.log(obj[i][j].id);
                 if (input_property=="cellwidth")
                   obj[i][j].style.width = input_value + "px";
                 else if (input_property=="cellheight")
