@@ -104,6 +104,25 @@ Blockly.Blocks['table_td_insert_img'] = {
   }
 };
 
+Blockly.Blocks['table_td_img_get'] = {
+  init: function () {
+  this.appendDummyInput()
+      .appendField(new Blockly.FieldVariable('fuGameTable'), 'fuGameElements_'); 
+  this.appendValueInput("imgid_")
+      .setCheck(null)
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.TABLE_TD_IMAGE_GET_SHOW)
+      .appendField(Blockly.Msg.ID_SHOW); 
+  this.appendDummyInput()  
+      .appendField(Blockly.Msg.TABLE_TD_IMAGE_POSITION_SHOW)
+      .appendField(new Blockly.FieldDropdown([["x","x"], ["y","y"]]), "position_");  
+  this.setInputsInline(true);
+  this.setPreviousStatement(true);
+  this.setNextStatement(true);
+  this.setColour(60);
+  }
+};
+
 Blockly.Blocks['table_td_insert_text'] = {
   init: function () {
   this.appendDummyInput()
@@ -121,25 +140,6 @@ Blockly.Blocks['table_td_insert_text'] = {
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.TABLE_TD_TEXT_SHOW);
-  this.setInputsInline(true);
-  this.setPreviousStatement(true);
-  this.setNextStatement(true);
-  this.setColour(60);
-  }
-};
-
-Blockly.Blocks['table_td_img_get'] = {
-  init: function () {
-  this.appendDummyInput()
-      .appendField(new Blockly.FieldVariable('fuGameTable'), 'fuGameElements_'); 
-  this.appendValueInput("imgid_")
-      .setCheck(null)
-      .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.TABLE_TD_IMAGE_GET_SHOW)
-      .appendField(Blockly.Msg.ID_SHOW); 
-  this.appendDummyInput()  
-      .appendField(Blockly.Msg.TABLE_TD_IMAGE_POSITION_SHOW)
-      .appendField(new Blockly.FieldDropdown([["x","x"], ["y","y"]]), "position_");  
   this.setInputsInline(true);
   this.setPreviousStatement(true);
   this.setNextStatement(true);
