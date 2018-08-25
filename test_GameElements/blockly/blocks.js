@@ -63,7 +63,7 @@ Blockly.Blocks['table_set'] = {
       .appendField(new Blockly.FieldVariable('fuGameTable'), 'fuGameElements_');      
   this.appendDummyInput()  
       .appendField(Blockly.Msg.TABLE_SET_SHOW)
-      .appendField(new Blockly.FieldDropdown([["width","width"], ["height","height"], ["left","left"], ["top","top"], ["borderstyle","borderstyle"], ["borderwidth","borderwidth"], ["bordercolor","bordercolor"], ["bgcolor","bgcolor"], ["zindex","zindex"], ["display","display"]]), "property_");
+      .appendField(new Blockly.FieldDropdown([["left","left"], ["top","top"], ["borderstyle","borderstyle"], ["borderwidth","borderwidth"], ["bordercolor","bordercolor"], ["width","width"], ["height","height"], ["bgcolor","bgcolor"], ["zindex","zindex"], ["display","display"]]), "property_");
   this.appendValueInput("value_")
       .setAlign(Blockly.ALIGN_RIGHT)
       .setCheck(null);    
