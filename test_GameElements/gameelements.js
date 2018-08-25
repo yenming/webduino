@@ -10,8 +10,7 @@
   var mouse_x,mouse_y;
   
   function table_create(input_id,input_width,input_height,input_left,input_top,input_trcount,input_tdcount,input_borderstyle,input_borderwidth,input_bordercolor,input_bgcolor,input_zindex,input_display) {
-    if (document.getElementById("gametable_"+input_id))
-    {
+    if (document.getElementById("gametable_"+input_id))    {
       document.getElementById("gametable_"+input_id).style.width = input_width + 'px';
       document.getElementById("gametable_"+input_id).style.height = input_height + 'px';
       document.getElementById("gametable_"+input_id).style.left = input_left + 'px';
@@ -22,21 +21,32 @@
       else
         document.getElementById("gametable_"+input_id).style.display = "block";
     }
-    else
-    {
-      var tbl = document.createElement('table');
-      tbl.style.position = "absolute";
-      tbl.id = "gametable_"+input_id;
-      tbl.style.width = input_width + 'px';
-      tbl.style.height = input_height + 'px';
-      tbl.style.left = input_left + 'px';
-      tbl.style.top = input_top + 'px';
-      tbl.style.zIndex = input_zindex;
-      if (input_display==0)
-        tbl.style.display = "none";
-      else
-        tbl.style.display = "block";
-      document.body.appendChild(tbl);
+    else{
+      if ((input_trcount>=1)&&(input_tdcount>=1)){
+        var tbl = document.createElement('table');
+        tbl.id = "gametable_"+input_id;
+        tbl.style.position = "absolute";
+        tbl.style.width = input_width + 'px';
+        tbl.style.height = input_height + 'px';
+        tbl.style.left = input_left + 'px';
+        tbl.style.top = input_top + 'px';
+        tbl.style.zIndex = input_zindex;
+        tbl.style.border = input_borderwidth +'px ' + input_borderstyle + ' ' + input_bordercolor;
+        tbl.style.background = input_bgcolor;
+        if (input_display==0)
+          tbl.style.display = "none";
+        else
+          tbl.style.display = "block";
+        var tr,td;
+        for (i=0;i<input_trcount;i++){
+          tr = tbl.insertRow(i);
+          for (j=0;j<input_tdcount;j++){
+            td = tr.insertCell(j);
+            td.style.align="center";
+          }
+         }
+        document.body.appendChild(tbl);
+      }
     }
   }
   
