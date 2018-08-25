@@ -432,6 +432,7 @@
   window.table_create = table_create;
   window.table_delete = table_delete;
   window.table_td_insert_img = table_td_insert_img;
+  window.table_td_img_get = table_td_img_get;
   window.table_td_insert_text = table_td_insert_text;
   window.table_td_clear = table_td_clear;
   
