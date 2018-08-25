@@ -16,6 +16,14 @@ Blockly.JavaScript['table_create'] = function (block) {
   return code;
 };
 
+Blockly.JavaScript['table_set'] = function (block) {
+  var variable_fuGameElements_ = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('fuGameElements_'), Blockly.Variables.NAME_TYPE); 
+  var value_property_ = block.getFieldValue('property_');
+  var value_value_ = Blockly.JavaScript.valueToCode(block, 'value_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'table_set("' + variable_fuGameElements_ + '","' + value_property_ + '",' + value_value_ + ');\n';
+  return code;
+};
+
 Blockly.JavaScript['table_td_insert_img'] = function (block) {
   var variable_fuGameElements_ = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('fuGameElements_'), Blockly.Variables.NAME_TYPE);
   var value_x_ = Blockly.JavaScript.valueToCode(block, 'x_', Blockly.JavaScript.ORDER_ATOMIC);
