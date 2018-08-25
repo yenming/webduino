@@ -54,9 +54,8 @@
   }
   
   function table_td_insert_text(input_id,input_x,input_y,input_text){
-    if (document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x)) {
+    if (document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x))
       document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x).innerHTML = input_text;
-    }
   }  
   
   function table_td_get(input_id,input_x,input_y,input_property){
@@ -72,9 +71,8 @@
   }
   
   function table_td_clear(input_id,input_x,input_y){
-    if (document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x)) {
+    if (document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x)) 
       document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x).innerHTML = "";
-    }    
   }  
   
   function table_delete(input_id) {
