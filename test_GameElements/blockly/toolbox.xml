@@ -1,5 +1,5 @@
 <category id="catGameElements"> 
-    <block type="table_create">   
+  <block type="table_create">   
     <value name="width_">
       <block type="math_number">
         <field name="NUM">300</field>
@@ -58,6 +58,67 @@
   </block>
   <block type="table_delete">
   </block>
+  <block type="table_td_insert_img">  
+    <value name="x_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="y_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>  
+    <value name="imgid_">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>      
+    <value name="url_">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="width_">
+      <block type="math_number">
+        <field name="NUM">300</field>
+      </block>
+    </value>
+    <value name="height_">
+      <block type="math_number">
+        <field name="NUM">300</field>
+      </block>
+    </value>   
+  </block>
+  <block type="table_td_insert_text">  
+    <value name="x_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="y_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>     
+    <value name="text_">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>  
+  </block>    
+  <block type="table_td_clear">  
+    <value name="x_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="y_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>    
+  </block>    
   <block type="canvas_create">  
     <value name="width_">
       <block type="math_number">
