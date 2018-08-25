@@ -65,10 +65,8 @@
       {
         var obj = document.getElementById("gametable_"+input_id);
         if (document.getElementById("gametable_"+input_id).rows.length>0){
-          console.log(obj.rows.length);
           for (var i=0;i<obj.rows.length;i++){
             if (obj.rows[i].cells.length>0){
-              console.log(obj.rows[i].cells.length);
               for (var j=0;j<obj.rows[i].cells.length;j++){
                 if (input_property=="cellwidth")
                   obj.rows[i].cells[j].style.width = input_value + "px";
