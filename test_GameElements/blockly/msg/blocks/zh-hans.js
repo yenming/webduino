@@ -1,4 +1,5 @@
 Blockly.Msg.TABLE_CREATE_SHOW = "表格 新增";
+Blockly.Msg.TABLE_SET_SHOW = "表格 设定";
 Blockly.Msg.TABLE_TRCOUNT_SHOW = "列数";
 Blockly.Msg.TABLE_TDCOUNT_SHOW = "行数";
 Blockly.Msg.TABLE_BORDERSTYLE_SHOW = "边框样式";
