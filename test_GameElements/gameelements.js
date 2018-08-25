@@ -13,7 +13,6 @@
     if (document.getElementById("gametable_"+input_id)) {
       document.body.removeChild(document.getElementById("gametable_"+input_id));
     }
-    
     if ((input_trcount>=1)&&(input_tdcount>=1)){
       var tbl = document.createElement('table');
       tbl.id = "gametable_"+input_id;
@@ -104,31 +103,23 @@
   }  
   
   function canvas_create(input_id ,input_width,input_height,input_left,input_top,input_zindex) {
-    if (document.getElementById("gamecanvas_"+input_id))
-    {
-      document.getElementById("gamecanvas_"+input_id).setAttribute("width",input_width + 'px');
-      document.getElementById("gamecanvas_"+input_id).setAttribute("height",input_height + 'px');
-      document.getElementById("gamecanvas_"+input_id).style.left = input_left + 'px';
-      document.getElementById("gamecanvas_"+input_id).style.top = input_top + 'px';
-      document.getElementById("gamecanvas_"+input_id).style.zIndex = input_zindex;
+    if (document.getElementById("gamecanvas_"+input_id)) {
+      document.body.removeChild(document.getElementById("gamecanvas_"+input_id));
     }
-    else
-    {
-      var can = document.createElement('canvas');
-      can.style.position = "absolute";
-      can.id = "gamecanvas_"+input_id;
-      can.setAttribute("width",input_width + 'px');
-      can.setAttribute("height",input_height + 'px');
-      can.style.left = input_left + 'px';
-      can.style.top = input_top + 'px';
-      can.style.zIndex = input_zindex;
-      document.body.appendChild(can);
-      
-      var img = document.createElement('img');
-      img.id = "gamecanvasimg";
-      img.style.display = "none";
-      document.body.appendChild(img);
-    }
+    var can = document.createElement('canvas');
+    can.style.position = "absolute";
+    can.id = "gamecanvas_"+input_id;
+    can.setAttribute("width",input_width + 'px');
+    can.setAttribute("height",input_height + 'px');
+    can.style.left = input_left + 'px';
+    can.style.top = input_top + 'px';
+    can.style.zIndex = input_zindex;
+    document.body.appendChild(can);
+
+    var img = document.createElement('img');
+    img.id = "gamecanvasimg";
+    img.style.display = "none";
+    document.body.appendChild(img);
   } 
   
   function canvas_line(input_id,input_linewidth,input_x0,input_y0,input_x1,input_y1,input_color) {
@@ -218,35 +209,23 @@
   function image_create(input_id,input_url,input_width,input_height,input_left,input_top,input_zindex,input_display) {
     if (document.getElementById("gameimg_"+input_id))
     {
-      document.getElementById("gameimg_"+input_id).src = input_url;
-      document.getElementById("gameimg_"+input_id).style.width = input_width + 'px';
-      document.getElementById("gameimg_"+input_id).style.height = input_height + 'px';
-      document.getElementById("gameimg_"+input_id).style.left = input_left + 'px';
-      document.getElementById("gameimg_"+input_id).style.top = input_top + 'px';
-      document.getElementById("gameimg_"+input_id).style.zIndex = input_zindex;
-      if (input_display==0)
-        document.getElementById("gameimg_"+input_id).style.display = "none";
-      else
-        document.getElementById("gameimg_"+input_id).style.display = "block";
-    }
+      document.body.removeChild(document.getElementById("gameimg_"+input_id));
+    } 
+    var img = document.createElement('img');
+    img.style.position = "absolute";
+    img.id = "gameimg_"+input_id;
+    img.src = input_url;
+    img.style.width = input_width + 'px';
+    img.style.height = input_height + 'px';
+    img.style.left = input_left + 'px';
+    img.style.top = input_top + 'px';
+    img.style.zIndex = input_zindex;
+    if (input_display==0)
+      img.style.display = "none";
     else
-    {
-      var img = document.createElement('img');
-      img.style.position = "absolute";
-      img.id = "gameimg_"+input_id;
-      img.src = input_url;
-      img.style.width = input_width + 'px';
-      img.style.height = input_height + 'px';
-      img.style.left = input_left + 'px';
-      img.style.top = input_top + 'px';
-      img.style.zIndex = input_zindex;
-      if (input_display==0)
-        img.style.display = "none";
-      else
-        img.style.display = "block";
-      img.setAttribute("onclick", "javascript:image_onclickid_set(this);");
-      document.body.appendChild(img);
-    }
+      img.style.display = "block";
+    img.setAttribute("onclick", "javascript:image_onclickid_set(this);");
+    document.body.appendChild(img);
   }
   
   function image_set(input_id,input_property,input_value) {
