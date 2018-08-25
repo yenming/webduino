@@ -75,7 +75,7 @@
                 else if (input_property=="cellheight")
                   obj.rows[i].cells[j].style.height = input_value + "px";        
                 else if (input_property=="bgcolor")
-                  obj.rows[i].cells[j].style.bgcolor = input_value;
+                  obj.rows[i].cells[j].style.background = input_value;
               }
             }
           }
