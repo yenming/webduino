@@ -62,9 +62,9 @@
         for (var objtr in document.getElementById("gametable_"+input_id).childNodes){
           for (var objtd in objtr.childNodes){
               console.log(objtd.id);
-                if (input_property=="width")
+                if (input_property=="cellwidth")
                   objtd.style.width = input_value + "px";
-                else if (input_property=="height")
+                else if (input_property=="cellheight")
                   objtd.style.height = input_value + "px";        
                 else if (input_property=="borderstyle")
                   objtd.style.borderstyle = input_value;
