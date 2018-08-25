@@ -38,8 +38,8 @@ Blockly.JavaScript['table_td_img_get'] = function (block) {
   var variable_fuGameElements_ = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('fuGameElements_'), Blockly.Variables.NAME_TYPE);
   var value_imgid_ = Blockly.JavaScript.valueToCode(block, 'imgid_', Blockly.JavaScript.ORDER_ATOMIC);
   var value_position_ = block.getFieldValue('position_');
-  var code = 'table_td_img_get("' + variable_fuGameElements_ + '",'+ value_imgid_ + ',"' + value_position_ + '");\n';
-  return code;
+  var code = 'table_td_img_get("' + variable_fuGameElements_ + '",'+ value_imgid_ + ',"' + value_position_ + '");';
+  return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
 Blockly.JavaScript['table_td_insert_text'] = function (block) {
@@ -58,17 +58,6 @@ Blockly.JavaScript['table_td_clear'] = function (block) {
   var code = 'table_td_clear("' + variable_fuGameElements_ + '",'+ value_x_ + ',' + value_y_ + ');\n';
   return code;
 };
-
-
-
-
-
-
-
-
-
-
-
 
 Blockly.JavaScript['music_create'] = function (block) {
   var value_url = Blockly.JavaScript.valueToCode(block, 'url_', Blockly.JavaScript.ORDER_ATOMIC);
