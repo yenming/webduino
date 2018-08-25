@@ -314,7 +314,8 @@
   function image_delete(input_id) {
     if (document.getElementById("gameimg_"+input_id))
     {
-      document.body.removeChild(document.getElementById("gameimg_"+input_id));
+      //document.body.removeChild(document.getElementById("gameimg_"+input_id));
+      document.getElementById("gameimg_"+input_id).parentNode.removeChild(document.getElementById("gameimg_"+input_id));
     }  
   }   
   
