@@ -58,9 +58,6 @@
   </block>
   <block type="table_delete">
   </block>
-  
-  
-  
   <block type="canvas_create">  
     <value name="width_">
       <block type="math_number">
