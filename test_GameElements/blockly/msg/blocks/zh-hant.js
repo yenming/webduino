@@ -69,4 +69,4 @@ Blockly.Msg.MOUSE_COORDINATE_GET_SHOW = "取得 滑鼠座標";
 Blockly.Msg.DOCUMENT_TIMER_SHOW = "計時器 間隔時間(ms)";
 Blockly.Msg.DOCUMENT_TIMER_ONCE_SHOW = "計時器 間隔時間(ms)後執行一次";
 Blockly.Msg.DOCUMENT_TIMER_STOP_SHOW = "計時器 停止";
-Blockly.Msg.PROPERTY_SHOW = "性質";
+Blockly.Msg.PROPERTY_SHOW = "屬性";
