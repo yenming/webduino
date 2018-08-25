@@ -26,12 +26,9 @@
         var tbl = document.createElement('table');
         tbl.id = "gametable_"+input_id;
         tbl.style.position = "absolute";
-        //tbl.style.width = input_width + 'px';
-        //tbl.style.height = input_height + 'px';
         tbl.style.left = input_left + 'px';
         tbl.style.top = input_top + 'px';
         tbl.style.zIndex = input_zindex;
-        //tbl.style.background = input_bgcolor;
         tbl.style.border = input_borderwidth +'px ' + input_borderstyle + ' ' + input_bordercolor;
         tbl.style.borderTop = input_borderwidth +'px ' + input_borderstyle + ' ' + input_bordercolor;
         tbl.style.borderLeft = input_borderwidth +'px ' + input_borderstyle + ' ' + input_bordercolor;
@@ -48,7 +45,7 @@
             td = tr.insertCell(j);
             td.style.align="center";
             td.style.verticalAlign = "center";
-            td.style.background = "#123456";
+            td.style.background = input_bgcolor;
             td.style.width = (input_width/input_tdcount) + 'px';
             td.style.height = (input_height/input_trcount) + 'px';
           }
