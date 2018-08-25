@@ -106,7 +106,7 @@ Blockly.Blocks['table_td_insert_img'] = {
 Blockly.Blocks['table_td_insert_text'] = {
   init: function () {
   this.appendDummyInput()
-      .appendField(Blockly.Msg.TABLE_TD_INSERT_IMG_SHOW)
+      .appendField(Blockly.Msg.TABLE_TD_INSERT_TEXT_SHOW)
       .appendField(new Blockly.FieldVariable('fuGameTable'), 'fuGameElements_'); 
   this.appendValueInput("x_")
       .setCheck("Number")
