@@ -102,7 +102,7 @@ Blockly.Blocks['table_td_img_get'] = {
       .appendField(Blockly.Msg.ID_SHOW); 
   this.appendDummyInput()  
       .appendField(Blockly.Msg.TABLE_TD_IMAGE_POSITION_SHOW)
-      .appendField(new Blockly.FieldDropdown([["x","x"], ["y","y"], ["tableID","tableID"]]), "position_");  
+      .appendField(new Blockly.FieldDropdown([["x","x"], ["y","y"], ["tableID","tableID"]]), "property_");  
   this.setInputsInline(true);
   this.setOutput(true, null); 
   this.setColour(200);
