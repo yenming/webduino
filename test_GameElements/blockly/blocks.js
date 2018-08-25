@@ -57,17 +57,6 @@ Blockly.Blocks['table_create'] = {
   }
 };
 
-Blockly.Blocks['table_delete'] = {
-  init: function () {
-  this.appendDummyInput()
-      .appendField(Blockly.Msg.TABLE_DELETE_SHOW)
-      .appendField(new Blockly.FieldVariable('fuGameTable'), 'fuGameElements_');   
-  this.setPreviousStatement(true);
-  this.setNextStatement(true);
-  this.setColour(60);
-  }
-};
-
 Blockly.Blocks['table_td_insert_img'] = {
   init: function () {
   this.appendDummyInput()
@@ -158,6 +147,17 @@ Blockly.Blocks['table_td_clear'] = {
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.TABLE_TD_Y_SHOW); 
   this.setInputsInline(true);
+  this.setPreviousStatement(true);
+  this.setNextStatement(true);
+  this.setColour(60);
+  }
+};
+
+Blockly.Blocks['table_delete'] = {
+  init: function () {
+  this.appendDummyInput()
+      .appendField(Blockly.Msg.TABLE_DELETE_SHOW)
+      .appendField(new Blockly.FieldVariable('fuGameTable'), 'fuGameElements_');   
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setColour(60);
