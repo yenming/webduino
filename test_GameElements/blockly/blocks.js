@@ -83,7 +83,7 @@ Blockly.Blocks['table_td_insert_img'] = {
   this.appendValueInput("imgid_")
       .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.TABLE_TD_IMG_ID_SHOW); 
+      .appendField(Blockly.Msg.ID_SHOW); 
   this.appendValueInput("url_")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
