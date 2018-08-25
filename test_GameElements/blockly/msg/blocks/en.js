@@ -1,3 +1,10 @@
+Blockly.Msg.TABLE_CREATE_SHOW = "Table Create";
+Blockly.Msg.TABLE_TRCOUNT_SHOW = "Rows";
+Blockly.Msg.TABLE_TDCOUNT_SHOW = "Columns";
+Blockly.Msg.TABLE_BORDERSTYLE_SHOW = "Border Style";
+Blockly.Msg.TABLE_BORDERWIDTH_SHOW = "Border Width";
+Blockly.Msg.TABLE_BORDERCOLOR_SHOW = "Border Color";
+Blockly.Msg.TABLE_BGCOLOR_SHOW = "Background Color";
 Blockly.Msg.MUSIC_CREATE_SHOW ="Background Music Play";
 Blockly.Msg.MUSIC_LENGTH_SHOW ="Length(ms)";
 Blockly.Msg.MUSIC_LOOP_SHOW ="Loop";
