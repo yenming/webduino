@@ -94,8 +94,7 @@
         <field name="TEXT"></field>
       </block>
     </value>  
-  </block>
-  </block>    
+  </block>  
   <block type="table_td_clear">  
     <value name="x_">
       <block type="math_number">
