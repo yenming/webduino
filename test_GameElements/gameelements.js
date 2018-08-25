@@ -48,11 +48,11 @@
       else if (input_property=="top")
         document.getElementById("gametable_"+input_id).style.top = input_value + "px";
       else if (input_property=="borderstyle")
-        document.getElementById("gametable_"+input_id).style.borderstyle = input_value;
+        document.getElementById("gametable_"+input_id).style.borderStyle = input_value;
       else if (input_property=="borderwidth")
-        document.getElementById("gametable_"+input_id).style.borderwidth = input_value + "px";
+        document.getElementById("gametable_"+input_id).style.borderWidth = input_value + "px";
       else if (input_property=="bordercolor")
-        document.getElementById("gametable_"+input_id).style.bordercolor = input_value;      
+        document.getElementById("gametable_"+input_id).style.borderColor = input_value;      
       else if (input_property=="zindex")
         document.getElementById("gametable_"+input_id).style.zIndex = input_value;
       else if (input_property=="display"){ 
