@@ -30,8 +30,8 @@
         for (var j=0;j<input_tdcount;j++){
           td = tr.insertCell(j);
           td.id = "gametable_td_"+input_id+"_"+i+'_'+j;
-          td.style.align="center";
-          td.style.verticalAlign = "center";
+          td.style.textAlign="center";
+          td.style.verticalAlign = "middle";
           td.style.background = input_bgcolor;
           td.style.width = (input_width/input_tdcount) + 'px';
           td.style.height = (input_height/input_trcount) + 'px';          
