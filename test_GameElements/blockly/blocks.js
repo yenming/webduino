@@ -75,11 +75,11 @@ Blockly.Blocks['table_td_insert_img'] = {
   this.appendValueInput("x_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.X_SHOW);
+      .appendField(Blockly.Msg.TABLE_TD_X_SHOW);
   this.appendValueInput("y_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.Y_SHOW);   
+      .appendField(Blockly.Msg.TABLE_TD_Y_SHOW);   
   this.appendValueInput("imgid_")
       .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
@@ -110,11 +110,11 @@ Blockly.Blocks['table_td_insert_text'] = {
   this.appendValueInput("x_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.X_SHOW);
+      .appendField(Blockly.Msg.TABLE_TD_X_SHOW);
   this.appendValueInput("y_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.Y_SHOW); 
+      .appendField(Blockly.Msg.TABLE_TD_Y_SHOW); 
   this.appendValueInput("text_")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
@@ -133,11 +133,11 @@ Blockly.Blocks['table_td_clear'] = {
   this.appendValueInput("x_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.X_SHOW);
+      .appendField(Blockly.Msg.TABLE_TD_X_SHOW);
   this.appendValueInput("y_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.Y_SHOW);      
+      .appendField(Blockly.Msg.TABLE_TD_Y_SHOW);      
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setColour(60);
