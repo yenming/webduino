@@ -29,7 +29,7 @@ Blockly.Blocks['table_create'] = {
       .appendField(Blockly.Msg.TABLE_TDCOUNT_SHOW);    
   this.appendDummyInput()  
       .appendField(Blockly.Msg.TABLE_BORDERSTYLE_SHOW)
-      .appendField(new Blockly.FieldDropdown([["none","none"], ["hidden","hidden"], ["solid","solid"], ["dashed","dashed"], ["double","double"], ["dotted","dotted"], ["groove","groove"], ["ridge","ridge"], ["inset","inset"], ["outset","outset"], ["inherit","inherit"]]), "borderstyle_");  
+      .appendField(new Blockly.FieldDropdown([["solid","solid"], ["dashed","dashed"], ["double","double"], ["dotted","dotted"], ["groove","groove"], ["ridge","ridge"], ["inset","inset"], ["outset","outset"], ["inherit","inherit"], ["none","none"], ["hidden","hidden"]]), "borderstyle_");  
   this.appendValueInput("borderwidth_")
       .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
