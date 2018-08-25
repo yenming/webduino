@@ -48,7 +48,7 @@
   
   function table_td_img_get(input_img_id,input_property){
     if (document.getElementById("gameimg_"+input_img_id))
-      return "OK";
+      return document.getElementById("gameimg_"+input_img_id).parentNode.id;
     else
       return "";
   }
