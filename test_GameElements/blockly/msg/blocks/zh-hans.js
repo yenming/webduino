@@ -5,6 +5,7 @@ Blockly.Msg.TABLE_BORDERSTYLE_SHOW = "边框样式";
 Blockly.Msg.TABLE_BORDERWIDTH_SHOW = "边框宽度";
 Blockly.Msg.TABLE_BORDERCOLOR_SHOW = "边框颜色";
 Blockly.Msg.TABLE_BGCOLOR_SHOW = "背景颜色";
+Blockly.Msg.TABLE_DELETE_SHOW = "表格 删除";
 Blockly.Msg.MUSIC_CREATE_SHOW ="背景音乐 播放";
 Blockly.Msg.MUSIC_LENGTH_SHOW ="长度(ms)";
 Blockly.Msg.MUSIC_LOOP_SHOW ="循环";
