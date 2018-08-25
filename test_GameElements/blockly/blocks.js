@@ -72,11 +72,6 @@ Blockly.Blocks['table_td_insert_img'] = {
   this.appendDummyInput()
       .appendField(Blockly.Msg.TABLE_TD_INSERT_IMG_SHOW)
       .appendField(new Blockly.FieldVariable('fuGameTable'), 'fuGameElements_');   
-  this.appendValueInput("url_")
-      .setCheck("String")
-      .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.MUSIC_CREATE_SHOW)
-      .appendField(Blockly.Msg.URL_SHOW); 
   this.appendValueInput("x_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
@@ -84,7 +79,17 @@ Blockly.Blocks['table_td_insert_img'] = {
   this.appendValueInput("y_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.Y_SHOW);      
+      .appendField(Blockly.Msg.Y_SHOW);   
+  this.appendValueInput("imgid_")
+      .setCheck("String")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.TABLE_TD_IMG_ID_SHOW)
+      .appendField(Blockly.Msg.URL_SHOW); 
+  this.appendValueInput("url_")
+      .setCheck("String")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.MUSIC_CREATE_SHOW)
+      .appendField(Blockly.Msg.URL_SHOW);     
   this.appendValueInput("width_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
@@ -115,8 +120,7 @@ Blockly.Blocks['table_td_insert_text'] = {
   this.appendValueInput("text_")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.TEXT_SHOW)
-      .appendField(Blockly.Msg.URL_SHOW);    
+      .appendField(Blockly.Msg.TEXT_SHOW);    
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setColour(60);
