@@ -19,10 +19,17 @@ Blockly.Blocks['table_create'] = {
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.TOP_SHOW); 
-  this.appendValueInput("borderstyle_")
-      .setCheck(null)
+  this.appendValueInput("trcount_")
+      .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.TABLE_BORDERSTYLE_SHOW);     
+      .appendField(Blockly.Msg.TABLE_TRCOUNT_SHOW);    
+  this.appendValueInput("tdcount_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.TABLE_TDCOUNT_SHOW);    
+this.appendDummyInput()  
+      .appendField(Blockly.Msg.CANVAS_TEXTALIGN_SHOW)
+      .appendField(new Blockly.FieldDropdown([["right","right"]]), "border_");   
   this.appendValueInput("borderwidth_")
       .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
