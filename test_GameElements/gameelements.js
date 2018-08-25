@@ -59,22 +59,23 @@
       {
         console.log(document.getElementById("gametable_"+input_id).hasChildNodes());
         if (document.getElementById("gametable_"+input_id).hasChildNodes()){
-          for (var objtr in document.getElementById("gametable_"+input_id).childNodes){
-            console.log(objtr.id);
-            for (var objtd in objtr.childNodes){
-              console.log(objtd.id);
-              if (input_property=="cellwidth")
-              objtd.style.width = input_value + "px";
-              else if (input_property=="cellheight")
-              objtd.style.height = input_value + "px";        
-              else if (input_property=="borderstyle")
-              objtd.style.borderstyle = input_value;
-              else if (input_property=="borderwidth")
-              objtd.style.borderwidth = input_value + "px";
-              else if (input_property=="bordercolor")
-              objtd.style.bordercolor = input_value;
-              else if (input_property=="bgcolor")
-              objtd.style.bgcolor = input_value;
+          var obj = document.getElementById("gametable_"+input_id).childNodes;
+          for (var i=0;i<obj.length;i++){
+            if (obj[i].hasChildNodes()){
+              for (var j=0;j<obj[i].length;j++){
+                if (input_property=="cellwidth")
+                  obj[i][j].style.width = input_value + "px";
+                else if (input_property=="cellheight")
+                  obj[i][j].style.height = input_value + "px";        
+                else if (input_property=="borderstyle")
+                  obj[i][j].style.borderstyle = input_value;
+                else if (input_property=="borderwidth")
+                  obj[i][j].style.borderwidth = input_value + "px";
+                else if (input_property=="bordercolor")
+                  obj[i][j].style.bordercolor = input_value;
+                else if (input_property=="bgcolor")
+                  obj[i][j].style.bgcolor = input_value;
+              }
             }
           }
         }
