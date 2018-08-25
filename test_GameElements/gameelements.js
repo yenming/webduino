@@ -57,8 +57,10 @@
       }
       else
       {
+        console.log(document.getElementById("gametable_"+input_id).hasChildNodes());
         if (document.getElementById("gametable_"+input_id).hasChildNodes()){
           for (var objtr in document.getElementById("gametable_"+input_id).childNodes){
+            console.log(objtr.id);
             for (var objtd in objtr.childNodes){
               console.log(objtd.id);
               if (input_property=="cellwidth")
