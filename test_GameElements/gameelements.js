@@ -9,6 +9,53 @@
   var onclicktimerid;
   var mouse_x,mouse_y;
   
+  function table_create(input_id,input_width,input_height,input_left,input_top,input_trcount,input_tdcount,input_borderstyle,input_borderwidth,input_bordercolor,input_bgcolor,input_zindex,input_display) {
+    if (document.getElementById("gametable_"+input_id))
+    {
+      document.getElementById("gametable_"+input_id).style.width = input_width + 'px';
+      document.getElementById("gametable_"+input_id).style.height = input_height + 'px';
+      document.getElementById("gametable_"+input_id).style.left = input_left + 'px';
+      document.getElementById("gametable_"+input_id).style.top = input_top + 'px';
+      document.getElementById("gametable_"+input_id).style.zIndex = input_zindex;
+      if (input_display==0)
+        document.getElementById("gametable_"+input_id).style.display = "none";
+      else
+        document.getElementById("gametable_"+input_id).style.display = "block";
+    }
+    else
+    {
+      var tbl = document.createElement('table');
+      tbl.style.position = "absolute";
+      tbl.id = "gametable_"+input_id;
+      tbl.style.width = input_width + 'px';
+      tbl.style.height = input_height + 'px';
+      tbl.style.left = input_left + 'px';
+      tbl.style.top = input_top + 'px';
+      tbl.style.zIndex = input_zindex;
+      if (input_display==0)
+        tbl.style.display = "none";
+      else
+        tbl.style.display = "block";
+      document.body.appendChild(tbl);
+    }
+  }
+  
+  function table_delete(input_id) {
+    if (document.getElementById("gametable_"+input_id)) {
+      document.body.removeChild(document.getElementById("gametable_"+input_id));
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   function music_create(input_url) {
     var substr = input_url.toLowerCase().split('.');
     var extname_av = ".aac,.au,.aif,.aiff,.aiffc,.alac,.ape,.asf,.avi,.cda,.dat,.divx,.flac,.m2ts,.m4a,.mid,.mov,.mp2,.mp3,.mp4,.mpc,.mpg,.mpeg,.mv2,.ogg,.pdf,.ra,.ram,.raw,.rcp,.rm,.rmvb,.snd,.tak,.tta,.vob,.voc,.wma,.wav,.webm,.wmf,.wmv,.wv,.xmi,";
@@ -397,5 +444,7 @@
   window.canvas_delete = canvas_delete;
   window.music_create = music_create;
   window.music_delete = music_delete;
+  window.table_create = table_create;
+  window.table_delete = table_delete;
   
 }(window, window.document));
