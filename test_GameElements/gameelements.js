@@ -10,45 +10,36 @@
   var mouse_x,mouse_y;
   
   function table_create(input_id,input_width,input_height,input_left,input_top,input_trcount,input_tdcount,input_borderstyle,input_borderwidth,input_bordercolor,input_bgcolor,input_zindex,input_display) {
-    if (document.getElementById("gametable_"+input_id))    {
-      document.getElementById("gametable_"+input_id).style.width = input_width + 'px';
-      document.getElementById("gametable_"+input_id).style.height = input_height + 'px';
-      document.getElementById("gametable_"+input_id).style.left = input_left + 'px';
-      document.getElementById("gametable_"+input_id).style.top = input_top + 'px';
-      document.getElementById("gametable_"+input_id).style.zIndex = input_zindex;
-      if (input_display==0)
-        document.getElementById("gametable_"+input_id).style.display = "none";
-      else
-        document.getElementById("gametable_"+input_id).style.display = "block";
+    if (document.getElementById("gametable_"+input_id)) {
+      document.body.removeChild(document.getElementById("gametable_"+input_id));
     }
-    else{
-      if ((input_trcount>=1)&&(input_tdcount>=1)){
-        var tbl = document.createElement('table');
-        tbl.id = "gametable_"+input_id;
-        tbl.style.position = "absolute";
-        tbl.style.left = input_left + 'px';
-        tbl.style.top = input_top + 'px';
-        tbl.style.zIndex = input_zindex;
-        tbl.style.border = input_borderwidth +'px ' + input_borderstyle + ' ' + input_bordercolor;
-        if (input_display==0)
-          tbl.style.display = "none";
-        else
-          tbl.style.display = "block";
-        var tr,td;
-        for (var i=0;i<input_trcount;i++){
-          tr = tbl.insertRow(i);
-          for (var j=0;j<input_tdcount;j++){
-            td = tr.insertCell(j);
-            td.id = "gametable_td_"+input_id+"_"+i+'_'+j;
-            td.style.align="center";
-            td.style.verticalAlign = "center";
-            td.style.background = input_bgcolor;
-            td.style.width = (input_width/input_tdcount) + 'px';
-            td.style.height = (input_height/input_trcount) + 'px';          
-          }
-         }
-        document.body.appendChild(tbl);
-      }
+    
+    if ((input_trcount>=1)&&(input_tdcount>=1)){
+      var tbl = document.createElement('table');
+      tbl.id = "gametable_"+input_id;
+      tbl.style.position = "absolute";
+      tbl.style.left = input_left + 'px';
+      tbl.style.top = input_top + 'px';
+      tbl.style.zIndex = input_zindex;
+      tbl.style.border = input_borderwidth +'px ' + input_borderstyle + ' ' + input_bordercolor;
+      if (input_display==0)
+        tbl.style.display = "none";
+      else
+        tbl.style.display = "block";
+      var tr,td;
+      for (var i=0;i<input_trcount;i++){
+        tr = tbl.insertRow(i);
+        for (var j=0;j<input_tdcount;j++){
+          td = tr.insertCell(j);
+          td.id = "gametable_td_"+input_id+"_"+i+'_'+j;
+          td.style.align="center";
+          td.style.verticalAlign = "center";
+          td.style.background = input_bgcolor;
+          td.style.width = (input_width/input_tdcount) + 'px';
+          td.style.height = (input_height/input_trcount) + 'px';          
+        }
+       }
+      document.body.appendChild(tbl);
     }
   }
   
@@ -60,7 +51,7 @@
   
   function table_td_insert_img(input_id,input_x,input_y,input_img_id,input_url,input_width,input_height){
     if (document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x)) {
-      document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x).innerHTML = "<img id='gameimg_"+"+input_img_id+"' src='"+input_url+"' width='"+input_width+"' height='"+input_height+"' onclick='image_onclickid_set(this);'>";
+      document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x).innerHTML = "<img id='gameimg_"+input_img_id+"' src='"+input_url+"' width='"+input_width+"' height='"+input_height+"' onclick='image_onclickid_set(this);'>";
     } 
   }
   
