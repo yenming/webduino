@@ -40,7 +40,6 @@
           for (var j=0;j<input_tdcount;j++){
             td = tr.insertCell(j);
             td.id = "gametable_td_"+input_id+"_"+i+'_'+j;
-            console.log(td.id);
             td.style.align="center";
             td.style.verticalAlign = "center";
             td.style.background = input_bgcolor;
@@ -60,21 +59,18 @@
   }
   
   function table_td_insert_img(input_id,input_x,input_y,input_img_id,input_url,input_width,input_height){
-    console.log("gametable_td_"+input_id+"_"+input_y+"_"+input_x);
     if (document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x)) {
-      document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x).innerHTML = "<img id='"+input_img_id+"' src='"+input_url+"' width='"+input_width+"' height='"+input_height+"' onclick='image_onclickid_set(this);'>";
+      document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x).innerHTML = "<img id='gameimg_"+"+input_img_id+"' src='"+input_url+"' width='"+input_width+"' height='"+input_height+"' onclick='image_onclickid_set(this);'>";
     } 
   }
   
   function table_td_insert_text(input_id,input_x,input_y,input_text){
-    console.log("gametable_td_"+input_id+"_"+input_y+"_"+input_x);
     if (document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x)) {
       document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x).innerHTML = input_text;
     }
   }  
   
   function table_td_clear(input_id,input_x,input_y){
-    console.log("gametable_td_"+input_id+"_"+input_y+"_"+input_x);
     if (document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x)) {
       document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x).innerHTML = "";
     }    
