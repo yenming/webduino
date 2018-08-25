@@ -33,8 +33,8 @@
           td.style.textAlign="center";
           td.style.verticalAlign = "middle";
           td.style.background = input_bgcolor;
-          td.style.width = (input_width/input_tdcount) + 'px';
-          td.style.height = (input_height/input_trcount) + 'px';          
+          td.style.width = input_width + 'px';
+          td.style.height = input_height + 'px';          
         }
        }
       document.body.appendChild(tbl);
