@@ -32,6 +32,10 @@
         tbl.style.top = input_top + 'px';
         tbl.style.zIndex = input_zindex;
         tbl.style.border = input_borderwidth +'px ' + input_borderstyle + ' ' + input_bordercolor;
+        tbl.style.borderTop = input_bordercolor;
+        tbl.style.borderLeft = input_bordercolor;
+        tbl.style.borderBottom = input_bordercolor;
+        tbl.style.borderRight = input_bordercolor;
         tbl.style.background = input_bgcolor;
         if (input_display==0)
           tbl.style.display = "none";
