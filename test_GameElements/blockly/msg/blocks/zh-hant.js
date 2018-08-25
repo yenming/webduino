@@ -1,5 +1,7 @@
 Blockly.Msg.TABLE_CREATE_SHOW = "表格 新增";
 Blockly.Msg.TABLE_SET_SHOW = "表格 設定";
+Blockly.Msg.TABLE_TD_WIDTH_SHOW = "儲存格寬度";
+Blockly.Msg.TABLE_TD_HEIGHT_SHOW = "儲存格高度";
 Blockly.Msg.TABLE_TRCOUNT_SHOW = "列數";
 Blockly.Msg.TABLE_TDCOUNT_SHOW = "行數";
 Blockly.Msg.TABLE_BORDERSTYLE_SHOW = "邊框樣式";
