@@ -16,12 +16,6 @@ Blockly.JavaScript['table_create'] = function (block) {
   return code;
 };
 
-Blockly.JavaScript['table_delete'] = function (block) {
-  var variable_fuGameElements_ = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('fuGameElements_'), Blockly.Variables.NAME_TYPE);
-  var code = 'table_delete("' + variable_fuGameElements_ + '");\n';
-  return code;
-};
-
 Blockly.JavaScript['table_td_insert_img'] = function (block) {
   var variable_fuGameElements_ = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('fuGameElements_'), Blockly.Variables.NAME_TYPE);
   var value_x_ = Blockly.JavaScript.valueToCode(block, 'x_', Blockly.JavaScript.ORDER_ATOMIC);
@@ -56,6 +50,12 @@ Blockly.JavaScript['table_td_clear'] = function (block) {
   var value_x_ = Blockly.JavaScript.valueToCode(block, 'x_', Blockly.JavaScript.ORDER_ATOMIC);
   var value_y_ = Blockly.JavaScript.valueToCode(block, 'y_', Blockly.JavaScript.ORDER_ATOMIC);
   var code = 'table_td_clear("' + variable_fuGameElements_ + '",'+ value_x_ + ',' + value_y_ + ');\n';
+  return code;
+};
+
+Blockly.JavaScript['table_delete'] = function (block) {
+  var variable_fuGameElements_ = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('fuGameElements_'), Blockly.Variables.NAME_TYPE);
+  var code = 'table_delete("' + variable_fuGameElements_ + '");\n';
   return code;
 };
 
