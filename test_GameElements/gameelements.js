@@ -41,6 +41,35 @@
     }
   }
 
+  function table_set(input_id,input_property,input_value){
+    if (document.getElementById("gametable_"+input_id)) {
+      if (input_property=="width")
+        document.getElementById("gametable_"+input_id).style.width = input_value + "px";
+      else if (input_property=="height")
+        document.getElementById("gametable_"+input_id).style.height = input_value + "px";
+      else if (input_property=="left")
+        document.getElementById("gametable_"+input_id).style.left = input_value + "px";
+      else if (input_property=="top")
+        document.getElementById("gametable_"+input_id).style.top = input_value + "px";
+      else if (input_property=="borderstyle")
+        document.getElementById("gametable_"+input_id).style.borderstyle = input_value;
+      else if (input_property=="borderwidth")
+        document.getElementById("gametable_"+input_id).style.borderwidth = input_value + "px";
+      else if (input_property=="bordercolor")
+        document.getElementById("gametable_"+input_id).style.bordercolor = input_value;
+      else if (input_property=="bgcolor")
+        document.getElementById("gametable_"+input_id).style.bgcolor = input_value;
+      else if (input_property=="zIndex")
+        document.getElementById("gametable_"+input_id).style.zIndex = input_value;
+      else if (input_property=="display")
+      { if (input_value==1)
+          document.getElementById("gametable_"+input_id).style.display = "block";    
+        else if (input_value==0)
+          document.getElementById("gametable_"+input_id).style.display = "none";
+      }
+    }
+  }
+
   function table_td_insert_img(input_id,input_x,input_y,input_img_id,input_url,input_width,input_height){
     if (document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x))
       document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x).innerHTML = "<img id='gameimg_"+input_img_id+"' src='"+input_url+"' width='"+input_width+"' height='"+input_height+"' onclick='image_onclickid_set(this);'>";
@@ -449,6 +478,7 @@
   window.music_create = music_create;
   window.music_delete = music_delete;
   window.table_create = table_create;
+  window.table_set = table_set;
   window.table_delete = table_delete;
   window.table_td_insert_img = table_td_insert_img;
   window.table_td_img_get = table_td_img_get;
