@@ -1,11 +1,11 @@
 Blockly.Blocks['table_create'] = {
   init: function() {
   this.appendDummyInput()
-      .appendField(Blockly.Msg.TABLE_CREATE_SHOW)
       .appendField(new Blockly.FieldVariable('fuGameTable'), 'fuGameElements_');    
   this.appendValueInput("width_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.TABLE_CREATE_SHOW)
       .appendField(Blockly.Msg.WIDTH_SHOW);
   this.appendValueInput("height_")
       .setCheck("Number")
@@ -71,11 +71,11 @@ Blockly.Blocks['table_delete'] = {
 Blockly.Blocks['table_td_insert_img'] = {
   init: function () {
   this.appendDummyInput()
-      .appendField(Blockly.Msg.TABLE_TD_INSERT_IMAGE_SHOW)
       .appendField(new Blockly.FieldVariable('fuGameTable'), 'fuGameElements_');   
   this.appendValueInput("x_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.TABLE_TD_INSERT_IMAGE_SHOW)
       .appendField(Blockly.Msg.TABLE_TD_X_SHOW);
   this.appendValueInput("y_")
       .setCheck("Number")
@@ -107,11 +107,11 @@ Blockly.Blocks['table_td_insert_img'] = {
 Blockly.Blocks['table_td_insert_text'] = {
   init: function () {
   this.appendDummyInput()
-      .appendField(Blockly.Msg.TABLE_TD_INSERT_TEXT_SHOW)
       .appendField(new Blockly.FieldVariable('fuGameTable'), 'fuGameElements_'); 
   this.appendValueInput("x_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.TABLE_TD_INSERT_TEXT_SHOW)
       .appendField(Blockly.Msg.TABLE_TD_X_SHOW);
   this.appendValueInput("y_")
       .setCheck("Number")
@@ -131,11 +131,11 @@ Blockly.Blocks['table_td_insert_text'] = {
 Blockly.Blocks['table_td_img_get'] = {
   init: function () {
   this.appendDummyInput()
-      .appendField(Blockly.Msg.TABLE_TD_IMAGE_GET_SHOW)
       .appendField(new Blockly.FieldVariable('fuGameTable'), 'fuGameElements_'); 
   this.appendValueInput("imgid_")
       .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.TABLE_TD_IMAGE_GET_SHOW)
       .appendField(Blockly.Msg.ID_SHOW); 
   this.appendDummyInput()  
       .appendField(Blockly.Msg.TABLE_TD_IMAGE_POSITION_SHOW)
@@ -150,11 +150,11 @@ Blockly.Blocks['table_td_img_get'] = {
 Blockly.Blocks['table_td_clear'] = {
   init: function () {
   this.appendDummyInput()
-      .appendField(Blockly.Msg.TABLE_TD_CLEAR_SHOW)
       .appendField(new Blockly.FieldVariable('fuGameTable'), 'fuGameElements_');  
   this.appendValueInput("x_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.TABLE_TD_CLEAR_SHOW)
       .appendField(Blockly.Msg.TABLE_TD_X_SHOW);
   this.appendValueInput("y_")
       .setCheck("Number")
