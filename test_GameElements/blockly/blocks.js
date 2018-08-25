@@ -27,7 +27,7 @@ Blockly.Blocks['table_create'] = {
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.TABLE_TDCOUNT_SHOW);    
-this.appendDummyInput()  
+  this.appendDummyInput()  
       .appendField(Blockly.Msg.TABLE_BORDERSTYLE_SHOW)
       .appendField(new Blockly.FieldDropdown([["solid","solid"], ["dashed","dashed"], [" groove"," groove"]]), "borderstyle_");  
   this.appendValueInput("borderwidth_")
