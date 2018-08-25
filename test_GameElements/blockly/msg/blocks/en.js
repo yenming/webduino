@@ -11,6 +11,7 @@ Blockly.Msg.TABLE_TD_X_SHOW = "Column";
 Blockly.Msg.TABLE_TD_Y_SHOW = "Row";
 Blockly.Msg.TABLE_TD_IMG_ID_SHOW = "ID";
 Blockly.Msg.TABLE_TD_TEXT_SHOW = "Text";
+Blockly.Msg.TABLE_TD_INSERT_TEXT_SHOW = "Table Cell Insert T";
 Blockly.Msg.TABLE_TD_CLEAR_SHOW = "Table Cell Clear";
 Blockly.Msg.MUSIC_CREATE_SHOW ="Background Music Play";
 Blockly.Msg.MUSIC_LENGTH_SHOW ="Length(ms)";
