@@ -56,8 +56,6 @@
       </block>
     </value>     
   </block>
-  <block type="table_delete">
-  </block>
   <block type="table_td_insert_img">  
     <value name="x_">
       <block type="math_number">
@@ -109,7 +107,9 @@
         <field name="NUM">0</field>
       </block>
     </value>    
-  </block>    
+  </block>
+  <block type="table_delete">
+  </block>
   <block type="canvas_create">  
     <value name="width_">
       <block type="math_number">
