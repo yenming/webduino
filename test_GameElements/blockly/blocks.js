@@ -81,15 +81,13 @@ Blockly.Blocks['table_td_insert_img'] = {
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.Y_SHOW);   
   this.appendValueInput("imgid_")
-      .setCheck("String")
+      .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.TABLE_TD_IMG_ID_SHOW)
-      .appendField(Blockly.Msg.URL_SHOW); 
+      .appendField(Blockly.Msg.TABLE_TD_IMG_ID_SHOW); 
   this.appendValueInput("url_")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.MUSIC_CREATE_SHOW)
-      .appendField(Blockly.Msg.URL_SHOW);     
+      .appendField(Blockly.Msg.MUSIC_CREATE_SHOW);     
   this.appendValueInput("width_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
