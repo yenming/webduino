@@ -29,11 +29,6 @@
         tbl.style.left = input_left + 'px';
         tbl.style.top = input_top + 'px';
         tbl.style.zIndex = input_zindex;
-        tbl.style.border = input_borderwidth +'px ' + input_borderstyle + ' ' + input_bordercolor;
-        tbl.style.borderTop = input_borderwidth +'px ' + input_borderstyle + ' ' + input_bordercolor;
-        tbl.style.borderLeft = input_borderwidth +'px ' + input_borderstyle + ' ' + input_bordercolor;
-        tbl.style.borderBottom = input_borderwidth +'px ' + input_borderstyle + ' ' + input_bordercolor;
-        tbl.style.borderRight = input_borderwidth +'px ' + input_borderstyle + ' ' + input_bordercolor;
         if (input_display==0)
           tbl.style.display = "none";
         else
@@ -48,6 +43,11 @@
             td.style.background = input_bgcolor;
             td.style.width = (input_width/input_tdcount) + 'px';
             td.style.height = (input_height/input_trcount) + 'px';
+            td.style.border = input_borderwidth +'px ' + input_borderstyle + ' ' + input_bordercolor;
+            td.style.borderTop = input_borderwidth +'px ' + input_borderstyle + ' ' + input_bordercolor;
+            td.style.borderLeft = input_borderwidth +'px ' + input_borderstyle + ' ' + input_bordercolor;
+            td.style.borderBottom = input_borderwidth +'px ' + input_borderstyle + ' ' + input_bordercolor;
+            td.style.borderRight = input_borderwidth +'px ' + input_borderstyle + ' ' + input_bordercolor;            
           }
          }
         document.body.appendChild(tbl);
