@@ -10,9 +10,8 @@
   var mouse_x,mouse_y;
   
   function table_create(input_id,input_width,input_height,input_left,input_top,input_trcount,input_tdcount,input_borderstyle,input_borderwidth,input_bordercolor,input_bgcolor,input_zindex,input_display) {
-    if (document.getElementById("gametable_"+input_id)) {
-      document.body.removeChild(document.getElementById("gametable_"+input_id));
-    }
+    if (document.getElementById("gametable_"+input_id)) 
+      document.getElementById("gametable_"+input_id).parentNode.removeChild(document.getElementById("gametable_"+input_id));
     if ((input_trcount>=1)&&(input_tdcount>=1)){
       var tbl = document.createElement('table');
       tbl.id = "gametable_"+input_id;
@@ -43,9 +42,8 @@
   }
   
   function table_delete(input_id) {
-    if (document.getElementById("gametable_"+input_id)) {
-      document.body.removeChild(document.getElementById("gametable_"+input_id));
-    }
+    if (document.getElementById("gametable_"+input_id))
+      document.getElementById("gametable_"+input_id).parentNode.removeChild(document.getElementById("gametable_"+input_id));
   }
   
   function table_td_insert_img(input_id,input_x,input_y,input_img_id,input_url,input_width,input_height){
@@ -81,31 +79,26 @@
         var src = '<iframe src="' + input_url + '" style="width:0px;height:0px" frameborder="0" allow="geolocation; microphone; camera"></iframe>';
     
     if (document.getElementById("gamemusic_"))
-          document.getElementById("gamemusic_").innerHTML = src;
-    else
-    {
-        var div = document.createElement('div');
-        div.id = "gamemusic_";
-        div.style.position = 'absolute';      
-        div.style.left = '0px';
-        div.style.top = '0px';
-        div.style.zIndex = -1;   
-        div.style.display = 'none';
-        div.innerHTML = src;
-        document.body.appendChild(div);
-    }
+        document.getElementById("gamemusic_").parentNode.removeChild(document.getElementById("gamemusic_"));
+    var div = document.createElement('div');
+    div.id = "gamemusic_";
+    div.style.position = 'absolute';      
+    div.style.left = '0px';
+    div.style.top = '0px';
+    div.style.zIndex = -1;   
+    div.style.display = 'none';
+    div.innerHTML = src;
+    document.body.appendChild(div);
   }
   
   function music_delete() {
-    if (document.getElementById("gamemusic_")) {
-      document.body.removeChild(document.getElementById("gamemusic_"));
-    }
+    if (document.getElementById("gamemusic_")) 
+      document.getElementById("gamemusic_").parentNode.removeChild(document.getElementById("gamemusic_"));
   }  
   
   function canvas_create(input_id ,input_width,input_height,input_left,input_top,input_zindex) {
-    if (document.getElementById("gamecanvas_"+input_id)) {
-      document.body.removeChild(document.getElementById("gamecanvas_"+input_id));
-    }
+    if (document.getElementById("gamecanvas_"+input_id)) 
+      document.getElementById("gamecanvas_"+input_id).parentNode.removeChild(document.getElementById("gamecanvas_"+input_id));
     var can = document.createElement('canvas');
     can.style.position = "absolute";
     can.id = "gamecanvas_"+input_id;
@@ -207,9 +200,7 @@
   
   function image_create(input_id,input_url,input_width,input_height,input_left,input_top,input_zindex,input_display) {
     if (document.getElementById("gameimg_"+input_id))
-    {
-      document.body.removeChild(document.getElementById("gameimg_"+input_id));
-    } 
+      document.getElementById("gameimg_"+input_id).parentNode.removeChild(document.getElementById("gameimg_"+input_id));
     var img = document.createElement('img');
     img.style.position = "absolute";
     img.id = "gameimg_"+input_id;
