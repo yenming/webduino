@@ -31,7 +31,7 @@ Blockly.JavaScript['table_td_insert_img'] = function (block) {
 Blockly.JavaScript['table_td_img_get'] = function (block) {
   var value_imgid_ = Blockly.JavaScript.valueToCode(block, 'imgid_', Blockly.JavaScript.ORDER_ATOMIC);
   var value_position_ = block.getFieldValue('position_');
-  var code = 'table_td_img_get('+ value_imgid_ + ',"' + value_position_ + '");';
+  var code = 'table_td_img_get('+ value_imgid_ + ',"' + value_position_ + '")';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
