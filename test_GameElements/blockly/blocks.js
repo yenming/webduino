@@ -61,9 +61,9 @@ Blockly.Blocks['table_delete'] = {
   this.appendDummyInput()
       .appendField(Blockly.Msg.TABLE_DELETE_SHOW)
       .appendField(new Blockly.FieldVariable('fuGameElements'), 'fuGameElements_');   
-    this.setPreviousStatement(true);
-    this.setNextStatement(true);
-    this.setColour(60);
+  this.setPreviousStatement(true);
+  this.setNextStatement(true);
+  this.setColour(60);
   }
 };
 
