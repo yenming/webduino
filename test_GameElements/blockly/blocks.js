@@ -1,3 +1,39 @@
+Blockly.Blocks['table_create'] = {
+  init: function() {
+  this.appendValueInput("width_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.TABLE_CREATE_SHOW)
+      .appendField(Blockly.Msg.WIDTH_SHOW);
+  this.appendValueInput("height_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.HEIGHT_SHOW);
+  this.appendValueInput("left_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.LEFT_SHOW);    
+  this.appendValueInput("top_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.TOP_SHOW);   
+  this.setInputsInline(true);
+  this.setPreviousStatement(true);
+  this.setNextStatement(true);
+  this.setColour(60);
+  }
+};
+
+Blockly.Blocks['table_delete'] = {
+  init: function () {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.TABLE_DELETE_SHOW);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setColour(60);
+  }
+};
+
 Blockly.Blocks['music_create'] = {
   init: function() {
   this.appendValueInput("url_")
