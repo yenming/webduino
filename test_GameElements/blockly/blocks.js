@@ -16,7 +16,31 @@ Blockly.Blocks['table_create'] = {
   this.appendValueInput("top_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.TOP_SHOW);   
+      .appendField(Blockly.Msg.TOP_SHOW); 
+  this.appendValueInput("borderstyle_")
+      .setCheck(null)
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.TABLE_BORDERSTYLE_SHOW);     
+  this.appendValueInput("borderwidth_")
+      .setCheck(null)
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.TABLE_BORDERWIDTH_SHOW);       
+  this.appendValueInput("bordercolor_")
+      .setCheck(null)
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.TABLE_BORDERCOLOR_SHOW);   
+  this.appendValueInput("bgcolor_")
+      .setCheck(null)
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.TABLE_BGCOLOR_SHOW); 
+  this.appendValueInput("zindex_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.ZINDEX_SHOW);   
+  this.appendValueInput("display_")
+      .setCheck(null)
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.DISPLAY_SHOW);     
   this.setInputsInline(true);
   this.setPreviousStatement(true);
   this.setNextStatement(true);
