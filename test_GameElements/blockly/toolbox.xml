@@ -56,6 +56,13 @@
       </block>
     </value>     
   </block>
+  <block type="table_set">
+    <value name="value_">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>    
+  </block>  
   <block type="table_td_insert_img">  
     <value name="x_">
       <block type="math_number">
