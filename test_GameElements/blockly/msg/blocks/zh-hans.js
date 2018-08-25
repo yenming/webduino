@@ -11,6 +11,7 @@ Blockly.Msg.TABLE_TD_X_SHOW = "纵行";
 Blockly.Msg.TABLE_TD_Y_SHOW = "横列";
 Blockly.Msg.TABLE_TD_IMG_ID_SHOW = "ID";
 Blockly.Msg.TABLE_TD_TEXT_SHOW = "文字";
+Blockly.Msg.TABLE_TD_INSERT_TEXT_SHOW = "表格 插入文字";
 Blockly.Msg.TABLE_TD_CLEAR_SHOW = "表格 清除";
 Blockly.Msg.MUSIC_CREATE_SHOW ="背景音乐 播放";
 Blockly.Msg.MUSIC_LENGTH_SHOW ="长度(ms)";
