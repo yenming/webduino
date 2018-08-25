@@ -133,6 +133,27 @@ Blockly.Blocks['table_td_insert_text'] = {
   }
 };
 
+Blockly.Blocks['table_td_get'] = {
+  init: function () {
+  this.appendDummyInput()
+      .appendField(new Blockly.FieldVariable('fuGameTable'), 'fuGameElements_');     
+  this.appendValueInput("x_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.TABLE_TD_GET_SHOW)
+      .appendField(Blockly.Msg.TABLE_TD_X_SHOW);
+  this.appendValueInput("y_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.TABLE_TD_Y_SHOW); 
+  this.appendDummyInput()  
+      .appendField(new Blockly.FieldDropdown([["background","background"], ["innerHTML","innerHTML"]]), "property_");  
+  this.setInputsInline(true);
+  this.setOutput(true, null); 
+  this.setColour(200);
+  }
+};
+
 Blockly.Blocks['table_td_clear'] = {
   init: function () {
   this.appendDummyInput()
