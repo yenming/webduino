@@ -2,7 +2,7 @@ Blockly.Blocks['table_create'] = {
   init: function() {
   this.appendDummyInput()
       .appendField(Blockly.Msg.TABLE_CREATE_SHOW)
-      .appendField(new Blockly.FieldVariable('fuGameElements'), 'fuGameElements_');    
+      .appendField(new Blockly.FieldVariable('fuGameTable'), 'fuGameElements_');    
   this.appendValueInput("width_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
@@ -60,12 +60,94 @@ Blockly.Blocks['table_delete'] = {
   init: function () {
   this.appendDummyInput()
       .appendField(Blockly.Msg.TABLE_DELETE_SHOW)
-      .appendField(new Blockly.FieldVariable('fuGameElements'), 'fuGameElements_');   
+      .appendField(new Blockly.FieldVariable('fuGameTable'), 'fuGameElements_');   
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setColour(60);
   }
 };
+
+Blockly.Blocks['table_td_insert_img'] = {
+  init: function () {
+  this.appendDummyInput()
+      .appendField(Blockly.Msg.TABLE_TD_INSERT_IMG_SHOW)
+      .appendField(new Blockly.FieldVariable('fuGameTable'), 'fuGameElements_');   
+  this.appendValueInput("url_")
+      .setCheck("String")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.MUSIC_CREATE_SHOW)
+      .appendField(Blockly.Msg.URL_SHOW); 
+  this.appendValueInput("x_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.X_SHOW);
+  this.appendValueInput("y_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.Y_SHOW);      
+  this.appendValueInput("width_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.WIDTH_SHOW);
+  this.appendValueInput("height_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.HEIGHT_SHOW);    
+  this.setPreviousStatement(true);
+  this.setNextStatement(true);
+  this.setColour(60);
+  }
+};
+
+Blockly.Blocks['table_td_insert_text'] = {
+  init: function () {
+  this.appendDummyInput()
+      .appendField(Blockly.Msg.TABLE_TD_INSERT_IMG_SHOW)
+      .appendField(new Blockly.FieldVariable('fuGameTable'), 'fuGameElements_'); 
+  this.appendValueInput("x_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.X_SHOW);
+  this.appendValueInput("y_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.Y_SHOW); 
+  this.appendValueInput("text_")
+      .setCheck("String")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.TEXT_SHOW)
+      .appendField(Blockly.Msg.URL_SHOW);    
+  this.setPreviousStatement(true);
+  this.setNextStatement(true);
+  this.setColour(60);
+  }
+};
+
+Blockly.Blocks['table_td_clear'] = {
+  init: function () {
+  this.appendDummyInput()
+      .appendField(Blockly.Msg.TABLE_TD_CLEAR_SHOW)
+      .appendField(new Blockly.FieldVariable('fuGameTable'), 'fuGameElements_');  
+  this.appendValueInput("x_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.X_SHOW);
+  this.appendValueInput("y_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.Y_SHOW);      
+  this.setPreviousStatement(true);
+  this.setNextStatement(true);
+  this.setColour(60);
+  }
+};
+
+
+
+
+
+
+
 
 Blockly.Blocks['music_create'] = {
   init: function() {
@@ -103,7 +185,7 @@ Blockly.Blocks['canvas_create'] = {
   init: function() {
   this.appendDummyInput()
       .appendField(Blockly.Msg.CANVAS_CREATE_SHOW)
-      .appendField(new Blockly.FieldVariable('fuGameElements'), 'fuGameElements_');
+      .appendField(new Blockly.FieldVariable('fuGameCanvas'), 'fuGameElements_');
   this.appendValueInput("width_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
@@ -134,7 +216,7 @@ Blockly.Blocks['canvas_line'] = {
   init: function() {
   this.appendDummyInput()
       .appendField(Blockly.Msg.CANVAS_LINE_SHOW)
-      .appendField(new Blockly.FieldVariable('fuGameElements'), 'fuGameElements_');
+      .appendField(new Blockly.FieldVariable('fuGameCanvas'), 'fuGameElements_');
   this.appendValueInput("linewidth_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
@@ -170,7 +252,7 @@ Blockly.Blocks['canvas_rect'] = {
   init: function() {
   this.appendDummyInput()
       .appendField(Blockly.Msg.CANVAS_RECT_SHOW)
-      .appendField(new Blockly.FieldVariable('fuGameElements'), 'fuGameElements_');
+      .appendField(new Blockly.FieldVariable('fuGameCanvas'), 'fuGameElements_');
   this.appendValueInput("linewidth_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
@@ -210,7 +292,7 @@ Blockly.Blocks['canvas_arc'] = {
   init: function() {
   this.appendDummyInput()
       .appendField(Blockly.Msg.CANVAS_ARC_SHOW)
-      .appendField(new Blockly.FieldVariable('fuGameElements'), 'fuGameElements_');
+      .appendField(new Blockly.FieldVariable('fuGameCanvas'), 'fuGameElements_');
   this.appendValueInput("linewidth_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
@@ -258,7 +340,7 @@ Blockly.Blocks['canvas_img'] = {
   init: function() {
   this.appendDummyInput()
       .appendField(Blockly.Msg.CANVAS_IMG_SHOW)
-      .appendField(new Blockly.FieldVariable('fuGameElements'), 'fuGameElements_');
+      .appendField(new Blockly.FieldVariable('fuGameCanvas'), 'fuGameElements_');
   this.appendValueInput("url_")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
@@ -306,7 +388,7 @@ Blockly.Blocks['canvas_text'] = {
   init: function() {
   this.appendDummyInput()
       .appendField(Blockly.Msg.CANVAS_TEXT_SHOW)
-      .appendField(new Blockly.FieldVariable('fuGameElements'), 'fuGameElements_');
+      .appendField(new Blockly.FieldVariable('fuGameCanvas'), 'fuGameElements_');
   this.appendValueInput("text_")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
@@ -349,7 +431,7 @@ Blockly.Blocks['canvas_clear'] = {
   init: function () {
     this.appendDummyInput()
       .appendField(Blockly.Msg.CANVAS_CLEAR_SHOW)
-      .appendField(new Blockly.FieldVariable('fuGameElements'), 'fuGameElements_');
+      .appendField(new Blockly.FieldVariable('fuGameCanvas'), 'fuGameElements_');
     this.setInputsInline(true);
     this.setPreviousStatement(true);
     this.setNextStatement(true);
@@ -361,7 +443,7 @@ Blockly.Blocks['canvas_delete'] = {
   init: function () {
     this.appendDummyInput()
       .appendField(Blockly.Msg.CANVAS_DELETE_SHOW)
-      .appendField(new Blockly.FieldVariable('fuGameElements'), 'fuGameElements_');
+      .appendField(new Blockly.FieldVariable('fuGameCanvas'), 'fuGameElements_');
     this.setInputsInline(true);
     this.setPreviousStatement(true);
     this.setNextStatement(true);
