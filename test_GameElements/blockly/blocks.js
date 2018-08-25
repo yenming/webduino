@@ -101,7 +101,7 @@ Blockly.Blocks['table_td_img_get'] = {
       .appendField(Blockly.Msg.TABLE_TD_IMAGE_GET_SHOW)
       .appendField(Blockly.Msg.ID_SHOW); 
   this.appendDummyInput()  
-      .appendField(Blockly.Msg.TABLE_TD_IMAGE_POSITION_SHOW)
+      .appendField(Blockly.Msg.PROPERTY_SHOW)
       .appendField(new Blockly.FieldDropdown([["x","x"], ["y","y"], ["tableID","tableID"]]), "property_");  
   this.setInputsInline(true);
   this.setOutput(true, null); 
@@ -147,6 +147,7 @@ Blockly.Blocks['table_td_get'] = {
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.TABLE_TD_Y_SHOW); 
   this.appendDummyInput()  
+      .appendField(Blockly.Msg.PROPERTY_SHOW)
       .appendField(new Blockly.FieldDropdown([["background","background"], ["innerHTML","innerHTML"]]), "property_");  
   this.setInputsInline(true);
   this.setOutput(true, null); 
