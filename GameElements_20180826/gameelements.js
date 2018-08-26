@@ -159,8 +159,12 @@
   }
   
   function table_td_insert_text(input_id,input_x,input_y,input_text,input_fontname,input_fontsize,input_color){
-    if (document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x))
-      document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x).innerHTML = "<font face='" + input_fontname + "' size='" + input_fontsize + "' color='" + input_color + "'>" + input_text + "</font>";
+    if (document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x)){
+      if (input_text.indexOf("code:")==0)
+        document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x).innerHTML = input_text.substr(5, input_text.length-5);
+      else
+        document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x).innerHTML = "<font face='" + input_fontname + "' size='" + input_fontsize + "' color='" + input_color + "'>" + input_text + "</font>";
+    }
   }  
   
   function table_td_get(input_id,input_x,input_y,input_property){
