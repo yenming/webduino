@@ -170,8 +170,12 @@
   function table_td_get(input_id,input_x,input_y,input_property){
     if (document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x))
     {
-      if (input_property=="background")
-        return document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x).style.background;
+      if (input_property=="background"){
+       var rgb = document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x).style.background;
+       var hexcolor = rgb.replace(/rgb(/ig,"").replace(/)/ig,"").split(",");
+        
+       return hexcolor;
+      }
       else if (input_property=="innerHTML")
         return document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x).innerHTML;
       else if (input_property=="image"){
