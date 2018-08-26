@@ -93,7 +93,11 @@
       else if (input_property=="borderwidth")
         return document.getElementById("gametable_"+input_id).style.borderWidth;
       else if (input_property=="bordercolor")
-        return document.getElementById("gametable_"+input_id).style.borderColor;      
+        return document.getElementById("gametable_"+input_id).style.borderColor;    
+      else if (input_property=="rows")
+        return document.getElementById("gametable_"+input_id).rows.length;
+      else if (input_property=="columns")
+        return document.getElementById("gametable_"+input_id).rows[0].cells.length;         
       else if (input_property=="zindex")
         return document.getElementById("gametable_"+input_id).style.zIndex;
       else if (input_property=="display")
