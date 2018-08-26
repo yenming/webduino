@@ -47,8 +47,10 @@ Blockly.JavaScript['table_td_insert_text'] = function (block) {
   var variable_fuGameElements_ = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('fuGameElements_'), Blockly.Variables.NAME_TYPE);
   var value_x_ = Blockly.JavaScript.valueToCode(block, 'x_', Blockly.JavaScript.ORDER_ATOMIC);
   var value_y_ = Blockly.JavaScript.valueToCode(block, 'y_', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_text_ = Blockly.JavaScript.valueToCode(block, 'text_', Blockly.JavaScript.ORDER_ATOMIC); 
-  var code = 'table_td_insert_text("' + variable_fuGameElements_ + '",'+ value_x_ + ',' + value_y_ + ',' + value_text_+ ');\n';
+  var value_text_ = Blockly.JavaScript.valueToCode(block, 'text_', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_size_ = Blockly.JavaScript.valueToCode(block, 'size_', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_color_ = Blockly.JavaScript.valueToCode(block, 'color_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'table_td_insert_text("' + variable_fuGameElements_ + '",'+ value_x_ + ',' + value_y_ + ',' + value_text_+ ',' + value_size_ + ',' + value_color_+ ');\n';
   return code;
 };
 
