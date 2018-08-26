@@ -95,6 +95,27 @@
       </block>
     </value>   
   </block>
+  <block type="table_get">      
+  </block>  
+  <block type="table_clear">      
+  </block> 
+  <block type="table_td_set">  
+    <value name="x_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="y_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>  
+    <value name="value_">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>      
+  </block>
   <block type="table_td_insert_text">  
     <value name="x_">
       <block type="math_number">
