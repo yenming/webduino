@@ -85,13 +85,13 @@
   function table_get(input_id,input_property){
     if (document.getElementById("gametable_"+input_id)) {
       if (input_property=="left")
-        return document.getElementById("gametable_"+input_id).style.left;
+        return Number(document.getElementById("gametable_"+input_id).style.left.replace(/px/ig,""));
       else if (input_property=="top")
-        return document.getElementById("gametable_"+input_id).style.top;
+        return Number(document.getElementById("gametable_"+input_id).style.top.replace(/px/ig,""));
       else if (input_property=="borderstyle")
         return document.getElementById("gametable_"+input_id).style.borderStyle;
       else if (input_property=="borderwidth")
-        return document.getElementById("gametable_"+input_id).style.borderWidth;
+        return Number(document.getElementById("gametable_"+input_id).style.borderWidth.replace(/px/ig,""));
       else if (input_property=="bordercolor")
         return document.getElementById("gametable_"+input_id).style.borderColor;    
       else if (input_property=="rows")
