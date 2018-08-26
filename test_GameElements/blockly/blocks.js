@@ -74,6 +74,58 @@ Blockly.Blocks['table_set'] = {
   }
 };
 
+Blockly.Blocks['table_get'] = {
+  init: function () {
+  this.appendDummyInput()
+      .appendField(new Blockly.FieldVariable('fuGameTable'), 'fuGameElements_');  
+  this.appendDummyInput()  
+      .appendField(Blockly.Msg.TABLE_GET_SHOW)
+      .appendField(Blockly.Msg.PROPERTY_SHOW)
+      .appendField(new Blockly.FieldDropdown([["left","left"], ["top","top"], ["borderstyle","borderstyle"], ["borderwidth","borderwidth"], ["bordercolor","bordercolor"], ["zindex","zindex"], ["display","display"]]), "property_");
+  this.setInputsInline(true);
+  this.setOutput(true, null); 
+  this.setColour(200);
+  }
+};
+
+Blockly.Blocks['table_clear'] = {
+  init: function () {
+  this.appendDummyInput()
+      .appendField(Blockly.Msg.TABLE_CLEAR_SHOW)
+      .appendField(new Blockly.FieldVariable('fuGameTable'), 'fuGameElements_');  
+  this.setInputsInline(true);
+  this.setPreviousStatement(true);
+  this.setNextStatement(true);
+  this.setColour(60);
+  }
+};
+
+Blockly.Blocks['table_td_set'] = {
+  init: function() {
+  this.appendDummyInput()
+      .appendField(new Blockly.FieldVariable('fuGameTable'), 'fuGameElements_'); 
+  this.appendValueInput("x_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.TABLE_TD_SET_SHOW)
+      .appendField(Blockly.Msg.TABLE_TD_X_SHOW);
+  this.appendValueInput("y_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.TABLE_TD_Y_SHOW);       
+  this.appendDummyInput()  
+      .appendField(Blockly.Msg.TABLE_SET_SHOW)
+      .appendField(new Blockly.FieldDropdown([["cellwidth","cellwidth"], ["cellheight","cellheight"], ["cellcolor","cellcolor"]]), "property_");
+  this.appendValueInput("value_")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .setCheck(null);    
+  this.setInputsInline(true);
+  this.setPreviousStatement(true);
+  this.setNextStatement(true);
+  this.setColour(60);
+  }
+};
+
 Blockly.Blocks['table_td_insert_img'] = {
   init: function () {
   this.appendDummyInput()
