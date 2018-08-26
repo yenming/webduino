@@ -174,6 +174,13 @@
         return document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x).style.background;
       else if (input_property=="innerHTML")
         return document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x).innerHTML;
+      else if (input_property=="image"){
+        var td = document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x);
+        if (td.childNodes.length > 0)
+          return td.childNodes[0].id;
+        else
+          return "";
+      }
     }
     else
       return "";
