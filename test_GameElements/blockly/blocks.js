@@ -143,6 +143,14 @@ Blockly.Blocks['table_td_insert_text'] = {
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.TABLE_TD_TEXT_SHOW);
+  this.appendValueInput("size_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.TABLE_TD_SIZE_SHOW);  
+  this.appendValueInput("color_")
+      .setCheck(null)
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.COLOR_SHOW);       
   this.setInputsInline(true);
   this.setPreviousStatement(true);
   this.setNextStatement(true);
