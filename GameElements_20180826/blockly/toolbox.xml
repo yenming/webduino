@@ -32,12 +32,12 @@
     </value>   
     <value name="width_">
       <block type="math_number">
-        <field name="NUM">300</field>
+        <field name="NUM">50</field>
       </block>
     </value>
     <value name="height_">
       <block type="math_number">
-        <field name="NUM">300</field>
+        <field name="NUM">50</field>
       </block>
     </value>    
     <value name="bgcolor_">
