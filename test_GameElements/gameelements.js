@@ -174,9 +174,9 @@
        var rgb = document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x).style.background;
        var hexcolor = rgb.replace(/rgb\(/ig,"").replace(/\)/ig,"").replace(/\ /ig,"").split(",");
        console.log(hexcolor);
-       var r = hexcolor[0].toString(16).length==1?"0"+hexcolor[0].toString(16):hexcolor[0].toString(16);
-       var g = hexcolor[1].toString(16).length==1?"0"+hexcolor[1].toString(16):hexcolor[1].toString(16);
-       var b = hexcolor[2].toString(16).length==1?"0"+hexcolor[2].toString(16):hexcolor[2].toString(16);
+       var r = Number(hexcolor[0]).toString(16).length==1?"0"+Number(hexcolor[0]).toString(16):Number(hexcolor[0]).toString(16);
+       var g = Number(hexcolor[1]).toString(16).length==1?"0"+Number(hexcolor[1]).toString(16):Number(hexcolor[1]).toString(16);
+       var b = Number(hexcolor[2]).toString(16).length==1?"0"+Number(hexcolor[2]).toString(16):Number(hexcolor[2]).toString(16);
        return "#"+r+g+b;
       }
       else if (input_property=="innerHTML")
