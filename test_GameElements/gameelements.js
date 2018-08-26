@@ -89,13 +89,12 @@
 
   function table_td_img_get(input_img_id,input_property){
     if (document.getElementById("gameimg_"+input_img_id)){
-      if (document.getElementById("gameimg_"+input_img_id).parentNode.id.split("_").length==5){
-        if (input_property=="tableID")
-          return document.getElementById("gameimg_"+input_img_id).parentNode.id.split("_")[2];
-        else if (input_property=="column")  
-          return Number(document.getElementById("gameimg_"+input_img_id).parentNode.id.split("_")[4]);
+      if (document.getElementById("gameimg_"+input_img_id).parentNode.id.split("_").length>=5){
+        var arr = document.getElementById("gameimg_"+input_img_id).parentNode.id.split("_");
+        if (input_property=="column")  
+          return Number(arr[arr.length-1]);
         else if (input_property=="row")
-          return Number(document.getElementById("gameimg_"+input_img_id).parentNode.id.split("_")[3]);
+          return Number(arr[arr.length-2]);
       }
       else
         return "";
