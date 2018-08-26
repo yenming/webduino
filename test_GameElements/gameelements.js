@@ -103,9 +103,9 @@
       return "";
   }
   
-  function table_td_insert_text(input_id,input_x,input_y,input_text){
+  function table_td_insert_text(input_id,input_x,input_y,input_text,input_size,input_color){
     if (document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x))
-      document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x).innerHTML = input_text;
+      document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x).innerHTML = "<font size='" + input_size + "' color='" + input_color + "'>+input_text+</font>;
   }  
   
   function table_td_get(input_id,input_x,input_y,input_property){
