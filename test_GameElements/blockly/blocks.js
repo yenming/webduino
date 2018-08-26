@@ -142,11 +142,15 @@ Blockly.Blocks['table_td_insert_text'] = {
   this.appendValueInput("text_")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.TABLE_TD_TEXT_SHOW);
-  this.appendValueInput("size_")
+      .appendField(Blockly.Msg.CONTEXT_SHOW);
+  this.appendValueInput("fontname_")
+      .setCheck("String")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.FONTNAME_SHOW);    
+  this.appendValueInput("fontsize_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.TABLE_TD_SIZE_SHOW);  
+      .appendField(Blockly.Msg.FONTSIZE_SHOW); 
   this.appendValueInput("color_")
       .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
@@ -454,7 +458,7 @@ Blockly.Blocks['canvas_text'] = {
   this.appendValueInput("text_")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.CANVAS_CONTEXT_SHOW);    
+      .appendField(Blockly.Msg.CONTEXT_SHOW);    
   this.appendValueInput("x0_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
@@ -466,13 +470,13 @@ Blockly.Blocks['canvas_text'] = {
   this.appendValueInput("fontname_")
       .setCheck("String")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.CANVAS_FONTNAME_SHOW);    
+      .appendField(Blockly.Msg.FONTNAME_SHOW);    
   this.appendValueInput("fontsize_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.CANVAS_FONTSIZE_SHOW);  
+      .appendField(Blockly.Msg.FONTSIZE_SHOW);  
   this.appendDummyInput()  
-      .appendField(Blockly.Msg.CANVAS_TEXTALIGN_SHOW)
+      .appendField(Blockly.Msg.TEXTALIGN_SHOW)
       .appendField(new Blockly.FieldDropdown([["start","start"], ["end","end"], ["center","center"], ["left","left"], ["right","right"]]), "textalign_");
   this.appendValueInput("fill_")
       .setCheck(null)
