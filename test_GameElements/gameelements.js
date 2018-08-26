@@ -176,8 +176,12 @@
         return document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x).innerHTML;
       else if (input_property=="image"){
         var td = document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x);
-        if (td.childNodes.length > 0)
-          return td.childNodes[0].id;
+        if (td.childNodes.length > 0){
+          if (td.childNodes[0].id.indexOf("gameimg_")==0)
+            return td.childNodes[0].id.substr(8);
+          else
+            return "";
+        }
         else
           return "";
       }
