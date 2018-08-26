@@ -96,8 +96,14 @@
         return document.getElementById("gametable_"+input_id).style.borderStyle;
       else if (input_property=="borderwidth")
         return Number(document.getElementById("gametable_"+input_id).style.borderWidth.replace(/px/ig,""));
-      else if (input_property=="bordercolor")
-        return document.getElementById("gametable_"+input_id).style.borderColor; 
+      else if (input_property=="bordercolor"){
+       var rgb = document.getElementById("gametable_"+input_id).style.borderColor;
+       var hexcolor = rgb.replace(/rgb\(/ig,"").replace(/\)/ig,"").replace(/\ /ig,"").split(",");
+       var r = Number(hexcolor[0]).toString(16).length==1?"0"+Number(hexcolor[0]).toString(16):Number(hexcolor[0]).toString(16);
+       var g = Number(hexcolor[1]).toString(16).length==1?"0"+Number(hexcolor[1]).toString(16):Number(hexcolor[1]).toString(16);
+       var b = Number(hexcolor[2]).toString(16).length==1?"0"+Number(hexcolor[2]).toString(16):Number(hexcolor[2]).toString(16);
+       return "#"+r+g+b;
+      }
       else if (input_property=="zindex")
         return document.getElementById("gametable_"+input_id).style.zIndex;
       else if (input_property=="display")
@@ -173,7 +179,6 @@
       if (input_property=="background"){
        var rgb = document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x).style.background;
        var hexcolor = rgb.replace(/rgb\(/ig,"").replace(/\)/ig,"").replace(/\ /ig,"").split(",");
-       console.log(hexcolor);
        var r = Number(hexcolor[0]).toString(16).length==1?"0"+Number(hexcolor[0]).toString(16):Number(hexcolor[0]).toString(16);
        var g = Number(hexcolor[1]).toString(16).length==1?"0"+Number(hexcolor[1]).toString(16):Number(hexcolor[1]).toString(16);
        var b = Number(hexcolor[2]).toString(16).length==1?"0"+Number(hexcolor[2]).toString(16):Number(hexcolor[2]).toString(16);
