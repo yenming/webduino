@@ -27,7 +27,7 @@ Blockly.JavaScript['table_set'] = function (block) {
 Blockly.JavaScript['table_get'] = function (block) {
   var variable_fuGameElements_ = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('fuGameElements_'), Blockly.Variables.NAME_TYPE); 
   var value_property_ = block.getFieldValue('property_');
-  var code = 'table_get("' + variable_fuGameElements_ + '","' + value_property_ + ')';
+  var code = 'table_get("' + variable_fuGameElements_ + '","' + value_property_ + '")';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
