@@ -111,6 +111,16 @@
         <field name="TEXT"></field>
       </block>
     </value>
+    <value name="size_">
+      <block type="math_number">
+        <field name="NUM">12</field>
+      </block>
+    </value> 
+    <value name="color_">
+      <block type="colour_picker">
+        <field name="COLOUR">#ff0000</field>
+      </block>
+    </value>       
   </block>
   <block type="table_td_img_get">    
     <value name="imgid_">
