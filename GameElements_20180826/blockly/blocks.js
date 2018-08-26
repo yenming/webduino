@@ -114,7 +114,7 @@ Blockly.Blocks['table_td_set'] = {
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.TABLE_TD_Y_SHOW);       
   this.appendDummyInput()  
-      .appendField(Blockly.Msg.TABLE_SET_SHOW)
+      .appendField(Blockly.Msg.PROPERTY_SHOW)
       .appendField(new Blockly.FieldDropdown([["cellwidth","cellwidth"], ["cellheight","cellheight"], ["cellcolor","cellcolor"]]), "property_");
   this.appendValueInput("value_")
       .setAlign(Blockly.ALIGN_RIGHT)
