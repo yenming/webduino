@@ -63,6 +63,12 @@
       </block>
     </value>    
   </block>  
+  <block type="table_get">      
+  </block>  
+  <block type="table_clear">      
+  </block> 
+  <block type="table_delete">
+  </block>
   <block type="table_td_insert_img">  
     <value name="x_">
       <block type="math_number">
@@ -95,27 +101,13 @@
       </block>
     </value>   
   </block>
-  <block type="table_get">      
-  </block>  
-  <block type="table_clear">      
-  </block> 
-  <block type="table_td_set">  
-    <value name="x_">
-      <block type="math_number">
-        <field name="NUM">0</field>
-      </block>
-    </value>
-    <value name="y_">
-      <block type="math_number">
-        <field name="NUM">0</field>
-      </block>
-    </value>  
-    <value name="value_">
+  <block type="table_td_img_get">    
+    <value name="imgid_">
       <block type="text">
         <field name="TEXT"></field>
       </block>
-    </value>      
-  </block>
+    </value>  
+  </block>  
   <block type="table_td_insert_text">  
     <value name="x_">
       <block type="math_number">
@@ -148,14 +140,7 @@
       </block>
     </value>       
   </block>
-  <block type="table_td_img_get">    
-    <value name="imgid_">
-      <block type="text">
-        <field name="TEXT"></field>
-      </block>
-    </value>  
-  </block>  
-  <block type="table_td_clear">  
+  <block type="table_td_set">  
     <value name="x_">
       <block type="math_number">
         <field name="NUM">0</field>
@@ -165,7 +150,12 @@
       <block type="math_number">
         <field name="NUM">0</field>
       </block>
-    </value>    
+    </value>  
+    <value name="value_">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>      
   </block>
   <block type="table_td_get">    
     <value name="x_">
@@ -179,7 +169,17 @@
       </block>
     </value>     
   </block>    
-  <block type="table_delete">
+  <block type="table_td_clear">  
+    <value name="x_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="y_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>    
   </block>
   <block type="canvas_create">  
     <value name="width_">
@@ -412,6 +412,18 @@
   </block>  
   <block type="canvas_delete">
   </block>  
+  <block type="image_boundary">
+    <value name="left_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value> 
+    <value name="top_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>    
+  </block>  
   <block type="image_create">
     <value name="id_">
       <block type="text">
@@ -454,6 +466,8 @@
       </block>
     </value>     
   </block>
+  <block type="image_sys_get">
+  </block>    
   <block type="image_set">
     <value name="id_">
       <block type="text">
@@ -480,13 +494,6 @@
       </block>
     </value>     
   </block>    
-  <block type="image_delete">
-    <value name="id_">
-      <block type="text">
-        <field name="TEXT"></field>
-      </block>
-    </value> 
-  </block>
   <block type="image_collision">
     <value name="id1_">
       <block type="text">
@@ -499,18 +506,6 @@
       </block>
     </value>     
   </block>   
-  <block type="image_boundary">
-    <value name="left_">
-      <block type="math_number">
-        <field name="NUM">0</field>
-      </block>
-    </value> 
-    <value name="top_">
-      <block type="math_number">
-        <field name="NUM">0</field>
-      </block>
-    </value>    
-  </block>  
   <block type="image_boundary_collision">
     <value name="id_">
       <block type="text">
@@ -518,8 +513,13 @@
       </block>
     </value>  
   </block>  
-  <block type="image_sys_get">
-  </block>    
+  <block type="image_delete">
+    <value name="id_">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value> 
+  </block>
   <block type="mouse_coordinate_get">
   </block>
   <block type="document_timer">
@@ -529,15 +529,6 @@
       </block>
     </value>  
   </block>
-  <block type="document_timer_once">
-    <value name="intervals_">
-      <block type="math_number">
-        <field name="NUM">1000</field>
-      </block>
-    </value>  
-  </block>  
-  <block type="document_timer_stop">
-  </block>  
   <block type="music_create"> 
     <value name="url_">
       <block type="text">
@@ -556,5 +547,14 @@
     </value>     
   </block>  
   <block type="music_delete"> 
-  </block>    
+  </block>   
+  <block type="document_timer_once">
+    <value name="intervals_">
+      <block type="math_number">
+        <field name="NUM">1000</field>
+      </block>
+    </value>  
+  </block>  
+  <block type="document_timer_stop">
+  </block>  
  </category>
