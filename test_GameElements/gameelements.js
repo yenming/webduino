@@ -81,7 +81,58 @@
       }
     }
   }
-
+  
+  function table_get(input_id,input_property){
+    if (document.getElementById("gametable_"+input_id)) {
+      if (input_property=="left")
+        return document.getElementById("gametable_"+input_id).style.left;
+      else if (input_property=="top")
+        return document.getElementById("gametable_"+input_id).style.top;
+      else if (input_property=="borderstyle")
+        return document.getElementById("gametable_"+input_id).style.borderStyle;
+      else if (input_property=="borderwidth")
+        return document.getElementById("gametable_"+input_id).style.borderWidth;
+      else if (input_property=="bordercolor")
+        return document.getElementById("gametable_"+input_id).style.borderColor;      
+      else if (input_property=="zindex")
+        return document.getElementById("gametable_"+input_id).style.zIndex;
+      else if (input_property=="display")
+        return document.getElementById("gametable_"+input_id).style.display;
+      else
+        return "";
+    }
+    else
+      return "";
+  }
+  
+  function table_clear(input_id){
+    if (document.getElementById("gametable_"+input_id)) {
+      var obj = document.getElementById("gametable_"+input_id);
+      if (document.getElementById("gametable_"+input_id).rows.length>0){
+        for (var i=0;i<obj.rows.length;i++){
+          if (obj.rows[i].cells.length>0){
+            for (var j=0;j<obj.rows[i].cells.length;j++)
+              obj.rows[i].cells[j].innerHTML = "";
+          }
+        }
+      }
+    }  
+  }
+  
+  function table_td_set(input_id,input_x,input_y,input_property,input_value){
+    if (document.getElementById("gametable_"+input_id)) {
+      var obj = document.getElementById("gametable_"+input_id);
+      if (document.getElementById("gametable_"+input_id).rows.length>0){
+        if (input_property=="cellwidth")
+          obj.rows[input_y].cells[input_x].style.width = input_value + "px";
+        else if (input_property=="cellheight")
+          obj.rows[input_y].cells[input_x].style.height = input_value + "px";        
+        else if (input_property=="cellcolor")
+          obj.rows[input_y].cells[input_x].style.background = input_value;
+      }
+    } 
+  }
+  
   function table_td_insert_img(input_id,input_x,input_y,input_img_id,input_url,input_width,input_height){
     if (document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x))
       document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x).innerHTML = "<img id='gameimg_"+input_img_id+"' src='"+input_url+"' width='"+input_width+"' height='"+input_height+"' onclick='image_onclickid_set(this);'>";
@@ -496,5 +547,8 @@
   window.table_td_insert_text = table_td_insert_text;
   window.table_td_get = table_td_get;
   window.table_td_clear = table_td_clear;
+  window.table_get = table_get;
+  window.table_clear = table_clear;
+  window.table_td_set = table_td_set;
   
 }(window, window.document));
