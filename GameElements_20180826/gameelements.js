@@ -84,7 +84,11 @@
   
   function table_get(input_id,input_property){
     if (document.getElementById("gametable_"+input_id)) {
-      if (input_property=="left")
+      if (input_property=="rows")
+        return document.getElementById("gametable_"+input_id).rows.length;
+      else if (input_property=="columns")
+        return document.getElementById("gametable_"+input_id).rows[0].cells.length;  
+      else if (input_property=="left")
         return Number(document.getElementById("gametable_"+input_id).style.left.replace(/px/ig,""));
       else if (input_property=="top")
         return Number(document.getElementById("gametable_"+input_id).style.top.replace(/px/ig,""));
@@ -93,11 +97,7 @@
       else if (input_property=="borderwidth")
         return Number(document.getElementById("gametable_"+input_id).style.borderWidth.replace(/px/ig,""));
       else if (input_property=="bordercolor")
-        return document.getElementById("gametable_"+input_id).style.borderColor;    
-      else if (input_property=="rows")
-        return document.getElementById("gametable_"+input_id).rows.length;
-      else if (input_property=="columns")
-        return document.getElementById("gametable_"+input_id).rows[0].cells.length;         
+        return document.getElementById("gametable_"+input_id).style.borderColor; 
       else if (input_property=="zindex")
         return document.getElementById("gametable_"+input_id).style.zIndex;
       else if (input_property=="display")
