@@ -172,7 +172,7 @@
     {
       if (input_property=="background"){
        var rgb = document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x).style.background;
-       var hexcolor = rgb.replace(/rgb(/ig,"").replace(/)/ig,"").split(",");
+       var hexcolor = rgb.replace(/rgb\(/ig,"").replace(/\)/ig,"").split(",");
         
        return hexcolor;
       }
