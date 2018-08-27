@@ -542,7 +542,7 @@
       mouse_x = e.pageX;
       mouse_y = e.pageY;
     }    
-    consloe.log(document.onmousemove);
+    console.log(document.onmousemove);
     if (input_property=="x")
       return mouse_x;
     else if (input_property=="y")
