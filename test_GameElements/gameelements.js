@@ -148,6 +148,8 @@
       else
         return "";
     }
+    else if (onclickid.indexOf("gameimg_")==0)   
+      return onclickid.replace(/gameimg_/ig,"");
     else
       return "";
   }
