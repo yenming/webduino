@@ -112,7 +112,7 @@
       else if (input_property=="onclickColumn"){
         if (onclickid.indexOf("gametable_td_"+input_id)==0){     
           if (onclickid.split("_").length>=5){
-            var arr = document.getElementById(onclickid).split("_");
+            var arr = onclickid.split("_");
             return Number(arr[arr.length-1]);
           }
           else
@@ -124,7 +124,7 @@
       else if (input_property=="onclickRow"){
         if (onclickid.indexOf("gametable_td_"+input_id)==0){     
           if (onclickid.split("_").length>=5){
-            var arr = document.getElementById(onclickid).split("_");
+            var arr = onclickid.split("_");
             return Number(arr[arr.length-2]);
           }
           else
