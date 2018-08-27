@@ -453,6 +453,8 @@
     else if (input_property=="onclick"){
       if (onclickid.indexOf("gameimg_")==0)   
         return onclickid.replace(/gameimg_/ig,"");
+      else
+        return "";
     }
     if (document.getElementById("gameimg_"+input_id))
     {
