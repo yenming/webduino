@@ -1,7 +1,7 @@
 // Author: Chung-Yi Fu (Kaohsiung, Taiwan)   https://www.facebook.com/francefu
 
 +(function (window, document) {
-
+  
   'use strict';
   
   var screen_width = 0;
@@ -135,6 +135,16 @@
         else
           return ""; 
       }
+      else if (input_property=="onclickImage"){
+        if (onclickid.indexOf("gametable_td_"+input_id)==0){     
+          if (document.getElementById(onclickid).hasChildNodes())
+            return document.getElementById(onclickid).firstChild.id.replace(/gameimg_/ig,"");
+          else
+            return "";
+        }
+        else
+          return ""; 
+      }      
       else
         return "";
     }
