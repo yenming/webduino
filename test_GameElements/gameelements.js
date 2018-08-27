@@ -562,12 +562,15 @@
   }
   
   function mouse_coordinate_get(input_property) {
-    document.onmousemove = function(e){  
-      e=e||window.event;
-      mouse_x = e.pageX;
-      mouse_y = e.pageY;
-    }    
-    console.log(document.onmousemove);
+    if (document.onmousemove=="")
+    {
+      document.onmousemove = function(e){  
+        e=e||window.event;
+        mouse_x = e.pageX;
+        mouse_y = e.pageY;
+      }
+      console.log("set");
+    }
     if (input_property=="x")
       return mouse_x;
     else if (input_property=="y")
