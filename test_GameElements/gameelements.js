@@ -562,7 +562,7 @@
   }
   
   function mouse_coordinate_get(input_property) {
-    if (document.onmousemove=="")
+    if (!document.onmousemove)
     {
       document.onmousemove = function(e){  
         e=e||window.event;
