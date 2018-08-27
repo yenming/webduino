@@ -461,7 +461,7 @@
         return 1;
       else
         return 0;
-    }    
+    }   
     if (document.getElementById("gameimg_"+input_id))
     {
       if (input_property=='url')
@@ -493,6 +493,8 @@
         return document.getElementById("gameimg_"+input_id).style.transform;
       else if (input_property=='rotateZ')
         return document.getElementById("gameimg_"+input_id).style.transform;
+      else if (input_property=='id')
+        return "gameimg_"+input_id;
     }
     else
       return "";    
