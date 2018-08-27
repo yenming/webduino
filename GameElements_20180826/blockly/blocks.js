@@ -81,7 +81,7 @@ Blockly.Blocks['table_get'] = {
   this.appendDummyInput()  
       .appendField(Blockly.Msg.TABLE_GET_SHOW)
       .appendField(Blockly.Msg.PROPERTY_SHOW)
-      .appendField(new Blockly.FieldDropdown([["columns","columns"], ["rows","rows"], ["left","left"], ["top","top"], ["borderstyle","borderstyle"], ["borderwidth","borderwidth"], ["bordercolor","bordercolor"], ["zindex","zindex"], ["display","display"]]), "property_");
+      .appendField(new Blockly.FieldDropdown([["onclickColumn","onclickColumn"], ["onclickRow","onclickRow"], ["columns","columns"], ["rows","rows"], ["left","left"], ["top","top"], ["borderstyle","borderstyle"], ["borderwidth","borderwidth"], ["bordercolor","bordercolor"], ["zindex","zindex"], ["display","display"]]), "property_");
   this.setInputsInline(true);
   this.setOutput(true, null); 
   this.setColour(200);

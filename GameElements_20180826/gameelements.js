@@ -34,7 +34,8 @@
           td.style.verticalAlign = "middle";
           td.style.background = input_bgcolor;
           td.style.width = input_width + 'px';
-          td.style.height = input_height + 'px';          
+          td.style.height = input_height + 'px';
+          td.setAttribute("onclick", "javascript:image_onclickid_set(this);");
         }
        }
       document.body.appendChild(tbl);
@@ -108,6 +109,30 @@
         return document.getElementById("gametable_"+input_id).style.zIndex;
       else if (input_property=="display")
         return document.getElementById("gametable_"+input_id).style.display;
+      else if (input_property=="onclickColumn"){
+        if (onclickid.indexOf("gametable_td_"+input_id)==0){     
+          if (onclickid.split("_").length>=5){
+            var arr = onclickid.split("_");
+            return Number(arr[arr.length-1]);
+          }
+          else
+            return "";
+        }
+        else
+          return "";
+      }
+      else if (input_property=="onclickRow"){
+        if (onclickid.indexOf("gametable_td_"+input_id)==0){     
+          if (onclickid.split("_").length>=5){
+            var arr = onclickid.split("_");
+            return Number(arr[arr.length-2]);
+          }
+          else
+            return "";
+        }
+        else
+          return ""; 
+      }
       else
         return "";
     }
@@ -537,11 +562,15 @@
   }
   
   function mouse_coordinate_get(input_property) {
-    document.onmousemove = function(e){  
-      e=e||window.event;
-      mouse_x = e.pageX;
-      mouse_y = e.pageY;
-    }    
+    if (!document.onmousemove)
+    {
+      document.onmousemove = function(e){  
+        e=e||window.event;
+        mouse_x = e.pageX;
+        mouse_y = e.pageY;
+      }
+      console.log("set");
+    }
     if (input_property=="x")
       return mouse_x;
     else if (input_property=="y")

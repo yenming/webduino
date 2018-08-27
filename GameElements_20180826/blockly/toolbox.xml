@@ -522,13 +522,6 @@
   </block>
   <block type="mouse_coordinate_get">
   </block>
-  <block type="document_timer">
-    <value name="intervals_">
-      <block type="math_number">
-        <field name="NUM">100</field>
-      </block>
-    </value>  
-  </block>
   <block type="music_create"> 
     <value name="url_">
       <block type="text">
@@ -548,6 +541,13 @@
   </block>  
   <block type="music_delete"> 
   </block>   
+  <block type="document_timer">
+    <value name="intervals_">
+      <block type="math_number">
+        <field name="NUM">100</field>
+      </block>
+    </value>  
+  </block>  
   <block type="document_timer_once">
     <value name="intervals_">
       <block type="math_number">
