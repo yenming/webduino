@@ -86,6 +86,10 @@
   }
   
   function table_get(input_id,input_property){
+    if (input_property=="onclickImage"){
+      if (onclickid.indexOf("gameimg_")==0)   
+        return onclickid.replace(/gameimg_/ig,"");
+    }
     if (document.getElementById("gametable_"+input_id)) {
       if (input_property=="rows")
         return document.getElementById("gametable_"+input_id).rows.length;
@@ -148,8 +152,6 @@
       else
         return "";
     }
-    else if (onclickid.indexOf("gameimg_")==0)   
-      return onclickid.replace(/gameimg_/ig,"");
     else
       return "";
   }
