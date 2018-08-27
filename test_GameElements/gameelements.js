@@ -453,7 +453,7 @@
     else if (input_property=="onclick"){
       if (onclickid.indexOf("gameimg_")==0)   
         return onclickid.replace(/gameimg_/ig,"");
-      else if (onclickid.indexOf("gametable_td_"+input_id)==0){     
+      else if (onclickid.indexOf("gametable_td_")==0){     
           if (document.getElementById(onclickid).hasChildNodes())
             return document.getElementById(onclickid).firstChild.id.replace(/gameimg_/ig,"");
           else
