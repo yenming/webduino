@@ -109,7 +109,7 @@
         return document.getElementById("gametable_"+input_id).style.zIndex;
       else if (input_property=="display")
         return document.getElementById("gametable_"+input_id).style.display;
-      elseif (input_property=="onclickColumn"){
+      else if (input_property=="onclickColumn"){
         if (onclickid.indexOf("gametable_td_"+input_id)==0){     
           if (onclickid.split("_").length>=5){
             var arr = document.getElementById(onclickid).split("_");
