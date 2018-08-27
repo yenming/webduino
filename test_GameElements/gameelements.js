@@ -455,7 +455,7 @@
       else
         return "";
     }
-    else if (input_property=='exist')
+    else if (input_property=='id')
     {
       if (document.getElementById("gameimg_"+input_id))
         return 1;
