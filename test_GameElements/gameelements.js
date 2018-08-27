@@ -34,7 +34,8 @@
           td.style.verticalAlign = "middle";
           td.style.background = input_bgcolor;
           td.style.width = input_width + 'px';
-          td.style.height = input_height + 'px';          
+          td.style.height = input_height + 'px';
+          td.setAttribute("onclick", "javascript:image_onclickid_set(this);");
         }
        }
       document.body.appendChild(tbl);
@@ -108,6 +109,30 @@
         return document.getElementById("gametable_"+input_id).style.zIndex;
       else if (input_property=="display")
         return document.getElementById("gametable_"+input_id).style.display;
+      elseif (input_property=="onclickColumn"){
+        if (onclickid.indexOf("gametable_td_"+input_id)==0){     
+          if (onclickid.split("_").length>=5){
+            var arr = document.getElementById(onclickid).split("_");
+            return Number(arr[arr.length-1]);
+          }
+          else
+            return "";
+        }
+        else
+          return "";
+      }
+      else if (input_property=="onclickRow"){
+        if (onclickid.indexOf("gametable_td_"+input_id)==0){     
+          if (onclickid.split("_").length>=5){
+            var arr = document.getElementById(onclickid).split("_");
+            return Number(arr[arr.length-2]);
+          }
+          else
+            return "";
+        }
+        else
+          return ""; 
+      }
       else
         return "";
     }
