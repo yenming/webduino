@@ -634,7 +634,7 @@ Blockly.Blocks['image_get'] = {
   this.appendValueInput("id_")
       .setCheck(null)
       .appendField(Blockly.Msg.GET_SHOW)
-      .appendField(new Blockly.FieldDropdown([["onclickid","onclickid"], ["exist","exist"], ["url","url"], ["width","width"], ["height","height"], ["left","left"], ["top","top"], ["zindex","zindex"], ["display","display"], ["opacity","opacity"], ["rotate","rotate"], ["rotateX","rotateX"], ["rotateY","rotateY"], ["rotateZ","rotateZ"]]), "property_")
+      .appendField(new Blockly.FieldDropdown([["onclickid","onclickid"], ["id","id"], ["url","url"], ["width","width"], ["height","height"], ["left","left"], ["top","top"], ["zindex","zindex"], ["display","display"], ["opacity","opacity"], ["rotate","rotate"], ["rotateX","rotateX"], ["rotateY","rotateY"], ["rotateZ","rotateZ"]]), "property_")
       .appendField(Blockly.Msg.ID_SHOW);  
   this.setInputsInline(true);
   this.setOutput(true, null); 
