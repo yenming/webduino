@@ -1,5 +1,7 @@
-+(function (window, document) {
+// Author: Chung-Yi Fu (Kaohsiung, Taiwan)   https://www.facebook.com/francefu
 
++(function (window, document) {
+  
   'use strict';
   
   var screen_width = 0;
