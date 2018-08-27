@@ -1,4 +1,4 @@
 Blockly.JavaScript['create_button'] = function(block) {
-  var code = 'createButton();';
+  var code = 'createButton();\n';
   return code;
 };
