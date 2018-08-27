@@ -443,14 +443,7 @@
   }    
   
   function image_get(input_id,input_property) {
-    if (input_property=='id')
-    {
-      if (document.getElementById("gameimg_"+input_id))
-        return 1;
-      else
-        return 0;
-    }
-    else if (input_property=="onclick"){
+    if (input_property=="onclickid"){
       if (onclickid.indexOf("gameimg_")==0)   
         return onclickid.replace(/gameimg_/ig,"");
       else if (onclickid.indexOf("gametable_td_")==0){     
@@ -462,6 +455,13 @@
       else
         return "";
     }
+    else if (input_property=='exist')
+    {
+      if (document.getElementById("gameimg_"+input_id))
+        return 1;
+      else
+        return 0;
+    }    
     if (document.getElementById("gameimg_"+input_id))
     {
       if (input_property=='url')
