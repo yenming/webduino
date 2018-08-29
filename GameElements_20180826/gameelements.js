@@ -167,15 +167,14 @@
   }
   
   function table_td_set(input_id,input_x,input_y,input_property,input_value){
-    if (document.getElementById("gametable_"+input_id)) {
-      if (document.getElementById("gametable_"+input_id).rows.length>0){
-        if (input_property=="cellwidth")
-          document.getElementById("gametable_"+input_id).rows[input_y].cells[input_x].style.width = input_value + "px";
-        else if (input_property=="cellheight")
-          document.getElementById("gametable_"+input_id).rows[input_y].cells[input_x].style.height = input_value + "px";        
-        else if (input_property=="cellcolor")
-          document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x).style.background = input_value;
-      }
+    if (document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x)) {
+      var obj = document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x);
+      if (input_property=="cellwidth")
+        obj.style.width = input_value + "px";
+      else if (input_property=="cellheight")
+        obj.style.height = input_value + "px";        
+      else if (input_property=="cellcolor")
+        obj.style.background = input_value;
     } 
   }
   
