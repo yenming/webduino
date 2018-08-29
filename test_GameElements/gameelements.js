@@ -169,11 +169,11 @@
   function table_td_set(input_id,input_x,input_y,input_property,input_value){
     if (document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x)) {
       var obj = document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x);
-      if (input_property=="cellwidth")
+      if (input_property=="width")
         obj.style.width = input_value + "px";
-      else if (input_property=="cellheight")
+      else if (input_property=="height")
         obj.style.height = input_value + "px";        
-      else if (input_property=="cellcolor")
+      else if (input_property=="backcolor")
         obj.style.background = input_value;
     } 
   }
@@ -211,7 +211,11 @@
   function table_td_get(input_id,input_x,input_y,input_property){
     if (document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x))
     {
-      if (input_property=="background"){
+      if (input_property=="width")
+        return document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x).style.width.replace(/px/ig,"");
+      else if (input_property=="height")
+        return document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x).style.height.replace(/px/ig,"");        
+      else if (input_property=="background"){
        var rgb = document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x).style.background;
        var hexcolor = rgb.replace(/rgb\(/ig,"").replace(/\)/ig,"").replace(/\ /ig,"").split(",");
        var r = Number(hexcolor[0]).toString(16).length==1?"0"+Number(hexcolor[0]).toString(16):Number(hexcolor[0]).toString(16);
