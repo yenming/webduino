@@ -175,7 +175,7 @@
         else if (input_property=="cellheight")
           obj.rows[input_y].cells[input_x].style.height = input_value + "px";        
         else if (input_property=="cellcolor")
-          obj.rows[input_y].cells[input_x].style.background = input_value;
+          obj.rows[input_y].cells[input_x].style.backgroundColor = input_value;
       }
     } 
   }
