@@ -115,7 +115,7 @@ Blockly.Blocks['table_td_set'] = {
       .appendField(Blockly.Msg.TABLE_TD_Y_SHOW);       
   this.appendDummyInput()  
       .appendField(Blockly.Msg.PROPERTY_SHOW)
-      .appendField(new Blockly.FieldDropdown([["cellwidth","cellwidth"], ["cellheight","cellheight"], ["cellcolor","cellcolor"]]), "property_");
+      .appendField(new Blockly.FieldDropdown([["width","width"], ["height","height"], ["background","background"], ["innerHTML","innerHTML"]]), "property_");
   this.appendValueInput("value_")
       .setAlign(Blockly.ALIGN_RIGHT)
       .setCheck(null);    
@@ -123,6 +123,28 @@ Blockly.Blocks['table_td_set'] = {
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setColour(60);
+  }
+};
+
+Blockly.Blocks['table_td_get'] = {
+  init: function () {
+  this.appendDummyInput()
+      .appendField(new Blockly.FieldVariable('fuGameTable'), 'fuGameElements_');     
+  this.appendValueInput("x_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.TABLE_TD_GET_SHOW)
+      .appendField(Blockly.Msg.TABLE_TD_X_SHOW);
+  this.appendValueInput("y_")
+      .setCheck("Number")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.TABLE_TD_Y_SHOW); 
+  this.appendDummyInput()  
+      .appendField(Blockly.Msg.PROPERTY_SHOW)
+      .appendField(new Blockly.FieldDropdown([["width","width"], ["height","height"], ["background","background"], ["innerHTML","innerHTML"], ["image","image"]]), "property_");  
+  this.setInputsInline(true);
+  this.setOutput(true, null); 
+  this.setColour(200);
   }
 };
 
@@ -211,28 +233,6 @@ Blockly.Blocks['table_td_insert_text'] = {
   this.setPreviousStatement(true);
   this.setNextStatement(true);
   this.setColour(60);
-  }
-};
-
-Blockly.Blocks['table_td_get'] = {
-  init: function () {
-  this.appendDummyInput()
-      .appendField(new Blockly.FieldVariable('fuGameTable'), 'fuGameElements_');     
-  this.appendValueInput("x_")
-      .setCheck("Number")
-      .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.TABLE_TD_GET_SHOW)
-      .appendField(Blockly.Msg.TABLE_TD_X_SHOW);
-  this.appendValueInput("y_")
-      .setCheck("Number")
-      .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.TABLE_TD_Y_SHOW); 
-  this.appendDummyInput()  
-      .appendField(Blockly.Msg.PROPERTY_SHOW)
-      .appendField(new Blockly.FieldDropdown([["background","background"], ["innerHTML","innerHTML"], ["image","image"]]), "property_");  
-  this.setInputsInline(true);
-  this.setOutput(true, null); 
-  this.setColour(200);
   }
 };
 
