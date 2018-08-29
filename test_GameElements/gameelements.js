@@ -173,7 +173,7 @@
         obj.style.width = input_value + "px";
       else if (input_property=="height")
         obj.style.height = input_value + "px";        
-      else if (input_property=="backcolor")
+      else if (input_property=="background")
         obj.style.background = input_value;
       else if (input_property=="innerHTML")
         obj.innerHTML = input_value;
