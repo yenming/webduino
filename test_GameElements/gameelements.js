@@ -488,12 +488,11 @@
     }   
     if (document.getElementById("gameimg_"+input_id))
     {
-      var img;
+      var img = document.getElementById("gameimg_"+input_id);
       img.onload = function() {
         ImageWidth = this.naturalWidth;
         ImageHeight = this.naturalHeight;
       }
-      img = document.getElementById("gameimg_"+input_id);
       if (input_property=='url')
         return document.getElementById("gameimg_"+input_id).src;
       else if (input_property=='width')
