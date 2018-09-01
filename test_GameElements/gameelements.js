@@ -232,8 +232,7 @@
  
   
   function table_td_insert_img(input_id,input_x,input_y,input_img_id,input_url,input_width,input_height){
-    if (document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x))
-    {
+    if (document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x)){
       var img = document.createElement('img');
       img.id = "gameimg_"+input_img_id;
       img.src = input_url;
