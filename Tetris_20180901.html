@@ -21,7 +21,7 @@
 var x0_next;
 var y0_next;
 var direction_next;
-var fuTimer;
+var fuTimer,ctrlTimer;
 var boundarystate;
 var i;
 var mX;
@@ -269,7 +269,7 @@ document.onkeydown = function(e){
     }
   }
 };
-var fuTimer = setInterval(function(){
+ctrlTimer = setInterval(function(){
   var CR = (table_get("fuGameTable","onclick[Column,Row]"));
   if (CR == ""){
     //
