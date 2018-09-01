@@ -209,7 +209,7 @@ function checkline() {
     }
     if (linestate == true) {
       score = (typeof score == 'number' ? score : 0) + 1;
-      document.getElementById('demo-area-01-show').innerHTML = 'score =  ' + score;
+      document.getElementById('demo-area-01-show').innerHTML = score;
       var p_inc = 1;
       if (m > 1) {
         p_inc = -p_inc;
@@ -290,7 +290,7 @@ document.onkeydown = function(e){
     <td>
       <input type="button" onclick="if (checkboundary(X0, Y0 + 1, Direction) == false) {clear_previous();Y0 = (typeof Y0 == 'number' ? Y0 : 0) + 1;draw_next();}" value="Down">  
     </td>
-    <td>
+    <td align="right">
       <span id="demo-area-01-show"></span>
     </td>
   </tr>
