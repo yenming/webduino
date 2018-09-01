@@ -10,6 +10,8 @@
   var onclicktime = 200;
   var onclicktimerid;
   var mouse_x,mouse_y;
+  var ImageWidth;
+  var ImageHeight;
   
   function table_create(input_id,input_width,input_height,input_left,input_top,input_trcount,input_tdcount,input_borderstyle,input_borderwidth,input_bordercolor,input_bgcolor,input_zindex,input_display) {
     if (document.getElementById("gametable_"+input_id)) 
@@ -493,10 +495,17 @@
         return Number(document.getElementById("gameimg_"+input_id).style.width.replace(/px/ig,""));
       else if (input_property=='height')
         return Number(document.getElementById("gameimg_"+input_id).style.height.replace(/px/ig,""));
-      else if (input_property=='naturalwidth')
-        return Number(String(document.getElementById("gameimg_"+input_id).natureWidth).replace(/px/ig,""));
-      else if (input_property=='naturalheight')
+      else if (input_property=='naturalwidth'){
+        var img = document.getElementById("gameimg_"+input_id);
+        img.onload = function() {
+          ImageWidth = Number(this.naturalWidth.replace(/px/ig,""));
+          ImageHeight = Number(this.naturalHeight.replace(/px/ig,""));
+        }
+        return ImageWidth;
+      }
+      else if (input_property=='naturalheight'){
         return Number(String(document.getElementById("gameimg_"+input_id).natureHeight).replace(/px/ig,""));      
+      }
       else if (input_property=='left')
         return Number(document.getElementById("gameimg_"+input_id).style.left.replace(/px/ig,""));
       else if (input_property=='top')
