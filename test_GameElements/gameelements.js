@@ -618,7 +618,7 @@
   function image_Natural_get (obj) {
     var img = new Image();
     img.src = obj.src;
-    return {naturalwidth: img.width, naturalheight: img.height};
+    return {width: img.width, height: img.height};
   }  
   
   function mouse_coordinate_get(input_property) {
