@@ -494,9 +494,9 @@
       else if (input_property=='height')
         return Number(document.getElementById("gameimg_"+input_id).style.height.replace(/px/ig,""));
       else if (input_property=='naturalwidth')
-        return Number(document.getElementById("gameimg_"+input_id).style.natureWidth.replace(/px/ig,""));
+        return Number(document.getElementById("gameimg_"+input_id).natureWidth.replace(/px/ig,""));
       else if (input_property=='naturalheight')
-        return Number(document.getElementById("gameimg_"+input_id).style.natureHeight.replace(/px/ig,""));      
+        return Number(document.getElementById("gameimg_"+input_id).natureHeight.replace(/px/ig,""));      
       else if (input_property=='left')
         return Number(document.getElementById("gameimg_"+input_id).style.left.replace(/px/ig,""));
       else if (input_property=='top')
