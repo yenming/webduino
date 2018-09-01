@@ -81,7 +81,7 @@ Blockly.Blocks['table_get'] = {
   this.appendDummyInput()  
       .appendField(Blockly.Msg.TABLE_GET_SHOW)
       .appendField(Blockly.Msg.PROPERTY_SHOW)
-      .appendField(new Blockly.FieldDropdown([["onclickColumn","onclickColumn"], ["onclickRow","onclickRow"], ["onclickImage","onclickImage"], ["columns","columns"], ["rows","rows"], ["left","left"], ["top","top"], ["borderstyle","borderstyle"], ["borderwidth","borderwidth"], ["bordercolor","bordercolor"], ["zindex","zindex"], ["display","display"]]), "property_");
+      .appendField(new Blockly.FieldDropdown([["onclickColumn","onclickColumn"], ["onclickRow","onclickRow"], ["onclick[Column,Row]","onclick[Column,Row]"], ["onclickImage","onclickImage"], ["columns","columns"], ["rows","rows"], ["left","left"], ["top","top"], ["borderstyle","borderstyle"], ["borderwidth","borderwidth"], ["bordercolor","bordercolor"], ["zindex","zindex"], ["display","display"]]), "property_");
   this.setInputsInline(true);
   this.setOutput(true, null); 
   this.setColour(200);
@@ -141,7 +141,7 @@ Blockly.Blocks['table_td_get'] = {
       .appendField(Blockly.Msg.TABLE_TD_Y_SHOW); 
   this.appendDummyInput()  
       .appendField(Blockly.Msg.PROPERTY_SHOW)
-      .appendField(new Blockly.FieldDropdown([["width","width"], ["height","height"], ["background","background"], ["innerHTML","innerHTML"], ["image","image"]]), "property_");  
+      .appendField(new Blockly.FieldDropdown([["width","width"], ["height","height"], ["background","background"], ["innerHTML","innerHTML"], ["image","image"], ["tdid","tdid"]]), "property_");  
   this.setInputsInline(true);
   this.setOutput(true, null); 
   this.setColour(200);
@@ -193,7 +193,7 @@ Blockly.Blocks['table_td_img_get'] = {
       .appendField(Blockly.Msg.ID_SHOW); 
   this.appendDummyInput()  
       .appendField(Blockly.Msg.PROPERTY_SHOW)
-      .appendField(new Blockly.FieldDropdown([["column","column"], ["row","row"]]), "property_");  
+      .appendField(new Blockly.FieldDropdown([["column","column"], ["row","row"], ["width","width"], ["height","height"], ["naturalwidth","naturalwidth"], ["naturalheight","naturalheight"], ["imageid","imageid"]]), "property_");  
   this.setInputsInline(true);
   this.setOutput(true, null); 
   this.setColour(200);
@@ -634,7 +634,7 @@ Blockly.Blocks['image_get'] = {
   this.appendValueInput("id_")
       .setCheck(null)
       .appendField(Blockly.Msg.GET_SHOW)
-      .appendField(new Blockly.FieldDropdown([["onclickid","onclickid"], ["exist","exist"], ["url","url"], ["width","width"], ["height","height"], ["left","left"], ["top","top"], ["zindex","zindex"], ["display","display"], ["opacity","opacity"], ["rotate","rotate"], ["rotateX","rotateX"], ["rotateY","rotateY"], ["rotateZ","rotateZ"], ["id","id"]]), "property_")
+      .appendField(new Blockly.FieldDropdown([["onclickid","onclickid"], ["exist","exist"], ["url","url"], ["width","width"], ["height","height"], ["naturalwidth","naturalwidth"], ["naturalheight","naturalheight"], ["left","left"], ["top","top"], ["zindex","zindex"], ["display","display"], ["opacity","opacity"], ["rotate","rotate"], ["rotateX","rotateX"], ["rotateY","rotateY"], ["rotateZ","rotateZ"], ["id","id"]]), "property_")
       .appendField(Blockly.Msg.ID_SHOW);  
   this.setInputsInline(true);
   this.setOutput(true, null); 
