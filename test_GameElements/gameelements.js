@@ -143,10 +143,10 @@
             return "["+arr[arr.length-1]+","+arr[arr.length-2]+"]";
           }
           else
-            return "[,]";
+            return "[]";
         }
         else
-          return "[,]"; 
+          return "[]"; 
       }
       else if (input_property=="onclickImage"){
         if (onclickid.indexOf("gametable_td_"+input_id)==0){     
