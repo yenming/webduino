@@ -10,8 +10,7 @@
   var onclicktime = 200;
   var onclicktimerid;
   var mouse_x,mouse_y;
-  var ImageWidth;
-  var ImageHeight;
+  var ImageWidth,ImageHeight;
   
   function table_create(input_id,input_width,input_height,input_left,input_top,input_trcount,input_tdcount,input_borderstyle,input_borderwidth,input_bordercolor,input_bgcolor,input_zindex,input_display) {
     if (document.getElementById("gametable_"+input_id)) 
@@ -489,11 +488,12 @@
     }   
     if (document.getElementById("gameimg_"+input_id))
     {
-      var img = document.getElementById("gameimg_"+input_id);
+      var img;
       img.onload = function() {
-        ImageWidth = Number(String(this.naturalWidth).replace(/px/ig,""));
-        ImageHeight = Number(String(this.naturalHeight).replace(/px/ig,""));
+        ImageWidth = this.naturalWidth;
+        ImageHeight = this.naturalHeight;
       }
+      img = document.getElementById("gameimg_"+input_id);
       if (input_property=='url')
         return document.getElementById("gameimg_"+input_id).src;
       else if (input_property=='width')
