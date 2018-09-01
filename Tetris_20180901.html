@@ -270,26 +270,26 @@ document.onkeydown = function(e){
   }
 };
 fuTimer = setInterval(function(){
-  _E8_AE_8A_E6_95_B8 = (table_get("fuGameTable","onclick[Column,Row]"));
-  if (_E8_AE_8A_E6_95_B8[0] <= 5) {
+  var CR = (table_get("fuGameTable","onclick[Column,Row]"));
+  if (CR[0] <= 5) {
     if (checkboundary(X0 - 1, Y0, Direction) == false) {
       clear_previous();
       X0 = (typeof X0 == 'number' ? X0 : 0) + -1;
       draw_next();
     }
-  } else if (_E8_AE_8A_E6_95_B8[0] >= 11) {
+  } else if (CR[0] >= 11) {
     if (checkboundary(X0 + 1, Y0, Direction) == false) {
       clear_previous();
       X0 = (typeof X0 == 'number' ? X0 : 0) + 1;
       draw_next();
     }
-  } else if (_E8_AE_8A_E6_95_B8[1] > 15 && (_E8_AE_8A_E6_95_B8[0] > 5 && _E8_AE_8A_E6_95_B8[0] < 11)) {
+  } else if (CR[1] > 15 && (CR[0] > 5 && CR[0] < 11)) {
     if (checkboundary(X0, Y0 + 1, Direction) == false) {
       clear_previous();
       Y0 = (typeof Y0 == 'number' ? Y0 : 0) + 1;
       draw_next();
     }
-  } else if (_E8_AE_8A_E6_95_B8[1] <= 15 && (_E8_AE_8A_E6_95_B8[0] > 5 && _E8_AE_8A_E6_95_B8[0] < 11)) {
+  } else if (CR[1] <= 15 && (CR[0] > 5 && CR[0] < 11)) {
     if (checkboundary(X0, Y0, (Direction + 1) % (Matrix.length / 2)) == false) {
       clear_previous();
       Direction = (Direction + 1) % (Matrix.length / 2);
