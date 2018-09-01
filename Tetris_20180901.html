@@ -14,7 +14,8 @@
 </style>
 </head>
 
-<body align="center">
+<body>
+<center>
 <span id="demo-area-01-show"></span>
   
 <script id="jsbin-javascript">
@@ -209,7 +210,7 @@ function checkline() {
     }
     if (linestate == true) {
       score = (typeof score == 'number' ? score : 0) + 1;
-      document.getElementById('demo-area-01-show').innerHTML = score;
+      document.getElementById('demo-area-01-show').innerHTML = 'score =  ' + score;
       var p_inc = 1;
       if (m > 1) {
         p_inc = -p_inc;
@@ -296,5 +297,6 @@ document.onkeydown = function(e){
     </td>
   </tr>
 </table>
+</center>
 </body>
 </html>
