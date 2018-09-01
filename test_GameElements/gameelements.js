@@ -241,6 +241,8 @@
           return Number(arr[arr.length-1]);
         else if (input_property=="row")
           return Number(arr[arr.length-2]);
+        else if (input_property=="imageid")
+          return "gameimg_"+input_img_id;
       }
       else
         return -1;
