@@ -271,7 +271,10 @@ document.onkeydown = function(e){
 };
 fuTimer = setInterval(function(){
   var CR = (table_get("fuGameTable","onclick[Column,Row]"));
-  if (CR[0] <= 5) {
+  if (CR == ""){
+    //
+  }
+  else if (CR[0] <= 5) {
     if (checkboundary(X0 - 1, Y0, Direction) == false) {
       clear_previous();
       X0 = (typeof X0 == 'number' ? X0 : 0) + -1;
