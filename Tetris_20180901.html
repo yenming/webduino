@@ -302,7 +302,31 @@ ctrlTimer = setInterval(function(){
 },100); 
 
 </script>
+  
+<table>
+<tr>
+<td>
+<input type="button" onclick="if (checkboundary(X0 - 1, Y0, Direction) == false) {clear_previous();X0 = (typeof X0 == 'number' ? X0 : 0) + -1;draw_next();}" value="Left">&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td>
+<input type="button" onclick="if (checkboundary(X0, Y0, (Direction + 1) % (Matrix.length / 2)) == false) {clear_previous();Direction = (Direction + 1) % (Matrix.length / 2);draw_next();}" value="Turn (Ctrl)">&nbsp;&nbsp;&nbsp;&nbsp; 
+</td>
+<td>
+<input type="button" onclick="if (checkboundary(X0 + 1, Y0, Direction) == false) {clear_previous();X0 = (typeof X0 == 'number' ? X0 : 0) + 1;draw_next();}" value="Right"> 
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<input type="button" onclick="if (checkboundary(X0, Y0 + 1, Direction) == false) {clear_previous();Y0 = (typeof Y0 == 'number' ? Y0 : 0) + 1;draw_next();}" value="Down"> 
+</td>
+<td align="right">
 <span id="demo-area-01-show"></span>
+</td>
+</tr>
+</table>
+
 </center>
 </body>
 </html>
