@@ -489,23 +489,21 @@
     }   
     if (document.getElementById("gameimg_"+input_id))
     {
+      var img = document.getElementById("gameimg_"+input_id);
+      img.onload = function() {
+        ImageWidth = Number(this.naturalWidth.replace(/px/ig,""));
+        ImageHeight = Number(this.naturalHeight.replace(/px/ig,""));
+      }
       if (input_property=='url')
         return document.getElementById("gameimg_"+input_id).src;
       else if (input_property=='width')
         return Number(document.getElementById("gameimg_"+input_id).style.width.replace(/px/ig,""));
       else if (input_property=='height')
         return Number(document.getElementById("gameimg_"+input_id).style.height.replace(/px/ig,""));
-      else if (input_property=='naturalwidth'){
-        var img = document.getElementById("gameimg_"+input_id);
-        img.onload = function() {
-          ImageWidth = Number(this.naturalWidth.replace(/px/ig,""));
-          ImageHeight = Number(this.naturalHeight.replace(/px/ig,""));
-        }
+      else if (input_property=='naturalwidth')
         return ImageWidth;
-      }
-      else if (input_property=='naturalheight'){
-        return Number(String(document.getElementById("gameimg_"+input_id).natureHeight).replace(/px/ig,""));      
-      }
+      else if (input_property=='naturalheight')
+        return ImageHeight;
       else if (input_property=='left')
         return Number(document.getElementById("gameimg_"+input_id).style.left.replace(/px/ig,""));
       else if (input_property=='top')
