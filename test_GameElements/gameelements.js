@@ -493,6 +493,7 @@
         ImageWidth = this.naturalWidth;
         ImageHeight = this.naturalHeight;
       }
+      var img = document.getElementById("gameimg_"+input_id);
       if (input_property=='url')
         return document.getElementById("gameimg_"+input_id).src;
       else if (input_property=='width')
