@@ -220,6 +220,8 @@
         else
           return "";
       }
+      else if (input_property=="tdid")
+        return "gametable_td_"+input_id+"_"+input_y+'_'+input_x;
     }
     else
       return "";
