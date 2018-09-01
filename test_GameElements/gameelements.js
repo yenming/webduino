@@ -488,12 +488,6 @@
     }   
     if (document.getElementById("gameimg_"+input_id))
     {
-      var img = document.getElementById("gameimg_"+input_id);
-      img.onload = function() {
-        ImageWidth = this.naturalWidth;
-        ImageHeight = this.naturalHeight;
-      }
-      var img = document.getElementById("gameimg_"+input_id);
       if (input_property=='url')
         return document.getElementById("gameimg_"+input_id).src;
       else if (input_property=='width')
@@ -501,9 +495,9 @@
       else if (input_property=='height')
         return Number(document.getElementById("gameimg_"+input_id).style.height.replace(/px/ig,""));
       else if (input_property=='naturalwidth')
-        return ImageWidth;
+        return image_getNatural(document.getElementById("gameimg_"+input_id)).naturalWidth;
       else if (input_property=='naturalheight')
-        return ImageHeight;
+        return image_getNatural(document.getElementById("gameimg_"+input_id)).naturalHeight;
       else if (input_property=='left')
         return Number(document.getElementById("gameimg_"+input_id).style.left.replace(/px/ig,""));
       else if (input_property=='top')
@@ -620,6 +614,12 @@
     else
       return 0;
   }
+  
+  function image_getNatural (obj) {
+    var img = new Image();
+    img.src = obj.src;
+    return {naturalwidth: img.width, naturalheight: img.height};
+  }  
   
   function mouse_coordinate_get(input_property) {
     if (!document.onmousemove)
