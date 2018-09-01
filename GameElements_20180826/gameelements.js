@@ -1,4 +1,5 @@
-// Author: Chung-Yi Fu (Kaohsiung, Taiwan)   https://www.facebook.com/francefu
+// Author: Chung-Yi Fu (Kaohsiung, Taiwan)  2018-9-1 20:00  
+// https://www.facebook.com/francefu
 
 +(function (window, document) {
   
@@ -10,6 +11,7 @@
   var onclicktime = 200;
   var onclicktimerid;
   var mouse_x,mouse_y;
+  var ImageWidth,ImageHeight;
   
   function table_create(input_id,input_width,input_height,input_left,input_top,input_trcount,input_tdcount,input_borderstyle,input_borderwidth,input_bordercolor,input_bgcolor,input_zindex,input_display) {
     if (document.getElementById("gametable_"+input_id)) 
@@ -135,6 +137,20 @@
         else
           return ""; 
       }
+      else if (input_property=="onclick[Column,Row]"){
+        if (onclickid.indexOf("gametable_td_"+input_id)==0){     
+          if (onclickid.split("_").length>=5){
+            var arr = onclickid.split("_");
+            onclickid="";
+            arr = [arr[arr.length-1],arr[arr.length-2]];
+            return arr;
+          }
+          else
+            return "";
+        }
+        else
+          return ""; 
+      }
       else if (input_property=="onclickImage"){
         if (onclickid.indexOf("gametable_td_"+input_id)==0){     
           if (document.getElementById(onclickid).hasChildNodes())
@@ -208,6 +224,8 @@
         else
           return "";
       }
+      else if (input_property=="tdid")
+        return "gametable_td_"+input_id+"_"+input_y+'_'+input_x;
     }
     else
       return "";
@@ -215,8 +233,15 @@
  
   
   function table_td_insert_img(input_id,input_x,input_y,input_img_id,input_url,input_width,input_height){
-    if (document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x))
-      document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x).innerHTML = "<img id='gameimg_"+input_img_id+"' src='"+input_url+"' width='"+input_width+"' height='"+input_height+"' onclick='image_onclickid_set(this);'>";
+    if (document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x)){
+      var img = document.createElement('img');
+      img.id = "gameimg_"+input_img_id;
+      img.src = input_url;
+      img.style.width = input_width + 'px';
+      img.style.height = input_height + 'px';
+      img.setAttribute("onclick", "javascript:image_onclickid_set(this);");
+      document.getElementById("gametable_td_"+input_id+"_"+input_y+"_"+input_x).appendChild(img);
+    }
   }
 
   function table_td_img_get(input_img_id,input_property){
@@ -227,6 +252,20 @@
           return Number(arr[arr.length-1]);
         else if (input_property=="row")
           return Number(arr[arr.length-2]);
+        else if (input_property=="width")  
+          return Number(document.getElementById("gameimg_"+input_img_id).style.width.replace(/px/ig,""));
+        else if (input_property=="height")
+          return Number(document.getElementById("gameimg_"+input_img_id).style.height.replace(/px/ig,""));
+        else if (input_property=='naturalwidth'){
+          var naturl = image_Natural_get(document.getElementById("gameimg_"+input_img_id));
+          return Number(naturl.width);
+        }
+        else if (input_property=='naturalheight'){
+          var naturl = image_Natural_get(document.getElementById("gameimg_"+input_img_id));
+          return Number(naturl.height);
+        }      
+        else if (input_property=="imageid")
+          return "gameimg_"+input_img_id;
       }
       else
         return -1;
@@ -471,6 +510,14 @@
         return Number(document.getElementById("gameimg_"+input_id).style.width.replace(/px/ig,""));
       else if (input_property=='height')
         return Number(document.getElementById("gameimg_"+input_id).style.height.replace(/px/ig,""));
+      else if (input_property=='naturalwidth'){
+        var naturl = image_Natural_get(document.getElementById("gameimg_"+input_id));
+        return Number(naturl.width);
+      }
+      else if (input_property=='naturalheight'){
+        var naturl = image_Natural_get(document.getElementById("gameimg_"+input_id));
+        return Number(naturl.height);
+      }
       else if (input_property=='left')
         return Number(document.getElementById("gameimg_"+input_id).style.left.replace(/px/ig,""));
       else if (input_property=='top')
@@ -588,6 +635,12 @@
       return 0;
   }
   
+  function image_Natural_get (obj) {
+    var img = new Image();
+    img.src = obj.src;
+    return {width: img.width, height: img.height};
+  }  
+  
   function mouse_coordinate_get(input_property) {
     if (!document.onmousemove)
     {
@@ -615,6 +668,7 @@
   window.image_onclickid_set = image_onclickid_set;
   window.image_onclickid_clear = image_onclickid_clear;
   window.image_onclick_get = image_onclick_get;
+  window.image_Natural_get = image_Natural_get;
   window.mouse_coordinate_get = mouse_coordinate_get;
   window.canvas_create = canvas_create;
   window.canvas_line = canvas_line;
