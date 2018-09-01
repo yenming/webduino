@@ -265,6 +265,7 @@ bgColor = '#ffffff';
 score = 0;
 timeinterval = 500;
 table_create("fuGameTable",20,20,0,80,20,11,"solid",1,'#ff0000','#ffffff',0,true);
+document.getElementById('gametable_fuGameTable').style.position = "static";
 start();
 document.onkeydown = function(e){
   if(e.keyCode == 37){
