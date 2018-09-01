@@ -251,6 +251,10 @@
           return Number(arr[arr.length-1]);
         else if (input_property=="row")
           return Number(arr[arr.length-2]);
+        else if (input_property=="width")  
+          return Number(document.getElementById("gameimg_"+input_img_id).style.width.replace(/px/ig,""));
+        else if (input_property=="height")
+          return Number(document.getElementById("gameimg_"+input_img_id).style.height.replace(/px/ig,""));
         else if (input_property=='naturalwidth'){
           var naturl = image_Natural_get(document.getElementById("gameimg_"+input_img_id));
           return Number(naturl.width);
