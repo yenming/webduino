@@ -269,6 +269,13 @@ document.onkeydown = function(e){
     }
   }
 };
+document.onmousedown = function(){
+  if (checkboundary(X0, Y0, (Direction + 1) % (Matrix.length / 2)) == false) {
+    clear_previous();
+    Direction = (Direction + 1) % (Matrix.length / 2);
+    draw_next();
+  }    
+};    
 
 </script>
   
