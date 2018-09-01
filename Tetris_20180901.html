@@ -240,6 +240,21 @@ table_create("fuGameTable",20,20,0,80,20,15,"solid",1,'#ff0000','#ffffff',0,true
 document.getElementById('gametable_fuGameTable').style.position = "static";
 table_create("fuGameTable1",20,20,0,80,6,15,"solid",1,'#ff0000','#ffffff',0,true);
 document.getElementById('gametable_fuGameTable1').style.position = "static";
+table_td_set("fuGameTable1",5,0,"background",'#33ff33');
+table_td_set("fuGameTable1",5,1,"background",'#33ff33');
+table_td_set("fuGameTable1",5,2,"background",'#33ff33');
+table_td_set("fuGameTable1",6,0,"background",'#33ff33');
+table_td_set("fuGameTable1",6,1,"background",'#33ff33');
+table_td_set("fuGameTable1",6,2,"background",'#33ff33');
+table_td_set("fuGameTable1",7,0,"background",'#33ff33');
+table_td_set("fuGameTable1",7,1,"background",'#33ff33');
+table_td_set("fuGameTable1",7,2,"background",'#33ff33');
+table_td_set("fuGameTable1",8,0,"background",'#33ff33');
+table_td_set("fuGameTable1",8,1,"background",'#33ff33');
+table_td_set("fuGameTable1",8,2,"background",'#33ff33');
+table_td_set("fuGameTable1",9,0,"background",'#33ff33');
+table_td_set("fuGameTable1",9,1,"background",'#33ff33');
+table_td_set("fuGameTable1",9,2,"background",'#33ff33');  
 start();
 document.onkeydown = function(e){
   if(e.keyCode == 37){
@@ -276,25 +291,25 @@ ctrlTimer = setInterval(function(){
   if (CR == ""){
     //
   }
-  else if (CR[0] <= 5) {
+  else if (CR[0] <= 4) {
     if (checkboundary(X0 - 1, Y0, Direction) == false) {
       clear_previous();
       X0 = (typeof X0 == 'number' ? X0 : 0) + -1;
       draw_next();
     }
-  } else if (CR[0] >= 11) {
+  } else if (CR[0] >= 10) {
     if (checkboundary(X0 + 1, Y0, Direction) == false) {
       clear_previous();
       X0 = (typeof X0 == 'number' ? X0 : 0) + 1;
       draw_next();
     }
-  } else if (CR[1] > 3 && (CR[0] > 5 && CR[0] < 11)) {
+  } else if (CR[1] >= 3 && (CR[0] > 4 && CR[0] < 10)) {
     if (checkboundary(X0, Y0 + 1, Direction) == false) {
       clear_previous();
       Y0 = (typeof Y0 == 'number' ? Y0 : 0) + 1;
       draw_next();
     }
-  } else if (CR[1] <= 3 && (CR[0] > 5 && CR[0] < 11)) {
+  } else if (CR[1] < 3 && (CR[0] > 4 && CR[0] < 10)) {
     if (checkboundary(X0, Y0, (Direction + 1) % (Matrix.length / 2)) == false) {
       clear_previous();
       Direction = (Direction + 1) % (Matrix.length / 2);
