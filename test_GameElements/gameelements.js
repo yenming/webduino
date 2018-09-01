@@ -491,8 +491,8 @@
     {
       var img = document.getElementById("gameimg_"+input_id);
       img.onload = function() {
-        ImageWidth = Number(this.naturalWidth.replace(/px/ig,""));
-        ImageHeight = Number(this.naturalHeight.replace(/px/ig,""));
+        ImageWidth = Number(String(this.naturalWidth).replace(/px/ig,""));
+        ImageHeight = Number(String(this.naturalHeight).replace(/px/ig,""));
       }
       if (input_property=='url')
         return document.getElementById("gameimg_"+input_id).src;
