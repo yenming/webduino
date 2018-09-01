@@ -495,9 +495,9 @@
       else if (input_property=='height')
         return Number(document.getElementById("gameimg_"+input_id).style.height.replace(/px/ig,""));
       else if (input_property=='naturalwidth')
-        return image_getNatural(document.getElementById("gameimg_"+input_id)).naturalWidth;
+        return image_Natural_get(document.getElementById("gameimg_"+input_id)).naturalWidth;
       else if (input_property=='naturalheight')
-        return image_getNatural(document.getElementById("gameimg_"+input_id)).naturalHeight;
+        return image_Natural_get(document.getElementById("gameimg_"+input_id)).naturalHeight;
       else if (input_property=='left')
         return Number(document.getElementById("gameimg_"+input_id).style.left.replace(/px/ig,""));
       else if (input_property=='top')
@@ -615,7 +615,7 @@
       return 0;
   }
   
-  function image_getNatural (obj) {
+  function image_Natural_get (obj) {
     var img = new Image();
     img.src = obj.src;
     return {naturalwidth: img.width, naturalheight: img.height};
@@ -648,6 +648,7 @@
   window.image_onclickid_set = image_onclickid_set;
   window.image_onclickid_clear = image_onclickid_clear;
   window.image_onclick_get = image_onclick_get;
+  window.image_Natural_get = image_Natural_get;
   window.mouse_coordinate_get = mouse_coordinate_get;
   window.canvas_create = canvas_create;
   window.canvas_line = canvas_line;
