@@ -209,7 +209,7 @@ function checkline() {
     }
     if (linestate == true) {
       score = (typeof score == 'number' ? score : 0) + 1;
-      document.getElementById('demo-area-01-show').innerHTML = score;
+      document.getElementById('demo-area-01-show').innerHTML = 'score = ' + score;
       var p_inc = 1;
       if (m > 1) {
         p_inc = -p_inc;
@@ -269,39 +269,37 @@ document.onkeydown = function(e){
     }
   }
 };
-document.onmousedown = function(){
-  if (checkboundary(X0, Y0, (Direction + 1) % (Matrix.length / 2)) == false) {
-    clear_previous();
-    Direction = (Direction + 1) % (Matrix.length / 2);
-    draw_next();
-  }    
-};    
+fuTimer = setInterval(function(){
+  _E8_AE_8A_E6_95_B8 = (table_get("fuGameTable","onclick[Column,Row]"));
+  if (_E8_AE_8A_E6_95_B8[0] <= 5) {
+    if (checkboundary(X0 - 1, Y0, Direction) == false) {
+      clear_previous();
+      X0 = (typeof X0 == 'number' ? X0 : 0) + -1;
+      draw_next();
+    }
+  } else if (_E8_AE_8A_E6_95_B8[0] >= 11) {
+    if (checkboundary(X0 + 1, Y0, Direction) == false) {
+      clear_previous();
+      X0 = (typeof X0 == 'number' ? X0 : 0) + 1;
+      draw_next();
+    }
+  } else if (_E8_AE_8A_E6_95_B8[1] > 15 && (_E8_AE_8A_E6_95_B8[0] > 5 && _E8_AE_8A_E6_95_B8[0] < 11)) {
+    if (checkboundary(X0, Y0 + 1, Direction) == false) {
+      clear_previous();
+      Y0 = (typeof Y0 == 'number' ? Y0 : 0) + 1;
+      draw_next();
+    }
+  } else if (_E8_AE_8A_E6_95_B8[1] <= 15 && (_E8_AE_8A_E6_95_B8[0] > 5 && _E8_AE_8A_E6_95_B8[0] < 11)) {
+    if (checkboundary(X0, Y0, (Direction + 1) % (Matrix.length / 2)) == false) {
+      clear_previous();
+      Direction = (Direction + 1) % (Matrix.length / 2);
+      draw_next();
+    }
+  }
+},100); 
 
 </script>
-  
-<table>
-  <tr>
-    <td>
-      <input type="button" onclick="if (checkboundary(X0 - 1, Y0, Direction) == false) {clear_previous();X0 = (typeof X0 == 'number' ? X0 : 0) + -1;draw_next();}" value="Left">&nbsp;&nbsp;&nbsp;&nbsp;
-    </td>
-    <td>
-      <input type="button" onclick="if (checkboundary(X0, Y0, (Direction + 1) % (Matrix.length / 2)) == false) {clear_previous();Direction = (Direction + 1) % (Matrix.length / 2);draw_next();}" value="Turn (Ctrl)">&nbsp;&nbsp;&nbsp;&nbsp;  
-    </td>
-    <td>
-      <input type="button" onclick="if (checkboundary(X0 + 1, Y0, Direction) == false) {clear_previous();X0 = (typeof X0 == 'number' ? X0 : 0) + 1;draw_next();}" value="Right">  
-    </td>
-  </tr>
-  <tr>
-    <td>
-    </td>
-    <td>
-      <input type="button" onclick="if (checkboundary(X0, Y0 + 1, Direction) == false) {clear_previous();Y0 = (typeof Y0 == 'number' ? Y0 : 0) + 1;draw_next();}" value="Down">  
-    </td>
-    <td align="right">
-      <span id="demo-area-01-show"></span>
-    </td>
-  </tr>
-</table>
+<span id="demo-area-01-show"></span>
 </center>
 </body>
 </html>
