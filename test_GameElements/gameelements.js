@@ -144,10 +144,10 @@
             return arr;
           }
           else
-            return "[]";
+            return "[-1,-1]";
         }
         else
-          return "[]"; 
+          return "[-1,-1]"; 
       }
       else if (input_property=="onclickImage"){
         if (onclickid.indexOf("gametable_td_"+input_id)==0){     
