@@ -244,9 +244,9 @@
         else if (input_property=="row")
           return Number(arr[arr.length-2]);
         else if (input_property=="width")  
-          return Number(document.getElementById("gameimg_"+input_img_id).style.clientWidth.replace(/px/ig,""));
+          return Number(document.getElementById("gameimg_"+input_img_id).style.Width().replace(/px/ig,""));
         else if (input_property=="height")
-          return Number(document.getElementById("gameimg_"+input_img_id).style.clientHeight.replace(/px/ig,""));        
+          return Number(document.getElementById("gameimg_"+input_img_id).style.Height().replace(/px/ig,""));        
         else if (input_property=="imageid")
           return "gameimg_"+input_img_id;
       }
