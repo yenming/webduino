@@ -18,12 +18,30 @@
 
 <body>
   <div>
+    <table>
+    <tr>
+    <td>
     <input type="button" onclick="if (checkboundary(X0 - 1, Y0, Direction) == false) {clear_previous();X0 = (typeof X0 == 'number' ? X0 : 0) + -1;draw_next();}" value="Left">
-    <input type="button" onclick="if (checkboundary(X0 + 1, Y0, Direction) == false) {clear_previous();X0 = (typeof X0 == 'number' ? X0 : 0) + 1;draw_next();}" value="Right">
-    <input type="button" onclick="if (checkboundary(X0, Y0 + 1, Direction) == false) {clear_previous();Y0 = (typeof Y0 == 'number' ? Y0 : 0) + 1;draw_next();}" value="Down">
-    <input type="button" onclick="if (checkboundary(X0, Y0, (Direction + 1) % (Matrix.length / 2)) == false) {clear_previous();Direction = (Direction + 1) % (Matrix.length / 2);draw_next();}" value="Turn">
+    </td>
+    <td>
+    <input type="button" onclick="if (checkboundary(X0, Y0, (Direction + 1) % (Matrix.length / 2)) == false) {clear_previous();Direction = (Direction + 1) % (Matrix.length / 2);draw_next();}" value="Turn">  
+    </td>
+    <td>
+    <input type="button" onclick="if (checkboundary(X0 + 1, Y0, Direction) == false) {clear_previous();X0 = (typeof X0 == 'number' ? X0 : 0) + 1;draw_next();}" value="Right">  
+    </td>
+    </tr>
+    <tr>
+    <td>
+    </td>
+    <td>
+    <input type="button" onclick="if (checkboundary(X0, Y0 + 1, Direction) == false) {clear_previous();Y0 = (typeof Y0 == 'number' ? Y0 : 0) + 1;draw_next();}" value="Down">  
+    </td>
+    <td></td>
+    </tr>
+    </table>
     <br>
-    <span id="demo-area-01-show">123</span></div>
+    <span id="demo-area-01-show">123</span>
+  </div>
 <script id="jsbin-javascript">
 var x0_next;
 var y0_next;
