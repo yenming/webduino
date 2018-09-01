@@ -494,12 +494,14 @@
         return Number(document.getElementById("gameimg_"+input_id).style.width.replace(/px/ig,""));
       else if (input_property=='height')
         return Number(document.getElementById("gameimg_"+input_id).style.height.replace(/px/ig,""));
-      else if (input_property=='naturalwidth')
+      else if (input_property=='naturalwidth'){
         var naturl = image_Natural_get(document.getElementById("gameimg_"+input_id));
         return naturl.width;
-      else if (input_property=='naturalheight')
+      }
+      else if (input_property=='naturalheight'){
         var naturl = image_Natural_get(document.getElementById("gameimg_"+input_id));
         return naturl.height;
+      }
       else if (input_property=='left')
         return Number(document.getElementById("gameimg_"+input_id).style.left.replace(/px/ig,""));
       else if (input_property=='top')
