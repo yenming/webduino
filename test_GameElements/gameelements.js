@@ -490,9 +490,9 @@
       if (input_property=='url')
         return document.getElementById("gameimg_"+input_id).src;
       else if (input_property=='width')
-        return Number(document.getElementById("gameimg_"+input_id).style.width.replace(/px/ig,""));
+        return Number(document.getElementById("gameimg_"+input_id).width.replace(/px/ig,""));
       else if (input_property=='height')
-        return Number(document.getElementById("gameimg_"+input_id).style.height.replace(/px/ig,""));
+        return Number(document.getElementById("gameimg_"+input_id).height.replace(/px/ig,""));
       else if (input_property=='naturalwidth')
         return Number(document.getElementById("gameimg_"+input_id).natureWidth.replace(/px/ig,""));
       else if (input_property=='naturalheight')
