@@ -22,7 +22,7 @@
     <input type="button" onclick="if (checkboundary(X0 - 1, Y0, Direction) == false) {clear_previous();X0 = (typeof X0 == 'number' ? X0 : 0) + -1;draw_next();}" value="Left">
     </td>
     <td>
-    <input type="button" onclick="if (checkboundary(X0, Y0, (Direction + 1) % (Matrix.length / 2)) == false) {clear_previous();Direction = (Direction + 1) % (Matrix.length / 2);draw_next();}" value="Turn">  
+    <input type="button" onclick="if (checkboundary(X0, Y0, (Direction + 1) % (Matrix.length / 2)) == false) {clear_previous();Direction = (Direction + 1) % (Matrix.length / 2);draw_next();}" value="Turn (Ctrl)">  
     </td>
     <td>
     <input type="button" onclick="if (checkboundary(X0 + 1, Y0, Direction) == false) {clear_previous();X0 = (typeof X0 == 'number' ? X0 : 0) + 1;draw_next();}" value="Right">  
@@ -34,11 +34,13 @@
     <td>
     <input type="button" onclick="if (checkboundary(X0, Y0 + 1, Direction) == false) {clear_previous();Y0 = (typeof Y0 == 'number' ? Y0 : 0) + 1;draw_next();}" value="Down">  
     </td>
-    <td></td>
+    <td>
+    <span id="demo-area-01-show"></span>
+    </td>
     </tr>
     </table>
     <br>
-    <span id="demo-area-01-show">123</span>
+    
   </div>
 <script id="jsbin-javascript">
 var x0_next;
@@ -257,12 +259,12 @@ function checkline() {
 }
 
 
-document.getElementById('demo-area-01-show').innerHTML = '俄羅斯方塊    (down, left, right, Ctrl)';
+document.getElementById('demo-area-01-show').innerHTML = '';
 document.getElementById('demo-area-01-show').style.fontSize = 15 + 'px';
 bgColor = '#ffffff';
 score = 0;
 timeinterval = 500;
-table_create("fuGameTable",20,20,0,150,20,11,"solid",1,'#ff0000','#ffffff',0,true);
+table_create("fuGameTable",20,20,0,120,20,11,"solid",1,'#ff0000','#ffffff',0,true);
 start();
 document.onkeydown = function(e){
   if(e.keyCode == 37){
