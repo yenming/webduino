@@ -135,6 +135,18 @@
         else
           return ""; 
       }
+      else if (input_property=="onclick[Column,Row]"){
+        if (onclickid.indexOf("gametable_td_"+input_id)==0){     
+          if (onclickid.split("_").length>=5){
+            var arr = onclickid.split("_");
+            return "["+arr[arr.length-1]+","+arr[arr.length-2]+"]";
+          }
+          else
+            return "[,]";
+        }
+        else
+          return "[,]"; 
+      }
       else if (input_property=="onclickImage"){
         if (onclickid.indexOf("gametable_td_"+input_id)==0){     
           if (document.getElementById(onclickid).hasChildNodes())
