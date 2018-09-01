@@ -244,9 +244,9 @@
         else if (input_property=="row")
           return Number(arr[arr.length-2]);
         else if (input_property=="width")  
-          return Number(document.getElementById("gameimg_"+input_img_id).style.Width().replace(/px/ig,""));
+          return Number(document.getElementById("gameimg_"+input_img_id).style.Width.replace(/px/ig,""));
         else if (input_property=="height")
-          return Number(document.getElementById("gameimg_"+input_img_id).style.Height().replace(/px/ig,""));        
+          return Number(document.getElementById("gameimg_"+input_img_id).style.Height.replace(/px/ig,""));        
         else if (input_property=="imageid")
           return "gameimg_"+input_img_id;
       }
@@ -494,9 +494,9 @@
       else if (input_property=='height')
         return Number(document.getElementById("gameimg_"+input_id).style.height.replace(/px/ig,""));
       else if (input_property=='naturalwidth')
-        return Number(document.getElementById("gameimg_"+input_id).natureWidth.toString().replace(/px/ig,""));
+        return Number(String(document.getElementById("gameimg_"+input_id).natureWidth).replace(/px/ig,""));
       else if (input_property=='naturalheight')
-        return Number(document.getElementById("gameimg_"+input_id).natureHeight.toString().replace(/px/ig,""));      
+        return Number(String(document.getElementById("gameimg_"+input_id).natureHeight).replace(/px/ig,""));      
       else if (input_property=='left')
         return Number(document.getElementById("gameimg_"+input_id).style.left.replace(/px/ig,""));
       else if (input_property=='top')
