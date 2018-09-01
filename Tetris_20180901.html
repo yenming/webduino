@@ -1,0 +1,278 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Webduino Blockly Demo 01</title>
+  <script src="https://blocklypro.webduino.io/components/jquery/dist/jquery.min.js"></script>
+  <script src="https://blocklypro.webduino.io/dist/lib/webduino-all-0.4.20.min.js"></script>
+  <script src="https://blocklypro.webduino.io/dist/webduino-blockly.min.js"></script>
+  <script src="https://blocklypro.webduino.io/dist/lib/firebase.min.js"></script>
+  <script src="https://blocklypro.webduino.io/dist/lib/runtime.min.js"></script>
+  <script src="https://rawgit.com/fustyles/webduino/temp/GameElements_20180826/gameelements.js"></script>
+<style id="jsbin-css">
+#demo-area-01-show { font-size: 60px; pointer-events: auto!important; }
+</style>
+</head>
+
+<body>
+  <div><span id="demo-area-01-show">123</span></div>
+<script id="jsbin-javascript">
+var x0_next;
+var y0_next;
+var direction_next;
+var fuTimer;
+var boundarystate;
+var i;
+var mX;
+var m;
+var bgColor;
+var Matrix_yellow;
+var mX_next;
+var fuGameTable;
+var mY;
+var linestate;
+var score;
+var Matrix_orange;
+var mY_next;
+var Matrix;
+var n;
+var timeinterval;
+var Matrix_blue;
+var X0;
+var Y0;
+var Matrix_purple;
+var Direction;
+var mColor;
+var Matrix_red;
+var Matrix_green;
+var p;
+var Matrix_bluegreen;
+var end;
+var q;
+var j;
+
+function math_random_int(a, b) {
+  if (a > b) {
+    // Swap a and b to ensure a is smaller.
+    var c = a;
+    a = b;
+    b = c;
+  }
+  return Math.floor(Math.random() * (b - a + 1) + a);
+}
+
+function start() {
+  clearInterval(fuTimer);
+  Matrix_yellow = ['0,-1,0,1'.split(','), '0,0,1,0'.split(','), '0,0,-1,0'.split(','), '0,-1,0,1'.split(','), '0,-1,0,1'.split(','), '0,0,-1,0'.split(','), '0,0,1,0'.split(','), '0,-1,0,1'.split(',')];
+  Matrix_orange = ['-2,-1,0,1'.split(','), '0,0,0,0'.split(','), '0,0,0,0'.split(','), '-2,-1,0,1'.split(',')];
+  Matrix_blue = ['-1,-1,0,1'.split(','), '1,0,0,0'.split(','), '-1,0,0,0'.split(','), '-1,-1,0,1'.split(','), '-1,0,1,1'.split(','), '0,0,0,-1'.split(','), '0,0,0,1'.split(','), '-1,0,1,1'.split(',')];
+  Matrix_purple = ['-1,0,1,1'.split(','), '0,0,0,-1'.split(','), '-1,0,0,0'.split(','), '1,1,0,-1'.split(','), '-1,-1,0,1'.split(','), '-1,0,0,0'.split(','), '0,0,0,1'.split(','), '1,0,-1,-1'.split(',')];
+  Matrix_red = ['-1,-1,0,0'.split(','), '0,1,0,1'.split(',')];
+  Matrix_green = ['-1,0,0,1'.split(','), '0,0,1,1'.split(','), '-1,-1,0,0'.split(','), '1,0,0,-1'.split(',')];
+  Matrix_bluegreen = ['-1,0,0,1'.split(','), '1,1,0,0'.split(','), '0,0,1,1'.split(','), '-1,0,0,1'.split(',')];
+  n = math_random_int(1, 7);
+  if (n == 1) {
+    Matrix = Matrix_blue;
+    mColor = '#3366ff';
+  } else if (n == 2) {
+    Matrix = Matrix_purple;
+    mColor = '#cc33cc';
+  } else if (n == 3) {
+    Matrix = Matrix_yellow;
+    mColor = '#ffff00';
+  } else if (n == 4) {
+    Matrix = Matrix_red;
+    mColor = '#ff0000';
+  } else if (n == 5) {
+    Matrix = Matrix_green;
+    mColor = '#009900';
+  } else if (n == 6) {
+    Matrix = Matrix_bluegreen;
+    mColor = '#33ffff';
+  } else {
+    Matrix = Matrix_orange;
+    mColor = '#cc6600';
+  }
+  X0 = 5;
+  Y0 = 0;
+  Direction = 0;
+  draw_next();
+  fuTimer = setInterval(function(){
+    if (checkboundary(X0, Y0 + 1, Direction) == false) {
+      clear_previous();
+      Y0 = (typeof Y0 == 'number' ? Y0 : 0) + 1;
+      draw_next();
+    }
+  },timeinterval);
+}
+
+function checkboundary(x0_next, y0_next, direction_next) {
+  boundarystate = false;
+  mX_next = Matrix[(direction_next * 2 + 1) - 1];
+  mY_next = Matrix[(direction_next * 2 + 2) - 1];
+  var i_end = mX.length;
+  var i_inc = 1;
+  if (1 > i_end) {
+    i_inc = -i_inc;
+  }
+  for (i = 1;
+       i_inc >= 0 ? i <= i_end : i >= i_end;
+       i += i_inc) {
+    if (x0_next + mX_next[i - 1] * 1 > (table_get("fuGameTable","columns")) - 1 || x0_next + mX_next[i - 1] * 1 < 0) {
+      boundarystate = true;
+    } else {
+      if (y0_next + mY_next[i - 1] * 1 < 0) {
+        boundarystate = true;
+      } else if (y0_next + mY_next[i - 1] * 1 > (table_get("fuGameTable","rows")) - 1) {
+        boundarystate = true;
+        checkline();
+        start();
+      } else {
+        if ((table_td_get("fuGameTable",(x0_next + mX_next[i - 1] * 1),(y0_next + mY_next[i - 1] * 1),"background")) != bgColor) {
+          end = true;
+          var j_end = mX.length;
+          var j_inc = 1;
+          if (1 > j_end) {
+            j_inc = -j_inc;
+          }
+          for (j = 1;
+               j_inc >= 0 ? j <= j_end : j >= j_end;
+               j += j_inc) {
+            if (X0 + mX[j - 1] * 1 == x0_next + mX_next[i - 1] * 1 && Y0 + mY[j - 1] * 1 == y0_next + mY_next[i - 1] * 1) {
+              end = false;
+            }
+          }
+          if (end == true) {
+            boundarystate = true;
+            if (X0 == x0_next) {
+              checkline();
+              start();
+            }
+          }
+        }
+      }
+    }
+  }
+  return boundarystate;
+}
+
+function clear_previous() {
+  var i_end2 = mX.length;
+  var i_inc2 = 1;
+  if (1 > i_end2) {
+    i_inc2 = -i_inc2;
+  }
+  for (i = 1;
+       i_inc2 >= 0 ? i <= i_end2 : i >= i_end2;
+       i += i_inc2) {
+    table_td_set("fuGameTable",(X0 + mX[i - 1] * 1),(Y0 + mY[i - 1] * 1),"background",bgColor);
+  }
+}
+
+function draw_next() {
+  mX = Matrix[(Direction * 2 + 1) - 1];
+  mY = Matrix[(Direction * 2 + 2) - 1];
+  var i_end3 = mX.length;
+  var i_inc3 = 1;
+  if (1 > i_end3) {
+    i_inc3 = -i_inc3;
+  }
+  for (i = 1;
+       i_inc3 >= 0 ? i <= i_end3 : i >= i_end3;
+       i += i_inc3) {
+    table_td_set("fuGameTable",(X0 + mX[i - 1] * 1),(Y0 + mY[i - 1] * 1),"background",mColor);
+  }
+}
+
+function checkline() {
+  var m_start = (table_get("fuGameTable","rows")) - 1;
+  var m_inc = 1;
+  if (m_start > 0) {
+    m_inc = -m_inc;
+  }
+  for (m = m_start;
+       m_inc >= 0 ? m <= 0 : m >= 0;
+       m += m_inc) {
+    linestate = true;
+    var n_end = (table_get("fuGameTable","columns")) - 1;
+    var n_inc = 1;
+    if (0 > n_end) {
+      n_inc = -n_inc;
+    }
+    for (n = 0;
+         n_inc >= 0 ? n <= n_end : n >= n_end;
+         n += n_inc) {
+      if ((table_td_get("fuGameTable",n,m,"background")) == bgColor) {
+        linestate = false;
+      }
+    }
+    if (linestate == true) {
+      score = (typeof score == 'number' ? score : 0) + 1;
+      document.getElementById('demo-area-01-show').innerHTML = score;
+      var p_inc = 1;
+      if (m > 1) {
+        p_inc = -p_inc;
+      }
+      for (p = m;
+           p_inc >= 0 ? p <= 1 : p >= 1;
+           p += p_inc) {
+        var q_end = (table_get("fuGameTable","columns")) - 1;
+        var q_inc = 1;
+        if (0 > q_end) {
+          q_inc = -q_inc;
+        }
+        for (q = 0;
+             q_inc >= 0 ? q <= q_end : q >= q_end;
+             q += q_inc) {
+          table_td_set("fuGameTable",q,p,"background",(table_td_get("fuGameTable",q,(p - 1),"background")));
+        }
+      }
+      m = (typeof m == 'number' ? m : 0) + 1;
+    }
+  }
+}
+
+
+document.getElementById('demo-area-01-show').innerHTML = '«XÃ¹´µ¤è¶ô    (down, left, right, Ctrl)';
+document.getElementById('demo-area-01-show').style.fontSize = 15 + 'px';
+bgColor = '#ffffff';
+score = 0;
+timeinterval = 500;
+table_create("fuGameTable",25,25,0,30,20,11,"solid",1,'#ff0000','#ffffff',0,true);
+start();
+document.onkeydown = function(e){
+  if(e.keyCode == 37){
+      if (checkboundary(X0 - 1, Y0, Direction) == false) {
+      clear_previous();
+      X0 = (typeof X0 == 'number' ? X0 : 0) + -1;
+      draw_next();
+    }
+  }
+  if(e.keyCode == 39){
+      if (checkboundary(X0 + 1, Y0, Direction) == false) {
+      clear_previous();
+      X0 = (typeof X0 == 'number' ? X0 : 0) + 1;
+      draw_next();
+    }
+  }
+  if(e.keyCode == 40){
+      if (checkboundary(X0, Y0 + 1, Direction) == false) {
+      clear_previous();
+      Y0 = (typeof Y0 == 'number' ? Y0 : 0) + 1;
+      draw_next();
+    }
+  }
+  if(e.keyCode == 17){
+      if (checkboundary(X0, Y0, (Direction + 1) % (Matrix.length / 2)) == false) {
+      clear_previous();
+      Direction = (Direction + 1) % (Matrix.length / 2);
+      draw_next();
+    }
+  }
+};
+
+</script>
+</body>
+</html>
