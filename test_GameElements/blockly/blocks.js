@@ -133,7 +133,7 @@ Blockly.Blocks['table_td_border_set'] = {
   this.appendValueInput("x_")
       .setCheck("Number")
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.TABLE_TD_SET_SHOW)
+      .appendField(Blockly.Msg.TABLE_TD_BORDER_SET_SHOW)
       .appendField(Blockly.Msg.TABLE_TD_X_SHOW);
   this.appendValueInput("y_")
       .setCheck("Number")
