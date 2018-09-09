@@ -732,7 +732,7 @@
  
   function MatrixLed_show() {
     if (MatrixLedshowstate==1)
-      var ledtable ="<table style='width:"+MatrixLedwidth+"px;height:"+MatrixLedheight+"px;border:white;'>"
+      var ledtable ="<table id='gametable_fuGameTable' style='width:"+MatrixLedwidth+"px;height:"+MatrixLedheight+"px;border:white;'>"
                   + "<tr><td bgcolor='"+L[0]+"'></td><td bgcolor='"+L[5]+"'></td><td bgcolor='"+L[10]+"'></td><td bgcolor='"+L[15]+"'></td><td bgcolor='"+L[20]+"'></td></tr>"
                   + "<tr><td bgcolor='"+L[1]+"'></td><td bgcolor='"+L[6]+"'></td><td bgcolor='"+L[11]+"'></td><td bgcolor='"+L[16]+"'></td><td bgcolor='"+L[21]+"'></td></tr>"
                   + "<tr><td bgcolor='"+L[2]+"'></td><td bgcolor='"+L[7]+"'></td><td bgcolor='"+L[12]+"'></td><td bgcolor='"+L[17]+"'></td><td bgcolor='"+L[22]+"'></td></tr>"
@@ -740,7 +740,7 @@
                   + "<tr><td bgcolor='"+L[4]+"'></td><td bgcolor='"+L[9]+"'></td><td bgcolor='"+L[14]+"'></td><td bgcolor='"+L[19]+"'></td><td bgcolor='"+L[24]+"'></td></tr>"
                   + "</table>";
     else
-      var ledtable ="<table style='width:"+MatrixLedwidth+"px;height:"+MatrixLedheight+"px;border:white;'>"
+      var ledtable ="<table id='gametable_fuGameTable' style='width:"+MatrixLedwidth+"px;height:"+MatrixLedheight+"px;border:white;'>"
                   + "<tr><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td></tr>"
                   + "<tr><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td></tr>"
                   + "<tr><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td><td bgcolor='"+MatrixLedbackcolor+"'></td></tr>"
