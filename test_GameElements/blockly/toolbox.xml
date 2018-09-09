@@ -153,7 +153,7 @@
     </value>  
     <value name="value_">
       <block type="text">
-        <field name="TEXT">1px solid black</field>
+        <field name="TEXT"></field>
       </block>
     </value>      
   </block>
