@@ -185,9 +185,7 @@
   function table_td_set(input_id,input_x,input_y,input_property,input_value){
     if (document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x)) {
       var obj = document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x);
-      if (input_property=="border")
-        obj.style.border = input_value;
-      else if (input_property=="width")
+      if (input_property=="width")
         obj.style.width = input_value + "px";
       else if (input_property=="height")
         obj.style.height = input_value + "px";        
@@ -197,6 +195,13 @@
         obj.innerHTML = input_value;
     } 
   }
+  
+  function table_td_border_set(input_id,input_x,input_y,input_borderwidth,input_borderstyle,input_bordercolor){
+    if (document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x)) {
+      var obj = document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x);
+      obj.style.border = input_borderwidth +'px ' + input_borderstyle + ' ' + input_bordercolor;
+    } 
+  }  
   
   function table_td_get(input_id,input_x,input_y,input_property){
     if (document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x))
@@ -693,5 +698,6 @@
   window.table_get = table_get;
   window.table_clear = table_clear;
   window.table_td_set = table_td_set;
+  window.table_td_border_set = table_td_border_set;
   
 }(window, window.document));
