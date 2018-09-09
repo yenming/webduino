@@ -199,6 +199,7 @@
   function table_td_border_set(input_id,input_x,input_y,input_borderwidth,input_borderstyle,input_bordercolor){
     if (document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x)) {
       var obj = document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x);
+      console.log(input_borderwidth +'px ' + input_borderstyle + ' ' + input_bordercolor);
       obj.style.border = input_borderwidth +'px ' + input_borderstyle + ' ' + input_bordercolor;
     } 
   }  
