@@ -185,7 +185,9 @@
   function table_td_set(input_id,input_x,input_y,input_property,input_value){
     if (document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x)) {
       var obj = document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x);
-      if (input_property=="width")
+      if (input_property=="border")
+        obj.style.border = input_value;
+      else if (input_property=="width")
         obj.style.width = input_value + "px";
       else if (input_property=="height")
         obj.style.height = input_value + "px";        
