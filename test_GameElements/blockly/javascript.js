@@ -54,7 +54,7 @@ Blockly.JavaScript['table_td_border_set'] = function (block) {
   var value_borderstyle_ = block.getFieldValue('borderstyle_');
   var value_borderwidth_ = Blockly.JavaScript.valueToCode(block, 'borderwidth_', Blockly.JavaScript.ORDER_ATOMIC); 
   var value_bordercolor_ = Blockly.JavaScript.valueToCode(block, 'bordercolor_', Blockly.JavaScript.ORDER_ATOMIC);
-  var code = 'table_td_set("' + variable_fuGameElements_ + '",'+ value_x_ + ',' + value_y_ + ',"'+ value_borderstyle_ + '",' + value_borderwidth_ + ',' + value_bordercolor_ + ');\n';
+  var code = 'table_td_border_set("' + variable_fuGameElements_ + '",'+ value_x_ + ',' + value_y_ + ',"'+ value_borderstyle_ + '",' + value_borderwidth_ + ',' + value_bordercolor_ + ');\n';
   return code;
 };
 
