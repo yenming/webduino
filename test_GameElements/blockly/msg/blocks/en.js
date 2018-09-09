@@ -20,6 +20,7 @@ Blockly.Msg.TABLE_DELETE_SHOW = "Table Delete";
 Blockly.Msg.TABLE_GET_SHOW = "Get Table";
 Blockly.Msg.TABLE_CLEAR_SHOW = "Table Clear";
 Blockly.Msg.TABLE_TD_SET_SHOW = "Cell Set";
+Blockly.Msg.TABLE_TD_BORDER_SET_SHOW = "Cell Border Set";
 Blockly.Msg.MUSIC_CREATE_SHOW ="Background Music Play";
 Blockly.Msg.MUSIC_LENGTH_SHOW ="Length(ms)";
 Blockly.Msg.MUSIC_LOOP_SHOW ="Loop";
