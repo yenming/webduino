@@ -157,6 +157,28 @@
       </block>
     </value>      
   </block>
+  <block type="table_td_border_set">  
+    <value name="x_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="y_">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>  
+    <value name="borderwidth_">
+      <block type="math_number">
+        <field name="NUM">1</field>
+      </block>
+    </value>    
+    <value name="bordercolor_">
+      <block type="colour_picker">
+        <field name="COLOUR">#000000</field>
+      </block>
+    </value>
+  </block>
   <block type="table_td_get">    
     <value name="x_">
       <block type="math_number">
