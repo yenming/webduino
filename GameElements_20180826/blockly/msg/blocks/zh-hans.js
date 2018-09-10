@@ -77,7 +77,3 @@ Blockly.Msg.DOCUMENT_TIMER_SHOW = "计时器 间隔时间(ms)";
 Blockly.Msg.DOCUMENT_TIMER_ONCE_SHOW = "计时器 间隔时间(ms)后执行一次";
 Blockly.Msg.DOCUMENT_TIMER_STOP_SHOW = "计时器 停止";
 Blockly.Msg.PROPERTY_SHOW = "属性";
-Blockly.Msg.TEXT_TO_NUMBER_SHOW = "文字转数字";
-Blockly.Msg.LOOP_BREAK_SHOW = "迴圈 中断";
-Blockly.Msg.LOOP_CONTINUE_SHOW = "迴圈 继续";
-Blockly.Msg.FUNCTION_RETURN_SHOW = "函数 回传";
