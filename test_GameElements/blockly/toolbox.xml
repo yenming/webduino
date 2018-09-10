@@ -579,13 +579,8 @@
   </block>  
   <block type="document_timer_stop">
   </block>  
-  
-  
   <block type="text_to_number">
     <value name="value_text_">
-      <block type="text">
-        <field name="TEXT"></field>
-      </block>
     </value>    
   </block>  
   <block type="loop_break">      
