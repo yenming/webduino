@@ -810,7 +810,7 @@ Blockly.Blocks['text_to_number'] = {
     this.appendValueInput("value_text_")
         .setCheck(null)
         .appendField(Blockly.Msg.TEXT_TO_NUMBER_SHOW);
-    this.setOutput(true, null);  
+    this.setOutput(true);  
     this.setColour(300);
     this.setTooltip("");
     this.setHelpUrl("");
