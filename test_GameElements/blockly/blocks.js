@@ -862,8 +862,9 @@ Blockly.Blocks['loop_continue'] = {
 
 Blockly.Blocks['function_return'] = {
   init: function () {
-    this.appendDummyInput()
-      .appendField(Blockly.Msg.FUNCTION_RETURN_SHOW);
+    this.appendValueInput("value_")
+        .setCheck(null)
+        .appendField(Blockly.Msg.FUNCTION_RETURN_SHOW);    
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setColour(60);
