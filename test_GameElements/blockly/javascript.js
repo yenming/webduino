@@ -343,6 +343,7 @@ Blockly.JavaScript['loop_continue'] = function (block) {
 };
 
 Blockly.JavaScript['function_return'] = function (block) {
-  var code = 'return;\n';
+  var value_ = Blockly.JavaScript.valueToCode(block, 'value_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'return ' + value_ + ';\n';
   return code;
 };
