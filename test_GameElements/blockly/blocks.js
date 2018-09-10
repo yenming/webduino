@@ -126,6 +126,29 @@ Blockly.Blocks['table_td_set'] = {
   }
 };
 
+Blockly.Blocks['table_border_set'] = {
+  init: function() {
+  this.appendDummyInput()
+      .appendField(Blockly.Msg.TABLE_BORDER_SET_SHOW)
+      .appendField(new Blockly.FieldVariable('fuGameTable'), 'fuGameElements_');    
+  this.appendDummyInput()  
+      .appendField(Blockly.Msg.TABLE_BORDERSTYLE_SHOW)
+      .appendField(new Blockly.FieldDropdown([["solid","solid"], ["dashed","dashed"], ["double","double"], ["dotted","dotted"], ["groove","groove"], ["ridge","ridge"], ["inset","inset"], ["outset","outset"], ["inherit","inherit"], ["none","none"], ["hidden","hidden"]]), "borderstyle_");  
+  this.appendValueInput("borderwidth_")
+      .setCheck(null)
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.TABLE_BORDERWIDTH_SHOW);       
+  this.appendValueInput("bordercolor_")
+      .setCheck(null)
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.TABLE_BORDERCOLOR_SHOW);       
+  this.setInputsInline(true);
+  this.setPreviousStatement(true);
+  this.setNextStatement(true);
+  this.setColour(60);
+  }
+};
+
 Blockly.Blocks['table_td_border_set'] = {
   init: function() {
   this.appendDummyInput()
