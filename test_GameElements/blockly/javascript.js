@@ -319,8 +319,8 @@ Blockly.JavaScript['document_timer_stop'] = function (block) {
 
 Blockly.JavaScript['text_to_number'] = function (block) {
   var value_text = Blockly.JavaScript.valueToCode(block, 'value_text_', Blockly.JavaScript.ORDER_ATOMIC);
-  var code = 'Number();\n';
-  return code;
+  var code = 'text_to_number(' + value_text + ');\n';
+  return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
 Blockly.JavaScript['loop_break'] = function (block) {
