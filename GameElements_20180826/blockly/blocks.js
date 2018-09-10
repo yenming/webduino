@@ -228,7 +228,7 @@ Blockly.Blocks['table_td_insert_text'] = {
   this.appendValueInput("color_")
       .setCheck(null)
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField(Blockly.Msg.COLOR_SHOW);       
+      .appendField(Blockly.Msg.FONTCOLOR_SHOW);       
   this.setInputsInline(true);
   this.setPreviousStatement(true);
   this.setNextStatement(true);
