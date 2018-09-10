@@ -806,13 +806,15 @@ Blockly.Blocks['document_timer_stop'] = {
 };
 
 Blockly.Blocks['text_to_number'] = {
-  init: function () {
-    this.appendDummyInput()
-      .appendField(Blockly.Msg.TEXT_TO_NUMBER_SHOW);
-    this.setPreviousStatement(true);
-    this.setNextStatement(true);
-    this.setColour(60);
-  }
+  init: function() {
+    this.appendValueInput("value_text_")
+        .setCheck("String")
+        .appendField(Blockly.Msg.TEXT_TO_NUMBER_SHOW);
+    this.setOutput(true, null);  
+    this.setColour(300);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }  
 };
 
 Blockly.Blocks['loop_break'] = {
