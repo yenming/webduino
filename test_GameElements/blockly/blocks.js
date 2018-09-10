@@ -808,7 +808,7 @@ Blockly.Blocks['document_timer_stop'] = {
 Blockly.Blocks['text_to_number'] = {
   init: function() {
     this.appendValueInput("value_text_")
-        .setCheck("String")
+        .setCheck(null)
         .appendField(Blockly.Msg.TEXT_TO_NUMBER_SHOW);
     this.setOutput(true, null);  
     this.setColour(300);
