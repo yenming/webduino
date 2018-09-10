@@ -664,6 +664,10 @@
       return mouse_y;
   } 
   
+  function text_to_number(input_text) {
+    return Number(input_text);
+  } 
+  
   window.image_create = image_create;
   window.image_set = image_set;
   window.image_get = image_get;
@@ -699,5 +703,6 @@
   window.table_clear = table_clear;
   window.table_td_set = table_td_set;
   window.table_td_border_set = table_td_border_set;
+  window.text_to_number = text_to_number;
   
 }(window, window.document));
