@@ -316,3 +316,27 @@ Blockly.JavaScript['document_timer_stop'] = function (block) {
   var code = 'clearInterval(' + variable_fuTimer_ + ');\n';
   return code;
 };
+
+//
+Blockly.JavaScript['text_to_number'] = function (block) {
+  var value_text = Blockly.JavaScript.valueToCode(block, 'value_text_', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'Number(' + value_text + ');\n';
+  return code;
+};
+
+Blockly.JavaScript['loop_break'] = function (block) {
+  var variable_fuTimer_ = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('fuTimer_'), Blockly.Variables.NAME_TYPE);
+  var code = 'break;\n';
+  return code;
+};
+
+Blockly.JavaScript['loop_continue'] = function (block) {
+  var variable_fuTimer_ = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('fuTimer_'), Blockly.Variables.NAME_TYPE);
+  var code = 'continue;\n';
+  return code;
+};
+
+Blockly.JavaScript['function_return'] = function (block) {
+  var code = 'return;\n';
+  return code;
+};
