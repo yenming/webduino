@@ -709,6 +709,7 @@
   window.table_get = table_get;
   window.table_clear = table_clear;
   window.table_td_set = table_td_set;
+  window.table_border_set = table_border_set;
   window.table_td_border_set = table_td_border_set;
   window.text_to_number = text_to_number;
   
