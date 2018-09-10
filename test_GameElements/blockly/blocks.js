@@ -129,9 +129,9 @@ Blockly.Blocks['table_td_set'] = {
 Blockly.Blocks['table_border_set'] = {
   init: function() {
   this.appendDummyInput()
-      .appendField(Blockly.Msg.TABLE_BORDER_SET_SHOW)
       .appendField(new Blockly.FieldVariable('fuGameTable'), 'fuGameElements_');    
   this.appendDummyInput()  
+      .appendField(Blockly.Msg.TABLE_BORDER_SET_SHOW)
       .appendField(Blockly.Msg.TABLE_BORDERSTYLE_SHOW)
       .appendField(new Blockly.FieldDropdown([["solid","solid"], ["dashed","dashed"], ["double","double"], ["dotted","dotted"], ["groove","groove"], ["ridge","ridge"], ["inset","inset"], ["outset","outset"], ["inherit","inherit"], ["none","none"], ["hidden","hidden"]]), "borderstyle_");  
   this.appendValueInput("borderwidth_")
