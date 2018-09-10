@@ -600,5 +600,7 @@
   <block type="loop_continue">      
   </block> 
   <block type="function_return">
+    <value name="value_">
+    </value>     
   </block>  
  </category>
