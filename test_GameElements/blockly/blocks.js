@@ -804,3 +804,43 @@ Blockly.Blocks['document_timer_stop'] = {
     this.setColour(60);
   }
 };
+
+Blockly.Blocks['text_to_number'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.TEXT_TO_NUMBER_SHOW);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setColour(60);
+  }
+};
+
+Blockly.Blocks['loop_break'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.LOOP_BREAK_SHOW);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setColour(60);
+  }
+};
+
+Blockly.Blocks['loop_continue'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.LOOP_CONTINUE_SHOW);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setColour(60);
+  }
+};
+
+Blockly.Blocks['function_return'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.FUNCTION_RETURN_SHOW);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setColour(60);
+  }
+};
