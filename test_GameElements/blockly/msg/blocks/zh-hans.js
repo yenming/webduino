@@ -62,6 +62,7 @@ Blockly.Msg.LEFT_SHOW = "靠左距离";
 Blockly.Msg.TOP_SHOW = "靠上距离";
 Blockly.Msg.ZINDEX_SHOW = "层次";
 Blockly.Msg.DISPLAY_SHOW = "显示";
+Blockly.Msg.COLOR_SHOW = "颜色";
 Blockly.Msg.SET_SHOW = "图片 设定 ";
 Blockly.Msg.GET_SHOW = "图片 取得 ";
 Blockly.Msg.DELETE_SHOW = "图片 删除";
