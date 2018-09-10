@@ -74,3 +74,7 @@ Blockly.Msg.DOCUMENT_TIMER_SHOW = "Timer Intervals(ms)";
 Blockly.Msg.DOCUMENT_TIMER_ONCE_SHOW = "Timer Intervals(ms) Once";
 Blockly.Msg.DOCUMENT_TIMER_STOP_SHOW = "Timer Stop";
 Blockly.Msg.PROPERTY_SHOW = "Property";
+Blockly.Msg.TEXT_TO_NUMBER_SHOW = "TEXT TO NUMBER";
+Blockly.Msg.LOOP_BREAK_SHOW = "LOOP BREAK";
+Blockly.Msg.LOOP_CONTINUE_SHOW = "LOOP CONTINUE";
+Blockly.Msg.FUNCTION_RETURN_SHOW = "FUNCTION RETURN";
