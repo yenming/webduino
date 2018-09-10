@@ -196,6 +196,13 @@
     } 
   }
   
+  function table_border_set(input_id,input_borderstyle,input_borderwidth,input_bordercolor){
+    if (document.getElementById("gametable_"+input_id)) {
+      var obj = document.getElementById("gametable_"+input_id);
+      obj.style.border = input_borderwidth +'px ' + input_borderstyle + ' ' + input_bordercolor;
+    } 
+  } 
+  
   function table_td_border_set(input_id,input_x,input_y,input_borderstyle,input_borderwidth,input_bordercolor){
     if (document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x)) {
       var obj = document.getElementById("gametable_td_"+input_id+"_"+input_y+'_'+input_x);
