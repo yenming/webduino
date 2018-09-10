@@ -20,6 +20,7 @@ Blockly.Msg.TABLE_DELETE_SHOW = "表格 删除";
 Blockly.Msg.TABLE_GET_SHOW = "取得 表格";
 Blockly.Msg.TABLE_CLEAR_SHOW = "表格 清除";
 Blockly.Msg.TABLE_TD_SET_SHOW = "储存格 设定";
+Blockly.Msg.TABLE_BORDER_SET_SHOW = "表格 框线设定";
 Blockly.Msg.TABLE_TD_BORDER_SET_SHOW = "储存格 框线设定";
 Blockly.Msg.MUSIC_CREATE_SHOW ="背景音乐 播放";
 Blockly.Msg.MUSIC_LENGTH_SHOW ="长度(ms)";
