@@ -86,7 +86,7 @@ async function getData(row) {
 
 
 <body>
-ID: <input type="text" name="sid" id="sid" size="10"><input type="button" onclick="id=document.getElementById('sid');getData((text_to_number((_E8_AE_8A_E6_95_B8.indexOf(id) + 1))));"><br>
+ID: <input type="text" name="sid" id="sid" size="10"><input type="button" onclick="getData((text_to_number((_E8_AE_8A_E6_95_B8.indexOf(document.getElementById('sid')) + 1))));"><br>
 <div><span id="demo-area-01-show"></span></div>
 
 
