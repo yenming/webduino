@@ -24,14 +24,7 @@
 #demo-area-01-show { font-size: 60px; pointer-events: auto!important; }
 </style>
 
-</head>
-
-
-<body>
-  
-<div><span id="demo-area-01-show"></span></div>
-
-<script id="jsbin-javascript">
+  <script id="jsbin-javascript">
 
 (async function () {
 
@@ -42,6 +35,9 @@ var fuGameTable;
 var myData;
 var i;
 var Data;
+  
+//id = '389028';
+_E8_AE_8A_E6_95_B8 = '762250,389028,159569,763613,382609,761315,383795,608795,652099,389073,761708,760479,763266,687332,765859,371947,368762,815781,923706,819421,815709,683163,533715,923475,544330,815638,342455,919668,374347'.split(',');
 
 async function getData(row) {
   table_create("fuGameTable",0,0,0,100,30,2,"solid",0,'#000000','#ffffff',0,true);
@@ -83,12 +79,16 @@ async function getData(row) {
     }
   }
 }
-
-
-id = '389028';
-_E8_AE_8A_E6_95_B8 = '762250,389028,159569,763613,382609,761315,383795,608795,652099,389073,761708,760479,763266,687332,765859,371947,368762,815781,923706,819421,815709,683163,533715,923475,544330,815638,342455,919668,374347'.split(',');
-getData((text_to_number((_E8_AE_8A_E6_95_B8.indexOf(id) + 1))));
-
 }());
 </script>
+  
+</head>
+
+
+<body>
+ID: <input type="text" name="sid" id="sid" size="10"><input type="button" onclick="id=document.getElementById('sid');getData((text_to_number((_E8_AE_8A_E6_95_B8.indexOf(id) + 1))));"><br>
+<div><span id="demo-area-01-show"></span></div>
+
+
 </body>
+</html>
