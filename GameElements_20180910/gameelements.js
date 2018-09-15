@@ -1,4 +1,4 @@
-// Author: Chung-Yi Fu (Kaohsiung, Taiwan)  2018-9-1 20:00  
+// Author: Chung-Yi Fu (Kaohsiung, Taiwan)  2018-9-15 23:00  
 // https://www.facebook.com/francefu
 
 +(function (window, document) {
@@ -188,7 +188,9 @@
       if (input_property=="width")
         obj.style.width = input_value + "px";
       else if (input_property=="height")
-        obj.style.height = input_value + "px";        
+        obj.style.height = input_value + "px";  
+      else if (input_property=="textalign")
+        obj.style.textAlign = input_value;      
       else if (input_property=="background")
         obj.style.background = input_value;
       else if (input_property=="innerHTML")
