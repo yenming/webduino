@@ -24,6 +24,7 @@ var fuGameTable;
 var myData;
 var i;
 var Data;
+var timelimit;
 
 let button = document.createElement('button');
 button.textContent = "查詢";
@@ -32,18 +33,44 @@ button.onclick = function() {
 };
 document.body.appendChild(button).setAttribute('id','button');
   
+function get_time(t) {
+  var varTime = new Date(),
+    varHours = varTime.getHours(),
+    varMinutes = varTime.getMinutes(),
+    varSeconds = varTime.getSeconds();
+  var varNow;
+  if (t == "hms") {
+    varNow = varHours + ":" + varMinutes + ":" + varSeconds;
+  } else if (t == "h") {
+    varNow = varHours;
+  } else if (t == "m") {
+    varNow = varMinutes;
+  } else if (t == "s") {
+    varNow = varSeconds;
+  }
+  return varNow;
+}
+
 async function query(id) {
   //id = '389028';
   _E8_AE_8A_E6_95_B8 = '762250,389028,159569,763613,382609,761315,383795,608795,652099,389073,761708,760479,763266,687332,765859,371947,368762,815781,923706,819421,815709,683163,533715,923475,544330,815638,342455,919668,374347'.split(',');
   getData((text_to_number((_E8_AE_8A_E6_95_B8.indexOf(id) + 1))));  
 }
+
 async function getData(row) {
-  table_create("fuGameTable",0,0,0,50,30,2,"solid",0,'#000000','#ffffff',0,true);
+  table_create("fuGameTable",0,0,0,100,30,2,"solid",0,'#000000','#ffffff',0,true);
   myData= {};
   myData.sheetUrl = 'https://docs.google.com/spreadsheets/d/1HmADQBBHmQTnfSNzedgrzblD4cB56Ol7M0nafVizaC8/edit?usp=sharing';
   myData.sheetName = '111';
-
-  for (i = 2; i <= 30; i++) {
+  readSheetData({
+    row : (row + 1),
+    col : 1,
+    sheetUrl : myData.sheetUrl,
+    sheetName : myData.sheetName
+  }, function(googleSheetReadData){
+    document.getElementById('demo-area-01-show').innerHTML = googleSheetReadData;
+  });
+  for (i = 2; i <= 31; i++) {
     Data = '';
     readSheetData({
       row : 1,
@@ -51,25 +78,33 @@ async function getData(row) {
       sheetUrl : myData.sheetUrl,
       sheetName : myData.sheetName
     }, function(googleSheetReadData){
-      Data = googleSheetReadData;
       table_td_set("fuGameTable",0,(i - 2),"textalign",'left');
-      table_td_insert_text("fuGameTable",0,(i - 2),Data,'Arial',4,'#000000');
+      table_td_insert_text("fuGameTable",0,(i - 2),googleSheetReadData,'Arial',8,'#000000');
     });
+    await delay(1);
     readSheetData({
       row : (row + 1),
       col : i,
       sheetUrl : myData.sheetUrl,
       sheetName : myData.sheetName
     }, function(googleSheetReadData){
+      Data = googleSheetReadData;
       table_td_set("fuGameTable",1,(i - 2),"textalign",'right');
-      table_td_insert_text("fuGameTable",1,(i - 2),googleSheetReadData,'Arial',4,'#ff0000');
+      table_td_insert_text("fuGameTable",1,(i - 2),Data,'Arial',8,'#ff0000');
     });
-    await delay(3);
+    timelimit = ((text_to_number((get_time("h")))) * 3600 + (text_to_number((get_time("m")))) * 60) + (text_to_number((get_time("s"))));
+    while (Data == '') {
+      if (((text_to_number((get_time("h")))) * 3600 + (text_to_number((get_time("m")))) * 60) + (text_to_number((get_time("s")))) > timelimit + 3) {
+        break;
+      }
+      await delay(0.1);
+    }
     if (Data == '') {
       break;
     }
   }
 }
+
 }());
 </script>
 </body>
