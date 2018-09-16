@@ -79,7 +79,7 @@ async function getData(row) {
       sheetName : myData.sheetName
     }, function(googleSheetReadData){
       table_td_set("fuGameTable",0,(i - 2),"textalign",'left');
-      table_td_insert_text("fuGameTable",0,(i - 2),googleSheetReadData,'Arial',8,'#000000');
+      table_td_insert_text("fuGameTable",0,(i - 2),googleSheetReadData,'Arial',4,'#000000');
     });
     await delay(1);
     readSheetData({
@@ -90,7 +90,7 @@ async function getData(row) {
     }, function(googleSheetReadData){
       Data = googleSheetReadData;
       table_td_set("fuGameTable",1,(i - 2),"textalign",'right');
-      table_td_insert_text("fuGameTable",1,(i - 2),Data,'Arial',8,'#ff0000');
+      table_td_insert_text("fuGameTable",1,(i - 2),Data,'Arial',4,'#ff0000');
     });
     timelimit = ((text_to_number((get_time("h")))) * 3600 + (text_to_number((get_time("m")))) * 60) + (text_to_number((get_time("s"))));
     while (Data == '') {
