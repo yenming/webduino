@@ -70,9 +70,9 @@ async function getData(row) {
     }, function(googleSheetReadData){
       Data = googleSheetReadData.split(',');
       table_td_set("fuGameTable",0,(i - 2),"textalign",'left');
-      table_td_insert_text("fuGameTable",0,(i - 2),(Data[0]),'Arial',8,'#000000');
+      table_td_insert_text("fuGameTable",0,(i - 2),(Data[0]),'Arial',4,'#000000');
       table_td_set("fuGameTable",1,(i - 2),"textalign",'right');
-      table_td_insert_text("fuGameTable",1,(i - 2),(Data[1]),'Arial',8,'#ff0000');
+      table_td_insert_text("fuGameTable",1,(i - 2),(Data[1]),'Arial',4,'#ff0000');
     });
     timelimit = ((text_to_number((get_time("h")))) * 3600 + (text_to_number((get_time("m")))) * 60) + (text_to_number((get_time("s"))));
     while (Data == '') {
