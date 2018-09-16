@@ -14,7 +14,7 @@
 </style>
 </head>
 <body>
-身分證字號後六碼：<input type="text" id="sid" name="sid" size="10"><input type="button" value="查詢" onclick="getData((text_to_number((_E8_AE_8A_E6_95_B8.indexOf(id) + 1))));">
+身分證字號後六碼：<input type="text" id="sid" name="sid" size="10"><input type="button" value="查詢" onclick="query('389028');">
 <div><span id="demo-area-01-show"></span></div>
   
 <script id="jsbin-javascript">
@@ -29,9 +29,11 @@ var myData;
 var i;
 var Data;
   
-id = '389028';
-_E8_AE_8A_E6_95_B8 = '762250,389028,159569,763613,382609,761315,383795,608795,652099,389073,761708,760479,763266,687332,765859,371947,368762,815781,923706,819421,815709,683163,533715,923475,544330,815638,342455,919668,374347'.split(',');
-getData((text_to_number((_E8_AE_8A_E6_95_B8.indexOf(id) + 1))));  
+async function query(id) {
+  //id = '389028';
+  _E8_AE_8A_E6_95_B8 = '762250,389028,159569,763613,382609,761315,383795,608795,652099,389073,761708,760479,763266,687332,765859,371947,368762,815781,923706,819421,815709,683163,533715,923475,544330,815638,342455,919668,374347'.split(',');
+  getData((text_to_number((_E8_AE_8A_E6_95_B8.indexOf(id) + 1))));  
+}());
 
 async function getData(row) {
   table_create("fuGameTable",0,0,0,100,30,2,"solid",0,'#000000','#ffffff',0,true);
