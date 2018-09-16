@@ -1,0 +1,94 @@
+﻿<!doctype html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Transcript 1-11</title>
+<script src="https://blocklypro.webduino.io/components/jquery/dist/jquery.min.js"></script>
+<script src="https://blocklypro.webduino.io/dist/lib/webduino-all-0.4.20.min.js"></script>
+<script src="https://blocklypro.webduino.io/dist/webduino-blockly.min.js"></script>
+<script src="https://blocklypro.webduino.io/dist/lib/firebase.min.js"></script>
+<script src="https://blocklypro.webduino.io/dist/lib/runtime.min.js"></script>
+<script src="https://rawgit.com/fustyles/webduino/temp/GameElements_20180910/gameelements.js"></script>
+
+</head>
+<body>
+身分證後六碼：<input type="text" id="sid" name="sid" size="10">
+
+  
+<script id="jsbin-javascript">
+(async function () {
+var row;
+var _E8_AE_8A_E6_95_B8;
+var fuGameTable;
+var myData;
+var i;
+var Data;
+var timelimit;
+var mysheet = 'd/1HmADQBBHmQTnfSNzedgrzblD4cB56Ol7M0nafVizaC8/edit?usp=sharing';
+
+let button = document.createElement('button');
+button.textContent = "查詢";
+button.onclick = function() {
+    query(document.getElementById('sid').value);
+};
+document.body.appendChild(button).setAttribute('id','button');
+  
+function get_time(t) {
+  var varTime = new Date(),
+    varHours = varTime.getHours(),
+    varMinutes = varTime.getMinutes(),
+    varSeconds = varTime.getSeconds();
+  var varNow;
+  if (t == "hms") {
+    varNow = varHours + ":" + varMinutes + ":" + varSeconds;
+  } else if (t == "h") {
+    varNow = varHours;
+  } else if (t == "m") {
+    varNow = varMinutes;
+  } else if (t == "s") {
+    varNow = varSeconds;
+  }
+  return varNow;
+}
+async function query(id) {
+  _E8_AE_8A_E6_95_B8 = '1101,1102,1103,1104,1105,1106,1107,1108,1109,1110,1111,1112,1113,1114,1115,1116,1117,1118,1119,1120,1121,1122,1123,1124,1125,1126,1127,1128,1129,1130'.split(',');
+  if (_E8_AE_8A_E6_95_B8.indexOf(id)!=-1)
+    getData((text_to_number((_E8_AE_8A_E6_95_B8.indexOf(id) + 1))));  
+}
+async function getData(row) {
+  table_create("fuGameTable",0,0,0,50,30,2,"solid",0,'#000000','#ffffff',0,true);
+  myData= {};
+  myData.sheetUrl = 'https://docs.google.com/spreadsheets/'+mysheet;
+  myData.sheetName = 'data';
+
+  for (i = 2; i <= 100; i++) {
+    Data = '';
+    readSheetData({
+      row : (row + 1),
+      col : i,
+      sheetUrl : myData.sheetUrl,
+      sheetName : myData.sheetName
+    }, function(googleSheetReadData){
+      Data = googleSheetReadData.split(',');
+      table_td_set("fuGameTable",0,(i - 2),"textalign",'left');
+      table_td_insert_text("fuGameTable",0,(i - 2),(Data[0]),'Arial',4,'#000000');
+      table_td_set("fuGameTable",1,(i - 2),"textalign",'right');
+      table_td_insert_text("fuGameTable",1,(i - 2),(Data[1]),'Arial',4,'#ff0000');
+    });
+    timelimit = ((text_to_number((get_time("h")))) * 3600 + (text_to_number((get_time("m")))) * 60) + (text_to_number((get_time("s"))));
+    while (Data == '') {
+      if (((text_to_number((get_time("h")))) * 3600 + (text_to_number((get_time("m")))) * 60) + (text_to_number((get_time("s")))) > timelimit + 3) {
+        break;
+      }
+      await delay(0.1);
+    }
+    if (Data == ',,') {
+      break;
+    }
+  }
+}
+
+}());
+</script>
+</body>
+</html>
