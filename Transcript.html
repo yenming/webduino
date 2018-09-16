@@ -25,7 +25,6 @@ var i;
 var Data;
 var timelimit;
 var mysheet = 'd/1HmADQBBHmQTnfSNzedgrzblD4cB56Ol7M0nafVizaC8/edit?usp=sharing';
-
 let button = document.createElement('button');
 button.textContent = "查詢";
 button.onclick = function() {
@@ -51,16 +50,22 @@ function get_time(t) {
   return varNow;
 }
 async function query(id) {
-  _E8_AE_8A_E6_95_B8 = '762250,389028,159569,763613,382609,761315,383795,608795,652099,389073,761708,760479,763266,687332,765859,371947,368762,815781,923706,819421,815709,683163,533715,923475,544330,815638,342455,919668,374347'.split(',');
+  _E8_AE_8A_E6_95_B8 = '762250,389028,159569,763613,382609,761315,383795,608795,652099,389073,761708,760479,763266,687332,765859,371947,368762,815781,923706,819421,815709,683163,533715,923475,544330,815638,342455,919668,374347,999999'.split(',');
   if (_E8_AE_8A_E6_95_B8.indexOf(id)!=-1)
     getData((text_to_number((_E8_AE_8A_E6_95_B8.indexOf(id) + 1))));  
 }
+  
 async function getData(row) {
-  table_create("fuGameTable",0,0,0,50,30,2,"solid",0,'#000000','#ffffff',0,true);
+  table_create("fuGameTable",0,0,0,100,30,3,"solid",0,'#000000','#ffffff',0,true);
+  table_td_insert_text("fuGameTable",0,0,'科目','Arial',4,'#000000');
+  table_td_border_set("fuGameTable",0,0,"solid",1,'#000000');
+  table_td_insert_text("fuGameTable",1,0,'分數','Arial',4,'#000000');
+  table_td_border_set("fuGameTable",1,0,"solid",1,'#000000');
+  table_td_insert_text("fuGameTable",2,0,'平均','Arial',4,'#000000');
+  table_td_border_set("fuGameTable",2,0,"solid",1,'#000000');
   myData= {};
   myData.sheetUrl = 'https://docs.google.com/spreadsheets/'+mysheet;
   myData.sheetName = 'data';
-
   for (i = 2; i <= 100; i++) {
     Data = '';
     readSheetData({
@@ -70,10 +75,17 @@ async function getData(row) {
       sheetName : myData.sheetName
     }, function(googleSheetReadData){
       Data = googleSheetReadData.split(',');
-      table_td_set("fuGameTable",0,(i - 2),"textalign",'left');
-      table_td_insert_text("fuGameTable",0,(i - 2),(Data[0]),'Arial',4,'#000000');
-      table_td_set("fuGameTable",1,(i - 2),"textalign",'right');
-      table_td_insert_text("fuGameTable",1,(i - 2),(Data[1]),'Arial',4,'#ff0000');
+      if (Data[0] != '') {
+        table_td_set("fuGameTable",0,(i - 1),"textalign",'left');
+        table_td_insert_text("fuGameTable",0,(i - 1),(Data[0]),'Arial',4,'#000000');
+        table_td_border_set("fuGameTable",0,(i - 1),"solid",1,'#000000');
+        table_td_set("fuGameTable",1,(i - 1),"textalign",'right');
+        table_td_insert_text("fuGameTable",1,(i - 1),(Data[1]),'Arial',4,'#ff0000');
+        table_td_border_set("fuGameTable",1,(i - 1),"solid",1,'#000000');
+        table_td_set("fuGameTable",2,(i - 1),"textalign",'right');
+        table_td_insert_text("fuGameTable",2,(i - 1),(Data[2]),'Arial',4,'#33ff33');
+        table_td_border_set("fuGameTable",2,(i - 1),"solid",1,'#000000');
+      }
     });
     timelimit = ((text_to_number((get_time("h")))) * 3600 + (text_to_number((get_time("m")))) * 60) + (text_to_number((get_time("s"))));
     while (Data == '') {
@@ -87,7 +99,7 @@ async function getData(row) {
     }
   }
 }
-
+  
 }());
 </script>
 </body>
