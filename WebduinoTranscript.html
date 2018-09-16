@@ -80,13 +80,13 @@ async function getData(row) {
       if (Data[0] != '') {
         table_td_set("fuGameTable",0,(i - 1),"textalign",'left');
         table_td_insert_text("fuGameTable",0,(i - 1),(Data[0]),'Arial',4,'#000000');
-        table_td_border_set("fuGameTable",0,(i - 1),"solid",1,'#000000');
+        //table_td_border_set("fuGameTable",0,(i - 1),"solid",1,'#000000');
         table_td_set("fuGameTable",1,(i - 1),"textalign",'right');
         table_td_insert_text("fuGameTable",1,(i - 1),(Data[1]),'Arial',4,'#ff0000');
-        table_td_border_set("fuGameTable",1,(i - 1),"solid",1,'#000000');
+        //table_td_border_set("fuGameTable",1,(i - 1),"solid",1,'#000000');
         table_td_set("fuGameTable",2,(i - 1),"textalign",'right');
         table_td_insert_text("fuGameTable",2,(i - 1),(Data[2]),'Arial',4,'#33ff33');
-        table_td_border_set("fuGameTable",2,(i - 1),"solid",1,'#000000');
+        //table_td_border_set("fuGameTable",2,(i - 1),"solid",1,'#000000');
       }
     });
     timelimit = (get_time("h") * 3600 + get_time("m") * 60) + get_time("s");
