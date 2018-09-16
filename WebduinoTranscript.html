@@ -89,9 +89,9 @@ async function getData(row) {
         table_td_border_set("fuGameTable",2,(i - 1),"solid",1,'#000000');
       }
     });
-    timelimit = ((text_to_number((get_time("h")))) * 3600 + (text_to_number((get_time("m")))) * 60) + (text_to_number((get_time("s"))));
+    timelimit = (get_time("h") * 3600 + get_time("m") * 60) + get_time("s");
     while (Data == '') {
-      if (((text_to_number((get_time("h")))) * 3600 + (text_to_number((get_time("m")))) * 60) + (text_to_number((get_time("s")))) > timelimit + 3) {
+      if ((get_time("h") * 3600 + get_time("m") * 60) + get_time("s") > timelimit + 3) {
         break;
       }
       await delay(0.1);
