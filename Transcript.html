@@ -60,7 +60,7 @@ async function getData(row) {
   myData.sheetUrl = 'https://docs.google.com/spreadsheets/'+mysheet;
   myData.sheetName = 'data';
 
-  for (i = 2; i <= 31; i++) {
+  for (i = 2; i <= 100; i++) {
     Data = '';
     readSheetData({
       row : (row + 1),
