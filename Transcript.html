@@ -9,14 +9,13 @@
 <script src="https://blocklypro.webduino.io/dist/lib/firebase.min.js"></script>
 <script src="https://blocklypro.webduino.io/dist/lib/runtime.min.js"></script>
 <script src="https://rawgit.com/fustyles/webduino/temp/GameElements_20180910/gameelements.js"></script>
-
 </head>
 <body>
 身分證後六碼：<input type="text" id="sid" name="sid" size="10">
 
-  
 <script id="jsbin-javascript">
 (async function () {
+  
 var row;
 var _E8_AE_8A_E6_95_B8;
 var fuGameTable;
@@ -25,6 +24,7 @@ var i;
 var Data;
 var timelimit;
 var mysheet = 'd/1HmADQBBHmQTnfSNzedgrzblD4cB56Ol7M0nafVizaC8/edit?usp=sharing';
+
 let button = document.createElement('button');
 button.textContent = "查詢";
 button.onclick = function() {
@@ -49,6 +49,7 @@ function get_time(t) {
   }
   return varNow;
 }
+  
 async function query(id) {
   _E8_AE_8A_E6_95_B8 = '762250,389028,159569,763613,382609,761315,383795,608795,652099,389073,761708,760479,763266,687332,765859,371947,368762,815781,923706,819421,815709,683163,533715,923475,544330,815638,342455,919668,374347,999999'.split(',');
   if (_E8_AE_8A_E6_95_B8.indexOf(id)!=-1)
