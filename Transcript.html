@@ -55,6 +55,7 @@ async function getData(row) {
       table_td_set("fuGameTable",0,(i - 2),"textalign",'left');
       table_td_insert_text("fuGameTable",0,(i - 2),Data,'Arial',4,'#000000');
     });
+    await delay(1);
     readSheetData({
       row : (row + 1),
       col : i,
@@ -64,7 +65,7 @@ async function getData(row) {
       table_td_set("fuGameTable",1,(i - 2),"textalign",'right');
       table_td_insert_text("fuGameTable",1,(i - 2),googleSheetReadData,'Arial',4,'#ff0000');
     });
-    await delay(2);
+    await delay(1);
     if (Data == '') {
       break;
     }
