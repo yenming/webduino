@@ -9,19 +9,27 @@
   <script src="https://blocklypro.webduino.io/dist/webduino-blockly.min.js"></script>
   <script src="https://blocklypro.webduino.io/dist/lib/firebase.min.js"></script>
   <script src="https://blocklypro.webduino.io/dist/lib/runtime.min.js"></script>
-</head>
-
-<body onload="">
-  <div></div>
   
-<script id="Javascript">
-  var pin;
-  boardReady({board: 'Smart', device: 'abcd', transport: 'mqtt'}, function (board) {
-    board.samplingInterval = 50;
-    pin = getPin(board, 2);
-    pin.setMode(1);
-    pin.write(1);
-  });
+<script>
+  function getCommand() {
+    var strUrl=location.search;
+    var getPara="";   
+
+    if (strUrl.indexOf("?")!=-1) {
+      var getCmd = strUrl.split("?");
+      getPara = getCmd[1].split("&");
+      
+      var pin;
+      boardReady({board: 'Smart', device: getPara[0], transport: 'mqtt'}, function (board) {
+        board.samplingInterval = 50;
+        pin = getPin(board, getPara[1]);
+        pin.setMode(1);
+        pin.write(getPara[2]);
+      });
+    } 
+  }
 </script>
+</head>
+<body onload="getCommand();">
 </body>
 </html>
