@@ -11,18 +11,17 @@
   <script src="https://blocklypro.webduino.io/dist/lib/runtime.min.js"></script>
 </head>
 
-<body>
+<body onload="">
   <div></div>
   
-<script id="jsbin-javascript">
-var pin;
-boardReady({board: 'Smart', device: 'abcd', transport: 'mqtt'}, function (board) {
-  board.samplingInterval = 50;
-  pin = getPin(board, 2);
-  pin.setMode(1);
-  pin.write(1);
-});
-
+<script id="Javascript">
+  var pin;
+  boardReady({board: 'Smart', device: 'abcd', transport: 'mqtt'}, function (board) {
+    board.samplingInterval = 50;
+    pin = getPin(board, 2);
+    pin.setMode(1);
+    pin.write(1);
+  });
 </script>
 </body>
 </html>
