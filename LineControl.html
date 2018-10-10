@@ -22,7 +22,7 @@
     if (strUrl.indexOf("?")!=-1) {
       var getCmd = strUrl.split("?");
       getPara = getCmd[1].split("&");
-      //gbpSD8CLAiMDTkahK3
+      
       var matrix;
       boardReady({board: 'Bit', device: getPara[0], transport: 'mqtt'}, function (board) {
         board.samplingInterval = 250;
