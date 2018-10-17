@@ -13,14 +13,50 @@ Blockly.JavaScript['linebot_type'] = function(block) {
   var value_parameter3 = Blockly.JavaScript.valueToCode(block, 'value_parameter3', Blockly.JavaScript.ORDER_ATOMIC);
   var value_parameter4 = Blockly.JavaScript.valueToCode(block, 'value_parameter4', Blockly.JavaScript.ORDER_ATOMIC);  
   
-  if ((value_parameter1.indexOf(":")!=-1)||(value_parameter1.indexOf("/")!=-1)||(value_parameter1.indexOf("+")!=-1))
-    value_parameter1 = '"'+value_parameter1+'"';
-  if ((value_parameter2.indexOf(":")!=-1)||(value_parameter2.indexOf("/")!=-1)||(value_parameter2.indexOf("+")!=-1))
-    value_parameter2 = '"'+value_parameter2+'"';
-  if ((value_parameter3.indexOf(":")!=-1)||(value_parameter3.indexOf("/")!=-1)||(value_parameter3.indexOf("+")!=-1))
-    value_parameter3 = '"'+value_parameter3+'"';
-  if ((value_parameter4.indexOf(":")!=-1)||(value_parameter4.indexOf("/")!=-1)||(value_parameter4.indexOf("+")!=-1))
-    value_parameter4 = '"'+value_parameter4+'"';  
+  if (!value_parameter1) value_parameter1='""';
+  if (!value_parameter2) value_parameter2='""';
+  if (!value_parameter3) value_parameter3='""';
+  if (!value_parameter4) value_parameter4='""';
+  
+  console.log(value_parameter1);
+  
+  value_parameter1 = value_parameter1.replace(/\\\'/g,"'");
+  value_parameter2 = value_parameter2.replace(/\\\'/g,"'");
+  value_parameter3 = value_parameter3.replace(/\\\'/g,"'");
+  value_parameter4 = value_parameter4.replace(/\\\'/g,"'");
+  
+  console.log(value_parameter1);
+  
+  if ((escape(value_parameter1).indexOf("%27")==0)&&(escape(value_parameter1).lastIndexOf("%27")==escape(value_parameter1).length-3))
+  {
+    value_parameter1 = '"'+value_parameter1.substr(1,value_parameter1.length-2).replace(/\"/g,'fustyles')+'"';
+    value_parameter1 = escape(value_parameter1).replace(/\%26/g," ").replace(/\%23/g," ").replace(/\+/g,"%2B").replace(/\%22/g,'"').replace(/fustyles/g,'%22');
+  }
+  else
+    value_parameter1 = 'escape('+value_parameter1+').replace(/\\%26/g," ").replace(/\\%23/g," ").replace(/\\+/g,"%2B")';
+  if ((escape(value_parameter2).indexOf("%27")==0)&&(escape(value_parameter2).lastIndexOf("%27")==escape(value_parameter2).length-3))
+  {
+    value_parameter2 = '"'+value_parameter2.substr(1,value_parameter2.length-2).replace(/\"/g,'fustyles')+'"';
+    value_parameter2 = escape(value_parameter2).replace(/\%26/g," ").replace(/\%23/g," ").replace(/\+/g,"%2B").replace(/\%22/g,'"').replace(/fustyles/g,'%22');
+  }
+  else
+    value_parameter2 = 'escape('+value_parameter2+').replace(/\\%26/g," ").replace(/\\%23/g," ").replace(/\\+/g,"%2B")';
+  if ((escape(value_parameter3).indexOf("%27")==0)&&(escape(value_parameter3).lastIndexOf("%27")==escape(value_parameter3).length-3))
+  {
+    value_parameter3 = '"'+value_parameter3.substr(1,value_parameter3.length-2).replace(/\"/g,'fustyles')+'"';
+    value_parameter3 = escape(value_parameter3).replace(/\%26/g," ").replace(/\%23/g," ").replace(/\+/g,"%2B").replace(/\%22/g,'"').replace(/fustyles/g,'%22');
+  }
+  else
+    value_parameter3 = 'escape('+value_parameter3+').replace(/\\%26/g," ").replace(/\\%23/g," ").replace(/\\+/g,"%2B")';
+  if ((escape(value_parameter4).indexOf("%27")==0)&&(escape(value_parameter4).lastIndexOf("%27")==escape(value_parameter4).length-3))
+  {
+    value_parameter4 = '"'+value_parameter4.substr(1,value_parameter4.length-2).replace(/\"/g,'fustyles')+'"';
+    value_parameter4 = escape(value_parameter4).replace(/\%26/g," ").replace(/\%23/g," ").replace(/\+/g,"%2B").replace(/\%22/g,'"').replace(/fustyles/g,'%22');
+  }
+  else
+    value_parameter4 = 'escape('+value_parameter4+').replace(/\\%26/g," ").replace(/\\%23/g," ").replace(/\\+/g,"%2B")';
+  
+  console.log(value_parameter1);
   
   if (value_type=='text')
     var code = '"&type='+value_type+'&text="+'+value_parameter1;
