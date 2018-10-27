@@ -67,9 +67,10 @@ Blockly.Blocks['pmgov_get'] = {
           ["南投縣-埔里","南投縣-埔里"],  
           ["雲林縣-斗六","雲林縣-斗六"],
           ["雲林縣-崙背","雲林縣-崙背"],
+          ["雲林縣-臺西","雲林縣-臺西"],
+          ["雲林縣-麥寮","雲林縣-麥寮"],
           ["嘉義縣-新港","嘉義縣-新港"],
           ["嘉義縣-朴子","嘉義縣-朴子"],
-          ["雲林縣-臺西","雲林縣-臺西"],
           ["嘉義市-嘉義","嘉義市-嘉義"],
           ["臺南市-新營","臺南市-新營"],
           ["臺南市-善化","臺南市-善化"],
@@ -98,13 +99,34 @@ Blockly.Blocks['pmgov_get'] = {
           ["連江縣-馬祖","連江縣-馬祖"],
           ["金門縣-金門","金門縣-金門"],
           ["澎湖縣-馬公","澎湖縣-馬公"]
-        ]), "value_site_");
+        ]), "value_site")
+          .appendField(new Blockly.FieldDropdown([
+          ["SiteName","SiteName"], 
+          ["County","County"],       
+          ["PublishTime","PublishTime"], 
+          ["AQI","AQI"],       
+          ["Status","Status"],
+          ["Pollutant","Pollutant"],
+          ["PM10 (μg/m3)","PM10"], 
+          ["PM10_AVG (μg/m3)","PM10_AVG"], 
+          ["PM2.5 (μg/m3)","PM2.5"], 
+          ["PM2.5_AVG (μg/m3)","PM2.5_AVG"], 
+          ["CO (ppm)","CO"], 
+          ["CO_8hr (ppm)","CO_8hr"], 
+          ["NO (ppb)","NO"], 
+          ["NO2 (ppb)","NO2"], 
+          ["NOx (ppb)","NOx"], 
+          ["O3 (ppb)","O3"], 
+          ["O3_8hr (ppb)","O3_8hr"], 
+          ["SO2 (ppb)","SO2"], 
+          ["WindDirec (degrees)","WindDirec"], 
+          ["WindSpeed (m/sec)","WindSpeed"],
+          ["Latitude","Latitude"], 
+          ["Longitude","Longitude"]
+        ]), "value_type");
     this.setOutput(true, null);  
     this.setColour(300);
     this.setTooltip("");
     this.setHelpUrl("");
   }  
 };
-
-
-
