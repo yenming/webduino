@@ -415,7 +415,7 @@
             <block type="matrix_led_texttocode">
               <value name="value_text_">
                 <block type="text">
-                  <field name="TEXT">♥ webduino ♡</field>
+                  <field name="TEXT"> ♥ webduino ♡ </field>
                 </block>
             </value>
           </block>           
@@ -424,13 +424,18 @@
     </value>
   </block>
   <block type="matrix_led_marquee_once">
+    <value name="value_times_">
+      <block type="math_number">
+        <field name="NUM">1</field>
+      </block>
+    </value>    
     <value name="value_marquee_">
       <block type="matrix_led_indentcode">
           <value name="value_indentcode_">
             <block type="matrix_led_texttocode">
               <value name="value_text_">
                 <block type="text">
-                  <field name="TEXT">♥ webduino ♡</field>
+                  <field name="TEXT"> ♥ webduino ♡ </field>
                 </block>
             </value>
           </block>           
