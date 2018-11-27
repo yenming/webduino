@@ -1,14 +1,24 @@
-// Author: Chung-Yi Fu (Kaohsiung, Taiwan)   https://www.facebook.com/francefu
+/*
+Author: Chung-Yi Fu (Kaohsiung, Taiwan)   https://www.facebook.com/francefu
+Google Script
+https://github.com/fustyles/webduino/blob/gs/linebot_push_message.gs
+https://github.com/fustyles/webduino/blob/gs/linenotify_push_message.gs
+*/
 
 +(function (window, document) {
 
   'use strict';
 
   function linebot_push_message(bot_token,bot_userid,bot_msg) {
-    
+
     bot_msg = JSON.parse(bot_msg);
     bot_msg["token"]=bot_token;
     bot_msg["userid"]=bot_userid;
+    
+    bot_msg["start"]="1325437200";
+    bot_msg["end"]="1325439000";
+    bot_msg["prefix"]="alert";
+    
     var input_url="https://script.google.com/macros/s/AKfycbwNu63z3ZFHo38wp9LBAwDGyG8tI46-5d-TpFLYFiOHDVOvmgN0/exec";
     var data = $.ajax({
         "type": "POST",
@@ -19,9 +29,9 @@
         {
           console.log(jsonp);
         },
-        error: function(exception)
+        error: function(jqXHR, textStatus, errorThrown)
         {
-          console.log("");
+          //console.log(errorThrown);
         }
      });
   }
@@ -29,6 +39,11 @@
   function linenotify_push_message(notify_token,notify_msg) {
     notify_msg = JSON.parse(notify_msg);
     notify_msg["token"]=notify_token;
+    
+    notify_msg["start"]="1325437200";
+    notify_msg["end"]="1325439000";
+    notify_msg["prefix"]="alert";
+    
     var input_url="https://script.google.com/macros/s/AKfycbySgcM0Ghz9gywkUQtRiM76YvKVmLpV8SNKLN7eMWms8BNDN7c/exec";
     var data = $.ajax({
         "type": "POST",
@@ -39,9 +54,9 @@
         {
           console.log(jsonp);
         },
-        error: function(exception)
+        error: function(jqXHR, textStatus, errorThrown)
         {
-          console.log("");
+          //console.log(errorThrown);
         }
      });
   }  
@@ -55,30 +70,29 @@
     
     if (line=="bot") {
       if (type=="text")
-        var para='{"type":"'+type+'","text":"'+parameter1+'"}';
+        return '{"type":"'+type+'","text":"'+parameter1+'"}';
       else if (type=="sticker")
-        var para='{"type":"'+type+'","packageId":"'+parameter1+'","stickerId":"'+parameter2+'"}';
+        return '{"type":"'+type+'","packageId":"'+parameter1+'","stickerId":"'+parameter2+'"}';
       else if (type=="image")
-        var para='{"type":"'+type+'","originalContentUrl":"'+parameter1+'","previewImageUrl":"'+parameter2+'"}';
+        return '{"type":"'+type+'","originalContentUrl":"'+parameter1+'","previewImageUrl":"'+parameter2+'"}';
       else if (type=="video")
-        var para='{"type":"'+type+'","originalContentUrl":"'+parameter1+'","previewImageUrl":"'+parameter2+'"}';
+        return '{"type":"'+type+'","originalContentUrl":"'+parameter1+'","previewImageUrl":"'+parameter2+'"}';
       else if (type=="audio")
-        var para='{"type":"'+type+'","originalContentUrl":"'+parameter1+'","duration":"'+parameter2+'"}';
+        return '{"type":"'+type+'","originalContentUrl":"'+parameter1+'","duration":"'+parameter2+'"}';
       else if (type=="location")
-        var para='{"type":"'+type+'","title":"'+parameter1+'","address":"'+parameter2+'","latitude":"'+parameter3+'","longitude":"'+parameter4+'"}';
+        return '{"type":"'+type+'","title":"'+parameter1+'","address":"'+parameter2+'","latitude":"'+parameter3+'","longitude":"'+parameter4+'"}';
       else
-        var para="";
+        return '';
     } else if (line=="notify") {
       if (type=="text")
-        var para='{"type":"'+type+'","text":"'+parameter1+'"}';
+        return '{"type":"'+type+'","text":"'+parameter1+'"}';
       else if (type=="sticker")
-        var para='{"type":"'+type+'","text":"'+parameter1+'","packageId":"'+parameter2+'","stickerId":"'+parameter3+'"}';
+        return '{"type":"'+type+'","text":"'+parameter1+'","packageId":"'+parameter2+'","stickerId":"'+parameter3+'"}';
       else if (type=="image")
-        var para='{"type":"'+type+'","text":"'+parameter1+'","originalContentUrl":"'+parameter2+'","previewImageUrl":"'+parameter3+'"}';
+        return '{"type":"'+type+'","text":"'+parameter1+'","originalContentUrl":"'+parameter2+'","previewImageUrl":"'+parameter3+'"}';
       else
-        var para="";
+        return '';
     }
-    return para;
   }
 
   window.linebot_push_message = linebot_push_message;
