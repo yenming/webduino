@@ -59,6 +59,8 @@ Blockly.Blocks['linebot_type'] = {
         this.getField('p3').setVisible(false);
         this.getField('p4').setVisible(false);
         this.getInput('value_parameter1').setVisible(true);
+        if (this.getInput('value_parameter2').visible_==true||this.getInput('value_parameter3').visible_==true||this.getInput('value_parameter4').visible_==true) 
+          this.unplugBlocks();
         this.getInput('value_parameter2').setVisible(false);
         this.getInput('value_parameter3').setVisible(false);
         this.getInput('value_parameter4').setVisible(false);
@@ -73,6 +75,8 @@ Blockly.Blocks['linebot_type'] = {
         this.getField('p4').setVisible(false);
         this.getInput('value_parameter1').setVisible(true);
         this.getInput('value_parameter2').setVisible(true);
+        if (this.getInput('value_parameter3').visible_==true||this.getInput('value_parameter4').visible_==true) 
+          this.unplugBlocks();
         this.getInput('value_parameter3').setVisible(false);
         this.getInput('value_parameter4').setVisible(false);
       } else if (this.getField('value_type').getValue() == "image") {
@@ -86,6 +90,8 @@ Blockly.Blocks['linebot_type'] = {
         this.getField('p4').setVisible(false);
         this.getInput('value_parameter1').setVisible(true);
         this.getInput('value_parameter2').setVisible(true);
+        if (this.getInput('value_parameter3').visible_==true||this.getInput('value_parameter4').visible_==true) 
+          this.unplugBlocks();
         this.getInput('value_parameter3').setVisible(false);
         this.getInput('value_parameter4').setVisible(false);
       } else if (this.getField('value_type').getValue() == "video") {
@@ -99,6 +105,8 @@ Blockly.Blocks['linebot_type'] = {
         this.getField('p4').setVisible(false);
         this.getInput('value_parameter1').setVisible(true);
         this.getInput('value_parameter2').setVisible(true);
+        if (this.getInput('value_parameter3').visible_==true||this.getInput('value_parameter4').visible_==true) 
+          this.unplugBlocks();
         this.getInput('value_parameter3').setVisible(false);
         this.getInput('value_parameter4').setVisible(false);
       } else if (this.getField('value_type').getValue() == "audio") {
@@ -112,6 +120,8 @@ Blockly.Blocks['linebot_type'] = {
         this.getField('p4').setVisible(false);
         this.getInput('value_parameter1').setVisible(true);
         this.getInput('value_parameter2').setVisible(true);
+        if (this.getInput('value_parameter3').visible_==true||this.getInput('value_parameter4').visible_==true) 
+          this.unplugBlocks();
         this.getInput('value_parameter3').setVisible(false);
         this.getInput('value_parameter4').setVisible(false);
       } else if (this.getField('value_type').getValue() == "location") {
@@ -139,6 +149,11 @@ Blockly.Blocks['linebot_type'] = {
   domToMutation : function(xmlElement) {
     this.getField('value_type').setValue(xmlElement.getAttribute('value_type'));
     this.onchange();
+  },
+  unplugBlocks : function() {
+    while (this.childBlocks_.length > 0) {
+        this.childBlocks_[this.childBlocks_.length-1].unplug();
+    }
   }
 };
 
@@ -184,34 +199,34 @@ Blockly.Blocks['linenotify_type'] = {
     this.setHelpUrl("");
   },
   onchange: function(event) {
-    //if (event.type=="change") {
-      if (this.getField('value_type').getValue() == 'text') {
-        this.getField('p1').setValue("text");
-        this.getField('p2').setValue("");
-        this.getField('p3').setValue("");
-        this.getField('p2').setVisible(false);
-        this.getField('p3').setVisible(false);
-        this.getInput('value_parameter2').setVisible(false);
-        this.getInput('value_parameter3').setVisible(false);
-      } else if (this.getField('value_type').getValue() == "sticker") {
-        this.getField('p1').setValue("text");
-        this.getField('p2').setValue("packageId");
-        this.getField('p3').setValue("stickerId");
-        this.getField('p2').setVisible(true);
-        this.getField('p3').setVisible(true);
-        this.getInput('value_parameter2').setVisible(true);
-        this.getInput('value_parameter3').setVisible(true);
-      } else if (this.getField('value_type').getValue() == "image") {
-        this.getField('p1').setValue("text");
-        this.getField('p2').setValue("originalContentUrl");
-        this.getField('p3').setValue("previewImageUrl");
-        this.getField('p2').setVisible(true);
-        this.getField('p3').setVisible(true);
-        this.getInput('value_parameter2').setVisible(true);
-        this.getInput('value_parameter3').setVisible(true);
-      }
-      this.setOutput(true, null);
-    //}
+    if (this.getField('value_type').getValue() == 'text') {
+      this.getField('p1').setValue("text");
+      this.getField('p2').setValue("");
+      this.getField('p3').setValue("");
+      this.getField('p2').setVisible(false);
+      this.getField('p3').setVisible(false); 
+      if (this.getInput('value_parameter2').visible_==true||this.getInput('value_parameter3').visible_==true) 
+        this.unplugBlocks();
+      this.getInput('value_parameter2').setVisible(false);
+      this.getInput('value_parameter3').setVisible(false);
+    } else if (this.getField('value_type').getValue() == "sticker") {
+      this.getField('p1').setValue("text");
+      this.getField('p2').setValue("packageId");
+      this.getField('p3').setValue("stickerId");
+      this.getField('p2').setVisible(true);
+      this.getField('p3').setVisible(true);
+      this.getInput('value_parameter2').setVisible(true);
+      this.getInput('value_parameter3').setVisible(true);
+    } else if (this.getField('value_type').getValue() == "image") {
+      this.getField('p1').setValue("text");
+      this.getField('p2').setValue("originalContentUrl");
+      this.getField('p3').setValue("previewImageUrl");
+      this.getField('p2').setVisible(true);
+      this.getField('p3').setVisible(true);
+      this.getInput('value_parameter2').setVisible(true);
+      this.getInput('value_parameter3').setVisible(true);
+    }
+    this.setOutput(true, null);
   },
   mutationToDom : function() {
     var container = document.createElement('mutation');
@@ -221,5 +236,10 @@ Blockly.Blocks['linenotify_type'] = {
   domToMutation : function(xmlElement) {
     this.getField('value_type').setValue(xmlElement.getAttribute('value_type'));
     this.onchange();
+  },
+  unplugBlocks : function() {
+    while (this.childBlocks_.length > 0) {
+        this.childBlocks_[this.childBlocks_.length-1].unplug();
+    }
   }
 };
