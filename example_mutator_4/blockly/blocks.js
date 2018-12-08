@@ -85,8 +85,8 @@ Blockly.Blocks['boardevent'] = {
   },
   compose: function(containerBlock) {
     var clauseBlock = containerBlock.nextConnection.targetBlock();
-    var errorCount = 0;
     var messageCount = 0;
+    var errorCount = 0;
     this.list = [];
     var errorConnections = [null];
     var messageConnections = [null];
@@ -94,13 +94,17 @@ Blockly.Blocks['boardevent'] = {
       switch (clauseBlock.type) {
         case 'message_with_item':
           messageCount++;
-          this.list.unshift("message");
-          messageConnections.push(clauseBlock.messageConnection_);
+          if (messageCount==1) {  // limit to 1
+            this.list.unshift("message");
+            messageConnections.push(clauseBlock.messageConnection_);
+          }
           break;          
         case 'error_with_item':
           errorCount++;
-          this.list.push("error");
-          errorConnections.push(clauseBlock.errorConnection_);
+          if (errorCount==1) {  // limit to 1
+            this.list.push("error");
+            errorConnections.push(clauseBlock.errorConnection_);
+          }
           break;
         default:
           throw TypeError('Unknown block type: ' + clauseBlock.type);
@@ -111,32 +115,36 @@ Blockly.Blocks['boardevent'] = {
     
     this.updateShape_();
     
-    if (this.messageCount>0) {
-      for (var i = 1; i <= this.messageCount; i++)
-          Blockly.Mutator.reconnect(messageConnections[i], this, 'do_message');
-    }
-    if (this.errorCount>0) {
-      for (var j = 1; j <= this.errorCount; j++)
-          Blockly.Mutator.reconnect(errorConnections[j], this, 'do_error');
-    }
+    if (this.messageCount>0)
+      Blockly.Mutator.reconnect(messageConnections[1], this, 'do_message');
+    if (this.errorCount>0)
+      Blockly.Mutator.reconnect(errorConnections[1], this, 'do_error');
+    
+    // limit to 1
+    if (messageCount>1)
+      containerBlock.nextConnection.targetBlock().dispose(true);
   },
   saveConnections: function(containerBlock) {
     var clauseBlock = containerBlock.nextConnection.targetBlock();
-    var errorCount = 0;
     var messageCount = 0;
+    var errorCount = 0;
     while (clauseBlock) {
       switch (clauseBlock.type) {
         case 'message_with_item':
           messageCount++;
-          var message = this.getInput('do_message');
-          clauseBlock.messageConnection_ =
-              message && message.connection.targetConnection;
+          if (messageCount==1) {  // limit to 1
+            var message = this.getInput('do_message');
+            clauseBlock.messageConnection_ =
+                message && message.connection.targetConnection;
+          }
           break;          
         case 'error_with_item':
           errorCount++;
-          var error = this.getInput('do_error');
-          clauseBlock.errorConnection_ =
-              error && error.connection.targetConnection;
+          if (errorCount==1) {  // limit to 1
+            var error = this.getInput('do_error');
+            clauseBlock.errorConnection_ =
+                error && error.connection.targetConnection;
+          }
           break;
         default:
           throw TypeError('Unknown block type: ' + clauseBlock.type);
@@ -148,17 +156,21 @@ Blockly.Blocks['boardevent'] = {
   updateShape_: function() {
     if (this.getInput('do_message')) this.removeInput('do_message');
     if (this.getInput('do_error')) this.removeInput('do_error');
-    var messageCount=0;
+    var messageCount = 0;
+    var errorCount = 0;
     for (var i = 0; i < this.list.length; i++) {
       if (this.list[i]=="message") {
-        if (messageCount==0) {  // limit to 1
+        messageCount++;
+        if (messageCount==1) {  // limit to 1
           this.appendStatementInput("do_message")
               .appendField("BoardEvent.STRING_MESSAGE","title_message");
         }
-        messageCount++;
       } else if (this.list[i]=="error") {
-        this.appendStatementInput("do_error")
-            .appendField("BoardEvent.ERROR","title_error");
+        errorCount++;
+        if (errorCount==1) {  // limit to 1
+          this.appendStatementInput("do_error")
+              .appendField("BoardEvent.ERROR","title_error");
+        }
       }
     }     
     /*
