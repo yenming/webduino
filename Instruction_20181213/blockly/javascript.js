@@ -173,3 +173,28 @@ Blockly.JavaScript['cmd12'] = function (block) {
   var code = myVar + "[" + cmd12_0 + "][" + cmd12_1 + "]";
   return [code, Blockly.JavaScript.ORDER_NONE]; 
 };
+
+Blockly.JavaScript['cmd13'] = function (block) {
+  var myVar = Blockly.JavaScript.valueToCode(block, 'myVar', Blockly.JavaScript.ORDER_ATOMIC);
+  
+  if ((myVar.indexOf("'")==0)&&(myVar.lastIndexOf("'")==myVar.length-1))
+    myVar = myVar.substring(1,myVar.length-1);
+  if ((myVar.indexOf("(")==0)&&(myVar.lastIndexOf(")")==myVar.length-1))
+    myVar = myVar.substring(1,myVar.length-1);
+    
+  var code = "var " + myVar + ";\n";
+  return code;
+};
+
+Blockly.JavaScript['cmd14'] = function (block) {
+  var myVar = Blockly.JavaScript.valueToCode(block, 'myVar', Blockly.JavaScript.ORDER_ATOMIC);
+  var variableValue = Blockly.JavaScript.valueToCode(block, 'variableValue', Blockly.JavaScript.ORDER_ATOMIC);
+  
+  if ((myVar.indexOf("'")==0)&&(myVar.lastIndexOf("'")==myVar.length-1))
+    myVar = myVar.substring(1,myVar.length-1);
+  if ((myVar.indexOf("(")==0)&&(myVar.lastIndexOf(")")==myVar.length-1))
+    myVar = myVar.substring(1,myVar.length-1);
+    
+  var code = myVar + " = " + variableValue +";\n";
+  return code;
+};

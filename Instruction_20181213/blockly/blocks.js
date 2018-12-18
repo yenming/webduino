@@ -342,3 +342,35 @@ Blockly.Blocks['cmd12'] = {
   this.setColour(20);
   }
 };
+
+Blockly.Blocks['cmd13'] = {
+  init: function() {
+  this.appendDummyInput()
+      .appendField("Declare Variable");
+  this.appendValueInput("myVar")
+      .setCheck(null);    
+  this.setPreviousStatement(true);
+  this.setNextStatement(true);
+  this.setInputsInline(true);
+  this.setTooltip('');
+  this.setColour(20);
+  }
+};
+
+Blockly.Blocks['cmd14'] = {
+  init: function() {
+  this.appendDummyInput()
+      .appendField("Set Variable");
+  this.appendValueInput("myVar")
+      .setCheck(null);   
+  this.appendDummyInput()
+      .appendField(" = ");    
+  this.appendValueInput("variableValue")
+      .setCheck(null);      
+  this.setPreviousStatement(true);
+  this.setNextStatement(true);
+  this.setInputsInline(true);
+  this.setTooltip('');
+  this.setColour(20);
+  }
+};

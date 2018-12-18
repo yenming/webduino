@@ -141,6 +141,25 @@
         <field name="NUM">0</field>
       </block>
     </value>     
+  </block>  
+  <block type="cmd13">
+    <value name="myVar">
+      <block type="text">
+        <field name="TEXT">myVar</field>
+      </block>
+    </value>        
+  </block>    
+  <block type="cmd14">
+    <value name="myVar">
+      <block type="text">
+        <field name="TEXT">myVar</field>
+      </block>
+    </value> 
+    <value name="variableValue">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>     
   </block>    
   <block type="cmd6">   
   </block>
